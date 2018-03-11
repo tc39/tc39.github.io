@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
+## JS Spec
 
-You can use the [editor on GitHub](https://github.com/codehag/spec-mock/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Get involved in the creation of the JavaScript Specification
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### What is the Javascript Specification?
 
-### Markdown
+The ECMAScript specification, known colloquially as the Javascript specification or JS Spec is the formal standard which outlines a vendor (browsers and other implementations) neutral programming language for the behavior of the web. The specification is standardized by the TC39 (Technical committee 39) of ECMA (European Computer Manufacturers Association). To get involved with the committee, read our [Joining the TC39]() documentation. Being a member is one of many ways to make an impact, read on to find out more!
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### How?
 
-```markdown
-Syntax highlighted code block
+Specifying a language is a complex process. We have a four stage process outlined [here](https://tc39.github.io/process-document/) with a rolling release schedule -- this means that we do not have a set date for when the language specification of a certain version is done, instead we have a new specification published every year. Read more about why we do that [here](./releases)
 
-# Header 1
-## Header 2
-### Header 3
+We can split up the proposal proceedure by stage, but we can also think of it in categories of work: [spec writing]() which has a specific language, [implementation](./implementation), [testing](./testing), and the [publishing](./publishing) process. There are many moving wheels when a proposal is in motion! If you are interested in making a proposal, or helping in some aspect of a proposal become a part of the spec, take a look at our [guides](./guides/index.html)
 
-- Bulleted
-- List
+On top of it, there are many aspects to be aware of, including ethics, history, best practices of language design, and others. Read more in our [FAQ](./faq)
 
-1. Numbered
-2. List
+### Why?
 
-**Bold** and _Italic_ and `Code` text
+When JavaScript was first implemented in Netscape, it gave Netscape a competitive advantage, as users could have an enriched web experience. As a result, other browsers such as Internet Explorer made their own versions of the language by backwards engineering Netscapes implementation. What resulted was a broken experience on the web, for both users and developers. One would need to choose which browser they were programming for, rather than programming for the whole web.
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/codehag/spec-mock/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+By specifying ECMAScript, we make it so that all implementations of the language have the same basic behavior, so that developers have an easier time writing for the web, and so that users have a better experience using the web!
