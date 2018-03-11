@@ -1,7 +1,3 @@
-## JS Spec
-
-Get involved in the creation of the JavaScript Specification
-
 ### What is the Javascript Specification?
 
 The ECMAScript specification, known colloquially as the Javascript specification or JS Spec is the formal standard which outlines a vendor (browsers and other implementations) neutral programming language for the behavior of the web. The specification is standardized by the TC39 (Technical committee 39) of ECMA (European Computer Manufacturers Association). To get involved with the committee, read our [Joining the TC39]() documentation. Being a member is one of many ways to make an impact, read on to find out more!
