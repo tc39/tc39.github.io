@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <section class="page-menu">
+      <h2>JS</h2>
+      <span class="menu">
+        <span class="menu-item">
+          <a href="https://github.com/tc39/ecma262#ecmascript" class="btn menu-btn">Proposals</a>
+          <span class="sub-menu">
+            <a href="https://github.com/tc39/proposals" class="btn menu-btn">Active Proposals</a>
+            <a href="https://github.com/tc39/proposals/blob/master/inactive-proposals.md" class="btn menu-btn">Inactive Proposals </a>
+          <a href="https://github.com/tc39/proposals/blob/master/finished-proposals.md" class="btn
+            menu-btn">Finished Proposals</a>
+          </span>
+        </span>
+        <span class="menu-item">
+          <a href="./guides" class="btn menu-btn">Guides</a>
+          <span class="sub-menu">
+            <a href="https://timothygu.me/es-howto/" class="btn menu-btn">Reading the spec</a>
+            <a href="./guides/first-proposal" class="btn menu-btn">Making your first Proposal</a>
+            <a href="" class="btn menu-btn">Implementing a Proposal</a>
+            <a href="" class="btn menu-btn">Giving meaningful
+              feedback</a>
+            <a href="" class="btn menu-btn">Running the tests</a>
+            <a href="" class="btn menu-btn">Joining the TC39 as a member
+              organization</a>
+            <a href="" class="btn menu-btn">More Guides</a>
+          </span>
+        </span>
+        <span class="menu-item">
+          <a href="" class="btn menu-btn">Process</a>
+          <span class="sub-menu">
+            <a href="https://tc39.github.io/process-document/" class="btn menu-btn">Overview</a>
+            <a href="https://github.com/tc39/proposals/blob/master/stage-0-proposals.md" class="btn
+              menu-btn">Stage 0</a>
+            <a href="./process/stage-0" class="btn menu-btn">Stage 1</a>
+            <a href="./process/stage-0" class="btn menu-btn">Stage 2</a>
+            <a href="./process/stage-0" class="btn menu-btn">Stage 3</a>
+            <a href="./process/stage-0" class="btn menu-btn">Stage 4</a>
+          </span>
+        </span>
+        <span class="menu-item">
+          <a href="" class="btn menu-btn">Discussion</a>
+          <span class="sub-menu">
+            <a href="./discussion/meeting-notes" class="btn menu-btn">Meeting Notes</a>
+            <a href="https://github.com/tc39/" class="btn menu-btn">Github Directory</a>
+            <a href="https://esdiscuss.org/" class="btn menu-btn">ES Discuss</a>
+            <a href="./discussion/irc" class="btn menu-btn">IRC</a>
+          </span>
+        </span>
+        <span class="menu-item">
+          <a href="" class="btn menu-btn">Resources</a>
+          <span class="sub-menu">
+            <a href="https://www.ecma-international.org/ecma-262/8.0/index.html" class="btn menu-btn">Current Spec</a>
+            <a href="" class="btn menu-btn">Contributing Guideline</a>
+            <a href="" class="btn menu-btn">Meeting Notes</a>
+          </span>
+        </span>
+        <span class="menu-item">
+          <a href="" class="btn menu-btn">FAQ</a>
+          <span class="sub-menu">
+          </span>
+        </span>
+      </span>
+    </section>
+    <section class="page-header">
+      <h1 class="project-name">JS spec</h1>
+      <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+    </section>
+
+    <section class="main-content">
+      {{ content }}
+
+    </section>
+  </body>
+</html>

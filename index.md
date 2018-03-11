@@ -1,8 +1,13 @@
-### What is the Javascript Specification?
+---
+title: JS spec
+layout: default
+---
+
+## What is the Javascript Specification?
 
 The ECMAScript specification, known colloquially as the Javascript specification or JS Spec is the formal standard which outlines a vendor (browsers and other implementations) neutral programming language for the behavior of the web. The specification is standardized by the TC39 (Technical committee 39) of ECMA (European Computer Manufacturers Association). To get involved with the committee, read our [Joining the TC39]() documentation. Being a member is one of many ways to make an impact, read on to find out more!
 
-### How?
+## How?
 
 Specifying a language is a complex process. We have a four stage process outlined [here](https://tc39.github.io/process-document/) with a rolling release schedule -- this means that we do not have a set date for when the language specification of a certain version is done, instead we have a new specification published every year. Read more about why we do that [here](./releases)
 
@@ -10,7 +15,7 @@ We can split up the proposal proceedure by stage, but we can also think of it in
 
 On top of it, there are many aspects to be aware of, including ethics, history, best practices of language design, and others. Read more in our [FAQ](./faq)
 
-### Why?
+## Why?
 
 When JavaScript was first implemented in Netscape, it gave Netscape a competitive advantage, as users could have an enriched web experience. As a result, other browsers such as Internet Explorer made their own versions of the language by backwards engineering Netscapes implementation. What resulted was a broken experience on the web, for both users and developers. One would need to choose which browser they were programming for, rather than programming for the whole web.
 

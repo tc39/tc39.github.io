@@ -1,0 +1,71 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.page-header {
+  background-color: #f7df1e;
+  color: black;
+  background-image: none;
+}
+
+.btn {
+  color: black;
+}
+
+.project-name {
+  font-size: 5rem;
+}
+
+
+.main-content h2{
+  color: black;
+}
+
+.page-header {
+  padding: 8rem 6rem 4rem 6rem;
+}
+
+.page-menu {
+  z-index: 1;
+  padding: 10px;
+  background-color: grey;
+  position: fixed;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-menu h2,
+.page-menu .btn{
+  margin: 0px;
+}
+
+.menu-item {
+  color: white;
+  border: white;
+  border-radius: 5px;
+  position: relative;
+}
+
+.menu-item:hover > .sub-menu {
+  background-color: grey;
+  display: inline-block;
+  width: 150px;
+  top: 2.2rem;
+  left: 0px;
+  position: absolute;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.sub-menu .btn {
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+}
