@@ -329,7 +329,9 @@ a:hover { text-decoration: underline; }
 
 .page-menu { z-index: 1; padding: 10px; background-color: grey; position: fixed; width: 100%; color: white; display: flex; justify-content: space-between; }
 
-.page-menu h2, .page-menu .btn { margin: 0px; }
+.page-menu h2 { margin: .4rem 0 0 0; }
+
+.page-menu .btn { margin: 0px; }
 
 .menu-item { color: white; border: white; border-radius: 5px; position: relative; }
 

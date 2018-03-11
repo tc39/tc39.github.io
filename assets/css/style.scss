@@ -37,7 +37,9 @@
   justify-content: space-between;
 }
 
-.page-menu h2,
+.page-menu h2 {
+  margin: .4rem 0 0 0;
+}
 .page-menu .btn{
   margin: 0px;
 }
