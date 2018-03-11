@@ -333,7 +333,9 @@ a:hover { text-decoration: underline; }
 
 .menu-item { color: white; border: white; border-radius: 5px; position: relative; }
 
-.menu-item:hover > .sub-menu { background-color: grey; display: inline-block; width: 150px; top: 2.2rem; left: 0px; position: absolute; }
+.menu-item:hover > .sub-menu { border: darkgray 1px solid; background-color: grey; display: inline-block; width: 220px; top: 2.2rem; left: 0px; position: absolute; }
+
+.menu-item:last-child:hover > .sub-menu { right: 0px; left: auto; }
 
 .sub-menu { display: none; }
 
