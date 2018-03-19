@@ -317,28 +317,34 @@ a:hover { text-decoration: underline; }
 
 .site-footer-credits { color: #819198; }
 
-.page-header { background-color: #f7df1e; color: black; background-image: none; }
+.page-header { background-color: #ff9900; color: black; background-image: none; }
 
-.btn { color: black; }
+.btn { color: black; border: none; border-radius: 0; }
 
 .project-name { font-size: 5rem; }
 
 .main-content h2 { color: black; }
 
+body { background: #f5f5f5; }
+
 .page-header { padding: 8rem 6rem 4rem 6rem; }
 
-.page-menu { z-index: 1; padding: 10px; background-color: grey; position: fixed; width: 100%; color: white; display: flex; justify-content: space-between; }
+.page-menu { z-index: 1; padding: 0px; background-color: #ff9900; position: fixed; width: 100%; color: white; display: flex; justify-content: space-between; }
 
-.page-menu h2 { margin: .4rem 0 0 0; }
+.page-menu h2 { margin: 0 0 0 0; }
+
+.home-btn { padding: 0.4rem; }
 
 .page-menu .btn { margin: 0px; }
 
 .menu-item { color: white; border: white; border-radius: 5px; position: relative; }
 
-.menu-item:hover > .sub-menu { border: darkgray 1px solid; background-color: grey; display: inline-block; width: 220px; top: 2.2rem; left: 0px; position: absolute; }
+.menu-item:hover > .sub-menu { border: transparent 1px solid; background-color: white; display: inline-block; width: 220px; top: 2.2rem; left: 0px; position: absolute; }
 
 .menu-item:last-child:hover > .sub-menu { right: 0px; left: auto; }
 
 .sub-menu { display: none; }
 
-.sub-menu .btn { border-radius: 0; border-top: none; border-left: none; border-right: none; width: 100%; }
+.sub-menu .btn { border-radius: 0; border-top: none; border-right: none; border-bottom: none; border-left: black 5px solid; margin: 3px; width: 100%; }
+
+.sub-menu .btn:hover { color: #ff9900; border-left: #ff9900 5px solid; }
