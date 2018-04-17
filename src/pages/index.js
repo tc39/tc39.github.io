@@ -2,7 +2,7 @@ import React from 'react'
 // import Link from 'gatsby-link'
 import logo from '../TC39.svg'
 
-const IndexPage = ({ content }) => (
+const IndexPage = ({content}) => (
   <div>
     <section className="main">
       <section className="page-header">
@@ -62,8 +62,7 @@ const IndexPage = ({ content }) => (
         <span className="footer-item">
           <a
             href="https://github.com/tc39/ecma262#ecmascript"
-            className="btn menu-btn"
-          >
+            className="btn menu-btn">
             Proposals
           </a>
         </span>

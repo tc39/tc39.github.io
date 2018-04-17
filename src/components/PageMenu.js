@@ -1,21 +1,21 @@
-import React from 'react';
+import React from 'react'
 
-const MenuBtn = ({ link, title }) => (
+const MenuBtn = ({link, title}) => (
   <a href={link} className="btn menu-btn">{title}</a>
 )
 
-const SubMenu = ({ children }) => (
+const SubMenu = ({children}) => (
   <span className="sub-menu">{children}</span>
 )
 
-const MenuItem = ({ link, title, children }) => (
+const MenuItem = ({link, title, children}) => (
   <span className="menu-item">
-    <MenuBtn {...{ link, title }}/>
+    <MenuBtn {...{link, title}} />
     {children}
   </span>
 )
 
-const Menu = ({ children }) => (
+const Menu = ({children}) => (
   <span className="menu">{children}</span>
 )
 

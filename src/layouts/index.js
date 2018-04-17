@@ -6,16 +6,16 @@ import Header from '../components/header'
 import PageMenu from '../components/PageMenu'
 import './index.css'
 
-const Layout = ({ children, data }) => (
+const Layout = ({children, data}) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-        { name: 'charset', content: 'UTF-8"' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'theme-color', content: '#157878' },
+        {name: 'description', content: 'Sample'},
+        {name: 'keywords', content: 'sample, something'},
+        {name: 'charset', content: 'UTF-8"'},
+        {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+        {name: 'theme-color', content: '#157878'},
       ]}
       htmlAttributes={{
         lang: data.site.siteMetadata.lang || 'en-US',
@@ -29,8 +29,7 @@ const Layout = ({ children, data }) => (
         maxWidth: 960,
         padding: '0px 1.0875rem 1.45rem',
         paddingTop: 0,
-      }}
-    >
+      }}>
       {children()}
     </div>
   </div>
@@ -47,6 +46,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        lang
       }
     }
   }
