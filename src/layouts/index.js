@@ -18,7 +18,7 @@ const Layout = ({children, data}) => (
         {name: 'theme-color', content: '#157878'},
       ]}
       htmlAttributes={{
-        lang: data.site.siteMetadata.lang || 'en-US',
+        lang: data.site.siteMetadata.lang,
       }}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
@@ -42,10 +42,10 @@ Layout.propTypes = {
 export default Layout
 
 export const query = graphql`
-  query SiteTitleQuery {
+  query siteMetadataQuery {
     site {
       siteMetadata {
-        title
+        title,
         lang
       }
     }
