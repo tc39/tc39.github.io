@@ -1,7 +1,8 @@
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
+@import "normalize.css";
+@import "./theme.css";
 
 a {
-  color: #ff9900;
+  color: #FA7C23;
 }
 
 .page-header {
@@ -12,9 +13,8 @@ a {
 
 .tc39-box {
   border: transparent 1rem solid;
-  background-color: #ff9900;
-  padding-left: 8rem;
-  padding-top: 5.5rem;
+  /* padding-left: 8rem;
+  padding-top: 5.5rem; */
   width: 18rem;
   height: 18rem;
   display: inline-block;
@@ -73,7 +73,7 @@ h1.project-name {
 }
 
 .main-content h3,
-.main-content h2{
+.main-content h2 {
   color: #606c71;
 }
 
@@ -97,7 +97,7 @@ body {
 .page-menu {
   z-index: 1;
   padding: 0px;
-  background-color: #ff9900;
+  background-color: #FA7C23;
   position: fixed;
   width: auto;
   right: 0;
@@ -107,7 +107,6 @@ body {
   justify-content: space-between;
 }
 
-
 .page-menu h2 {
   margin: 0 0 0 0;
 }
@@ -116,7 +115,7 @@ body {
   padding: 0.4rem;
 }
 
-.page-menu .btn{
+.page-menu .btn {
   margin: 0px;
 }
 
@@ -157,6 +156,6 @@ body {
 }
 
 .sub-menu .btn:hover {
-  color: #ff9900;
-  border-left: #ff9900 5px solid;
+  color: #FA7C23;
+  border-left: #FA7C23 5px solid;
 }

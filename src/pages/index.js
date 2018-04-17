@@ -8,7 +8,7 @@ const IndexPage = ({ data }) => {
     <div>
       <section className="main">
         <section className="page-header">
-          <img src={logo} />
+          <img className="tc39-box" src={logo} />
         </section>
         <span className="project-tagline">
           <h2>Specifying ECMAScript.</h2>
