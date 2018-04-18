@@ -1,8 +1,5 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "tc39-web-draft",
   "dependencies": {
     "gatsby": "^1.9.252",
     "gatsby-link": "^1.6.40",
@@ -12,10 +9,6 @@
     "gatsby-transformer-remark": "^1.7.40",
     "react-helmet": "^5.2.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
