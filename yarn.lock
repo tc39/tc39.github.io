@@ -3598,7 +3598,7 @@ gatsby-transformer-remark@^1.7.40:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.1.1"
 
-gatsby@^1.9.247:
+gatsby@^1.9.252:
   version "1.9.252"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.252.tgz#bc3b84ac717e4e40ab8bae31da01199b0160b103"
   dependencies:
@@ -5865,10 +5865,6 @@ normalize-url@^1.4.0:
     prepend-http "^1.0.0"
     query-string "^4.1.0"
     sort-keys "^1.0.0"
-
-normalize.css@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.0.tgz#14ac5e461612538a4ce9be90a7da23f86e718493"
 
 npm-run-path@^2.0.0:
   version "2.0.2"
