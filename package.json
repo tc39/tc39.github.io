@@ -1,0 +1,25 @@
+{
+  "name": "tc39-web-draft",
+  "dependencies": {
+    "gatsby": "^1.9.252",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-remark-emoji": "^0.0.2",
+    "gatsby-source-filesystem": "^1.5.33",
+    "gatsby-transformer-remark": "^1.7.40",
+    "react-helmet": "^5.2.0"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-fbjs-opensource": "^1.0.0",
+    "gh-pages": "^1.1.0",
+    "prettier": "^1.12.0"
+  }
+}

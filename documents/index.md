@@ -1,6 +1,5 @@
 ---
 title: Get involved in ECMAScript specification
-layout: default
 ---
 
 ## Currently Active Proposals
