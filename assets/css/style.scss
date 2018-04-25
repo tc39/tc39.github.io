@@ -8,6 +8,10 @@ a {
   color: #ff9900;
 }
 
+// Prevents page jumps!
+html {
+  overflow-y: scroll;
+}
 .page-header {
   background-color: #f5f5f5;
   color: black;
@@ -163,4 +167,67 @@ body {
 .sub-menu .btn:hover {
   color: #ff9900;
   border-left: #ff9900 5px solid;
+}
+
+// The whole proposals section
+.featurelist {
+
+}
+
+// Wrapper for each item
+.featurelist__item {
+  border-bottom: dotted;
+  margin-bottom: 1.125rem;
+}
+
+.featurelist__item__intro {
+  cursor: pointer;
+}
+
+.featurelist__item__intro h2:after {
+  background: url(/assets/img/menu-down.svg) no-repeat 50%;
+  content: "";
+  display: inline-block;
+  background-size: 2rem;
+  float: right;
+  width: 2rem;
+  height: 2rem;
+}
+
+.open .featurelist__item__intro h2:after {
+  transform: rotate(180deg);
+}
+
+.featurelist__item__info {
+  transition: height 2s 2s;
+  overflow: hidden;
+  height: 0;
+}
+
+.featurelist__item.open .featurelist__item__info {
+  height: auto;
+}
+
+
+.featurelist__item__status {
+  list-style: none;
+  padding-left: 0;
+}
+
+.featurelist__item__status li {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.featurelist__item__owner {
+
+}
+
+.featurelist__item__owner p {
+  margin-top: 0;
+}
+
+.featurelist__item__status li:nth-of-type(odd) {
+  background: #eee;
 }
