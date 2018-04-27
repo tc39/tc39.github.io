@@ -1,3 +1,5 @@
 theme: jekyll-theme-cayman
 plugins:
     - jemoji
+exclude: ['README.md', 'Dockerfile', 'Makefile', 'Gemfile', 'Gemfile.lock']
+keep_files: ['README.md']
