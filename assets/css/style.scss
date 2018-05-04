@@ -99,15 +99,14 @@ body {
 }
 
 .page-menu {
+  grid-column: 1 / 9;
   z-index: 1;
   padding: 0px;
   background-color: #ff9900;
-  position: fixed;
-  width: auto;
+  width: 100%;
   right: 0;
   color: white;
   display: flex;
-  border-bottom-left-radius: 15px;
   justify-content: space-between;
 }
 
