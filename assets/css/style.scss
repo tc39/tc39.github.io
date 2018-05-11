@@ -4,7 +4,7 @@
 @import "{{ site.theme }}";
 
 a {
-  color: #FA7C23;
+  color: #fc7c00;
 }
 
 .page-header {
@@ -15,7 +15,7 @@ a {
 
 .tc39-box {
   border: transparent 1rem solid;
-  background-color: #FA7C23;
+  background-color: #fc7c00;
   padding-left: 8rem;
   padding-top: 5.5rem;
   width: 18rem;
@@ -101,7 +101,7 @@ body {
   grid-column: 1 / 9;
   z-index: 1;
   padding: 0px;
-  background-color: #FA7C23;
+  background-color: #fc7c00;
   position: fixed;
   width: auto;
   right: 0;
@@ -160,6 +160,6 @@ body {
 }
 
 .sub-menu .btn:hover {
-  color: #FA7C23;
-  border-left: #FA7C23 5px solid;
+  color: #fc7c00;
+  border-left: #fc7c00 5px solid;
 }
