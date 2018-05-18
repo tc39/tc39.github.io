@@ -3,22 +3,6 @@ title: Get involved in ECMAScript specification
 layout: default
 ---
 
-## Currently Active Proposals
-
-Proposals follow [this process document](https://tc39.github.io/process-document/).
-This list contains only stage 1 proposals and higher that have not yet been withdrawn/rejected, or become finished.
-
-### Legend
-
-:rocket: means the champion thinks it's ready to advance but has not yet presented to the committee.
-
-:white_check_mark: means a pull request for tests was merged.
-
-:question: means there is no pull request for tests yet.
-
-:construction: means a pull request for tests was created, but not merged yet.
-
-
 ### Stage 3
 
 | :rocket: | Proposal                                                               | Author                              | Champion                                                                | Tests                                          |
