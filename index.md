@@ -38,60 +38,6 @@ This list contains only stage 1 proposals and higher that have not yet been with
 |          | [`String.prototype.{trimStart,trimEnd}`][trims]                        | Sebastian Markbåge                  | Sebastian Markbåge                                                      | [:white_check_mark:][tests-trims]              |
 |          | [`String.prototype.matchAll`][matchall]                                | Jordan Harband                      | Jordan Harband                                                          |
 
-### Stage 2
-
-| :rocket: | Proposal                                                                | Author                                                                  | Champion                                             |
-| -------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------- |
-|          | [Static class fields and private static methods][static-class-features] | Daniel Ehrenberg<br />Kevin Gibbons<br />Jeff Morrison<br />Kevin Smith | Daniel Ehrenberg                                     |
-|          | [`function.sent` metaproperty][function-sent]                           | Allen Wirfs-Brock                                                       | Allen Wirfs-Brock                                    |
-|          | [Decorators][decorators]                                                | Daniel Ehrenberg                                                        | Yehuda Katz<br />Brian Terlson<br />Daniel Ehrenberg |
-| :rocket: | [`throw` expressions][throw-expressions]                                | Ron Buckton                                                             | Ron Buckton                                          |
-|          | [`Atomics.waitAsync`][nonblocking]                                      | Lars Hansen                                                             | Shu-yu Guo<br />Lars Hansen                          |
-|          | [`Symbol.prototype.description`][symbol-description]                    | Michael Ficarra                                                         | Michael Ficarra                                      |
-
-### Stage 1
-
-| :rocket: | Proposal                                                                                     | Author                                               | Champion                                             |
-| -------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
-|          | [`Date.parse` fallback semantics][date-parse]                                                | Morgan Phillips                                      | Morgan Phillips                                      |
-|          | [`export v from "mod";` statements][export-from]                                             | Lee Byron                                            | Ben Newman<br />John-David Dalton                    |
-| :rocket: | [Observable][observable]                                                                     | Jafar Husain                                         | Jafar Husain<br />Mark Miller                        |
-|          | [WeakRefs][weakrefs]                                                                         | Dean Tribble                                         | Dean Tribble                                         |
-|          | [Frozen Realms][frozen-realms]                                                               | Mark Miller<br />Chip Morningstar<br />Caridy Patiño | Mark Miller<br />Chip Morningstar<br />Caridy Patiño |
-|          | [`Math` Extensions][more-math]                                                               | Rick Waldron                                         | Rick Waldron                                         |
-|          | [`of` and `from` on collection constructors][collection-of-from]                             | Leo Balter                                           | Leo Balter                                           |
-|          | Generator arrow functions (`=>*`)                                                            |                                                      | Brendan Eich<br />Domenic Denicola                   |
-|          | [`Promise.try`][try]                                                                         | Jordan Harband                                       | Jordan Harband                                       |
-|          | [Optional Chaining][chaining]                                                                | Gabriel Isenberg<br />Claude Pache                   | Gabriel Isenberg                                     |
-|          | [`Math.signbit`: IEEE-754 sign bit][signbit]                                                 | JF Bastien                                           | JF Bastien                                           |
-|          | [Error stacks][stacks]                                                                       | Jordan Harband                                       | Jordan Harband                                       |
-|          | [`do` expressions][do]                                                                       | Dave Herman                                          | Dave Herman                                          |
-|          | [Realms][realms]                                                                             | Caridy Patiño<br />Jean-Francois Paradis             | Dave Herman<br />Mark Miller<br />Caridy Patiño      |
-|          | [Temporal][temporal]                                                                         | Maggie Pint<br />Matt Johnson                        | Maggie Pint<br />Brian Terlson                       |
-|          | [Float16 on TypedArrays, DataView, `Math.hfround`][float16s]                                 | Leo Balter                                           | Leo Balter                                           |
-|          | Change `Number.parseInt`/`parseFloat` to not coerce `null`/`undefined`/`NaN` (repo link TBD) |                                                      | Brendan Eich                                         |
-|          | [Binary AST][binary-ast]                                                                     | Shu-yu Guo                                           | Shu-yu Guo                                           |
-|          | [Pipeline Operator][pipeline]                                                                | Daniel Ehrenberg                                     | Daniel Ehrenberg                                     |
-|          | [Extensible numeric literals][extensible-literals]                                           | Daniel Ehrenberg                                     | Daniel Ehrenberg                                     |
-|          | [First-class protocols][protocols]                                                           | Michael Ficarra                                      | Michael Ficarra                                      |
-|          | [Nullish coalescing Operator][nullish-coalescing]                                            | Gabriel Isenberg                                     | Gabriel Isenberg                                     |
-|          | [Partial application][partial-application]                                                   | Ron Buckton                                          | Ron Buckton                                          |
-|          | [Cancellation API][cancel-api]                                                               | Ron Buckton                                          | Ron Buckton & Brian Terlson                          |
-|          | [`InterpreterDirective`][interpreter-directive]                                              | Bradley Farias                                       | Bradley Farias                                       |
-|          | [`String.prototype.replaceAll`][replace-all]                                                 | Peter Marshall<br />Jakob Gruber<br />Mathias Bynens | Mathias Bynens                                       |
-|          | [`String.prototype.codePoints`][codepoints]                                                  | Ingvar Stepanyan                                     | Mathias Bynens                                       |
-|          | [Distinguishing literal strings][distinguishing-literal-strings]                             | Mike West                                            | Adam Klein<br />Mike West                            |
-|          | [`Object.freeze` + `Object.seal` syntax][freeze-seal-syntax]                                 | Keith Cirkel                                         | Keith Cirkel                                         |
-|          | [Block Params][block-params]                                                                 | Sam Goto                                             | Sam Goto                                             |
-|          | [`{BigInt,Number}.fromString`][from-string]                                                  | Mathias Bynens                                       | Mathias Bynens                                       |
-|          | [`Math.seededRandoms()`][seeded-randoms]                                                     | Tab Atkins                                           | Tab Atkins                                           |
-|          | [`Function.prototype.toString()` censorship][censorship]                                     | Domenic Denicola                                     | Domenic Denicola                                     |
-|          | [Top-level `await`][await]                                                                   | Myles Borins                                         | Myles Borins                                         |
-|          | [Maximally minimal mixins][mixins]                                                           | Justin Fagnani                                       | Justin Fagnani                                       |
-| :rocket: | [Getting last element of Array][arraylast]                                                   | Keith Cirkel                                         | Keith Cirkel                                         |
-|          | [New Set methods][set-methods]                                                               | Michał Wadas                                         | Sathya Gunasekaran                                   |
-|          | [Collection methods][collection-methods]                                                     | Michał Wadas                                         | Sathya Gunasekaran                                   |
-
 
 [function-to-string]: https://github.com/tc39/Function-prototype-toString-revision
 [global]: https://github.com/tc39/proposal-global

@@ -11,11 +11,14 @@
   </head>
   <body>
     <section class="main">
-      <section class="page-header">
-        {% include_relative _layouts/page_header.html %}
+      <section class="header">
+        {% include_relative _layouts/header.html %}
       </section>
-      <section class="page-menu">
+      <section class="menu">
           {% include_relative _layouts/menu.html %}
+      </section>
+      <section class="short-info">
+        {% include_relative _layouts/info.html %}
       </section>
       <section class="main-content">
         {{ content }}
@@ -23,7 +26,8 @@
       </section>
       <section class="footer">
           <span class="footer-item">
-            <a href="https://github.com/tc39/ecma262#ecmascript" class="btn menu-btn">Proposals</a>
+            <a href="https://github.com/tc39/ecma262#ecmascript" class="btn menu-btn">github</a>
+            <a href="https://twitter.com/tc39" class="btn menu-btn">twitter</a>
           </span>
       </section>
     </section>
