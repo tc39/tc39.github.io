@@ -3,9 +3,8 @@
 
 @import "{{ site.theme }}";
 
-
 a {
-  color: #ff9900;
+  color: #fc7c00;
 }
 
 .page-header {
@@ -16,7 +15,7 @@ a {
 
 .tc39-box {
   border: transparent 1rem solid;
-  background-color: #ff9900;
+  background-color: #fc7c00;
   padding-left: 8rem;
   padding-top: 5.5rem;
   width: 18rem;
@@ -102,8 +101,9 @@ body {
   grid-column: 1 / 9;
   z-index: 1;
   padding: 0px;
-  background-color: #ff9900;
-  width: 100%;
+  background-color: #fc7c00;
+  position: fixed;
+  width: auto;
   right: 0;
   color: white;
   display: flex;
@@ -160,6 +160,6 @@ body {
 }
 
 .sub-menu .btn:hover {
-  color: #ff9900;
-  border-left: #ff9900 5px solid;
+  color: #fc7c00;
+  border-left: #fc7c00 5px solid;
 }
