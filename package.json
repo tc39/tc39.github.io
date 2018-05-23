@@ -1,0 +1,23 @@
+{
+  "name": "tc39-web-draft",
+  "version": "0.0.0",
+  "description": "Draft for TC39 website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tc39/tc39-web-draft.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tc39/tc39-web-draft/issues"
+  },
+  "homepage": "https://github.com/tc39/tc39-web-draft#readme",
+  "devDependencies": {
+    "stylelint": "^9.2.1",
+    "stylelint-config-standard": "^18.2.0"
+  }
+}

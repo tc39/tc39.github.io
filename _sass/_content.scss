@@ -1,0 +1,28 @@
+.main-content {
+  font-size: 1rem;
+  padding: 130px 0;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-text;
+  }
+
+  .section-headline {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0;
+  }
+
+  p {
+    margin: 0 0 $spacing-paragraph;
+  }
+}
+
+a {
+  color: $color-primary;
+  font-weight: bold;
+}

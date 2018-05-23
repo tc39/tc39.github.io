@@ -1,0 +1,20 @@
+.g-row {
+  margin: 0 ($spacing-paragraph / -2) (2 * $spacing-paragraph);
+
+  [class*=g-col-] {
+    padding: 0 $spacing-paragraph / 2;
+  }
+
+  @media (min-width: $bp-tablet) {
+    display: flex;
+    flex-direction: row;
+
+    .g-col-4 {
+      flex: 0 0 percentage(4/12);
+    }
+
+    .g-col-8 {
+      flex: 0 0 percentage(8/12);
+    }
+  }
+}
