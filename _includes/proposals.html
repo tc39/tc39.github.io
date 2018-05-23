@@ -1,0 +1,561 @@
+<div class="featurelist">
+	<h2>Stage 3</h2>
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>Function.prototype.toString revision</h2>
+			<p>for functions defined using ECMAScript code, toString must return source text slice from beginning of first token to end of last token matched by the appropriate grammar production</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>Michael Ficarra</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>Michael Ficarra</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<a href="https://github.com/tc39/test262/issues/1163">https://github.com/tc39/test262/issues/1163</a>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<a href="http://tc39.github.io/Function-prototype-toString-revision/">http://tc39.github.io/Function-prototype-toString-revision/</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Developer Resources</h3>
+			<ul>
+				<li><a href="https://github.com/tc39/Function-prototype-toString-revision">https://github.com/tc39/Function-prototype-toString-revision</a></li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>global</h2>
+			<p>ECMAScript Proposal, specs, and reference implementation for GLOBAL_PLACEHOLDER</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>Jordan Harband</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>Jordan Harband</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<a href="https://github.com/tc39/test262/issues/765">https://github.com/tc39/test262/issues/765</a>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<a href="http://tc39.github.io/Function-prototype-toString-revision/">http://tc39.github.io/Function-prototype-toString-revision/</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Developer Resources</h3>
+			<ul>
+				<li><a href="https://tc39.github.io/proposal-global/">https://tc39.github.io/proposal-global/</a></li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>import()</h2>
+			<p>Adding a "function-like" import() module loading syntactic form to JavaScript</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>Domenic Denicola</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>Domenic Denicola</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<a href="https://github.com/tc39/test262/issues/1164">https://github.com/tc39/test262/issues/1164</a>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<a href="https://tc39.github.io/ecma262/#sec-modules">https://tc39.github.io/ecma262/#sec-modules</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Example</h3>
+					<pre><code class="js">
+const main = document.querySelector("main");
+  for (const link of document.querySelectorAll("nav > a")) {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+
+      import(`./section-modules/${link.dataset.entryModule}.js`)
+        .then(module => {
+          module.loadPageInto(main);
+        })
+        .catch(err => {
+          main.textContent = err.message;
+        });
+    });
+  }
+					</code></pre>
+			</div>
+		</div>
+		<h3>Developer Resources</h3>
+		<ul>
+			<li><a href="https://tc39.github.io/proposal-global/">https://tc39.github.io/proposal-global/</a></li>
+		</ul>
+		</section>
+	</section>
+
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>Legacy RegExp features in JavaScript</h2>
+			<p>This is a specification draft for the legacy (deprecated) RegExp features in JavaScript, i.e., static properties of the constructor like RegExp.$1 as well as the RegExp.prototype.compile method.</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>Claude Pache</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>Mark Miller<br /> Claude Pache</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<a href="https://github.com/tc39/test262/issues/1165">https://github.com/tc39/test262/issues/1165</a>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<span>N/A</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Developer Resources</h3>
+			<ul>
+				<li><a href="https://github.com/tc39/proposal-regexp-legacy-features">https://github.com/tc39/proposal-regexp-legacy-features</a></li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>BigInt</h2>
+			<p>Arbitrary precision integers in JavaScript</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>	Daniel Ehrenberg</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>Daniel Ehrenberg</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<a href="https://github.com/tc39/test262/issues/1056">https://github.com/tc39/test262/issues/1056</a>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<a href="https://tc39.github.io/proposal-bigint/">https://tc39.github.io/proposal-bigint/</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Developer Resources</h3>
+			<ul>
+				<li><a href="https://github.com/tc39/proposal-bigint">https://github.com/tc39/proposal-bigint</a></li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>Optional catch binding</h2>
+			<p>This proposal makes a grammatical change to ECMAScript, allowing the omission of a catch binding in cases where the binding would not be used. This occurs frequently with patterns such as</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>Michael Ficarra</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>Michael Ficarra</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<a href="https://github.com/tc39/test262/issues/1166">https://github.com/tc39/test262/issues/1166</a>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<a href="https://tc39.github.io/proposal-optional-catch-binding/">https://tc39.github.io/proposal-optional-catch-binding/</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Developer Resources</h3>
+			<ul>
+				<li><a href="https://github.com/tc39/proposal-optional-catch-binding">https://github.com/tc39/proposal-optional-catch-binding</a></li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>import.meta</h2>
+			<p>A proposal for adding an import.meta metaproperty to JavaScript, for holding host-specific metadata about the current module.</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>Domenic Denicola</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>Domenic Denicola</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<a href="https://github.com/tc39/test262/issues/1342">https://github.com/tc39/test262/issues/1342</a>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<a href="https://tc39.github.io/proposal-import-meta/">https://tc39.github.io/proposal-import-meta/</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Developer Resources</h3>
+			<ul>
+				<li><a href="https://github.com/tc39/proposal-import-meta">https://github.com/tc39/proposal-import-meta</a></li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>Private instance methods and accessors</h2>
+			<p>Keeping state and behavior private to a class lets library authors present a clear, stable interface, while changing their code over time behind the scenes.</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>Daniel Ehrenberg</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>Daniel Ehrenberg <br /> Kevin Gibbons</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<a href="https://github.com/tc39/test262/issues/1343">https://github.com/tc39/test262/issues/1343</a>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<span>N/A</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Developer Resources</h3>
+			<ul>
+				<li><a href="https://github.com/tc39/proposal-private-methods">https://github.com/tc39/proposal-private-methods</a></li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>Array.prototype.{flatMap,flatten}</h2>
+			<p>proposal for flatten and flatMap on arrays</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>Brian Terlson <br />Michael Ficarra</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>Brian Terlson <br /> Michael Ficarra</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<a href="https://github.com/tc39/test262/pull/1388">https://github.com/tc39/test262/pull/1388</a>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<a href="https://tc39.github.io/proposal-flatMap/">https://tc39.github.io/proposal-flatMap/</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Developer Resources</h3>
+			<ul>
+				<li><a href="https://github.com/tc39/proposal-flatMap">https://github.com/tc39/proposal-flatMap</a></li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>Numeric separators</h2>
+			<p>A proposal to add numeric literal separators in Javascript</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>Sam Goto <br />Rick Waldron</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>Sam Goto <br /> Rick Waldron</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<a href="https://github.com/tc39/test262/issues/1051">https://github.com/tc39/test262/issues/1051</a>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<a href="https://tc39.github.io/proposal-numeric-separator/">https://tc39.github.io/proposal-numeric-separator/</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Developer Resources</h3>
+			<ul>
+				<li><a href="https://github.com/tc39/proposal-numeric-separator">https://github.com/tc39/proposal-numeric-separator</a></li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>Class Public Instance Fields & Private Instance Fields</h2>
+			<p>This proposes a combined vision for public fields and private fields, drawing on the earlier Orthogonal Classes and Class Evaluation Order proposals.</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>Daniel Ehrenberg <br />Kevin Gibbons</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>Daniel Ehrenberg <br /> Jeff Morrison <br />Kevin Smith <br/> Kevin Gibbons</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<a href="https://github.com/tc39/test262/issues/1161">https://github.com/tc39/test262/issues/1161</a>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<a href="https://tc39.github.io/proposal-class-fields/">https://tc39.github.io/proposal-class-fields/</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Developer Resources</h3>
+			<ul>
+				<li><a href="https://github.com/tc39/proposal-numeric-separator">https://github.com/tc39/proposal-numeric-separator</a></li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>Class Public Instance Fields & Private Instance Fields</h2>
+			<p>This proposes a combined vision for public fields and private fields, drawing on the earlier Orthogonal Classes and Class Evaluation Order proposals.</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>Daniel Ehrenberg <br />Kevin Gibbons</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>Daniel Ehrenberg <br /> Jeff Morrison <br />Kevin Smith <br/> Kevin Gibbons</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<a href="https://github.com/tc39/test262/issues/1161">https://github.com/tc39/test262/issues/1161</a>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<a href="https://tc39.github.io/proposal-class-fields/">https://tc39.github.io/proposal-class-fields/</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Developer Resources</h3>
+			<ul>
+				<li><a href="https://github.com/tc39/proposal-class-fields">https://github.com/tc39/proposal-class-fields</a></li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>JSON superset</h2>
+			<p>A proposal to extend ECMA-262 syntax into a superset of JSON.</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>Richard Gibson</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>	Mark Miller <br /> Mathias Bynens</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<span>N/A</span>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<span>N/A</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Developer Resources</h3>
+			<ul>
+				<li><a href="https://github.com/tc39/proposal-json-superset">https://github.com/tc39/proposal-json-superset</a></li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>String.prototype.{trimStart,trimEnd}</h2>
+			<p>A proposal to extend ECMA-262 syntax into a superset of JSON.</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>Sebastian Markbåge</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>Sebastian Markbåge</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<a href="https://github.com/tc39/test262/pull/1246">https://github.com/tc39/test262/pull/1246</a>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<span>N/A</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Developer Resources</h3>
+			<ul>
+				<li><a href="https://tc39.github.io/proposal-string-left-right-trim/">https://tc39.github.io/proposal-string-left-right-trim/</a></li>
+			</ul>
+		</section>
+	</section>
+
+	<section class="featurelist__item">
+		<header class="featurelist__item__intro">
+			<h2>String.prototype.matchAll</h2>
+			<p>Proposal and specs for String.prototype.matchAll.</p>
+		</header>
+		<section class="featurelist__item__info">
+			<div>
+				<div>
+					<h3>Status</h3>
+					<ul class="featurelist__item__status">
+						<li class="featurelist__item__owner">
+							<p>Author(s)</p>
+							<p>Jordan Harband</p>
+						</li>
+						<li class="featurelist__item__owner">
+							<p>Champion(s)</p>
+							<p>Jordan Harband</p>
+						</li>
+						<li class="featurelist__item__tests">
+							<p>Test(s)</p>
+							<span>N/A</span>
+						</li>
+						<li class="featurelist__item__spec">
+							<p>Specification</p>
+							<span>N/A</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<h3>Developer Resources</h3>
+			<ul>
+				<li><a href="https://tc39.github.io/proposal-string-matchall/">https://tc39.github.io/proposal-string-matchall/</a></li>
+			</ul>
+		</section>
+	</section>
+</div>
