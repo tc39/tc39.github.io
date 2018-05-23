@@ -1,20 +1,9 @@
 .logo-box {
-  align-items: flex-end;
-  background: $color-tc39;
-  display: flex;
   flex-shrink: 0;
-  height: 120px;
-  justify-content: flex-end;
-  padding: 15px;
-  word-break: break-all;
-  width: 120px;
 
-  .project-name {
-    color: $color-text;
-    font-size: 2rem;
-    line-height: 2rem;
-    margin: 0;
-    max-width: 50%;
-    text-align: right;
+  img {
+    display: block;
+    height: 120px;
+    width: 120px;
   }
 }

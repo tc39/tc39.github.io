@@ -27,7 +27,7 @@
       &:focus {
         border-bottom-color: $color-primary;
         color: $color-primary;
-        font-weight: bold;
+        font-weight: $font-weight-semi-bold;
         text-decoration: none;
       }
     }

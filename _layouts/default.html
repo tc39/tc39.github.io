@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
-    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Source+Sans+Pro:300,400,600" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script defer src="{{ '/assets/js/main.js?v=' | append: site.github.build_revision | relative_url }}" />
@@ -17,9 +17,9 @@
     <main class="main">
       {% include_relative _layouts/page_header.html %}
       <section class="main-content">
-        {% include_relative _layouts/section_tc39.html %}
-        {% include_relative _layouts/section_specs.html %}
-        {% include_relative _layouts/info.html %}
+        {% include tc39.html %}
+        {% include specs.html %}
+        {% include contribute.html %}
         <!-- {{ content }} -->
         {% include proposals.html %}
       </section>
