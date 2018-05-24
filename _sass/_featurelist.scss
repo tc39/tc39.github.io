@@ -1,0 +1,46 @@
+.featurelist {
+  &__item {
+    border-bottom: 1px solid $color-spacer;
+    margin-bottom: 1.125rem;
+    &__intro {
+      cursor: pointer;
+      h4::after {
+        background: url(/assets/img/menu-down.svg) no-repeat 50%;
+        background-size: 1.5rem;
+        content: "";
+        display: block;
+        float: right;
+        height: 1.5rem;
+        transition: transform 600ms ease;
+        width: 1.5rem;
+        .open & {
+          transform: rotateX(180deg);
+        }
+      }
+    }
+    &__info {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 600ms ease;
+      // .open & {
+      //   max-height: 600px;
+      // }
+    }
+    &__status {
+      list-style: none;
+      padding-left: 0;
+      li {
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem;
+        &:nth-of-type(odd) {
+          background: #eee;
+        }
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

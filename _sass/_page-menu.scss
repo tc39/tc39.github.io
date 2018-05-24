@@ -3,18 +3,15 @@
   font-size: 24px;
   margin-top: 10px;
   width: 100%;
-
   .menu {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
     margin: 0;
     padding: 0;
-
     &-item {
       display: block;
     }
-
     &-link {
       border-bottom: 4px solid transparent;
       color: $color-nav;
@@ -22,7 +19,6 @@
       font-weight: normal;
       padding: 10px 10px;
       text-decoration: none;
-
       &:hover,
       &:focus {
         border-bottom-color: $color-primary;

@@ -1,7 +1,6 @@
 .main-content {
   font-size: 1rem;
   padding: 130px 0;
-
   h1,
   h2,
   h3,
@@ -9,14 +8,19 @@
   h5,
   h6 {
     color: $color-text;
+    font-weight: $font-weight-semi-bold;
   }
-
+  h3 {
+    background-color: $color-primary;
+    margin-left: -40px;
+    margin-right: -40px;
+    padding: 10px 40px;
+  }
   .section-headline {
     font-size: 2rem;
     font-weight: $font-weight-semi-bold;
     margin-top: 0;
   }
-
   p {
     margin: 0 0 $spacing-paragraph;
   }

@@ -1,47 +1,47 @@
-<div class="featurelist">
-  <h2>Stage 3</h2>
-
-  {% for proposal in site.data.stage3 %}
-  <section class="featurelist__item">
-    <header class="featurelist__item__intro">
-      <h2>{{ proposal.title }}</h2>
-      <p>{{ proposal.description }}</p>
-    </header>
-    <section class="featurelist__item__info">
-      <div>
+<section id="proposals">
+  <h2 class="section-headline">State of Proposals</h2>
+  <div class="featurelist">
+    <h3>Stage 3</h3>
+    {% for proposal in site.data.stage3 %}
+    <section class="featurelist__item">
+      <header class="featurelist__item__intro">
+        <h4>{{ proposal.title }}</h4>
+        <p>{{ proposal.description }}</p>
+      </header>
+      <section class="featurelist__item__info">
         <div>
-          <h3>Status</h3>
-          <ul class="featurelist__item__status">
-            <li class="featurelist__item__owner">
-              <p>Author(s)</p>
-              <p>{% for name in proposal.authors %}{{ name }}{% endfor %}</p>
-            </li>
-            <li class="featurelist__item__owner">
-              <p>Champion(s)</p>
-              <p>{% for name in proposal.champions %}{{ name }}{% endfor %}</p>
-            </li>
-            <li class="featurelist__item__tests">
-              <p>Test(s)</p>
-              <p>{% for url in proposal.tests %}<a href="{{ url }}">{{ url }}</a>{% endfor %}</p>
-            </li>
-            <li class="featurelist__item__spec">
-              <p>Specification</p>
-              <a href="{{ proposal.specification }}">{{ proposal.specification }}</a>
-            </li>
-          </ul>
+          <div>
+            <h5>Status</h5>
+            <ul class="featurelist__item__status">
+              <li class="featurelist__item__owner">
+                <p>Author(s)</p>
+                <p>{% for name in proposal.authors %}{{ name }}{% endfor %}</p>
+              </li>
+              <li class="featurelist__item__owner">
+                <p>Champion(s)</p>
+                <p>{% for name in proposal.champions %}{{ name }}{% endfor %}</p>
+              </li>
+              <li class="featurelist__item__tests">
+                <p>Test(s)</p>
+                <p>{% for url in proposal.tests %}<a href="{{ url }}">{{ url }}</a>{% endfor %}</p>
+              </li>
+              <li class="featurelist__item__spec">
+                <p>Specification</p>
+                <a href="{{ proposal.specification }}">{{ proposal.specification }}</a>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <div>
-          <h3>Example</h3>
-          <pre><code class="js">{{ proposal.example }}</code></pre>
-        </div>
-      </div>
-      <h3>Developer Resources</h3>
-      <ul>
-        {% for url in proposal.resources %}<li><a href="{{ url }}">{{ url }}</a></li>{% endfor %}
-      </ul>
+        <h5>Developer Resources</h5>
+        <ul>
+          {% for url in proposal.resources %}
+          <li>
+            <a href="{{ url }}">{{ url }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
     </section>
-  </section>
-  {% endfor %}
-
-</div>
+    {% endfor %}
+  </div>
+</section>

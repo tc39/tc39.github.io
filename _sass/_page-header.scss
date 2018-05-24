@@ -1,23 +1,19 @@
 .page-header {
   $spacing: 90px;
-
   align-items: flex-start;
   background: inherit;
   display: flex;
   flex-direction: row;
   padding: 0;
-
   .page-menu {
     margin-left: $spacing;
-
-    [dir=rtl] & {
+    [dir="rtl"] & {
       margin-left: 0;
       margin-right: $spacing;
     }
-
     @supports (margin-block-start: $spacing) {
-      margin-left: 0;
       margin-block-start: $spacing;
+      margin-left: 0;
     }
   }
 }
