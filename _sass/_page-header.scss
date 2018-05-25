@@ -12,10 +12,6 @@
         margin-left: 0;
         margin-right: $spacing;
       }
-      @supports (margin-block-start: $spacing) {
-        margin-block-start: $spacing;
-        margin-left: 0;
-      }
     }
   }
   @media (min-width: $bp-desktop) {
@@ -23,10 +19,8 @@
     .page-menu {
       margin-left: $spacing;
       [dir="rtl"] & {
+        margin-left: 0;
         margin-right: $spacing;
-      }
-      @supports (margin-block-start: $spacing) {
-        margin-block-start: $spacing;
       }
     }
   }
