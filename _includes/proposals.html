@@ -5,11 +5,11 @@
     <h3>Stage 3</h3>
     {% for proposal in site.data.stage3 %}
     <section class="featurelist__item">
-      <header class="featurelist__item__intro">
+      <header class="featurelist__item__intro" tabindex="0">
         <h4>{{ proposal.title }}</h4>
         <p>{{ proposal.description }}</p>
       </header>
-      <section class="featurelist__item__info">
+      <section class="featurelist__item__info" aria-hidden="true" tabindex="-1">
         <div>
           <div>
             <h5>Status</h5>
