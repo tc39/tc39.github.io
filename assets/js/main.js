@@ -32,8 +32,11 @@ function start() {
       var target = document.querySelector(ev.target.getAttribute('href'));
       window.scrollTo({
         behavior: 'smooth',
-        top: target.getBoundingClientRect().top
+        top: Math.floor(target.getBoundingClientRect().top + document.body.scrollTop)
       });
+      setTimeout(function () {
+        target.focus();
+      }, 400);
     });
   });
 }

@@ -3,7 +3,6 @@ $svg-height: 24;
 
 @mixin svgMenuIcon($color: currentColor, $height: $svg-height) {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="'+$height+'" viewBox="0 0 24 24" fill="none" stroke="'+$color+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>') no-repeat 50%;
-
 }
 
 .page-menu {
@@ -85,6 +84,7 @@ $svg-height: 24;
       flex-direction: row;
       justify-content: space-around;
       max-height: none;
+      overflow: visible;
       padding: 0;
       position: relative;
       text-align: start;
