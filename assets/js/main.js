@@ -24,6 +24,8 @@ function toggleProposal(item) {
 function start() {
   var items = document.querySelectorAll('.featurelist__item .featurelist__item__intro');
 
+  document.body.classList.remove('no-js');
+
   items.forEach(function (v) {
     v.addEventListener('click', function (ev) {
       toggleProposal(this.parentNode);
