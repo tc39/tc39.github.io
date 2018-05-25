@@ -39,5 +39,11 @@
         margin: 0;
       }
     }
+    &:focus-within &__info {
+      max-height: none;
+    }
+    &:focus-within &__intro h4::after {
+      transform: rotateX(180deg);
+    }
   }
 }
