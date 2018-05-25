@@ -15,5 +15,11 @@ body {
 .main {
   margin: 0 auto;
   max-width: 1280px;
-  padding: 0 45px;
+  padding: 0 15px;
+}
+
+@media (min-width: $bp-tablet) {
+  .main {
+    padding: 0 45px;
+  }
 }

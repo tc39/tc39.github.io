@@ -1,6 +1,6 @@
 .main-content {
   font-size: 1rem;
-  padding: 130px 0;
+  padding: 50px 0;
   h1,
   h2,
   h3,
@@ -23,6 +23,9 @@
   }
   p {
     margin: 0 0 $spacing-paragraph;
+  }
+  @media (min-width: $bp-tablet) {
+    padding: 130px 0;
   }
 }
 

@@ -1,8 +1,15 @@
 .logo-box {
   flex-shrink: 0;
+  z-index: 3;
   img {
     display: block;
-    height: 120px;
-    width: 120px;
+    height: 90px;
+    width: 90px;
+  }
+  @media (min-width: $bp-tablet) {
+    img {
+      height: 120px;
+      width: 120px;
+    }
   }
 }

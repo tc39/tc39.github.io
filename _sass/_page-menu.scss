@@ -1,19 +1,64 @@
+
+$svg-height: 24;
+
+@mixin svgMenuIcon($color: currentColor, $height: $svg-height) {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="'+$height+'" viewBox="0 0 24 24" fill="none" stroke="'+$color+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>') no-repeat 50%;
+
+}
+
 .page-menu {
-  border-bottom: 2px solid $color-spacer;
-  font-size: 24px;
-  margin-top: 10px;
+  $mt: 10px;
+  font-size: 18px;
+  margin-top: $mt;
   width: 100%;
-  .menu {
+  .menu-toggle {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 10;
+    &-text {
+      clip: rect(0 0 0 0);
+      height: 0;
+      overflow: hidden;
+      position: absolute;
+      width: 0;
+    }
+    &::after {
+      @include svgMenuIcon($color-tc39);
+
+      background-size: 1.5rem;
+      content: "";
+      display: block;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+  .menu {
+    background: $color-bg;
+    display: flex;
+    flex-direction: column;
+    left: 0;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: ($svg-height + $mt) 15px 0 120px;
+    position: absolute;
+    text-align: end;
+    top: 0;
+    transition: max-height 600ms ease;
+    width: 100vw;
+    z-index: 2;
+    &:focus-within,
+    &:target {
+      max-height: none;
+    }
     &-item {
       display: block;
     }
     &-link {
-      border-bottom: 4px solid transparent;
+      border-bottom: 1px solid $color-spacer;
       color: $color-nav;
       display: block;
       font-weight: normal;
@@ -21,11 +66,43 @@
       text-decoration: none;
       &:hover,
       &:focus {
-        border-bottom-color: $color-primary;
         color: $color-primary;
         font-weight: $font-weight-semi-bold;
         text-decoration: none;
       }
     }
+  }
+  &.open .menu-toggle,
+  &:focus-within .menu-toggle {
+    &::after {
+      @include svgMenuIcon();
+    }
+  }
+
+  @media (min-width: $bp-tablet) {
+    border-bottom: 2px solid $color-spacer;
+    .menu {
+      flex-direction: row;
+      justify-content: space-around;
+      max-height: none;
+      padding: 0;
+      position: relative;
+      text-align: start;
+      width: 100%;
+      &-toggle {
+        display: none;
+      }
+      &-link {
+        border-bottom: 4px solid transparent;
+        &:hover,
+        &:focus {
+          border-bottom-color: $color-primary;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $bp-desktop) {
+    font-size: 24px;
   }
 }
