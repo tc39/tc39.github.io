@@ -12,9 +12,9 @@
   }
   h3 {
     background-color: $color-primary;
-    margin-left: -40px;
-    margin-right: -40px;
-    padding: 10px 40px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 10px 15px;
   }
   .section-headline {
     font-size: 2rem;
@@ -26,6 +26,13 @@
   }
   @media (min-width: $bp-tablet) {
     padding: 130px 0;
+
+    h3 {
+      margin-left: -40px;
+      margin-right: -40px;
+      padding: 10px 40px;
+    }
+
   }
 }
 

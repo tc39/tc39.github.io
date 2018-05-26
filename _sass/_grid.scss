@@ -1,7 +1,7 @@
 .g-row {
-  margin: 0 ($spacing-paragraph / -2) (2 * $spacing-paragraph);
+  margin: 0 ($grid-gutter / -2) (2 * $grid-gutter);
   [class*="g-col-"] {
-    padding: 0 $spacing-paragraph / 2;
+    padding: 0 $grid-gutter / 2;
   }
   @media (min-width: $bp-tablet) {
     display: flex;
