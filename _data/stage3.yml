@@ -70,18 +70,6 @@
   resources:
     - https://github.com/tc39/proposal-bigint
 
-- title: Optional catch binding
-  description: This proposal makes a grammatical change to ECMAScript, allowing the omission of a catch binding in cases where the binding would not be used. This occurs frequently with patterns such as
-  authors:
-    - Michael Ficarra
-  champions:
-    - Michael Ficarra
-  tests:
-    - https://github.com/tc39/test262/issues/1166
-  specification: https://tc39.github.io/proposal-optional-catch-binding/
-  resources:
-    - https://github.com/tc39/proposal-optional-catch-binding
-
 - title: import.meta
   description: A proposal for adding an import.meta metaproperty to JavaScript, for holding host-specific metadata about the current module.
   authors:
@@ -93,3 +81,86 @@
   specification: https://tc39.github.io/proposal-import-meta/
   resources:
     - https://github.com/tc39/proposal-import-meta
+
+- title: Private instance methods and accessors
+  description: Keeping state and behavior private to a class lets library authors present a clear, stable interface, while changing their code over time behind the scenes.
+  authors:
+    - Daniel Ehrenberg
+  champions:
+    - Daniel Ehrenberg
+    - Kevin Gibbons
+  tests:
+    - https://github.com/tc39/test262/issues/1343
+  resources:
+    - https://github.com/tc39/proposal-private-methods
+
+- title: Array.prototype.{flat,flatMap}
+  description: Proposal for flatten and flatMap on arrays
+  authors:
+    - Brian Terlson
+    - Michael Ficarra
+  champions:
+    - Brian Terlson
+    - Michael Ficarra
+  resources:
+    - https://github.com/tc39/proposal-flatMap
+
+- title: Numeric separators
+  description: A proposal to add numeric literal separators in Javascript
+  authors:
+    - Sam Goto
+    - Rick Waldron
+  champions:
+    - Sam Goto
+    - Rick Waldron
+  tests:
+    - https://github.com/tc39/test262/issues/1051
+  specification: https://tc39.github.io/proposal-numeric-separator/
+  resources:
+    - https://github.com/tc39/proposal-numeric-separator
+
+- title: Class Public Instance Fields & Private Instance Fields
+  description: This proposes a combined vision for public fields and private fields, drawing on the earlier Orthogonal Classes and Class Evaluation Order proposals.
+  authors:
+    - Daniel Ehrenberg
+    - Kevin Gibbons
+  champions:
+    - Daniel Ehrenberg
+    - Jeff Morrison
+    - Kevin Smith
+    - Kevin Gibbons
+  tests:
+    - https://github.com/tc39/test262/issues/1161
+  specification: https://tc39.github.io/proposal-class-fields/
+  resources:
+    - https://github.com/tc39/proposal-numeric-separator
+
+- title: JSON superset
+  description: A proposal to extend ECMA-262 syntax into a superset of JSON.
+  authors:
+    - Richard Gibson
+  champions:
+    - Mark Miller
+    - Mathias Bynens
+  resources:
+    - https://github.com/tc39/proposal-json-superset
+
+- title: String.prototype.{trimStart,trimEnd}
+  description: A proposal to extend ECMA-262 syntax into a superset of JSON.
+  authors:
+    - Sebastian Markbåge
+  champions:
+    - Sebastian Markbåge
+  tests:
+    - https://github.com/tc39/test262/pull/1246
+  resources:
+    - https://tc39.github.io/proposal-string-left-right-trim/
+
+- title: String.prototype.matchAll
+  description: Proposal and specs for String.prototype.matchAll.
+  authors:
+    - Jordan Harband
+  champions:
+    - Jordan Harband
+  resources:
+    - https://tc39.github.io/proposal-string-matchall/
