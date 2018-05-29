@@ -105,20 +105,6 @@
   resources:
     - https://github.com/tc39/proposal-flatMap
 
-- title: Numeric separators
-  description: A proposal to add numeric literal separators in Javascript
-  authors:
-    - Sam Goto
-    - Rick Waldron
-  champions:
-    - Sam Goto
-    - Rick Waldron
-  tests:
-    - https://github.com/tc39/test262/issues/1051
-  specification: https://tc39.github.io/proposal-numeric-separator/
-  resources:
-    - https://github.com/tc39/proposal-numeric-separator
-
 - title: Class Public Instance Fields & Private Instance Fields
   description: This proposes a combined vision for public fields and private fields, drawing on the earlier Orthogonal Classes and Class Evaluation Order proposals.
   authors:
@@ -135,15 +121,7 @@
   resources:
     - https://github.com/tc39/proposal-numeric-separator
 
-- title: JSON superset
-  description: A proposal to extend ECMA-262 syntax into a superset of JSON.
-  authors:
-    - Richard Gibson
-  champions:
-    - Mark Miller
-    - Mathias Bynens
-  resources:
-    - https://github.com/tc39/proposal-json-superset
+- title: Static class fields and private static methods
 
 - title: String.prototype.{trimStart,trimEnd}
   description: A proposal to extend ECMA-262 syntax into a superset of JSON.
@@ -157,10 +135,5 @@
     - https://tc39.github.io/proposal-string-left-right-trim/
 
 - title: String.prototype.matchAll
-  description: Proposal and specs for String.prototype.matchAll.
-  authors:
-    - Jordan Harband
-  champions:
-    - Jordan Harband
-  resources:
-    - https://tc39.github.io/proposal-string-matchall/
+
+- title: Symbol.prototype.description
