@@ -1,0 +1,95 @@
+- title: Function.prototype.toString revision
+  description: for functions defined using ECMAScript code, toString must return source text slice from beginning of first token to end of last token matched by the appropriate grammar production
+  authors:
+    - Michael Ficarra
+  champions:
+    - Michael Ficarra
+  tests:
+    - https://github.com/tc39/test262/issues/1163
+  specification: http://tc39.github.io/Function-prototype-toString-revision/
+  resources:
+    - https://github.com/tc39/Function-prototype-toString-revision
+
+- title: global
+  description: ECMAScript Proposal, specs, and reference implementation for GLOBAL_PLACEHOLDER
+  authors:
+    - Jordan Harband
+  champions:
+    - Jordan Harband
+  tests:
+    - https://github.com/tc39/test262/issues/765
+  specification: http://tc39.github.io/Function-prototype-toString-revision/
+  resources:
+    - https://tc39.github.io/proposal-global/
+
+- title: import()
+  description: Adding a "function-like" import() module loading syntactic form to JavaScript
+  authors:
+    - Domenic Denicola
+  champions:
+    - Domenic Denicola
+  tests:
+    - https://github.com/tc39/test262/issues/1164
+  specification: https://tc39.github.io/ecma262/#sec-modules
+  example: >
+    const main = document.querySelector("main");
+      for (const link of document.querySelectorAll("nav > a")) {
+        link.addEventListener("click", e => {
+          e.preventDefault();
+
+          import(`./section-modules/${link.dataset.entryModule}.js`)
+            .then(module => {
+              module.loadPageInto(main);
+            })
+            .catch(err => {
+              main.textContent = err.message;
+            });
+        });
+      }
+
+- title: Legacy RegExp features in JavaScript
+  description: This is a specification draft for the legacy (deprecated) RegExp features in JavaScript, i.e., static properties of the constructor like RegExp.$1 as well as the RegExp.prototype.compile method.
+  authors:
+    - Claude Pache
+  champions:
+    - Mark Miller
+    - Claude Pache
+  tests:
+    - https://github.com/tc39/test262/issues/1165
+  resources:
+    - https://github.com/tc39/proposal-regexp-legacy-features
+
+- title: BigInt
+  description: Arbitrary precision integers in JavaScript
+  authors:
+    - Daniel Ehrenberg
+  champions:
+    - Daniel Ehrenberg
+  tests:
+    - https://github.com/tc39/test262/issues/1056
+  resources:
+    - https://github.com/tc39/proposal-bigint
+
+- title: Optional catch binding
+  description: This proposal makes a grammatical change to ECMAScript, allowing the omission of a catch binding in cases where the binding would not be used. This occurs frequently with patterns such as
+  authors:
+    - Michael Ficarra
+  champions:
+    - Michael Ficarra
+  tests:
+    - https://github.com/tc39/test262/issues/1166
+  specification: https://tc39.github.io/proposal-optional-catch-binding/
+  resources:
+    - https://github.com/tc39/proposal-optional-catch-binding
+
+- title: import.meta
+  description: A proposal for adding an import.meta metaproperty to JavaScript, for holding host-specific metadata about the current module.
+  authors:
+    - Domenic Denicola
+  champions:
+    - Domenic Denicola
+  tests:
+    - https://github.com/tc39/test262/issues/1342
+  specification: https://tc39.github.io/proposal-import-meta/
+  resources:
+    - https://github.com/tc39/proposal-import-meta
