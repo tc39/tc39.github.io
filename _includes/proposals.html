@@ -26,7 +26,7 @@
             </li>
             <li class="featurelist__item__spec">
               <p>Specification</p>
-              <a href="{{ proposal.specification }}">{{ proposal.specification }}</a>
+              <a href="https://tc39.github.io/{{ proposal.id }}">https://tc39.github.io/{{ proposal.id }}</a>
             </li>
           </ul>
         </div>
@@ -38,6 +38,7 @@
       </div>
       <h3>Developer Resources</h3>
       <ul>
+        <li><a href="https://github.com/tc39/{{ proposal.id }}">https://github.com/tc39/{{ proposal.id }}</a></li>
         {% for url in proposal.resources %}<li><a href="{{ url }}">{{ url }}</a></li>{% endfor %}
       </ul>
     </section>
