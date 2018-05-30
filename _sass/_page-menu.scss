@@ -13,6 +13,7 @@ $trans-timing: 600ms;
   $mt: 10px;
   font-size: 18px;
   margin-top: $mt;
+  text-align: end;
   width: 100%;
   .submenu {
     background: $color-submenu-bg;
@@ -25,10 +26,14 @@ $trans-timing: 600ms;
     overflow: hidden;
     padding: 0;
     transition: max-height $trans-timing ease;
+    &:focus-within {
+      max-height: none;
+    }
     &-item a {
       font-weight: 300;
     }
     &-toggle {
+      background: transparent;
       border: none;
       cursor: pointer;
       flex: 0 0 1.5rem;
@@ -61,19 +66,21 @@ $trans-timing: 600ms;
     overflow: hidden;
     padding: ($svg-height + $mt) 15px 0 120px;
     position: absolute;
-    text-align: end;
     top: 0;
     transition: max-height $trans-timing ease;
     width: 100vw;
     z-index: 2;
+    [dir="rtl"] & {
+      padding: ($svg-height + $mt) 120px 0 15px;
+    }
     &:focus-within,
     &:target {
       max-height: none;
     }
     &-toggle {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
+      display: inline-block;
+      margin: -10px;
+      padding: 10px;
       position: relative;
       z-index: 10;
       &-text {
@@ -92,22 +99,6 @@ $trans-timing: 600ms;
         width: 1.5rem;
       }
     }
-    &-item {
-      display: block;
-      &.has-submenu {
-        display: flex;
-        flex-wrap: wrap;
-        &:focus-within {
-          .submenu-toggle {
-            @include rotateSubmenuToggle();
-          }
-          .submenu {
-            max-height: none;
-            overflow: visible;
-          }
-        }
-      }
-    }
     &-link {
       border-bottom: 1px solid $color-spacer;
       color: $color-nav;
@@ -116,11 +107,27 @@ $trans-timing: 600ms;
       font-weight: normal;
       padding: 10px 10px;
       text-decoration: none;
+      &:focus {
+        ~.submenu-toggle {
+          @include rotateSubmenuToggle();
+        }
+        ~.submenu {
+          max-height: none;
+          overflow: visible;
+        }
+      }
       &:hover,
       &:focus {
         color: $color-primary;
         font-weight: $font-weight-semi-bold;
         text-decoration: none;
+      }
+    }
+    &-item {
+      display: block;
+      &.has-submenu {
+        display: flex;
+        flex-wrap: wrap;
       }
     }
   }
