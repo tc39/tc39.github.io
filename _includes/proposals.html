@@ -7,7 +7,9 @@
     <section class="featurelist__item">
       <header class="featurelist__item__intro" tabindex="0">
         <h4>{{ proposal.title }}</h4>
+        {% if proposal.description %}
         <p>{{ proposal.description }}</p>
+        {% endif %}
       </header>
       <section class="featurelist__item__info" aria-hidden="true" tabindex="-1">
         <div>
