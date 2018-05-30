@@ -16,31 +16,55 @@
             <ul class="featurelist__item__status">
               <li class="featurelist__item__owner">
                 <p>Author(s)</p>
-                <p>{% for name in proposal.authors %}{{ name }}{% endfor %}</p>
+                {% if proposal.authors | size %}
+                <p>{{ proposal.authors | join: ", " }}</p>
+                {% else %}
+                <p>–</p>
+                {% endif %}
               </li>
               <li class="featurelist__item__owner">
                 <p>Champion(s)</p>
-                <p>{% for name in proposal.champions %}{{ name }}{% endfor %}</p>
+                {% if proposal.champions | size %}
+                <p>{{ proposal.champions | join: ", " }}</p>
+                {% else %}
+                <p>–</p>
+                {% endif %}
               </li>
               <li class="featurelist__item__tests">
                 <p>Test(s)</p>
+                {% if proposal.tests | size %}
                 <p>{% for url in proposal.tests %}<a href="{{ url }}">{{ url }}</a>{% endfor %}</p>
+                {% else %}
+                <p>–</p>
+                {% endif %}
               </li>
               <li class="featurelist__item__spec">
                 <p>Specification</p>
+                {% if proposal.specification %}
                 <a href="{{ proposal.specification }}">{{ proposal.specification }}</a>
+                {% else %}
+                <p>–</p>
+                {% endif %}
               </li>
             </ul>
           </div>
+          {% if proposal.example %}
+          <div>
+            <h5>Example</h5>
+            <pre><code class="js">{{ proposal.example }}</code></pre>
+          </div>
+          {% endif %}
         </div>
+        {% if proposal.resources | size %}
         <h5>Developer Resources</h5>
-        <ul>
+        <ul class="featurelist__item__ressources">
           {% for url in proposal.resources %}
           <li>
             <a href="{{ url }}">{{ url }}</a>
           </li>
           {% endfor %}
         </ul>
+        {% endif %}
       </section>
     </section>
     {% endfor %}
