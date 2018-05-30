@@ -72,16 +72,18 @@ function start() {
 
   document.querySelectorAll('.menu-link').forEach(function (link) {
     link.addEventListener('click', function (ev) {
-      ev.preventDefault();
-      toggleMenu();
-      var target = document.querySelector(ev.target.getAttribute('href'));
-      window.scrollTo({
-        behavior: 'smooth',
-        top: Math.floor(target.getBoundingClientRect().top + document.body.scrollTop)
-      });
-      setTimeout(function () {
-        target.focus();
-      }, 400);
+      if (ev.target.href.startsWith('#')) {
+        ev.preventDefault();
+        toggleMenu();
+        var target = document.querySelector(ev.target.getAttribute('href'));
+        window.scrollTo({
+          behavior: 'smooth',
+          top: Math.floor(target.getBoundingClientRect().top + document.body.scrollTop)
+        });
+        setTimeout(function () {
+          target.focus();
+        }, 400);
+      }
     });
   });
 
