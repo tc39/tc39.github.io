@@ -32,7 +32,9 @@
       margin-right: -40px;
       padding: 10px 40px;
     }
-
+    .intro {
+      text-align: center;
+    }
   }
 }
 
@@ -43,4 +45,8 @@ a {
 
 .text-end {
   text-align: end;
+}
+
+.text-center {
+  text-align: center;
 }
