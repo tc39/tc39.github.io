@@ -8,6 +8,15 @@
   ],
   "rules": {
     "at-rule-empty-line-before": null,
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": [
+        "else",
+        "extends",
+        "if",
+        "include",
+        "mixin"
+      ]
+    }],
     "declaration-empty-line-before": null,
     "order/properties-alphabetical-order": true
   }

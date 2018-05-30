@@ -2,17 +2,58 @@
   <span class="menu-toggle-text">Open menu</span>
 </a>
 <ul class="menu" id="menu">
-  <li class="menu-item">
+  <li class="menu-item has-submenu">
     <a href="#tc39" class="menu-link">TC39</a>
+    <button class="submenu-toggle" tabindex="-1">
+      <span class="sr-only">Toggle submenu for TC39</span>
+    </button>
+    <ul class="submenu">
+      <li class="submenu-item">
+        <a class="menu-link" href="https://github.com/tc39/agendas/blob/master/2018/05.md">Upcoming Agenda</a>
+      </li>
+      <li class="submenu-item">
+        <a class="menu-link" href="https://github.com/tc39/tc39-notes/blob/master/es8/2018-01/jan-25.md">Recent Meeting Notes</a>
+      </li>
+    </ul>
   </li>
-  <li class="menu-item">
+  <li class="menu-item has-submenu">
     <a href="#specs" class="menu-link">Specs</a>
+    <button class="submenu-toggle" tabindex="-1">
+      <span class="sr-only">Toggle submenu for Specs</span>
+    </button>
+    <ul class="submenu">
+      <li class="submenu-item">
+        <a class="menu-link" href="https://github.com/tc39/proposals">Active Proposals</a>
+      </li>
+      <li class="submenu-item">
+        <a class="menu-link" href="https://github.com/tc39/proposals/blob/master/inactive-proposals.md">Inactive Proposals</a>
+      </li>
+      <li class="submenu-item">
+        <a class="menu-link" href="https://github.com/tc39/proposals/blob/master/finished-proposals.md">Finished Proposals</a>
+      </li>
+      <li class="submenu-item">
+        <a class="menu-link" href="https://www.ecma-international.org/ecma-262/8.0/index.html">Current Spec</a>
+      </li>
+    </ul>
   </li>
-  <li class="menu-item">
+  <li class="menu-item has-submenu">
     <a href="#contribute" class="menu-link">Contribute</a>
+    <button class="submenu-toggle" tabindex="-1">
+      <span class="sr-only">Toggle submenu for Contribute</span>
+    </button>
+    <ul class="submenu">
+      <li class="submenu-item">
+        <a class="menu-link" href="https://github.com/tc39/proposals/blob/master/CONTRIBUTING.md">Contributing to Proposals</a>
+      </li>
+      <li class="submenu-item">
+        <a class="menu-link" href="https://github.com/tc39/test262/blob/master/CONTRIBUTING.md">Contributing to Tests</a>
+      </li>
+      <li class="submenu-item">
+        <a class="menu-link" href="https://timothygu.me/es-howto/">Reading the Spec</a>
+      </li>
+    </ul>
   </li>
   <li class="menu-item">
     <a href="#proposals" class="menu-link">State of Proposals</a>
   </li>
 </ul>
-

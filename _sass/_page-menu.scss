@@ -1,8 +1,12 @@
-
 $svg-height: 24;
+$trans-timing: 600ms;
 
 @mixin svgMenuIcon($color: currentColor, $height: $svg-height) {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="'+$height+'" viewBox="0 0 24 24" fill="none" stroke="'+$color+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>') no-repeat 50%;
+}
+
+@mixin rotateSubmenuToggle() {
+  transform: rotateX(180deg);
 }
 
 .page-menu {
@@ -10,33 +14,46 @@ $svg-height: 24;
   font-size: 18px;
   margin-top: $mt;
   width: 100%;
-  .menu-toggle {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    position: relative;
-    z-index: 10;
-    &-text {
-      clip: rect(0 0 0 0);
-      height: 0;
-      overflow: hidden;
-      position: absolute;
-      width: 0;
+  .submenu {
+    background: $color-submenu-bg;
+    border-left: 1px solid $color-spacer;
+    border-right: 1px solid $color-spacer;
+    flex: 0 0 100%;
+    list-style: none;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height $trans-timing ease;
+    &-item a {
+      font-weight: 300;
     }
-    &::after {
-      @include svgMenuIcon($color-tc39);
-
-      background-size: 1.5rem;
-      content: "";
-      display: block;
-      height: 1.5rem;
-      width: 1.5rem;
+    &-toggle {
+      border: none;
+      cursor: pointer;
+      flex: 0 0 1.5rem;
+      margin: 0 0 0 0.5rem;
+      padding: 0;
+      &::after {
+        background: url(/assets/img/menu-down.svg) no-repeat 50%;
+        background-size: 1.5rem;
+        content: "";
+        display: block;
+        height: 1.5rem;
+        transition: transform $trans-timing ease;
+        width: 1.5rem;
+      }
+      &.open::after {
+        @include rotateSubmenuToggle();
+      }
+    }
+    &.open {
+      max-height: none;
     }
   }
   .menu {
     background: $color-bg;
-    display: flex;
-    flex-direction: column;
+    display: block;
     left: 0;
     list-style-type: none;
     margin: 0;
@@ -46,20 +63,56 @@ $svg-height: 24;
     position: absolute;
     text-align: end;
     top: 0;
-    transition: max-height 600ms ease;
+    transition: max-height $trans-timing ease;
     width: 100vw;
     z-index: 2;
     &:focus-within,
     &:target {
       max-height: none;
     }
+    &-toggle {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      position: relative;
+      z-index: 10;
+      &-text {
+        clip: rect(0 0 0 0);
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        width: 0;
+      }
+      &::after {
+        @include svgMenuIcon($color-tc39);
+        background-size: 1.5rem;
+        content: "";
+        display: block;
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
     &-item {
       display: block;
+      &.has-submenu {
+        display: flex;
+        flex-wrap: wrap;
+        &:focus-within {
+          .submenu-toggle {
+            @include rotateSubmenuToggle();
+          }
+          .submenu {
+            max-height: none;
+            overflow: visible;
+          }
+        }
+      }
     }
     &-link {
       border-bottom: 1px solid $color-spacer;
       color: $color-nav;
       display: block;
+      flex: 0 0 calc(100% - 2rem);
       font-weight: normal;
       padding: 10px 10px;
       text-decoration: none;
@@ -80,7 +133,21 @@ $svg-height: 24;
 
   @media (min-width: $bp-tablet) {
     border-bottom: 2px solid $color-spacer;
+    .submenu {
+      background: $color-bg;
+      border-left-width: 2px;
+      border-right-width: 2px;
+      font-size: 16px;
+      position: absolute;
+      &-toggle {
+        display: none;
+      }
+      &-item:last-child {
+        border-bottom: 2px solid $color-spacer;
+      }
+    }
     .menu {
+      display: flex;
       flex-direction: row;
       justify-content: space-around;
       max-height: none;
@@ -92,8 +159,18 @@ $svg-height: 24;
       &-toggle {
         display: none;
       }
+      &-item {
+        &.has-submenu {
+          display: block;
+        }
+        &:hover .submenu {
+          max-height: none;
+          overflow: visible;
+        }
+      }
       &-link {
         border-bottom: 4px solid transparent;
+        flex: none;
         &:hover,
         &:focus {
           border-bottom-color: $color-primary;

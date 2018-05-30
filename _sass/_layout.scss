@@ -21,8 +21,20 @@ body {
   width: 100%;
 }
 
+.page-title {
+  font-size: 36px;
+  line-height: 54px;
+  margin: 30px 0 0;
+}
+
 @media (min-width: $bp-tablet) {
   .main {
     padding: 0 45px;
+  }
+
+  .page-title {
+    font-size: 54px;
+    line-height: 81px;
+    text-align: end;
   }
 }
