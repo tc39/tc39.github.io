@@ -1,0 +1,52 @@
+.main-content {
+  font-size: 1rem;
+  padding: 50px 0;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-text;
+    font-weight: $font-weight-semi-bold;
+  }
+  h3 {
+    background-color: $color-primary;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 10px 15px;
+  }
+  .section-headline {
+    font-size: 2rem;
+    font-weight: $font-weight-semi-bold;
+    margin-top: 0;
+  }
+  p {
+    margin: 0 0 $spacing-paragraph;
+  }
+  @media (min-width: $bp-tablet) {
+    padding: 130px 0;
+
+    h3 {
+      margin-left: -40px;
+      margin-right: -40px;
+      padding: 10px 40px;
+    }
+    .intro {
+      text-align: center;
+    }
+  }
+}
+
+a {
+  color: $color-primary;
+  font-weight: $font-weight-semi-bold;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.text-center {
+  text-align: center;
+}

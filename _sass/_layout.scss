@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-bg;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: $font-weight-regular;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 ($grid-gutter / 2);
+  width: 100%;
+}
+
+.page-title {
+  font-size: 36px;
+  line-height: 54px;
+  margin: 30px 0 0;
+}
+
+@media (min-width: $bp-tablet) {
+  .main {
+    padding: 0 45px;
+  }
+
+  .page-title {
+    font-size: 54px;
+    line-height: 81px;
+    text-align: end;
+  }
+}
