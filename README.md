@@ -1,6 +1,6 @@
 # TC39 website draft
 
-The TC39 website aims to improve the web presense and host the documentation of the TC39. We want to
+The TC39 website aims to improve the web presence and host the documentation of the TC39. We want to
 make the JavaScript spec more accessible and help people understand what the committee does!
 
 This site is built using github pages and jekyll, and is currently in beta stage. We are looking for
