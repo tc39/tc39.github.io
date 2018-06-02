@@ -5,18 +5,6 @@
   width: 100%;
 }
 
-.fa{
-  line-height:30px;
-  font-size:30px;
-  display:inline-bloxk;
-  width:35px;
-  height:35px;
-}
-
-.hidden{
-  display:none;
-}
-
 input[type=checkbox] + label {
   position:relative;
 }
@@ -25,14 +13,11 @@ input[type=checkbox]:checked + label {
   animation: closing 0.3s forwards ease-in-out,
              moving 0.3s forwards ease-in-out;
 }
-.pointer-cursor{
-   cursor: pointer; cursor: hand;
-}
-.close{
 
+.close{
     float:right;
     color: #b94b45;
-    cursor: pointer; cursor: hand;
+    cursor: hand;
 }
 
 .alert-message{
