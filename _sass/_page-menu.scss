@@ -2,7 +2,7 @@ $svg-height: 24;
 $trans-timing: 600ms;
 
 @mixin svgMenuIcon($color: currentColor, $height: $svg-height) {
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="'+$height+'" viewBox="0 0 24 24" fill="none" stroke="'+$color+'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>') no-repeat 50%;
+  background: url(/assets/img/menu.svg) no-repeat 50%;
 }
 
 @mixin rotateSubmenuToggle() {
@@ -139,7 +139,7 @@ $trans-timing: 600ms;
   @media (min-width: $bp-tablet) {
     border-bottom: 2px solid $color-spacer;
     .submenu {
-      background: $color-submenu-bg;
+      background: $color-bg;
       border-top: 2px solid $color-spacer;
       font-size: 16px;
       position: absolute;
