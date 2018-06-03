@@ -148,6 +148,7 @@ $trans-timing: 600ms;
       }
       &-item {
         border-bottom: 1px solid $color-spacer;
+        border-left: 4px solid $color-primary;
       }
       &-item:last-child {
         border-bottom: 1px solid transparent;
