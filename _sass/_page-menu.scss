@@ -107,6 +107,7 @@ $trans-timing: 600ms;
       font-weight: normal;
       padding: 10px 10px;
       text-decoration: none;
+      min-width: 175px;
       &:focus {
         ~.submenu-toggle {
           @include rotateSubmenuToggle();
