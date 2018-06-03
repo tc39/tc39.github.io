@@ -17,8 +17,6 @@ $trans-timing: 600ms;
   width: 100%;
   .submenu {
     background: $color-submenu-bg;
-    border-left: 1px solid $color-spacer;
-    border-right: 1px solid $color-spacer;
     flex: 0 0 100%;
     list-style: none;
     margin: 0;
@@ -100,14 +98,13 @@ $trans-timing: 600ms;
       }
     }
     &-link {
-      border-bottom: 1px solid $color-spacer;
       color: $color-nav;
       display: block;
       flex: 0 0 calc(100% - 2rem);
       font-weight: normal;
       padding: 10px 10px;
       text-decoration: none;
-      min-width: 175px;
+      min-width: 180px;
       &:focus {
         ~.submenu-toggle {
           @include rotateSubmenuToggle();
@@ -142,16 +139,23 @@ $trans-timing: 600ms;
   @media (min-width: $bp-tablet) {
     border-bottom: 2px solid $color-spacer;
     .submenu {
-      background: $color-bg;
-      border-left-width: 2px;
-      border-right-width: 2px;
+      background: $color-submenu-bg;
+      border-top: 2px solid $color-spacer;
       font-size: 16px;
       position: absolute;
       &-toggle {
         display: none;
       }
+      &-item {
+        border-bottom: 1px solid $color-spacer;
+      }
       &-item:last-child {
-        border-bottom: 2px solid $color-spacer;
+        border-bottom: 1px solid transparent;
+      }
+      &-item:hover,
+      &-item:focus {
+        min-width: 120px;
+        display: inline-block;
       }
     }
     .menu {
@@ -177,17 +181,11 @@ $trans-timing: 600ms;
         }
       }
       &-link {
-        border-bottom: 4px solid transparent;
         flex: none;
         &:hover,
         &:focus {
-          border-bottom-color: $color-primary;
         }
       }
     }
-  }
-
-  @media (min-width: $bp-desktop) {
-    font-size: 24px;
   }
 }
