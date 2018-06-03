@@ -39,7 +39,7 @@
               <li class="featurelist__item__tests">
                 <p>Test(s)</p>
                 {% if proposal.tests | size %}
-                <p>{% for url in proposal.tests %}<a href="{{ url }}">{{ url }}</a>{% endfor %}</p>
+                <p>{% for url in proposal.tests %}<a href="{{ url }}" target="_blank">{{ url }}</a>{% endfor %}</p>
                 {% else %}
                 <p>–</p>
                 {% endif %}
@@ -47,7 +47,7 @@
               <li class="featurelist__item__spec">
                 <p>Specification</p>
                 {% if proposal.specification %}
-                <a href="{{ proposal.specification }}">{{ proposal.specification }}</a>
+                <a href="{{ proposal.specification }}" target="_blank">{{ proposal.specification }}</a>
                 {% else %}
                 <p>–</p>
                 {% endif %}
@@ -66,7 +66,7 @@
         <ul class="featurelist__item__ressources">
           {% for url in proposal.resources %}
           <li>
-            <a href="{{ url }}">{{ url }}</a>
+            <a href="{{ url }}" target="_blank">{{ url }}</a>
           </li>
           {% endfor %}
         </ul>
