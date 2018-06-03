@@ -17,6 +17,7 @@
   @media (min-width: $bp-desktop) {
     $spacing: 90px;
     .page-menu {
+      font-size: 1.1em;
       margin-left: $spacing;
       [dir="rtl"] & {
         margin-left: 0;
