@@ -102,9 +102,9 @@ $trans-timing: 600ms;
       display: block;
       flex: 0 0 calc(100% - 2rem);
       font-weight: normal;
+      min-width: 180px;
       padding: 10px 10px;
       text-decoration: none;
-      min-width: 180px;
       &:focus {
         ~.submenu-toggle {
           @include rotateSubmenuToggle();
@@ -155,8 +155,8 @@ $trans-timing: 600ms;
       }
       &-item:hover,
       &-item:focus {
-        min-width: 120px;
         display: inline-block;
+        min-width: 120px;
       }
     }
     .menu {
@@ -183,9 +183,6 @@ $trans-timing: 600ms;
       }
       &-link {
         flex: none;
-        &:hover,
-        &:focus {
-        }
       }
     }
   }
