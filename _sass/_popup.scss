@@ -15,13 +15,13 @@ input[type="checkbox"]:checked + label {
     moving 0.3s forwards ease-in-out;
 }
 
-.close{
-    color: #b94b45;
-    cursor: hand;
-    float:right;
+.close {
+  color: #b94b45;
+  cursor: hand;
+  float:right;
 }
 
-.alert-message{
+.alert-message {
   background: black;
   background-color: black;
   border: 1px solid rgba(#34495e, 0.25);
