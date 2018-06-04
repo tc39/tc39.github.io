@@ -20,6 +20,9 @@ install: docker-build
 	docker start tc39-website
 	docker exec -ti tc39-website bundle install
 	docker stop tc39-website
+	@if command -v npm; then\
+		npm install;\
+	fi
 
 build:
 	docker start tc39-website
