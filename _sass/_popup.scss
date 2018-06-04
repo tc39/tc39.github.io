@@ -1,40 +1,41 @@
 .popup {
-  position: fixed;
   bottom: 0;
   left: 0;
+  position: fixed;
   width: 100%;
 }
 
-input[type=checkbox] + label {
+input[type="checkbox"] + label {
   position:relative;
 }
 
-input[type=checkbox]:checked + label {
-  animation: closing 0.3s forwards ease-in-out,
-             moving 0.3s forwards ease-in-out;
+input[type="checkbox"]:checked + label {
+  animation:
+    closing 0.3s forwards ease-in-out,
+    moving 0.3s forwards ease-in-out;
 }
 
 .close{
-    float:right;
     color: #b94b45;
     cursor: hand;
+    float:right;
 }
 
 .alert-message{
+  background: black;
   background-color: black;
   border: 1px solid rgba(#34495e, 0.25);
-  color: #b94b45;
   border-radius: 3px;
-  line-height: 30px;
-  position: absolute;
-  top: 0; left: 0;
-  display: block;
-  width: 100%;
-  padding: 20px 44px;
+  box-shadow: 0 10px 50px rgba(0,0,0,.6);
   box-sizing: border-box;
+  color: #b94b45;
   color: rgba(255, 255, 255, .9);
-  box-shadow: 0px 10px 50px rgba(0,0,0,.6);
-  background: black;
+  display: block; left: 0;
+  line-height: 30px;
+  padding: 20px 44px;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 @keyframes closing {
@@ -47,6 +48,12 @@ input[type=checkbox]:checked + label {
 }
 
 @keyframes moving {
-  0%, 90% { top: 0; left: 0; }
-  100%  { top: -100px; left: 0; }
+  0%, 90% {
+    left: 0;
+    top: 0;
+  }
+  100%  {
+    left: 0;
+    top: -100px;
+  }
 }
