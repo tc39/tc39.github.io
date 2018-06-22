@@ -7,18 +7,21 @@
 
 input[type="checkbox"] + label {
   position: absolute;
+  transition: 
+    opacity 0.3s ease-in-out,
+    transform 0.6s ease-in-out;
+  will-change: opacity, transform;
 }
 
 input[type="checkbox"]:checked + label {
-  animation:
-    closing 0.3s forwards ease-in-out,
-    moving 0.3s forwards ease-in-out;
+  opacity: 0;
+  transform: translateY(100%);
 }
 
 .close {
   color: #b94b45;
-  cursor: hand;
-  float:right;
+  cursor: pointer;
+  float: right;
 }
 
 .alert-message {
@@ -36,24 +39,4 @@ input[type="checkbox"]:checked + label {
   padding: 20px 44px;
   position: absolute;
   width: 100%;
-}
-
-@keyframes closing {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes moving {
-  0%, 90% {
-    bottom: 0;
-    left: 0;
-  }
-  100%  {
-    bottom: -100px;
-    left: 0;
-  }
 }
