@@ -3,57 +3,40 @@
   left: 0;
   position: fixed;
   width: 100%;
-}
 
-input[type="checkbox"] + label {
-  position:relative;
-}
-
-input[type="checkbox"]:checked + label {
-  animation:
-    closing 0.3s forwards ease-in-out,
-    moving 0.3s forwards ease-in-out;
-}
-
-.close {
-  color: #b94b45;
-  cursor: hand;
-  float:right;
-}
-
-.alert-message {
-  background: black;
-  background-color: black;
-  border: 1px solid rgba(#34495e, 0.25);
-  border-radius: 3px;
-  box-shadow: 0 10px 50px rgba(0,0,0,.6);
-  box-sizing: border-box;
-  color: #b94b45;
-  color: rgba(255, 255, 255, .9);
-  display: block; left: 0;
-  line-height: 30px;
-  padding: 20px 44px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-@keyframes closing {
-  from {
-    opacity: 1;
+  input[type="checkbox"] + label {
+    position: absolute;
+    transition: 
+      opacity 0.3s ease-in-out,
+      transform 0.6s ease-in-out;
+    will-change: opacity, transform;
   }
-  to {
+
+  input[type="checkbox"]:checked + label {
     opacity: 0;
+    transform: translateY(100%);
   }
-}
 
-@keyframes moving {
-  0%, 90% {
-    left: 0;
-    top: 0;
+  .close {
+    color: #b94b45;
+    cursor: pointer;
+    float: right;
   }
-  100%  {
-    left: 0;
-    top: -100px;
+
+  .alert-message {
+    background: black;
+    background-color: black;
+    border: 1px solid rgba(#34495e, 0.25);
+    border-radius: 3px;
+    bottom: 0;
+    box-shadow: 0 10px 50px rgba(0,0,0,.6);
+    box-sizing: border-box;
+    color: #fff;
+    color: rgba(255, 255, 255, .9);
+    display: block; left: 0;
+    line-height: 30px;
+    padding: 20px 44px;
+    position: absolute;
+    width: 100%;
   }
 }
