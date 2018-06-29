@@ -1,8 +1,7 @@
 $svg-height: 24;
 $trans-timing: 600ms;
-
 @mixin svgMenuIcon($color: currentColor, $height: $svg-height) {
-  background: url(/assets/img/menu.svg) no-repeat 50%;
+  background: url(../img/menu.svg) no-repeat 50%;
 }
 
 @mixin rotateSubmenuToggle() {
@@ -38,7 +37,7 @@ $trans-timing: 600ms;
       margin: 0 0 0 0.5rem;
       padding: 0;
       &::after {
-        background: url(/assets/img/menu-down.svg) no-repeat 50%;
+        background: url(../img/menu-down.svg) no-repeat 50%;
         background-size: 1.5rem;
         content: "";
         display: block;
@@ -135,7 +134,6 @@ $trans-timing: 600ms;
       @include svgMenuIcon();
     }
   }
-
   @media (min-width: $bp-tablet) {
     border-bottom: 2px solid $color-spacer;
     .submenu {
