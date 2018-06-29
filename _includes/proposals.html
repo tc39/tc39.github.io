@@ -1,48 +1,78 @@
-<div class="featurelist">
-  <h2>Stage 3</h2>
-
-  {% for proposal in site.data.stage3 %}
-  <section class="featurelist__item">
-    <header class="featurelist__item__intro">
-      <h2>{{ proposal.title }}</h2>
-      <p>{{ proposal.description }}</p>
-    </header>
-    <section class="featurelist__item__info">
-      <div>
+<section>
+  <a id="proposals" tabindex="-1"></a>
+  <h2 class="section-headline text-end">State of Proposals</h2>
+  <div class="featurelist">
+    <h3>Stage 3</h3>
+    <i class="featurelist__desc">
+      Proposals that have been reviewed, and are being considered as
+      candidates for the spec are considered to be stage 3.
+    </i>
+    {% for proposal in site.data.stage3 %}
+    <section class="featurelist__item">
+      <header class="featurelist__item__intro" tabindex="0">
+        <h4>{{ proposal.title }}</h4>
+        {% if proposal.description %}
+        <p>{{ proposal.description }}</p>
+        {% endif %}
+      </header>
+      <section class="featurelist__item__info" aria-hidden="true" tabindex="-1">
         <div>
-          <h3>Status</h3>
-          <ul class="featurelist__item__status">
-            <li class="featurelist__item__owner">
-              <p>Author(s)</p>
-              <p>{% for name in proposal.authors %}{{ name }}{% endfor %}</p>
-            </li>
-            <li class="featurelist__item__owner">
-              <p>Champion(s)</p>
-              <p>{% for name in proposal.champions %}{{ name }}{% endfor %}</p>
-            </li>
-            <li class="featurelist__item__tests">
-              <p>Test(s)</p>
-              <p>{% for url in proposal.tests %}<a href="{{ url }}">{{ url }}</a>{% endfor %}</p>
-            </li>
-            <li class="featurelist__item__spec">
-              <p>Specification</p>
-              <a href="https://tc39.github.io/{{ proposal.id }}">https://tc39.github.io/{{ proposal.id }}</a>
-            </li>
-          </ul>
+          <div>
+            <h5>Status</h5>
+            <ul class="featurelist__item__status">
+              <li class="featurelist__item__owner">
+                <p>Author(s)</p>
+                {% if proposal.authors | size %}
+                <p>{{ proposal.authors | join: ", " }}</p>
+                {% else %}
+                <p>–</p>
+                {% endif %}
+              </li>
+              <li class="featurelist__item__owner">
+                <p>Champion(s)</p>
+                {% if proposal.champions | size %}
+                <p>{{ proposal.champions | join: ", " }}</p>
+                {% else %}
+                <p>–</p>
+                {% endif %}
+              </li>
+              <li class="featurelist__item__tests">
+                <p>Test(s)</p>
+                {% if proposal.tests | size %}
+                <p>{% for url in proposal.tests %}<a href="{{ url }}">{{ url }}</a>{% endfor %}</p>
+                {% else %}
+                <p>–</p>
+                {% endif %}
+              </li>
+              <li class="featurelist__item__spec">
+                <p>Specification</p>
+                {% if proposal.specification %}
+                <a href="{{ proposal.specification }}">{{ proposal.specification }}</a>
+                {% else %}
+                <p>–</p>
+                {% endif %}
+              </li>
+            </ul>
+          </div>
+          {% if proposal.example %}
+          <div>
+            <h5>Example</h5>
+            <pre><code class="js">{{ proposal.example }}</code></pre>
+          </div>
+          {% endif %}
         </div>
-
-        <div>
-          <h3>Example</h3>
-          <pre><code class="js">{{ proposal.example }}</code></pre>
-        </div>
-      </div>
-      <h3>Developer Resources</h3>
-      <ul>
-        <li><a href="https://github.com/tc39/{{ proposal.id }}">https://github.com/tc39/{{ proposal.id }}</a></li>
-        {% for url in proposal.resources %}<li><a href="{{ url }}">{{ url }}</a></li>{% endfor %}
-      </ul>
+        {% if proposal.resources | size %}
+        <h5>Developer Resources</h5>
+        <ul class="featurelist__item__ressources">
+          {% for url in proposal.resources %}
+          <li>
+            <a href="{{ url }}">{{ url }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </section>
     </section>
-  </section>
-  {% endfor %}
-
-</div>
+    {% endfor %}
+  </div>
+</section>

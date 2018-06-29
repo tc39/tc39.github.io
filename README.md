@@ -1,14 +1,50 @@
-# tc39 web draft
+# TC39 website draft
 
+The TC39 website aims to improve the web presence and host the documentation of TC39. We want to
+make the JavaScript spec more accessible and help people understand what the committee does!
 
-This is a sketch of a potential website to address an information orientation need for the tc39, see [website](http://tc39.github.io/tc39-web-draft/).
+This site is built using GitHub Pages and Jekyll and is currently in beta. We are looking for
+feedback from people of all areas.
 
-To learn more please get in touch with yulia at mozilla.com
+![website-screenshot](./screenshot.png)
 
-## Setting up your environment
-Building the website requires [Docker](https://docs.docker.com/install/) This allows you to have a dev environment set up with Ruby and Bundler already installed, along with all the depenencies this project needs.
+## Getting involved
 
-Once installed you should be able to get set up by running
-`$ make install` - This will install all the Ruby dependencies plus the environment for you to run the site
-`$ make build` - This runs Jekyll, and rebuilds the  _site folder
-`$ make serve` - If you're developing this is a better option, as it will run Jekyll and watch for changes, this option also sets up a dev server on `localhost:8000`
+This project adheres to the TC39 [Code of Conduct](https://tc39.github.io/code-of-conduct/).
+
+### Issues
+
+If you find that this website does not provide the information you need, please comment on our
+[usability thread](https://github.com/tc39/tc39-web-draft/issues/41) with
+what you were looking for and where you would have expected to find it! This
+helps us understand what people's needs are and how we can improve this page to address those needs.
+
+If you notice a problem with the site itself, such as accessibility or web compatibility, open a new issue and we will try to fix it!
+
+### Pull requests
+
+You can also take on issues and help us improve the site.
+
+Pull request titles should start with the issue number being addressed, followed by
+the change that was made. For example, `fix #32, add a footer`.
+
+If changes in the upstream master branch cause your PR to have conflicts, you should
+rebase your branch to master and force-push it to your repo (rather than doing a
+merge commit).
+
+## Local development
+
+Building the website requires [Docker](https://docs.docker.com/install/). This gives you a dev environment with Ruby, Bundler, and all other project dependencies already installed.
+
+After installing Docker and cloning this repo, you can build and serve the website as follows.
+```bash
+cd tc39-web-draft
+make install      # install the site's Docker image
+make build        # run Jekyll and rebuild site folder
+make serve        # run Jekyll, serve site on localhost:8000, and watch for local changes
+```
+
+## Discussion
+
+We use IRC to communicate. The channel we use is #tc39-website on freenode. You can find
+connection instructions [here](https://freenode.net/kb/answer/chat).

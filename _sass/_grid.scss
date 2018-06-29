@@ -1,0 +1,16 @@
+.g-row {
+  margin: 0 ($grid-gutter / -2) (2 * $grid-gutter);
+  [class*="g-col-"] {
+    padding: 0 $grid-gutter / 2;
+  }
+  @media (min-width: $bp-tablet) {
+    display: flex;
+    flex-direction: row;
+    .g-col-4 {
+      flex: 0 0 percentage(4/12);
+    }
+    .g-col-8 {
+      flex: 0 0 percentage(8/12);
+    }
+  }
+}
