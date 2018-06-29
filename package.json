@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tc39/tc39-web-draft.git"
+    "url": "git+https://github.com/tc39/beta.git"
   },
   "author": "",
   "license": "ISC",
