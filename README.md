@@ -48,3 +48,8 @@ make serve        # run Jekyll, serve site on localhost:8000, and watch for loca
 
 We use IRC to communicate. The channel we use is #tc39-website on freenode. You can find
 connection instructions [here](https://freenode.net/kb/answer/chat).
+
+## Monthly Planning Call
+
+We have planning meetings every month, on the _last Tuesday at 10:00 AM CEST_. If you would like to
+join, come say hi at the irc channel!
