@@ -52,4 +52,4 @@ connection instructions [here](https://freenode.net/kb/answer/chat).
 ## Monthly Planning Call
 
 We have planning meetings every month, on the _last Tuesday at 10:00 AM CEST_. If you would like to
-join, come say hi at the irc channel!
+join, come say hi at the irc channel! Meeting url is https://hangouts.google.com/call/lxrlUjS_VlOcuRU6BsFBAAEI
