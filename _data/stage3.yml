@@ -135,5 +135,38 @@
     - https://tc39.github.io/proposal-string-left-right-trim/
 
 - title: String.prototype.matchAll
+  description: If given a string, and either a sticky or a global regular expression which has multiple capturing groups, we often want to iterate through all of the matches.
+  authors:
+    - Jordan Harband
+  champions:
+    - Jordan Harband
+  tests:
+    - https://github.com/tc39/test262/pull/1500
+    - https://github.com/tc39/test262/pull/1587
+  resources:
+    - https://tc39.github.io/proposal-string-matchall/
 
 - title: Symbol.prototype.description
+  description: Expose the [[Description]] internal slot of a symbol directly instead of just indirectly through Symbol.prototype.toString.
+  authors:
+    - Michael Ficarra
+  champions:
+    - Michael Ficarra
+  tests:
+    - https://github.com/tc39/test262/pull/1590
+  resources:
+    - https://tc39.github.io/proposal-Symbol-description/
+
+- title: Object.fromEntries
+  description: A proposal for a new static method Object.fromEntries in ECMAScript for transforming a list of key-value pairs into an object.
+  authors:
+    - Darien Maillet Valentine
+  champions:
+    - Jordan Harband
+    - Kevin Gibbons
+  tests:
+    - https://github.com/tc39/test262/pull/1677
+    - https://github.com/tc39/test262/pull/1676
+  resources:
+    - https://tc39.github.io/proposal-object-from-entries/
+
