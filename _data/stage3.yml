@@ -170,3 +170,15 @@
   resources:
     - https://tc39.github.io/proposal-object-from-entries/
 
+- title: Well-formed JSON.stringify
+  description: A proposal to prevent JSON.stringify from returning ill-formed Unicode strings.
+  authors:
+    - Richard Gibson
+  champions:
+    - Mathias Bynens
+  tests:
+    - https://github.com/tc39/test262/pull/1787
+  specification: https://tc39.github.io/proposal-well-formed-stringify/
+  resources:
+    - https://tc39.github.io/proposal-well-formed-stringify/
+
