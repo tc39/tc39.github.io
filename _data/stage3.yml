@@ -11,14 +11,14 @@
     - https://github.com/tc39/Function-prototype-toString-revision
 
 - title: global
-  description: ECMAScript Proposal, specs, and reference implementation for GLOBAL_PLACEHOLDER
+  description: ECMAScript Proposal, specs, and reference implementation for globalThis
   authors:
     - Jordan Harband
   champions:
     - Jordan Harband
   tests:
     - https://github.com/tc39/test262/issues/765
-  specification: http://tc39.github.io/Function-prototype-toString-revision/
+  specification: https://tc39.github.io/proposal-global/
   resources:
     - https://tc39.github.io/proposal-global/
 
