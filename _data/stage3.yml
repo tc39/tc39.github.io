@@ -6,7 +6,7 @@
     - Michael Ficarra
   tests:
     - https://github.com/tc39/test262/issues/1163
-  specification: http://tc39.github.io/Function-prototype-toString-revision/
+  specification: https://tc39.github.io/Function-prototype-toString-revision/
   resources:
     - https://github.com/tc39/Function-prototype-toString-revision
 
