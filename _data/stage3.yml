@@ -10,7 +10,7 @@
   resources:
     - https://github.com/tc39/Function-prototype-toString-revision
 
-- title: global
+- title: globalThis
   description: ECMAScript Proposal, specs, and reference implementation for globalThis
   authors:
     - Jordan Harband
