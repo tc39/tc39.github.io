@@ -122,6 +122,18 @@
     - https://github.com/tc39/proposal-numeric-separator
 
 - title: Static class fields and private static methods
+  description: This proposal adds Static public fields, Static private methods and Static private fields
+  authors:
+    - Daniel Ehrenberg
+    - Kevin Gibbons
+    - Jeff Morrison
+    - Kevin Smith
+  champions:
+    - Shu-yu Guo
+    - Daniel Ehrenberg
+  specification: https://tc39.github.io/proposal-static-class-features/
+  resources:
+    - https://tc39.github.io/proposal-static-class-features/
 
 - title: String.prototype.{trimStart,trimEnd}
   description: A proposal to extend ECMA-262 syntax into a superset of JSON.
