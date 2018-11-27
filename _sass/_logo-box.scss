@@ -13,3 +13,17 @@
     }
   }
 }
+
+.ecma-logo-box {
+  flex-shrink: 2;
+  z-index: 3;
+  img {
+    display: inline-block;
+    width: 120px;
+  }
+  @media (min-width: $bp-tablet) {
+    img {
+      width: 120px;
+    }
+  }
+}
