@@ -254,6 +254,15 @@
   champions:
     - Jordan Harband
     - Kevin Gibbons
+  example: >
+    const entries = new Map([
+      ['cat', 'dog'],
+      ['life', 42]
+    ]);
+
+    const obj = Object.fromEntries(entries);
+
+    console.log(obj); // { cat: "dog", life: 42 }
   tests:
     - https://github.com/tc39/test262/pull/1677
     - https://github.com/tc39/test262/pull/1676
