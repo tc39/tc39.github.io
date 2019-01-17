@@ -145,7 +145,7 @@
     - Michael Ficarra
   example: >
     [1, [2, [3]]].flat(Infinity); // [1,2,3]
-    
+
     [2, 3, 4].flatMap((x) => [x, x * 2]); // [[2, 4, 3, 6, 4, 8]
   resources:
     - https://github.com/tc39/proposal-flatMap
@@ -188,6 +188,10 @@
     - Sebastian Markbåge
   tests:
     - https://github.com/tc39/test262/pull/1246
+  example: >
+    "    Hey JS!".trimStart(); // "Hey JS!"
+
+    "Hey JS!    ".trimEnd(); // "Hey JS!"
   resources:
     - https://tc39.github.io/proposal-string-left-right-trim/
 
