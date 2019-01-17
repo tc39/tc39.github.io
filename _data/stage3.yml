@@ -7,6 +7,13 @@
   tests:
     - https://github.com/tc39/test262/issues/1163
   specification: https://tc39.github.io/Function-prototype-toString-revision/
+  example: >
+    // String's parse must contains the same
+    // function body and parameter list as the original.
+
+    O.gOPD({ get a(){} }, "a").get // "function a(){}"
+
+    O.gOPD({ set a(b){} }, "a").set // "function a(b){}"
   resources:
     - https://github.com/tc39/Function-prototype-toString-revision
 
