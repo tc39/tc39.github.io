@@ -204,6 +204,29 @@
   tests:
     - https://github.com/tc39/test262/pull/1500
     - https://github.com/tc39/test262/pull/1587
+  example: >
+    var str = 'Hello world!!!';
+
+    var regexp = /(\w+)\W*/g;
+
+    console.log(str.matchAll(regexp));
+
+    /*
+    [
+      {
+        0: "Hello ",
+        1: "Hello"
+        index: 0,
+        input: "Hello world!!!"
+      },
+      {
+        0: "world!!!",
+        1: "world"
+        index: 6,
+        input: "Hello world!!!"
+      }
+    ]
+    */
   resources:
     - https://tc39.github.io/proposal-string-matchall/
 
