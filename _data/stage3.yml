@@ -238,6 +238,12 @@
     - Michael Ficarra
   tests:
     - https://github.com/tc39/test262/pull/1590
+  example: >
+    const symbol = Symbol('TC39');
+
+    console.log(symbol.description); // 'TC39'
+
+    console.log(symbol.hasOwnProperty('description')); // false
   resources:
     - https://tc39.github.io/proposal-Symbol-description/
 
