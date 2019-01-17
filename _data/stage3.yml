@@ -67,6 +67,14 @@
     - Daniel Ehrenberg
   tests:
     - https://github.com/tc39/test262/issues/1056
+  example: >
+    const theBiggestInt = 9007199254740991n;
+
+    const alsoHuge = BigInt(9007199254740991);
+    // ↪ 9007199254740991n
+
+    const hugeButString = BigInt('9007199254740991');
+    // ↪ 9007199254740991n
   resources:
     - https://github.com/tc39/proposal-bigint
 
