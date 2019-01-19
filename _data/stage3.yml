@@ -179,6 +179,36 @@
   specification: https://tc39.github.io/proposal-static-class-features/
   resources:
     - https://tc39.github.io/proposal-static-class-features/
+  example: >
+    class ColorFinder {
+      static #red = "#ff0000";
+
+      static #blue = "#00ff00";
+
+      static #green = "#0000ff";
+
+      // ^ static class fields
+
+      static white = "white";
+      
+      // ^ static public field.
+
+      static colorName(name) {
+        switch (name) {
+          case "red": return ColorFinder.#red;
+          case "blue": return ColorFinder.#blue;
+          case "green": return ColorFinder.#green;
+          default: throw new RangeError("unknown color");
+        }
+      }
+
+      // Static method ^
+
+      static #setColor(name) {
+
+      }
+      // ^ Static private method
+    }
 
 - title: String.prototype.{trimStart,trimEnd}
   description: A proposal to extend ECMA-262 syntax into a superset of JSON.
