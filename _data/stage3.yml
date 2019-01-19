@@ -308,6 +308,21 @@
   tests:
     - https://github.com/tc39/test262/pull/1787
   specification: https://tc39.github.io/proposal-well-formed-stringify/
+  example: >
+    // Non-BMP characters still serialize to surrogate pairs.
+    JSON.stringify('𝌆')
+    // → '"𝌆"'
+    
+    JSON.stringify('\uD834\uDF06')
+    // → '"𝌆"'
+
+    // Unpaired surrogate code units will serialize to escape sequences.
+    JSON.stringify('\uDF06\uD834')
+    // → '"\\udf06\\ud834"'
+    
+    JSON.stringify('\uDEAD')
+    // → '"\\udead"'
+
   resources:
     - https://tc39.github.io/proposal-well-formed-stringify/
 
