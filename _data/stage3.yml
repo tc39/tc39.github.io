@@ -163,8 +163,17 @@
   tests:
     - https://github.com/tc39/test262/issues/1161
   specification: https://tc39.github.io/proposal-class-fields/
+  example: >
+    class Foo {
+        instancePropertyBar = 0;
+        static staticPropertyBar = 0;
+        #privatePropertyBar = 0;
+        static #privatePropertyBar = 0;
+
+        set foo(value) { console.log(value); }
+    }
   resources:
-    - https://github.com/tc39/proposal-numeric-separator
+    - https://github.com/tc39/proposal-class-fields
 
 - title: Static class fields and private static methods
   description: This proposal adds Static public fields, Static private methods and Static private fields
@@ -319,7 +328,7 @@
     // Unpaired surrogate code units will serialize to escape sequences.
     JSON.stringify('\uDF06\uD834')
     // → '"\\udf06\\ud834"'
-    
+
     JSON.stringify('\uDEAD')
     // → '"\\udead"'
 
