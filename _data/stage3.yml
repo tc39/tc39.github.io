@@ -146,7 +146,7 @@
   example: >
     [1, [2, [3]]].flat(Infinity); // [1,2,3]
 
-    [2, 3, 4].flatMap((x) => [x, x * 2]); // [[2, 4, 3, 6, 4, 8]
+    [2, 3, 4].flatMap((x) => [x, x * 2]); // [2, 4, 3, 6, 4, 8]
   resources:
     - https://github.com/tc39/proposal-flatMap
 
