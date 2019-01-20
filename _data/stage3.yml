@@ -294,12 +294,12 @@
     - Jordan Harband
     - Kevin Gibbons
   example: >
-    const entries = new Map([
+    const iterableOfEntries = new Map([
       ['cat', 'dog'],
       ['life', 42]
     ]);
 
-    const obj = Object.fromEntries(entries);
+    const obj = Object.fromEntries(iterableOfEntries);
 
     console.log(obj); // { cat: "dog", life: 42 }
   tests:
