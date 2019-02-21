@@ -9,7 +9,7 @@ $trans-timing: 600ms;
 }
 
 .page-menu {
-  $mt: 10px;
+  $mt: 73.6px;
   font-size: 18px;
   margin-top: $mt;
   text-align: end;
@@ -27,7 +27,7 @@ $trans-timing: 600ms;
       max-height: none;
     }
     &-item a {
-      font-weight: 300;
+      font-weight: 500;
     }
     &-toggle {
       background: transparent;
@@ -100,7 +100,7 @@ $trans-timing: 600ms;
       color: $color-nav;
       display: block;
       flex: 0 0 calc(100% - 2rem);
-      font-weight: normal;
+      font-weight: 600;
       min-width: 180px;
       padding: 10px 10px;
       text-decoration: none;
