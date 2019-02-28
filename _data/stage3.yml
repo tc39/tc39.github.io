@@ -1,22 +1,3 @@
-- title: Function.prototype.toString revision
-  description: for functions defined using ECMAScript code, toString must return source text slice from beginning of first token to end of last token matched by the appropriate grammar production
-  authors:
-    - Michael Ficarra
-  champions:
-    - Michael Ficarra
-  tests:
-    - https://github.com/tc39/test262/issues/1163
-  specification: https://tc39.github.io/Function-prototype-toString-revision/
-  example: >
-    // String's parse must contains the same
-    // function body and parameter list as the original.
-
-    O.gOPD({ get a(){} }, "a").get // "function a(){}"
-
-    O.gOPD({ set a(b){} }, "a").set // "function a(b){}"
-  resources:
-    - https://github.com/tc39/Function-prototype-toString-revision
-
 - title: globalThis
   description: ECMAScript Proposal, specs, and reference implementation for globalThis
   authors:
@@ -112,7 +93,7 @@
 
       get #x() { return #xValue; }
       set #x(value) {
-        this.#xValue = value; 
+        this.#xValue = value;
         window.requestAnimationFrame(this.#render.bind(this));
       }
 
@@ -134,21 +115,6 @@
     window.customElements.define('num-counter', Counter);
   resources:
     - https://github.com/tc39/proposal-private-methods
-
-- title: Array.prototype.{flat,flatMap}
-  description: Proposal for flatten and flatMap on arrays
-  authors:
-    - Brian Terlson
-    - Michael Ficarra
-  champions:
-    - Brian Terlson
-    - Michael Ficarra
-  example: >
-    [1, [2, [3]]].flat(Infinity); // [1,2,3]
-
-    [2, 3, 4].flatMap((x) => [x, x * 2]); // [2, 4, 3, 6, 4, 8]
-  resources:
-    - https://github.com/tc39/proposal-flatMap
 
 - title: Class Public Instance Fields & Private Instance Fields
   description: This proposes a combined vision for public fields and private fields, drawing on the earlier Orthogonal Classes and Class Evaluation Order proposals.
@@ -199,7 +165,7 @@
       // ^ static class fields
 
       static white = "white";
-      
+
       // ^ static public field.
 
       static colorName(name) {
@@ -218,21 +184,6 @@
       }
       // ^ Static private method
     }
-
-- title: String.prototype.{trimStart,trimEnd}
-  description: A proposal to extend ECMA-262 syntax into a superset of JSON.
-  authors:
-    - Sebastian Markbåge
-  champions:
-    - Sebastian Markbåge
-  tests:
-    - https://github.com/tc39/test262/pull/1246
-  example: >
-    "    Hey JS!".trimStart(); // "Hey JS!"
-
-    "Hey JS!    ".trimEnd(); // "Hey JS!"
-  resources:
-    - https://tc39.github.io/proposal-string-left-right-trim/
 
 - title: String.prototype.matchAll
   description: If given a string, and either a sticky or a global regular expression which has multiple capturing groups, we often want to iterate through all of the matches.
@@ -268,70 +219,3 @@
     */
   resources:
     - https://tc39.github.io/proposal-string-matchall/
-
-- title: Symbol.prototype.description
-  description: Expose the [[Description]] internal slot of a symbol directly instead of just indirectly through Symbol.prototype.toString.
-  authors:
-    - Michael Ficarra
-  champions:
-    - Michael Ficarra
-  tests:
-    - https://github.com/tc39/test262/pull/1590
-  example: >
-    const symbol = Symbol('TC39');
-
-    console.log(symbol.description); // 'TC39'
-
-    console.log(symbol.hasOwnProperty('description')); // false
-  resources:
-    - https://tc39.github.io/proposal-Symbol-description/
-
-- title: Object.fromEntries
-  description: A proposal for a new static method Object.fromEntries in ECMAScript for transforming a list of key-value pairs into an object.
-  authors:
-    - Darien Maillet Valentine
-  champions:
-    - Jordan Harband
-    - Kevin Gibbons
-  example: >
-    const iterableOfEntries = new Map([
-      ['cat', 'dog'],
-      ['life', 42]
-    ]);
-
-    const obj = Object.fromEntries(iterableOfEntries);
-
-    console.log(obj); // { cat: "dog", life: 42 }
-  tests:
-    - https://github.com/tc39/test262/pull/1677
-    - https://github.com/tc39/test262/pull/1676
-  resources:
-    - https://tc39.github.io/proposal-object-from-entries/
-
-- title: Well-formed JSON.stringify
-  description: A proposal to prevent JSON.stringify from returning ill-formed Unicode strings.
-  authors:
-    - Richard Gibson
-  champions:
-    - Mathias Bynens
-  tests:
-    - https://github.com/tc39/test262/pull/1787
-  specification: https://tc39.github.io/proposal-well-formed-stringify/
-  example: >
-    // Non-BMP characters still serialize to surrogate pairs.
-    JSON.stringify('𝌆')
-    // → '"𝌆"'
-    
-    JSON.stringify('\uD834\uDF06')
-    // → '"𝌆"'
-
-    // Unpaired surrogate code units will serialize to escape sequences.
-    JSON.stringify('\uDF06\uD834')
-    // → '"\\udf06\\ud834"'
-
-    JSON.stringify('\uDEAD')
-    // → '"\\udead"'
-
-  resources:
-    - https://tc39.github.io/proposal-well-formed-stringify/
-
