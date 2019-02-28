@@ -1,15 +1,3 @@
-- title: Function.prototype.toString revision
-  description: for functions defined using ECMAScript code, toString must return source text slice from beginning of first token to end of last token matched by the appropriate grammar production
-  authors:
-    - Michael Ficarra
-  champions:
-    - Michael Ficarra
-  tests:
-    - https://github.com/tc39/test262/issues/1163
-  specification: https://tc39.github.io/Function-prototype-toString-revision/
-  resources:
-    - https://github.com/tc39/Function-prototype-toString-revision
-
 - title: globalThis
   description: ECMAScript Proposal, specs, and reference implementation for globalThis
   authors:
@@ -20,7 +8,10 @@
     - https://github.com/tc39/test262/issues/765
   specification: https://tc39.github.io/proposal-global/
   resources:
-    - https://tc39.github.io/proposal-global/
+    - https://github.com/tc39/proposal-global
+  presented:
+    - date: November 2018
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-11/nov-29.md#kevins-1pm-talk
 
 - title: import()
   description: Adding a "function-like" import() module loading syntactic form to JavaScript
@@ -46,6 +37,11 @@
             });
         });
       }
+  resources:
+    - https://github.com/tc39/proposal-dynamic-import
+  presented:
+    - date: November 2016
+      url: https://github.com/tc39/tc39-notes/blob/master/es7/2016-11/dec-1.md#14ii-import-open-issues-and-stage-3-discussion
 
 - title: Legacy RegExp features in JavaScript
   description: This is a specification draft for the legacy (deprecated) RegExp features in JavaScript, i.e., static properties of the constructor like RegExp.$1 as well as the RegExp.prototype.compile method.
@@ -69,6 +65,9 @@
     - https://github.com/tc39/test262/issues/1056
   resources:
     - https://github.com/tc39/proposal-bigint
+  presented:
+    - date: May 2017
+      url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
 
 - title: import.meta
   description: A proposal for adding an import.meta metaproperty to JavaScript, for holding host-specific metadata about the current module.
@@ -81,6 +80,9 @@
   specification: https://tc39.github.io/proposal-import-meta/
   resources:
     - https://github.com/tc39/proposal-import-meta
+  presented:
+    - date: May 2017
+      url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-09/sept-27.md#12iiic-importmeta-for-stage-3
 
 - title: Private instance methods and accessors
   description: Keeping state and behavior private to a class lets library authors present a clear, stable interface, while changing their code over time behind the scenes.
@@ -93,17 +95,9 @@
     - https://github.com/tc39/test262/issues/1343
   resources:
     - https://github.com/tc39/proposal-private-methods
-
-- title: Array.prototype.{flat,flatMap}
-  description: Proposal for flatten and flatMap on arrays
-  authors:
-    - Brian Terlson
-    - Michael Ficarra
-  champions:
-    - Brian Terlson
-    - Michael Ficarra
-  resources:
-    - https://github.com/tc39/proposal-flatMap
+  presented:
+    - date: January 2019
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2019-01/jan-30.md#private-fields-and-methods-refresher
 
 - title: Class Public Instance Fields & Private Instance Fields
   description: This proposes a combined vision for public fields and private fields, drawing on the earlier Orthogonal Classes and Class Evaluation Order proposals.
@@ -119,7 +113,10 @@
     - https://github.com/tc39/test262/issues/1161
   specification: https://tc39.github.io/proposal-class-fields/
   resources:
-    - https://github.com/tc39/proposal-numeric-separator
+    - https://github.com/tc39/proposal-class-fields
+  presented:
+    - date: January 2019
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2019-01/jan-30.md#private-fields-and-methods-refresher
 
 - title: Static class fields and private static methods
   description: This proposal adds Static public fields, Static private methods and Static private fields
@@ -134,17 +131,9 @@
   specification: https://tc39.github.io/proposal-static-class-features/
   resources:
     - https://tc39.github.io/proposal-static-class-features/
-
-- title: String.prototype.{trimStart,trimEnd}
-  description: A proposal to extend ECMA-262 syntax into a superset of JSON.
-  authors:
-    - Sebastian Markbåge
-  champions:
-    - Sebastian Markbåge
-  tests:
-    - https://github.com/tc39/test262/pull/1246
-  resources:
-    - https://tc39.github.io/proposal-string-left-right-trim/
+  presented:
+    - date: January 2019
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2019-01/jan-30.md#private-fields-and-methods-refresher
 
 - title: String.prototype.matchAll
   description: If given a string, and either a sticky or a global regular expression which has multiple capturing groups, we often want to iterate through all of the matches.
@@ -157,40 +146,35 @@
     - https://github.com/tc39/test262/pull/1587
   resources:
     - https://tc39.github.io/proposal-string-matchall/
+  presented:
+    - date: September 2018
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-09/sept-25.md#update-on-stringprototypematchall
 
-- title: Symbol.prototype.description
-  description: Expose the [[Description]] internal slot of a symbol directly instead of just indirectly through Symbol.prototype.toString.
+- title: Hashbang Grammar
+  description: This proposal is to match de-facto usage in some CLI JS hosts that allow for Shebangs / Hashbang. Such hosts strip the hashbang in order to generate valid JS source texts before passing to JS engines currently. This would unify and standardize how that is done..
   authors:
-    - Michael Ficarra
+    - Bradley Farias
   champions:
-    - Michael Ficarra
+    - Bradley Farias
   tests:
-    - https://github.com/tc39/test262/pull/1590
+    - https://github.com/tc39/test262/pull/2065
+  specification: https://tc39.github.io/proposal-hashbang/out.html
   resources:
-    - https://tc39.github.io/proposal-Symbol-description/
+    - https://github.com/tc39/proposal-hashbang
+  example: >
+    #!/usr/bin/env node
 
-- title: Object.fromEntries
-  description: A proposal for a new static method Object.fromEntries in ECMAScript for transforming a list of key-value pairs into an object.
-  authors:
-    - Darien Maillet Valentine
-  champions:
-    - Jordan Harband
-    - Kevin Gibbons
-  tests:
-    - https://github.com/tc39/test262/pull/1677
-    - https://github.com/tc39/test262/pull/1676
-  resources:
-    - https://tc39.github.io/proposal-object-from-entries/
+    // in the Script Goal
 
-- title: Well-formed JSON.stringify
-  description: A proposal to prevent JSON.stringify from returning ill-formed Unicode strings.
-  authors:
-    - Richard Gibson
-  champions:
-    - Mathias Bynens
-  tests:
-    - https://github.com/tc39/test262/pull/1787
-  specification: https://tc39.github.io/proposal-well-formed-stringify/
-  resources:
-    - https://tc39.github.io/proposal-well-formed-stringify/
+    'use strict';
 
+    console.log(1);
+
+
+    #!/usr/bin/env node
+
+    // in the Module Goal
+
+    export {};
+
+    console.log(1);
