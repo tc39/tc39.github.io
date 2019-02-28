@@ -1,15 +1,3 @@
-- title: Function.prototype.toString revision
-  description: for functions defined using ECMAScript code, toString must return source text slice from beginning of first token to end of last token matched by the appropriate grammar production
-  authors:
-    - Michael Ficarra
-  champions:
-    - Michael Ficarra
-  tests:
-    - https://github.com/tc39/test262/issues/1163
-  specification: https://tc39.github.io/Function-prototype-toString-revision/
-  resources:
-    - https://github.com/tc39/Function-prototype-toString-revision
-
 - title: globalThis
   description: ECMAScript Proposal, specs, and reference implementation for globalThis
   authors:
@@ -67,6 +55,14 @@
     - Daniel Ehrenberg
   tests:
     - https://github.com/tc39/test262/issues/1056
+  example: >
+    const theBiggestInt = 9007199254740991n;
+
+    const alsoHuge = BigInt(9007199254740991);
+    // ↪ 9007199254740991n
+
+    const hugeButString = BigInt('9007199254740991');
+    // ↪ 9007199254740991n
   resources:
     - https://github.com/tc39/proposal-bigint
 
@@ -91,19 +87,34 @@
     - Kevin Gibbons
   tests:
     - https://github.com/tc39/test262/issues/1343
+  example: >
+    class Counter extends HTMLElement {
+      #xValue = 0;
+
+      get #x() { return #xValue; }
+      set #x(value) {
+        this.#xValue = value;
+        window.requestAnimationFrame(this.#render.bind(this));
+      }
+
+      #clicked() {
+        this.#x++;
+      }
+
+      constructor() {
+        super();
+        this.onclick = this.#clicked.bind(this);
+      }
+
+      connectedCallback() { this.#render(); }
+
+      #render() {
+        this.textContent = this.#x.toString();
+      }
+    }
+    window.customElements.define('num-counter', Counter);
   resources:
     - https://github.com/tc39/proposal-private-methods
-
-- title: Array.prototype.{flat,flatMap}
-  description: Proposal for flatten and flatMap on arrays
-  authors:
-    - Brian Terlson
-    - Michael Ficarra
-  champions:
-    - Brian Terlson
-    - Michael Ficarra
-  resources:
-    - https://github.com/tc39/proposal-flatMap
 
 - title: Class Public Instance Fields & Private Instance Fields
   description: This proposes a combined vision for public fields and private fields, drawing on the earlier Orthogonal Classes and Class Evaluation Order proposals.
@@ -118,8 +129,17 @@
   tests:
     - https://github.com/tc39/test262/issues/1161
   specification: https://tc39.github.io/proposal-class-fields/
+  example: >
+    class Foo {
+        instancePropertyBar = 0;
+        static staticPropertyBar = 0;
+        #privatePropertyBar = 0;
+        static #privatePropertyBar = 0;
+
+        set foo(value) { console.log(value); }
+    }
   resources:
-    - https://github.com/tc39/proposal-numeric-separator
+    - https://github.com/tc39/proposal-class-fields
 
 - title: Static class fields and private static methods
   description: This proposal adds Static public fields, Static private methods and Static private fields
@@ -134,17 +154,36 @@
   specification: https://tc39.github.io/proposal-static-class-features/
   resources:
     - https://tc39.github.io/proposal-static-class-features/
+  example: >
+    class ColorFinder {
+      static #red = "#ff0000";
 
-- title: String.prototype.{trimStart,trimEnd}
-  description: A proposal to extend ECMA-262 syntax into a superset of JSON.
-  authors:
-    - Sebastian Markbåge
-  champions:
-    - Sebastian Markbåge
-  tests:
-    - https://github.com/tc39/test262/pull/1246
-  resources:
-    - https://tc39.github.io/proposal-string-left-right-trim/
+      static #blue = "#00ff00";
+
+      static #green = "#0000ff";
+
+      // ^ static class fields
+
+      static white = "white";
+
+      // ^ static public field.
+
+      static colorName(name) {
+        switch (name) {
+          case "red": return ColorFinder.#red;
+          case "blue": return ColorFinder.#blue;
+          case "green": return ColorFinder.#green;
+          default: throw new RangeError("unknown color");
+        }
+      }
+
+      // Static method ^
+
+      static #setColor(name) {
+
+      }
+      // ^ Static private method
+    }
 
 - title: String.prototype.matchAll
   description: If given a string, and either a sticky or a global regular expression which has multiple capturing groups, we often want to iterate through all of the matches.
@@ -155,42 +194,28 @@
   tests:
     - https://github.com/tc39/test262/pull/1500
     - https://github.com/tc39/test262/pull/1587
+  example: >
+    var str = 'Hello world!!!';
+
+    var regexp = /(\w+)\W*/g;
+
+    console.log(str.matchAll(regexp));
+
+    /*
+    [
+      {
+        0: "Hello ",
+        1: "Hello"
+        index: 0,
+        input: "Hello world!!!"
+      },
+      {
+        0: "world!!!",
+        1: "world"
+        index: 6,
+        input: "Hello world!!!"
+      }
+    ]
+    */
   resources:
     - https://tc39.github.io/proposal-string-matchall/
-
-- title: Symbol.prototype.description
-  description: Expose the [[Description]] internal slot of a symbol directly instead of just indirectly through Symbol.prototype.toString.
-  authors:
-    - Michael Ficarra
-  champions:
-    - Michael Ficarra
-  tests:
-    - https://github.com/tc39/test262/pull/1590
-  resources:
-    - https://tc39.github.io/proposal-Symbol-description/
-
-- title: Object.fromEntries
-  description: A proposal for a new static method Object.fromEntries in ECMAScript for transforming a list of key-value pairs into an object.
-  authors:
-    - Darien Maillet Valentine
-  champions:
-    - Jordan Harband
-    - Kevin Gibbons
-  tests:
-    - https://github.com/tc39/test262/pull/1677
-    - https://github.com/tc39/test262/pull/1676
-  resources:
-    - https://tc39.github.io/proposal-object-from-entries/
-
-- title: Well-formed JSON.stringify
-  description: A proposal to prevent JSON.stringify from returning ill-formed Unicode strings.
-  authors:
-    - Richard Gibson
-  champions:
-    - Mathias Bynens
-  tests:
-    - https://github.com/tc39/test262/pull/1787
-  specification: https://tc39.github.io/proposal-well-formed-stringify/
-  resources:
-    - https://tc39.github.io/proposal-well-formed-stringify/
-
