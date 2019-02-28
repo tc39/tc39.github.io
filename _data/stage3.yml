@@ -46,6 +46,8 @@
             });
         });
       }
+  resources:
+    - https://github.com/tc39/proposal-dynamic-import
 
 - title: Legacy RegExp features in JavaScript
   description: This is a specification draft for the legacy (deprecated) RegExp features in JavaScript, i.e., static properties of the constructor like RegExp.$1 as well as the RegExp.prototype.compile method.
