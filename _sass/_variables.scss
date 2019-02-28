@@ -1,14 +1,22 @@
+// Colors
 $color-tc39: #f90;
 $color-primary: #7cb;
-$color-bg: #fefefe;
-$color-spacer: #eee;
+$color-link: #017e78;
 $color-text: #000;
 $color-nav: #444;
+$color-spacer: #eee;
 $color-submenu-bg: #fcfcfc;
+$color-bg: #fefefe;
+
+// Font weights
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-semi-bold: 550;
+
+// Spacing
 $grid-gutter: 40px;
 $spacing-paragraph: 40px;
+
+// Breakpoints
 $bp-tablet: 920px;
 $bp-desktop: 1200px;

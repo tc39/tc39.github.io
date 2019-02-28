@@ -8,9 +8,10 @@
   tests:
     - https://github.com/tc39/test262/issues/1163
 
-- title: global
+- title: globalThis
   id: proposal-global
-  description: ECMAScript Proposal, specs, and reference implementation for GLOBAL_PLACEHOLDER
+  description: ECMAScript Proposal, specs, and reference implementation for globalThis
+
   authors:
     - Jordan Harband
   champions:
@@ -111,7 +112,7 @@
 
 - title: Static class fields and private static methods
   id: proposal-static-class-features
-  description: The static parts of new class features, in a separate proposal
+  description: This proposal adds Static public fields, Static private methods and Static private fields
   authors:
     - Daniel Ehrenberg
     - Kevin Gibbons
@@ -133,7 +134,7 @@
 
 - title: String.prototype.matchAll
   id: proposal-string-matchall
-  description: Proposal and specs for String.prototype.matchAll.
+  description: If given a string, and either a sticky or a global regular expression which has multiple capturing groups, we often want to iterate through all of the matches.
   authors:
     - Jordan Harband
   champions:
