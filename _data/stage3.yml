@@ -63,6 +63,14 @@
     - Daniel Ehrenberg
   tests:
     - https://github.com/tc39/test262/issues/1056
+  example: >
+    const theBiggestInt = 9007199254740991n;
+
+    const alsoHuge = BigInt(9007199254740991);
+    // ↪ 9007199254740991n
+
+    const hugeButString = BigInt('9007199254740991');
+    // ↪ 9007199254740991n
   resources:
     - https://github.com/tc39/proposal-bigint
   presented:
@@ -93,11 +101,37 @@
     - Kevin Gibbons
   tests:
     - https://github.com/tc39/test262/issues/1343
-  resources:
-    - https://github.com/tc39/proposal-private-methods
   presented:
     - date: January 2019
       url: https://github.com/tc39/tc39-notes/blob/master/es9/2019-01/jan-30.md#private-fields-and-methods-refresher
+  example: >
+    class Counter extends HTMLElement {
+      #xValue = 0;
+
+      get #x() { return #xValue; }
+      set #x(value) {
+        this.#xValue = value;
+        window.requestAnimationFrame(this.#render.bind(this));
+      }
+
+      #clicked() {
+        this.#x++;
+      }
+
+      constructor() {
+        super();
+        this.onclick = this.#clicked.bind(this);
+      }
+
+      connectedCallback() { this.#render(); }
+
+      #render() {
+        this.textContent = this.#x.toString();
+      }
+    }
+    window.customElements.define('num-counter', Counter);
+  resources:
+    - https://github.com/tc39/proposal-private-methods
 
 - title: Class Public Instance Fields & Private Instance Fields
   description: This proposes a combined vision for public fields and private fields, drawing on the earlier Orthogonal Classes and Class Evaluation Order proposals.
@@ -112,6 +146,15 @@
   tests:
     - https://github.com/tc39/test262/issues/1161
   specification: https://tc39.github.io/proposal-class-fields/
+  example: >
+    class Foo {
+        instancePropertyBar = 0;
+        static staticPropertyBar = 0;
+        #privatePropertyBar = 0;
+        static #privatePropertyBar = 0;
+
+        set foo(value) { console.log(value); }
+    }
   resources:
     - https://github.com/tc39/proposal-class-fields
   presented:
@@ -134,6 +177,36 @@
   presented:
     - date: January 2019
       url: https://github.com/tc39/tc39-notes/blob/master/es9/2019-01/jan-30.md#private-fields-and-methods-refresher
+  example: >
+    class ColorFinder {
+      static #red = "#ff0000";
+
+      static #blue = "#00ff00";
+
+      static #green = "#0000ff";
+
+      // ^ static class fields
+
+      static white = "white";
+
+      // ^ static public field.
+
+      static colorName(name) {
+        switch (name) {
+          case "red": return ColorFinder.#red;
+          case "blue": return ColorFinder.#blue;
+          case "green": return ColorFinder.#green;
+          default: throw new RangeError("unknown color");
+        }
+      }
+
+      // Static method ^
+
+      static #setColor(name) {
+
+      }
+      // ^ Static private method
+    }
 
 - title: String.prototype.matchAll
   description: If given a string, and either a sticky or a global regular expression which has multiple capturing groups, we often want to iterate through all of the matches.
@@ -144,6 +217,29 @@
   tests:
     - https://github.com/tc39/test262/pull/1500
     - https://github.com/tc39/test262/pull/1587
+  example: >
+    var str = 'Hello world!!!';
+
+    var regexp = /(\w+)\W*/g;
+
+    console.log(str.matchAll(regexp));
+
+    /*
+    [
+      {
+        0: "Hello ",
+        1: "Hello"
+        index: 0,
+        input: "Hello world!!!"
+      },
+      {
+        0: "world!!!",
+        1: "world"
+        index: 6,
+        input: "Hello world!!!"
+      }
+    ]
+    */
   resources:
     - https://tc39.github.io/proposal-string-matchall/
   presented:
