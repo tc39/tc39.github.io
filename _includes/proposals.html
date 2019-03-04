@@ -9,70 +9,73 @@
     </i>
     {% for proposal in site.data.stage3 %}
     <section class="featurelist__item">
-      <header class="featurelist__item__intro" tabindex="0">
-        <h4>{{ proposal.title }}</h4>
-        {% if proposal.description %}
-        <p>{{ proposal.description }}</p>
-        {% endif %}
-      </header>
-      <section class="featurelist__item__info" aria-hidden="true" tabindex="-1">
-        <div>
-          <div>
-            <h5>Status</h5>
-            <ul class="featurelist__item__status">
-              <li class="featurelist__item__owner">
-                <p>Author(s)</p>
-                {% if proposal.authors | size %}
-                <p>{{ proposal.authors | join: ", " }}</p>
-                {% else %}
-                <p>–</p>
-                {% endif %}
-              </li>
-              <li class="featurelist__item__owner">
-                <p>Champion(s)</p>
-                {% if proposal.champions | size %}
-                <p>{{ proposal.champions | join: ", " }}</p>
-                {% else %}
-                <p>–</p>
-                {% endif %}
-              </li>
-              <li class="featurelist__item__tests">
-                <p>Test(s)</p>
-                {% if proposal.tests | size %}
-                <p>{% for url in proposal.tests %}<a href="{{ url }}">{{ url }}</a>{% endfor %}</p>
-                {% else %}
-                <p>–</p>
-                {% endif %}
-              </li>
-              <li class="featurelist__item__spec">
-                <p>Specification</p>
-                {% if proposal.specification %}
-                <a href="{{ proposal.specification }}">{{ proposal.specification }}</a>
-                {% else %}
-                <p>–</p>
-                {% endif %}
-              </li>
-            </ul>
-          </div>
-          {% if proposal.example %}
-          <div>
-            <h5>Example</h5>
-            <pre><code class="js">{{ proposal.example }}</code></pre>
-          </div>
-          {% endif %}
-        </div>
-        {% if proposal.resources | size %}
-        <h5>Developer Resources</h5>
-        <ul class="featurelist__item__ressources">
+      <section class="">
+        <header class="featurelist__item__intro" tabindex="0">
           {% for url in proposal.resources %}
-          <li>
-            <a href="{{ url }}">{{ url }}</a>
-          </li>
-          {% endfor %}
-        </ul>
+          <section class="g-row">
+            <h4 class="featurelist__item__title flex-grow">
+              <a href="{{ url }}">{{ proposal.title }}</a>
+            </h4>
+            {% endfor %}
+            <section class="featurelist__item__tags flex-shrink" tabindex="-1">
+              <ul class="featurelist__item__status">
+                {% if proposal.presented | size %}
+                {% for presentation in proposal.presented %}
+                  <li class="featurelist__item__presented">
+                    <a href="{{ presentation.url }}">{{ presentation.date }}</a>
+                  </li>
+                {% endfor %}
+                {% endif %}
+                {% if proposal.tests | size %}
+                {% for url in proposal.tests %}
+                  <li class="featurelist__item__tests">
+                    <a href="{{ url }}">Tests</a>
+                  </li>
+                {% endfor %}
+                {% endif %}
+                {% if proposal.specification %}
+                <li class="featurelist__item__spec">
+                  <a href="{{ proposal.specification }}">Specification</a>
+                </li>
+                {% endif %}
+              </ul>
+            </section>
+          </section>
+          <section class="featurelist__item__author">
+          {% if proposal.authors | size %}
+          Author(s):
+          {{ proposal.authors | join: ", " }}
+          {% endif %}
+          {% if proposal.champions | size %}
+          |
+          Champion(s):
+          {{ proposal.champions | join: ", " }}
+          {% else %}
+          {% endif %}
+          </section>
+          {% if proposal.description %}
+          <section class="featurelist__item__desc">{{ proposal.description }}</section>
+          {% endif %}
+        {% if proposal.example %}
+        <div class="featurelist__item__example">Show Example</div>
+          {% endif %}
+        <section class="featurelist__item__info" tabindex="-1">
+        {% if proposal.example %}
+          <div>
+            <div>
+              <pre><code class="js">{{ proposal.example }}</code></pre>
+            </div>
+          </div>
         {% endif %}
+        </section>
+        </header>
       </section>
     </section>
     {% endfor %}
   </div>
+  <section class="featurelist__more">
+    <a href="https://github.com/tc39/proposals">
+      See more proposals
+    </a>
+  </section>
 </section>

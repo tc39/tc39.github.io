@@ -1,19 +1,144 @@
 .featurelist {
   &__item {
+    background-color: white;
     border-bottom: 1px solid $color-spacer;
+    font-size: 0.9em;
     margin-bottom: 1.125rem;
+    padding: 0 1rem 0 1rem;
     &__intro {
       cursor: pointer;
-      h4::before {
-        background: url(../img/menu-down.svg) no-repeat 50%;
-        background-size: 1.5rem;
+    }
+    &__info {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 600ms ease;
+    }
+    &__ressources {
+      a {
+        word-break: break-all;
+      }
+    }
+    &__status {
+      clear: both;
+      float: left;
+      font-size: 0.8em;
+      list-style: none;
+      margin-top: 0;
+      padding: 0;
+      a {
+        word-break: break-all;
+      }
+      li {
+        display: inline-block;
+        margin-top: 0.5rem;
+        opacity: 1;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        &:hover {
+          background-color: transparent;
+        }
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+      p {
+        margin: 0;
+      }
+      @media (min-width: $bp-tablet) {
+        clear: none;
+        float: right;
+        margin-top: 0.5rem;
+        padding: 0 5px;
+      }
+    }
+    h4 {
+      display: inline-block;
+      float: left;
+      font-size: 1.6em;
+      margin-bottom: 0.5em;
+      margin-top: 1em;
+      padding-bottom: 0;
+      padding-top: 0;
+      word-wrap: anywhere;
+        a {
+          text-decoration: none;
+        }
+    }
+    &__tests {
+      background-color: $tag-tests;
+      border: 2px solid $tag-tests;
+      border-radius: 10px;
+      &:hover {
+        a {
+          color: $tag-tests;
+        }
+      }
+    }
+    &__spec {
+      background-color: $tag-spec;
+      border: 2px solid $tag-spec;
+      border-radius: 10px;
+      &:hover {
+        a {
+          color: $tag-spec;
+        }
+      }
+    }
+    &__presented {
+      background-color: $tag-presented;
+      border: 2px solid $tag-presented;
+      border-radius: 10px;
+      &:hover {
+        a {
+          color: $tag-presented;
+        }
+      }
+    }
+    &__impl {
+      background-color: $tag-presented;
+      border: 2px solid $tag-presented;
+      border-radius: 10px;
+      &:hover {
+        a {
+          color: $tag-tests;
+        }
+      }
+    }
+    .no-js &:focus-within &__info {
+      max-height: none;
+    }
+    .no-js &:focus-within &__intro h4::after {
+      transform: rotateX(180deg);
+    }
+    &__desc {
+      clear: both;
+      display: block;
+      margin: 1em 0 1em 0;
+      padding: 0;
+    }
+    &__author {
+      clear: both;
+      color: grey;
+      font-weight: 800;
+      margin: 0;
+      padding-top: 0;
+    }
+    &__example {
+      display: inline-block;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-decoration: underline;
+      &::before {
+        background: url(../img/menu-down.svg) no-repeat 20%;
+        background-size: 1.2rem;
         content: "";
         display: block;
         float: right;
-        height: 1.5rem;
+        height: 1.2em;
         margin-left: 0.5rem;
         transition: transform 600ms ease;
-        width: 1.5rem;
+        width: 1.2rem;
         .open & {
           transform: rotateX(180deg);
         }
@@ -24,47 +149,14 @@
         }
       }
     }
-    &__info {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 600ms ease;
-    }
-    &__status {
-      list-style: none;
-      padding: 0;
-      li {
-        align-items: flex-start;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 0.5rem;
-        &:nth-of-type(odd) {
-          background: #eee;
-        }
-      }
-      a {
-        word-break: break-all;
-      }
-      p {
-        margin: 0;
-      }
-    }
-    &__ressources {
-      a {
-        word-break: break-all;
-      }
-    }
-    .no-js &:focus-within &__info {
-      max-height: none;
-    }
-    .no-js &:focus-within &__intro h4::after {
-      transform: rotateX(180deg);
-    }
   }
   &__desc {
     display: block;
     font-size: 1.1em;
     margin-bottom: 4.5em;
     margin-top: 2em;
+  }
+  &__more {
+    text-align: center;
   }
 }

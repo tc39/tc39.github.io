@@ -27,6 +27,10 @@
   @media (min-width: $bp-tablet) {
     padding: 130px 0;
 
+  .section-headline {
+    border-bottom: none;
+  }
+
     h3 {
       margin-left: -40px;
       margin-right: -40px;
