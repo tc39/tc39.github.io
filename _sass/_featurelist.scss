@@ -126,7 +126,9 @@
     }
     &__example {
       display: inline-block;
+      font-weight: 800;
       margin-bottom: 1rem;
+      text-decoration: underline;
       &::before {
         background: url(../img/menu-down.svg) no-repeat 20%;
         background-size: 1.2rem;
