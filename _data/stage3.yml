@@ -8,7 +8,10 @@
     - https://github.com/tc39/test262/issues/765
   specification: https://tc39.github.io/proposal-global/
   resources:
-    - https://tc39.github.io/proposal-global/
+    - https://github.com/tc39/proposal-global
+  presented:
+    - date: November 2018
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-11/nov-29.md#kevins-1pm-talk
 
 - title: import()
   description: Adding a "function-like" import() module loading syntactic form to JavaScript
@@ -36,6 +39,10 @@
       }
   resources:
     - https://github.com/tc39/proposal-dynamic-import
+  presented:
+    - date: November 2016
+      url: https://github.com/tc39/tc39-notes/blob/master/es7/2016-11/dec-1.md#14ii-import-open-issues-and-stage-3-discussion
+
 
 - title: Legacy RegExp features in JavaScript
   description: This is a specification draft for the legacy (deprecated) RegExp features in JavaScript, i.e., static properties of the constructor like RegExp.$1 as well as the RegExp.prototype.compile method.
@@ -67,6 +74,9 @@
     // ↪ 9007199254740991n
   resources:
     - https://github.com/tc39/proposal-bigint
+  presented:
+    - date: May 2017
+      url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
 
 - title: import.meta
   description: A proposal for adding an import.meta metaproperty to JavaScript, for holding host-specific metadata about the current module.
@@ -79,6 +89,9 @@
   specification: https://tc39.github.io/proposal-import-meta/
   resources:
     - https://github.com/tc39/proposal-import-meta
+  presented:
+    - date: May 2017
+      url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-09/sept-27.md#12iiic-importmeta-for-stage-3
 
 - title: Private instance methods and accessors
   description: Keeping state and behavior private to a class lets library authors present a clear, stable interface, while changing their code over time behind the scenes.
@@ -89,6 +102,9 @@
     - Kevin Gibbons
   tests:
     - https://github.com/tc39/test262/issues/1343
+  presented:
+    - date: January 2019
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2019-01/jan-30.md#private-fields-and-methods-refresher
   example: >
     class Counter extends HTMLElement {
       #xValue = 0;
@@ -142,6 +158,9 @@
     }
   resources:
     - https://github.com/tc39/proposal-class-fields
+  presented:
+    - date: January 2019
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2019-01/jan-30.md#private-fields-and-methods-refresher
 
 - title: Static class fields and private static methods
   description: This proposal adds Static public fields, Static private methods and Static private fields
@@ -156,6 +175,9 @@
   specification: https://tc39.github.io/proposal-static-class-features/
   resources:
     - https://tc39.github.io/proposal-static-class-features/
+  presented:
+    - date: January 2019
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2019-01/jan-30.md#private-fields-and-methods-refresher
   example: >
     class ColorFinder {
       static #red = "#ff0000";
@@ -221,3 +243,37 @@
     */
   resources:
     - https://tc39.github.io/proposal-string-matchall/
+  presented:
+    - date: September 2018
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-09/sept-25.md#update-on-stringprototypematchall
+
+- title: Hashbang Grammar
+  description: This proposal is to match de-facto usage in some CLI JS hosts that allow for Shebangs / Hashbang. Such hosts strip the hashbang in order to generate valid JS source texts before passing to JS engines currently. This would unify and standardize how that is done..
+  authors:
+    - Bradley Farias
+  champions:
+    - Bradley Farias
+  tests:
+    - https://github.com/tc39/test262/pull/2065
+  specification: https://tc39.github.io/proposal-hashbang/out.html
+  resources:
+    - https://github.com/tc39/proposal-hashbang
+  example: >
+    #!/usr/bin/env node
+
+    // in the Script Goal
+
+    'use strict';
+
+    console.log(1);
+
+
+    /****** begining of another script ********/
+
+    #!/usr/bin/env node
+
+    // in the Module Goal
+
+    export {};
+
+    console.log(1);
