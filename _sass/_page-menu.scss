@@ -54,7 +54,7 @@ $trans-timing: 600ms;
     }
   }
   .menu {
-    background: $color-bg;
+    background: $color-submenu-bg;
     display: block;
     left: 0;
     list-style-type: none;
@@ -127,6 +127,11 @@ $trans-timing: 600ms;
         flex-wrap: wrap;
       }
     }
+    @media (min-width: $bp-desktop) {
+      &-link {
+        padding: 10px 40px;
+      }
+    }
   }
   &.open .menu-toggle,
   &:focus-within .menu-toggle {
@@ -137,7 +142,7 @@ $trans-timing: 600ms;
   @media (min-width: $bp-tablet) {
     border-bottom: 2px solid $color-spacer;
     .submenu {
-      background: $color-bg;
+      background: white;
       border-top: 2px solid $color-spacer;
       font-size: 16px;
       position: absolute;
@@ -160,7 +165,7 @@ $trans-timing: 600ms;
     .menu {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
       max-height: none;
       overflow: visible;
       padding: 0;

@@ -43,6 +43,7 @@
     - date: November 2016
       url: https://github.com/tc39/tc39-notes/blob/master/es7/2016-11/dec-1.md#14ii-import-open-issues-and-stage-3-discussion
 
+
 - title: Legacy RegExp features in JavaScript
   description: This is a specification draft for the legacy (deprecated) RegExp features in JavaScript, i.e., static properties of the constructor like RegExp.$1 as well as the RegExp.prototype.compile method.
   authors:
@@ -266,6 +267,8 @@
 
     console.log(1);
 
+
+    /****** begining of another script ********/
 
     #!/usr/bin/env node
 

@@ -5,8 +5,8 @@ $color-link: #017e78;
 $color-text: #000;
 $color-nav: #444;
 $color-spacer: #eee;
-$color-submenu-bg: #fcfcfc;
-$color-bg: #fefefe;
+$color-submenu-bg: white;
+$color-bg: #fafafa;
 
 // Font weights
 $font-weight-light: 300;
@@ -20,3 +20,8 @@ $spacing-paragraph: 40px;
 // Breakpoints
 $bp-tablet: 920px;
 $bp-desktop: 1200px;
+
+// Tags
+$tag-tests: #017e78;
+$tag-spec: #f90;
+$tag-presented: #a63446;
