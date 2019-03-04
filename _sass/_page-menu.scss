@@ -127,6 +127,11 @@ $trans-timing: 600ms;
         flex-wrap: wrap;
       }
     }
+    @media (min-width: $bp-desktop) {
+      &-link {
+        padding: 10px 40px;
+      }
+    }
   }
   &.open .menu-toggle,
   &:focus-within .menu-toggle {
@@ -160,7 +165,7 @@ $trans-timing: 600ms;
     .menu {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: space-between;
       max-height: none;
       overflow: visible;
       padding: 0;
