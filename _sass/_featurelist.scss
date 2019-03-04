@@ -13,26 +13,6 @@
       overflow: hidden;
       transition: max-height 600ms ease;
     }
-    &__tests {
-      background-color: $tag-tests;
-      border: 2px solid $tag-tests;
-      border-radius: 10px;
-    }
-    &__spec {
-      background-color: $tag-spec;
-      border: 2px solid $tag-spec;
-      border-radius: 10px;
-    }
-    &__presented {
-      background-color: $tag-presented;
-      border: 2px solid $tag-presented;
-      border-radius: 10px;
-    }
-    &__impl {
-      background-color: $tag-presented;
-      border: 2px solid $tag-presented;
-      border-radius: 10px;
-    }
     &__ressources {
       a {
         word-break: break-all;
@@ -51,11 +31,11 @@
       li {
         display: inline-block;
         margin-top: 0.5rem;
-        opacity: 0.5;
+        opacity: 1;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
         &:hover {
-          opacity: 1;
+          background-color: transparent;
         }
         a {
           color: white;
@@ -72,6 +52,59 @@
         padding: 0 5px;
       }
     }
+    h4 {
+      display: inline-block;
+      float: left;
+      font-size: 1.6em;
+      margin-bottom: 0.5em;
+      margin-top: 1em;
+      padding-bottom: 0;
+      padding-top: 0;
+      word-wrap: anywhere;
+        a {
+          text-decoration: none;
+        }
+    }
+    &__tests {
+      background-color: $tag-tests;
+      border: 2px solid $tag-tests;
+      border-radius: 10px;
+      &:hover {
+        a {
+          color: $tag-tests;
+        }
+      }
+    }
+    &__spec {
+      background-color: $tag-spec;
+      border: 2px solid $tag-spec;
+      border-radius: 10px;
+      &:hover {
+        a {
+          color: $tag-spec;
+        }
+      }
+    }
+    &__presented {
+      background-color: $tag-presented;
+      border: 2px solid $tag-presented;
+      border-radius: 10px;
+      &:hover {
+        a {
+          color: $tag-presented;
+        }
+      }
+    }
+    &__impl {
+      background-color: $tag-presented;
+      border: 2px solid $tag-presented;
+      border-radius: 10px;
+      &:hover {
+        a {
+          color: $tag-tests;
+        }
+      }
+    }
     .no-js &:focus-within &__info {
       max-height: none;
     }
@@ -84,13 +117,10 @@
       margin: 1em 0 1em 0;
       padding: 0;
     }
-    &__authors {
-      display: block;
-      font-size: 1.1em;
-    }
     &__author {
       clear: both;
       color: grey;
+      font-weight: 800;
       margin: 0;
       padding-top: 0;
     }
@@ -116,19 +146,6 @@
           margin-right: 0.5rem;
         }
       }
-    }
-    h4 {
-      display: inline-block;
-      float: left;
-      font-size: 1.6em;
-      margin-bottom: 0.5em;
-      margin-top: 1em;
-      padding-bottom: 0;
-      padding-top: 0;
-      word-wrap: anywhere;
-        a {
-          text-decoration: none;
-        }
     }
   }
   &__desc {
