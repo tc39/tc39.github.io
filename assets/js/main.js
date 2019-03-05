@@ -36,7 +36,7 @@ function toggleProposal(item) {
  * Represents the start of this application
  */
 function start() {
-  var items = document.querySelectorAll('.featurelist__item .featurelist__item__intro');
+  var items = document.querySelectorAll('.featurelist__item .featurelist__item__example');
 
   document.body.classList.remove('no-js');
 
