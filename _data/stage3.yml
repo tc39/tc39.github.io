@@ -1,23 +1,15 @@
-- title: Function.prototype.toString revision
-  id: Function-prototype-toString-revision
-  description: for functions defined using ECMAScript code, toString must return source text slice from beginning of first token to end of last token matched by the appropriate grammar production
-  authors:
-    - Michael Ficarra
-  champions:
-    - Michael Ficarra
-  tests:
-    - https://github.com/tc39/test262/issues/1163
-
 - title: globalThis
   id: proposal-global
   description: ECMAScript Proposal, specs, and reference implementation for globalThis
-
   authors:
     - Jordan Harband
   champions:
     - Jordan Harband
   tests:
     - https://github.com/tc39/test262/issues/765
+  presented:
+    - date: November 2018
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-11/nov-29.md#kevins-1pm-talk
 
 - title: import()
   id: proposal-dynamic-import
@@ -43,6 +35,10 @@
             });
         });
       }
+  presented:
+    - date: November 2016
+      url: https://github.com/tc39/tc39-notes/blob/master/es7/2016-11/dec-1.md#14ii-import-open-issues-and-stage-3-discussion
+
 
 - title: Legacy RegExp features in JavaScript
   id: proposal-regexp-legacy-features
@@ -64,6 +60,17 @@
     - Daniel Ehrenberg
   tests:
     - https://github.com/tc39/test262/issues/1056
+  example: >
+    const theBiggestInt = 9007199254740991n;
+
+    const alsoHuge = BigInt(9007199254740991);
+    // ↪ 9007199254740991n
+
+    const hugeButString = BigInt('9007199254740991');
+    // ↪ 9007199254740991n
+  presented:
+    - date: May 2017
+      url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
 
 - title: import.meta
   id: proposal-import-meta
@@ -74,6 +81,9 @@
     - Domenic Denicola
   tests:
     - https://github.com/tc39/test262/issues/1342
+  presented:
+    - date: May 2017
+      url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-09/sept-27.md#12iiic-importmeta-for-stage-3
 
 - title: Private instance methods and accessors
   id: proposal-private-methods
@@ -85,16 +95,35 @@
     - Kevin Gibbons
   tests:
     - https://github.com/tc39/test262/issues/1343
+  presented:
+    - date: January 2019
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2019-01/jan-30.md#private-fields-and-methods-refresher
+  example: >
+    class Counter extends HTMLElement {
+      #xValue = 0;
 
-- title: Array.prototype.{flat,flatMap}
-  id: proposal-flatMap
-  description: Proposal for flatten and flatMap on arrays
-  authors:
-    - Brian Terlson
-    - Michael Ficarra
-  champions:
-    - Brian Terlson
-    - Michael Ficarra
+      get #x() { return #xValue; }
+      set #x(value) {
+        this.#xValue = value;
+        window.requestAnimationFrame(this.#render.bind(this));
+      }
+
+      #clicked() {
+        this.#x++;
+      }
+
+      constructor() {
+        super();
+        this.onclick = this.#clicked.bind(this);
+      }
+
+      connectedCallback() { this.#render(); }
+
+      #render() {
+        this.textContent = this.#x.toString();
+      }
+    }
+    window.customElements.define('num-counter', Counter);
 
 - title: Class Public Instance Fields & Private Instance Fields
   id: proposal-class-fields
@@ -109,6 +138,18 @@
     - Kevin Gibbons
   tests:
     - https://github.com/tc39/test262/issues/1161
+  example: >
+    class Foo {
+        instancePropertyBar = 0;
+        static staticPropertyBar = 0;
+        #privatePropertyBar = 0;
+        static #privatePropertyBar = 0;
+
+        set foo(value) { console.log(value); }
+    }
+  presented:
+    - date: January 2019
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2019-01/jan-30.md#private-fields-and-methods-refresher
 
 - title: Static class fields and private static methods
   id: proposal-static-class-features
@@ -121,16 +162,39 @@
   champions:
     - Shu-Yu Guo
     - Daniel Ehrenberg
+  presented:
+    - date: January 2019
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2019-01/jan-30.md#private-fields-and-methods-refresher
+  example: >
+    class ColorFinder {
+      static #red = "#ff0000";
 
-- title: String.prototype.{trimStart,trimEnd}
-  id: proposal-string-left-right-trim
-  description: A proposal to extend ECMA-262 syntax into a superset of JSON.
-  authors:
-    - Sebastian Markbåge
-  champions:
-    - Sebastian Markbåge
-  tests:
-    - https://github.com/tc39/test262/pull/1246
+      static #blue = "#00ff00";
+
+      static #green = "#0000ff";
+
+      // ^ static class fields
+
+      static white = "white";
+
+      // ^ static public field.
+
+      static colorName(name) {
+        switch (name) {
+          case "red": return ColorFinder.#red;
+          case "blue": return ColorFinder.#blue;
+          case "green": return ColorFinder.#green;
+          default: throw new RangeError("unknown color");
+        }
+      }
+
+      // Static method ^
+
+      static #setColor(name) {
+
+      }
+      // ^ Static private method
+    }
 
 - title: String.prototype.matchAll
   id: proposal-string-matchall
@@ -139,11 +203,61 @@
     - Jordan Harband
   champions:
     - Jordan Harband
+  tests:
+    - https://github.com/tc39/test262/pull/1500
+    - https://github.com/tc39/test262/pull/1587
+  example: >
+    var str = 'Hello world!!!';
 
-- title: Symbol.prototype.description
-  id: proposal-Symbol-description
-  description: proposal to add Symbol.prototype.description
+    var regexp = /(\w+)\W*/g;
+
+    console.log(str.matchAll(regexp));
+
+    /*
+    [
+      {
+        0: "Hello ",
+        1: "Hello"
+        index: 0,
+        input: "Hello world!!!"
+      },
+      {
+        0: "world!!!",
+        1: "world"
+        index: 6,
+        input: "Hello world!!!"
+      }
+    ]
+    */
+  presented:
+    - date: September 2018
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-09/sept-25.md#update-on-stringprototypematchall
+
+- title: Hashbang Grammar
+  id: proposal-hashbang
+  description: This proposal is to match de-facto usage in some CLI JS hosts that allow for Shebangs / Hashbang. Such hosts strip the hashbang in order to generate valid JS source texts before passing to JS engines currently. This would unify and standardize how that is done..
   authors:
-    - Michael Ficarra
+    - Bradley Farias
   champions:
-    - Michael Ficarra
+    - Bradley Farias
+  tests:
+    - https://github.com/tc39/test262/pull/2065
+  example: >
+    #!/usr/bin/env node
+
+    // in the Script Goal
+
+    'use strict';
+
+    console.log(1);
+
+
+    /****** begining of another script ********/
+
+    #!/usr/bin/env node
+
+    // in the Module Goal
+
+    export {};
+
+    console.log(1);
