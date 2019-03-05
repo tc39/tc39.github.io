@@ -1,5 +1,6 @@
 - title: globalThis
   id: proposal-global
+  specification: true
   description: ECMAScript Proposal, specs, and reference implementation for globalThis
   authors:
     - Jordan Harband
@@ -13,6 +14,7 @@
 
 - title: import()
   id: proposal-dynamic-import
+  specification: true
   description: Adding a "function-like" import() module loading syntactic form to JavaScript
   authors:
     - Domenic Denicola
@@ -42,6 +44,7 @@
 
 - title: Legacy RegExp features in JavaScript
   id: proposal-regexp-legacy-features
+  specification: false
   description: This is a specification draft for the legacy (deprecated) RegExp features in JavaScript, i.e., static properties of the constructor like RegExp.$1 as well as the RegExp.prototype.compile method.
   authors:
     - Claude Pache
@@ -53,6 +56,7 @@
 
 - title: BigInt
   id: proposal-bigint
+  specification: true
   description: Arbitrary precision integers in JavaScript
   authors:
     - Daniel Ehrenberg
@@ -74,6 +78,7 @@
 
 - title: import.meta
   id: proposal-import-meta
+  specification: true
   description: A proposal for adding an import.meta metaproperty to JavaScript, for holding host-specific metadata about the current module.
   authors:
     - Domenic Denicola
@@ -87,6 +92,7 @@
 
 - title: Private instance methods and accessors
   id: proposal-private-methods
+  specification: true
   description: Keeping state and behavior private to a class lets library authors present a clear, stable interface, while changing their code over time behind the scenes.
   authors:
     - Daniel Ehrenberg
@@ -127,6 +133,7 @@
 
 - title: Class Public Instance Fields & Private Instance Fields
   id: proposal-class-fields
+  specification: true
   description: This proposes a combined vision for public fields and private fields, drawing on the earlier Orthogonal Classes and Class Evaluation Order proposals.
   authors:
     - Daniel Ehrenberg
@@ -153,12 +160,13 @@
 
 - title: Static class fields and private static methods
   id: proposal-static-class-features
+  specification: true
   description: This proposal adds Static public fields, Static private methods and Static private fields
   authors:
     - Daniel Ehrenberg
     - Kevin Gibbons
     - Jeff Morrison
-    - Kevin Smith 
+    - Kevin Smith
   champions:
     - Shu-Yu Guo
     - Daniel Ehrenberg
@@ -198,6 +206,7 @@
 
 - title: String.prototype.matchAll
   id: proposal-string-matchall
+  specification: true
   description: If given a string, and either a sticky or a global regular expression which has multiple capturing groups, we often want to iterate through all of the matches.
   authors:
     - Jordan Harband
@@ -235,6 +244,7 @@
 
 - title: Hashbang Grammar
   id: proposal-hashbang
+  specification: true
   description: This proposal is to match de-facto usage in some CLI JS hosts that allow for Shebangs / Hashbang. Such hosts strip the hashbang in order to generate valid JS source texts before passing to JS engines currently. This would unify and standardize how that is done..
   authors:
     - Bradley Farias
