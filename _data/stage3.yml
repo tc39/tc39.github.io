@@ -55,6 +55,9 @@
     - https://github.com/tc39/test262/issues/1165
   resources:
     - https://github.com/tc39/proposal-regexp-legacy-features
+  presented:
+    - date: May 2017
+      url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
 
 - title: BigInt
   description: Arbitrary precision integers in JavaScript
@@ -75,8 +78,8 @@
   resources:
     - https://github.com/tc39/proposal-bigint
   presented:
-    - date: May 2017
-      url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
+    - date: May 2018
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-05/may-22.md#bigint-status-update
 
 - title: import.meta
   description: A proposal for adding an import.meta metaproperty to JavaScript, for holding host-specific metadata about the current module.
