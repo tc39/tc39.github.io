@@ -38,7 +38,7 @@
         });
       }
   presented:
-    - date: November 2016
+    - date: December 2016
       url: https://github.com/tc39/tc39-notes/blob/master/es7/2016-11/dec-1.md#14ii-import-open-issues-and-stage-3-discussion
 
 
@@ -53,6 +53,9 @@
     - Claude Pache
   tests:
     - https://github.com/tc39/test262/issues/1165
+  presented:
+    - date: May 2017
+      url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
 
 - title: BigInt
   id: proposal-bigint
@@ -73,8 +76,8 @@
     const hugeButString = BigInt('9007199254740991');
     // ↪ 9007199254740991n
   presented:
-    - date: May 2017
-      url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
+    - date: May 2018
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-05/may-22.md#bigint-status-update
 
 - title: import.meta
   id: proposal-import-meta
@@ -87,7 +90,7 @@
   tests:
     - https://github.com/tc39/test262/issues/1342
   presented:
-    - date: May 2017
+    - date: September 2017
       url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-09/sept-27.md#12iiic-importmeta-for-stage-3
 
 - title: Private instance methods and accessors
@@ -271,3 +274,7 @@
     export {};
 
     console.log(1);
+
+  presented:
+    - date: November 2018
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-11/nov-28.md#hash-bang-grammar
