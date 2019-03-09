@@ -40,7 +40,7 @@
   resources:
     - https://github.com/tc39/proposal-dynamic-import
   presented:
-    - date: November 2016
+    - date: December 2016
       url: https://github.com/tc39/tc39-notes/blob/master/es7/2016-11/dec-1.md#14ii-import-open-issues-and-stage-3-discussion
 
 
@@ -55,6 +55,9 @@
     - https://github.com/tc39/test262/issues/1165
   resources:
     - https://github.com/tc39/proposal-regexp-legacy-features
+  presented:
+    - date: May 2017
+      url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
 
 - title: BigInt
   description: Arbitrary precision integers in JavaScript
@@ -75,8 +78,8 @@
   resources:
     - https://github.com/tc39/proposal-bigint
   presented:
-    - date: May 2017
-      url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
+    - date: May 2018
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-05/may-22.md#bigint-status-update
 
 - title: import.meta
   description: A proposal for adding an import.meta metaproperty to JavaScript, for holding host-specific metadata about the current module.
@@ -90,7 +93,7 @@
   resources:
     - https://github.com/tc39/proposal-import-meta
   presented:
-    - date: May 2017
+    - date: September 2017
       url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-09/sept-27.md#12iiic-importmeta-for-stage-3
 
 - title: Private instance methods and accessors
@@ -277,3 +280,7 @@
     export {};
 
     console.log(1);
+
+  presented:
+    - date: November 2018
+      url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-11/nov-28.md#hash-bang-grammar
