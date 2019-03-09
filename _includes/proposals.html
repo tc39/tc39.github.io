@@ -6,6 +6,33 @@
     <i class="featurelist__desc">
       This section features proposals that are in Stage 3 of <a href="https://tc39.github.io/process-document/">our process</a>, which means they are close to completion.
     </i>
+    <details class="featurelist__legend">
+      <summary><strong>How to read the proposals list</strong></summary>
+      <p>
+      Each proposal has links out to other resources. The tags identify the following attributes.
+      Below you will find a table with example tags and their meanings.
+      All tags have hover text if you need help getting oriented.
+      </p>
+
+      <strong>Types of tags and what they mean</strong>
+      <ul class="featurelist__legend__tags">
+          <li>Last Presented:
+          <div class="featurelist__item__presented featurelist__item__tag">
+            <a href="./" title="Notes from most recent presentation">December 2018</a>
+          </div>
+          </li>
+          <li>Available Tests:
+          <div class="featurelist__item__tests featurelist__item__tag">
+            <a href="./" title="Patch introducing tests in test262 repository">Test</a>
+          </div>
+          </li>
+          <li>Specification Text:
+        <div class="featurelist__item__spec featurelist__item__tag">
+          <a href="./" title="Read the specification text">Specification</a>
+        </div>
+          </li>
+      </ul>
+    </details>
     {% for proposal in site.data.stage3 %}
     <section class="featurelist__item">
       <section class="">
@@ -17,24 +44,24 @@
             </h4>
             {% endfor %}
             <section class="featurelist__item__tags flex-shrink" tabindex="-1">
-              <ul class="featurelist__item__status">
+              <ul class="featurelist__item__status featurelist__item__tags">
                 {% if proposal.presented | size %}
                 {% for presentation in proposal.presented %}
-                  <li class="featurelist__item__presented">
-                    <a href="{{ presentation.url }}">{{ presentation.date }}</a>
+                  <li class="featurelist__item__presented featurelist__item__tag">
+                    <a href="{{ presentation.url }}" title="Notes from most recent presentation">{{ presentation.date }}</a>
                   </li>
                 {% endfor %}
                 {% endif %}
                 {% if proposal.tests | size %}
                 {% for url in proposal.tests %}
-                  <li class="featurelist__item__tests">
-                    <a href="{{ url }}">Tests</a>
+                  <li class="featurelist__item__tests featurelist__item__tag">
+                    <a href="{{ url }}" title="Patch introducing tests in test262 repository">Test</a>
                   </li>
                 {% endfor %}
                 {% endif %}
                 {% if proposal.specification %}
-                <li class="featurelist__item__spec">
-                  <a href="{{ proposal.specification }}">Specification</a>
+                <li class="featurelist__item__spec featurelist__item__tag">
+                  <a href="{{ proposal.specification }}" title="Read the specification text">Specification</a>
                 </li>
                 {% endif %}
               </ul>
