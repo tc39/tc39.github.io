@@ -41,15 +41,27 @@
             </section>
           </section>
           <section class="featurelist__item__author">
-          {% if proposal.authors | size %}
-          Author(s):
-          {{ proposal.authors | join: ", " }}
-          {% endif %}
-          {% if proposal.champions | size %}
-          |
-          Champion(s):
-          {{ proposal.champions | join: ", " }}
+          {% if proposal.authors == proposal.champions %}
+            Author and Champion:
+            {{ proposal.authors | join: ", " }}
           {% else %}
+            {% if proposal.authors | size %}
+            {% if proposal.authors.size > 1 %}
+            Authors:
+            {% else %}
+            Author:
+            {% endif %}
+            {{ proposal.authors | join: ", " }}
+            {% endif %}
+            {% if proposal.champions | size %}
+            |
+            {% if proposal.champions.size > 1 %}
+            Champions:
+            {% else %}
+            Champion:
+            {% endif %}
+            {{ proposal.champions | join: ", " }}
+            {% endif %}
           {% endif %}
           </section>
           {% if proposal.description %}
