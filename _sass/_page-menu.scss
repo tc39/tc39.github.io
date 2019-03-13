@@ -9,13 +9,12 @@ $trans-timing: 600ms;
 }
 
 .page-menu {
-  $mt: 73.6px;
+  $mobile-mt: 15px;
   font-size: 18px;
-  margin-top: $mt;
+  margin-top: $mobile-mt;
   text-align: end;
   width: 100%;
   .submenu {
-    background: $color-submenu-bg;
     flex: 0 0 100%;
     list-style: none;
     margin: 0;
@@ -26,8 +25,16 @@ $trans-timing: 600ms;
     &:focus-within {
       max-height: none;
     }
+    &-item {
+      width: 100%;
+    }
     &-item a {
       font-weight: 500;
+      &:hover {
+        color: $color-primary;
+        font-weight: 500;
+        text-decoration: none;
+      }
     }
     &-toggle {
       background: transparent;
@@ -55,20 +62,22 @@ $trans-timing: 600ms;
   }
   .menu {
     background: $color-submenu-bg;
+    border-bottom: 1px solid $color-spacer;
     display: block;
     left: 0;
     list-style-type: none;
     margin: 0;
     max-height: 0;
     overflow: hidden;
-    padding: ($svg-height + $mt) 15px 0 120px;
+    padding: ($svg-height + $mobile-mt) 20px 10px 0;
     position: absolute;
+    right: 0;
     top: 0;
     transition: max-height $trans-timing ease;
     width: 100vw;
     z-index: 2;
     [dir="rtl"] & {
-      padding: ($svg-height + $mt) 120px 0 15px;
+      padding: ($svg-height + $mobile-mt) 0 10px 20px;
     }
     &:focus-within,
     &:target {
@@ -140,9 +149,11 @@ $trans-timing: 600ms;
     }
   }
   @media (min-width: $bp-tablet) {
-    border-bottom: 2px solid $color-spacer;
+    $mt: 73.6px;
+    border-bottom: 1px solid $color-spacer;
+    margin-top: $mt;
     .submenu {
-      background: white;
+      background: $color-submenu-bg;
       border-top: 2px solid $color-spacer;
       font-size: 16px;
       position: absolute;
@@ -163,6 +174,7 @@ $trans-timing: 600ms;
       }
     }
     .menu {
+      background: $color-submenu-bg;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
