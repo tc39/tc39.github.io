@@ -37,12 +37,10 @@
     <section class="featurelist__item">
       <section class="">
         <header class="featurelist__item__intro" tabindex="0">
-          {% for url in proposal.resources %}
           <section class="g-row">
             <h4 class="featurelist__item__title flex-grow">
-              <a href="{{ url }}">{{ proposal.title }}</a>
+              <a href="https://github.com/tc39/{{ proposal.id }}">{{ proposal.title }}</a>
             </h4>
-            {% endfor %}
             <section class="featurelist__item__tags flex-shrink" tabindex="-1">
               <ul class="featurelist__item__status featurelist__item__tags">
                 {% if proposal.presented | size %}
@@ -59,10 +57,10 @@
                   </li>
                 {% endfor %}
                 {% endif %}
-                {% if proposal.specification %}
-                <li class="featurelist__item__spec featurelist__item__tag">
-                  <a href="{{ proposal.specification }}" title="Read the specification text">Specification</a>
-                </li>
+                {% if proposal.has_specification %}
+                  <li class="featurelist__item__spec featurelist__item__tag">
+                    <a href="https://tc39.github.io/{{ proposal.id }}" title="Read the specification text">Specification</a>
+                  </li>
                 {% endif %}
               </ul>
             </section>
@@ -95,8 +93,8 @@
           <section class="featurelist__item__desc">{{ proposal.description }}</section>
           {% endif %}
         {% if proposal.example %}
-        <div class="featurelist__item__example">Show Example</div>
-          {% endif %}
+          <div class="featurelist__item__example">Show Example</div>
+        {% endif %}
         <section class="featurelist__item__info" tabindex="-1">
         {% if proposal.example %}
           <div>

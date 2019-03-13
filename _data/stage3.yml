@@ -1,4 +1,6 @@
 - title: globalThis
+  id: proposal-global
+  has_specification: true
   description: ECMAScript Proposal, specs, and reference implementation for globalThis
   authors:
     - Jordan Harband
@@ -6,14 +8,13 @@
     - Jordan Harband
   tests:
     - https://github.com/tc39/test262/issues/765
-  specification: https://tc39.github.io/proposal-global/
-  resources:
-    - https://github.com/tc39/proposal-global
   presented:
     - date: November 2018
       url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-11/nov-29.md#kevins-1pm-talk
 
 - title: import()
+  id: proposal-dynamic-import
+  has_specification: true
   description: Adding a "function-like" import() module loading syntactic form to JavaScript
   authors:
     - Domenic Denicola
@@ -21,7 +22,6 @@
     - Domenic Denicola
   tests:
     - https://github.com/tc39/test262/issues/1164
-  specification: https://tc39.github.io/ecma262/#sec-modules
   example: >
     const main = document.querySelector("main");
       for (const link of document.querySelectorAll("nav > a")) {
@@ -37,14 +37,14 @@
             });
         });
       }
-  resources:
-    - https://github.com/tc39/proposal-dynamic-import
   presented:
     - date: December 2016
       url: https://github.com/tc39/tc39-notes/blob/master/es7/2016-11/dec-1.md#14ii-import-open-issues-and-stage-3-discussion
 
 
 - title: Legacy RegExp features in JavaScript
+  id: proposal-regexp-legacy-features
+  has_specification: false
   description: This is a specification draft for the legacy (deprecated) RegExp features in JavaScript, i.e., static properties of the constructor like RegExp.$1 as well as the RegExp.prototype.compile method.
   authors:
     - Claude Pache
@@ -53,13 +53,13 @@
     - Claude Pache
   tests:
     - https://github.com/tc39/test262/issues/1165
-  resources:
-    - https://github.com/tc39/proposal-regexp-legacy-features
   presented:
     - date: May 2017
       url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
 
 - title: BigInt
+  id: proposal-bigint
+  has_specification: true
   description: Arbitrary precision integers in JavaScript
   authors:
     - Daniel Ehrenberg
@@ -75,13 +75,13 @@
 
     const hugeButString = BigInt('9007199254740991');
     // ↪ 9007199254740991n
-  resources:
-    - https://github.com/tc39/proposal-bigint
   presented:
     - date: May 2018
       url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-05/may-22.md#bigint-status-update
 
 - title: import.meta
+  id: proposal-import-meta
+  has_specification: true
   description: A proposal for adding an import.meta metaproperty to JavaScript, for holding host-specific metadata about the current module.
   authors:
     - Domenic Denicola
@@ -89,14 +89,13 @@
     - Domenic Denicola
   tests:
     - https://github.com/tc39/test262/issues/1342
-  specification: https://tc39.github.io/proposal-import-meta/
-  resources:
-    - https://github.com/tc39/proposal-import-meta
   presented:
     - date: September 2017
       url: https://github.com/tc39/tc39-notes/blob/master/es8/2017-09/sept-27.md#12iiic-importmeta-for-stage-3
 
 - title: Private instance methods and accessors
+  id: proposal-private-methods
+  has_specification: true
   description: Keeping state and behavior private to a class lets library authors present a clear, stable interface, while changing their code over time behind the scenes.
   authors:
     - Daniel Ehrenberg
@@ -134,10 +133,10 @@
       }
     }
     window.customElements.define('num-counter', Counter);
-  resources:
-    - https://github.com/tc39/proposal-private-methods
 
 - title: Class Public Instance Fields & Private Instance Fields
+  id: proposal-class-fields
+  has_specification: true
   description: This proposes a combined vision for public fields and private fields, drawing on the earlier Orthogonal Classes and Class Evaluation Order proposals.
   authors:
     - Daniel Ehrenberg
@@ -149,7 +148,6 @@
     - Kevin Gibbons
   tests:
     - https://github.com/tc39/test262/issues/1161
-  specification: https://tc39.github.io/proposal-class-fields/
   example: >
     class Foo {
         instancePropertyBar = 0;
@@ -159,13 +157,13 @@
 
         set foo(value) { console.log(value); }
     }
-  resources:
-    - https://github.com/tc39/proposal-class-fields
   presented:
     - date: January 2019
       url: https://github.com/tc39/tc39-notes/blob/master/es9/2019-01/jan-30.md#private-fields-and-methods-refresher
 
 - title: Static class fields and private static methods
+  id: proposal-static-class-features
+  has_specification: true
   description: This proposal adds Static public fields, Static private methods and Static private fields
   authors:
     - Daniel Ehrenberg
@@ -173,11 +171,8 @@
     - Jeff Morrison
     - Kevin Smith
   champions:
-    - Shu-yu Guo
+    - Shu-Yu Guo
     - Daniel Ehrenberg
-  specification: https://tc39.github.io/proposal-static-class-features/
-  resources:
-    - https://tc39.github.io/proposal-static-class-features/
   presented:
     - date: January 2019
       url: https://github.com/tc39/tc39-notes/blob/master/es9/2019-01/jan-30.md#private-fields-and-methods-refresher
@@ -213,6 +208,8 @@
     }
 
 - title: String.prototype.matchAll
+  id: proposal-string-matchall
+  has_specification: true
   description: If given a string, and either a sticky or a global regular expression which has multiple capturing groups, we often want to iterate through all of the matches.
   authors:
     - Jordan Harband
@@ -244,13 +241,13 @@
       }
     ]
     */
-  resources:
-    - https://tc39.github.io/proposal-string-matchall/
   presented:
     - date: September 2018
       url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-09/sept-25.md#update-on-stringprototypematchall
 
 - title: Hashbang Grammar
+  id: proposal-hashbang
+  has_specification: true
   description: This proposal is to match de-facto usage in some CLI JS hosts that allow for Shebangs / Hashbang. Such hosts strip the hashbang in order to generate valid JS source texts before passing to JS engines currently. This would unify and standardize how that is done..
   authors:
     - Bradley Farias
@@ -258,9 +255,6 @@
     - Bradley Farias
   tests:
     - https://github.com/tc39/test262/pull/2065
-  specification: https://tc39.github.io/proposal-hashbang/out.html
-  resources:
-    - https://github.com/tc39/proposal-hashbang
   example: >
     #!/usr/bin/env node
 
