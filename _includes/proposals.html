@@ -30,7 +30,7 @@
                   </li>
                 {% endfor %}
                 {% endif %}
-                {% if proposal.specification %}
+                {% if proposal.has_specification %}
               <li class="featurelist__item__spec">
                 <a href="https://tc39.github.io/{{ proposal.id }}">Specification</a>
               </li>
