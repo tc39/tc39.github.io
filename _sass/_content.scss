@@ -55,24 +55,3 @@ a {
 .text-center {
   text-align: center;
 }
-
-@font-face {
-  font-family: 'ExternalLinkIcon';
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/ExternalLinkIcon.eot');
-  src: url('../fonts/ExternalLinkIcon.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/ExternalLinkIcon.woff') format('woff'),
-  url('../fonts/ExternalLinkIcon.ttf') format('truetype'),
-  url('../fonts/ExternalLinkIcon.svg#ExternalLinkIcon') format('svg');
-}
-
-a[href^="http://"]:not([href*="http://www.ecma-international.org"])::after,
-a[href^="https://"]:not([href*="https://tc39.github.io"])::after{
-  content:'\0045';
-  display: inline-block;
-  font-family: 'ExternalLinkIcon', sans-serif;
-  font-size: 0.8em;
-  margin-inline-start: 0.3em;
-  text-decoration: none;
-}
