@@ -10,10 +10,8 @@
       overflow: hidden;
       transition: max-height 600ms ease;
     }
-    &__ressources {
-      a {
-        word-break: break-all;
-      }
+    &__tags {
+      flex-shrink: 0;
     }
     &__tag {
       display: inline-block;
@@ -29,9 +27,6 @@
         color: white;
         text-decoration: none;
         word-break: break-all;
-      }
-      p {
-        margin: 0;
       }
     }
     &__status {
@@ -87,16 +82,6 @@
       &:hover {
         a {
           color: $tag-presented;
-        }
-      }
-    }
-    &__impl {
-      background-color: $tag-presented;
-      border: 2px solid $tag-presented;
-      border-radius: 10px;
-      &:hover {
-        a {
-          color: $tag-tests;
         }
       }
     }
