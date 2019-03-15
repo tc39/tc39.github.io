@@ -41,7 +41,7 @@
             <h4 class="featurelist__item__title flex-grow">
               <a href="https://github.com/tc39/{{ proposal.id }}">{{ proposal.title }}</a>
             </h4>
-            <section class="featurelist__item__tags flex-shrink" tabindex="-1">
+            <section class="featurelist__item__tags" tabindex="-1">
               <ul class="featurelist__item__status featurelist__item__tags">
                 {% if proposal.presented | size %}
                 {% for presentation in proposal.presented %}
