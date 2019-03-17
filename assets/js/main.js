@@ -1,3 +1,5 @@
+'use strict';
+
 function openMenu(menu) {
   menu.style.maxHeight = menu.scrollHeight + 'px';
   setTimeout(function() {
