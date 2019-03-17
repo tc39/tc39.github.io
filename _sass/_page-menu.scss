@@ -107,6 +107,7 @@ $trans-timing: 600ms;
     }
     &-link {
       color: $color-nav;
+      cursor: pointer;
       display: block;
       flex: 0 0 calc(100% - 2rem);
       font-weight: 600;
