@@ -74,7 +74,7 @@ $trans-timing: 600ms;
     right: 0;
     top: 0;
     transition: max-height $trans-timing ease;
-    width: 100vw;
+    width: 100%;
     z-index: 2;
     [dir="rtl"] & {
       padding: ($svg-height + $mobile-mt) 0 10px 20px;
