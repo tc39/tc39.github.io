@@ -1,9 +1,9 @@
 .sr-only {
-  clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(100%);
   height: 1px;
-  width: 1px;
   overflow: hidden;
   position: absolute;
+  width: 1px;
   white-space: nowrap;
 }
