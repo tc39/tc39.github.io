@@ -1,12 +1,10 @@
-# TC39 website draft
+# TC39 website
 
 The TC39 website aims to improve the web presence and host the documentation of TC39. We want to
 make the JavaScript spec more accessible and help people understand what the committee does!
 
 This site is built using GitHub Pages and Jekyll and is currently an MVP. We are looking for
 feedback from people of all areas.
-
-![website-screenshot](./screenshot.png)
 
 ## Getting involved
 
@@ -15,7 +13,7 @@ This project adheres to the TC39 [Code of Conduct](https://tc39.github.io/code-o
 ### Issues
 
 If you find that this website does not provide the information you need, please comment on our
-[usability thread](https://github.com/tc39/tc39-web-draft/issues/41) with
+[usability thread](https://github.com/tc39/tc39.github.io/issues/41) with
 what you were looking for and where you would have expected to find it! This
 helps us understand what people's needs are and how we can improve this page to address those needs.
 
@@ -49,7 +47,7 @@ make serve        # run Jekyll, serve site on localhost:8000, and watch for loca
 We use IRC to communicate. The channel we use is #tc39-website on freenode. You can find
 connection instructions [here](https://freenode.net/kb/answer/chat).
 
-## Monthly Planning Call
+## Monthly planning call
 
 We have planning meetings every month, on the _last Tuesday at 10:00 AM CEST_. If you would like to
-join, come say hi at the irc channel! [Meeting URL](https://hangouts.google.com/call/lxrlUjS_VlOcuRU6BsFBAAEI)
+join, come say hi at the IRC channel! The meeting is held on Google Hangouts [here](https://hangouts.google.com/call/lxrlUjS_VlOcuRU6BsFBAAEI).
