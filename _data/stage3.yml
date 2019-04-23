@@ -207,43 +207,49 @@
       // ^ Static private method
     }
 
-- title: String.prototype.matchAll
-  id: proposal-string-matchall
+- title: Numeric Separators
+  id: proposal-numeric-separator
   has_specification: true
-  description: If given a string, and either a sticky or a global regular expression which has multiple capturing groups, we often want to iterate through all of the matches.
+  description: This proposal adds the ability to utilize numeric literal separators for increased readability in Javascript source
   authors:
-    - Jordan Harband
+    - Sam Goto
+    - Rick Waldron
   champions:
-    - Jordan Harband
+    - Sam Goto
+    - Rick Waldron
   tests:
-    - https://github.com/tc39/test262/pull/1500
-    - https://github.com/tc39/test262/pull/1587
+    - https://github.com/tc39/test262/pull/1189
+    - https://github.com/tc39/test262/pull/1176
   example: >
-    var str = 'Hello world!!!';
-
-    var regexp = /(\w+)\W*/g;
-
-    console.log(str.matchAll(regexp));
-
-    /*
-    [
-      {
-        0: "Hello ",
-        1: "Hello"
-        index: 0,
-        input: "Hello world!!!"
-      },
-      {
-        0: "world!!!",
-        1: "world"
-        index: 6,
-        input: "Hello world!!!"
-      }
-    ]
-    */
+    var a = 31_557_600;
+    var b = 0b1111_1111;
+    var c = 0xFF_FF_FF;
   presented:
-    - date: September 2018
-      url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-09/sept-25.md#update-on-stringprototypematchall
+    - date: March 2019
+      url: https://github.com/tc39/tc39-notes/blob/master/es10/2019-03/mar-28.md
+
+
+
+- title: Promise.allSettled
+  id: proposal-promise-allSettled
+  has_specification: true
+  description: This proposal is to match popular usage in libraries, adds a method which returns a promise that is fulfilled with an array of promise state snapshots, but only after all the original promises have settled, i.e. become either fulfilled or rejected.
+  authors:
+    - Jason Williams
+    - Robert Pamely
+    - Mathias Bynens
+  champions:
+    - Mathias Bynens
+  tests:
+    - https://github.com/tc39/test262/pull/2124
+  example: >
+    const promises = [ fetch('index.html'), fetch('https://does-not-exist/') ];
+    const results = await Promise.allSettled(promises);
+    const successfulPromises = results.filter(p => p.status === 'fulfilled');
+
+  presented:
+    - date: March 2019
+      url: https://github.com/tc39/tc39-notes/blob/master/es10/2019-03/mar-26.md
 
 - title: Hashbang Grammar
   id: proposal-hashbang
