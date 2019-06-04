@@ -4,19 +4,10 @@
   "description": "Draft for TC39 website",
   "main": "index.js",
   "scripts": {
-    "lint": "stylelint _sass",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:js": "prettier -c --loglevel warn **/*.js",
+    "lint:scss": "stylelint _sass",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.scss": [
-      "stylelint --fix",
-      "git add"
-    ]
   },
   "repository": {
     "type": "git",
@@ -29,8 +20,6 @@
   },
   "homepage": "https://tc39.github.io",
   "devDependencies": {
-    "husky": "^2.3.0",
-    "lint-staged": "^8.1.7",
     "prettier": "^1.17.1",
     "stylelint": "^10.0.1",
     "stylelint-config-prettier": "^5.2.0",
