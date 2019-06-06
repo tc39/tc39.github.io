@@ -54,26 +54,6 @@ function start() {
         toggleProposal(this.parentNode);
       }
     });
-    v.addEventListener("keydown", function(ev) {
-      var nextItem = ev.target.parentNode.nextElementSibling;
-      var prevItem = ev.target.parentNode.previousElementSibling;
-      if (
-        ev.key === "ArrowDown" &&
-        nextItem &&
-        nextItem.classList.contains("featurelist__item")
-      ) {
-        ev.preventDefault();
-        nextItem.firstElementChild.focus();
-      }
-      if (
-        ev.key === "ArrowUp" &&
-        prevItem &&
-        prevItem.classList.contains("featurelist__item")
-      ) {
-        ev.preventDefault();
-        prevItem.firstElementChild.focus();
-      }
-    });
   });
 
   document

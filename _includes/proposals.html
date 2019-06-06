@@ -1,6 +1,5 @@
-<section>
-  <a id="proposals" tabindex="-1"></a>
-  <h2 class="section-headline text-end">State of Proposals</h2>
+<article>
+  <h2 id="proposals" class="section-headline text-end">State of Proposals</h2>
   <div class="featurelist">
     <h3>Current Candidates for the Specification</h3>
     <i class="featurelist__desc">
@@ -34,14 +33,13 @@
       </ul>
     </details>
     {% for proposal in site.data.stage3 %}
-    <section class="featurelist__item">
-      <section class="">
-        <header class="featurelist__item__intro" tabindex="0">
-          <section class="g-row">
+      <article class="featurelist__item">
+        <div class="featurelist__item__intro">
+          <header class="g-row">
             <h4 class="featurelist__item__title flex-grow">
               <a href="https://github.com/tc39/{{ proposal.id }}">{{ proposal.title }}</a>
             </h4>
-            <section class="featurelist__item__tags" tabindex="-1">
+            <div class="featurelist__item__tags">
               <ul class="featurelist__item__status featurelist__item__tags">
                 {% if proposal.presented | size %}
                 {% for presentation in proposal.presented %}
@@ -63,50 +61,64 @@
                   </li>
                 {% endif %}
               </ul>
-            </section>
-          </section>
-          <section class="featurelist__item__author">
-          {% if proposal.authors == proposal.champions %}
-            Author and Champion:
-            {{ proposal.authors | join: ", " }}
-          {% else %}
-            {% if proposal.authors | size %}
-            {% if proposal.authors.size > 1 %}
-            Authors:
-            {% else %}
-            Author:
-            {% endif %}
-            {{ proposal.authors | join: ", " }}
-            {% endif %}
-            {% if proposal.champions | size %}
-            |
-            {% if proposal.champions.size > 1 %}
-            Champions:
-            {% else %}
-            Champion:
-            {% endif %}
-            {{ proposal.champions | join: ", " }}
-            {% endif %}
-          {% endif %}
-          </section>
-          {% if proposal.description %}
-          <section class="featurelist__item__desc">{{ proposal.description }}</section>
-          {% endif %}
-        {% if proposal.example %}
-          <div class="featurelist__item__example">Show Example</div>
-        {% endif %}
-        <section class="featurelist__item__info" tabindex="-1">
-        {% if proposal.example %}
-          <div>
-            <div>
-              <pre><code class="js">{{ proposal.example }}</code></pre>
             </div>
+          </header>
+          <div class="featurelist__item__author">
+            {% if proposal.authors == proposal.champions %}
+              Author and Champion:
+              {{ proposal.authors | join: ", " }}
+            {% else %}
+              {% if proposal.authors | size %}
+              {% if proposal.authors.size > 1 %}
+              Authors:
+              {% else %}
+              Author:
+              {% endif %}
+              {{ proposal.authors | join: ", " }}
+              {% endif %}
+              {% if proposal.champions | size %}
+              |
+              {% if proposal.champions.size > 1 %}
+              Champions:
+              {% else %}
+              Champion:
+              {% endif %}
+              {{ proposal.champions | join: ", " }}
+              {% endif %}
+            {% endif %}
           </div>
-        {% endif %}
+          {% if proposal.description %}
+          <div class="featurelist__item__desc">{{ proposal.description }}</div>
+          {% endif %}
+          {% if proposal.example %}
+          <div
+            class="featurelist__item__example"
+            aria-controls="example-{{ proposal.id }}"
+            aria-expanded="false"
+            tabindex="0"
+            id="example-toggle-{{ proposal.id }}"
+            aria-selected="false"
+          >
+            Show Example
+          </div>
+          {% endif %}
+          <section
+            class="featurelist__item__info"
+            id="example-{{ proposal.id }}"
+            role="region"
+            aria-hidden="true"
+            aria-labelledby="example-toggle-{{ proposal.id }}"
+          >
+            {% if proposal.example %}
+              <div>
+                <div>
+                  <pre><code class="js" tabindex="-1">{{ proposal.example }}</code></pre>
+                </div>
+              </div>
+            {% endif %}
+          </div>
         </section>
-        </header>
-      </section>
-    </section>
+      </article>
     {% endfor %}
   </div>
   <section class="featurelist__more">
