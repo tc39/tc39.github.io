@@ -83,30 +83,16 @@ function start() {
       toggleMenu();
     });
 
-  document.querySelectorAll(".menu-link").forEach(function(link) {
-    link.addEventListener("click", function(ev) {
-      if (ev.target.href.startsWith("#")) {
-        ev.preventDefault();
-        toggleMenu();
-        var target = document.querySelector(ev.target.getAttribute("href"));
-        window.scrollTo({
-          behavior: "smooth",
-          top: Math.floor(
-            target.getBoundingClientRect().top + document.body.scrollTop
-          )
-        });
-        setTimeout(function() {
-          target.focus();
-        }, 400);
-      }
-      var submenu = link.parentNode.querySelector('.submenu');
-      if (submenu) {
+  document.querySelectorAll('.menu-link').forEach(function (link) {
+    var submenu = link.parentNode.querySelector('.submenu');
+    if (submenu) {
+      link.addEventListener('click', function (ev) {
         var t = link.parentNode.querySelector('.submenu-toggle');
         ev.preventDefault();
         toggleMenu(submenu);
         t.classList.toggle('open');
-      }
-    });
+      });
+    }
   });
 
   document.querySelectorAll(".submenu-toggle").forEach(function(toggle) {
