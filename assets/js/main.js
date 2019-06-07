@@ -99,6 +99,13 @@ function start() {
           target.focus();
         }, 400);
       }
+      var submenu = link.parentNode.querySelector('.submenu');
+      if (submenu) {
+        var t = link.parentNode.querySelector('.submenu-toggle');
+        ev.preventDefault();
+        toggleMenu(submenu);
+        t.classList.toggle('open');
+      }
     });
   });
 
