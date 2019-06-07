@@ -1,5 +1,6 @@
 {
   "name": "tc39-web-draft",
+  "private": true,
   "version": "0.0.0",
   "description": "Draft for TC39 website",
   "main": "index.js",
@@ -27,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/tc39/tc39.github.io/issues"
   },
-  "homepage": "https://tc39.github.io",
+  "homepage": "https://tc39.es/",
   "devDependencies": {
     "husky": "^2.3.0",
     "lint-staged": "^8.1.7",

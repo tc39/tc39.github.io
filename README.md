@@ -8,7 +8,7 @@ feedback from people of all areas.
 
 ## Getting involved
 
-This project adheres to the TC39 [Code of Conduct](https://tc39.github.io/code-of-conduct/).
+This project adheres to the TC39 [Code of Conduct](https://tc39.es/code-of-conduct/).
 
 ### Issues
 
