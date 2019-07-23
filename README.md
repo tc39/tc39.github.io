@@ -30,6 +30,11 @@ If changes in the upstream master branch cause your PR to have conflicts, you sh
 rebase your branch to master and force-push it to your repo (rather than doing a
 merge commit).
 
+### Code style
+
+The repo contains a [prettier](https://prettier.io/) and [stylelint](https://stylelint.io/) configuration.
+Code style is checked via CI. To prevent unnecessary red builds you should check locally before committing via `npm run lint`.
+
 ## Local development
 
 Building the website requires [Docker](https://docs.docker.com/install/). This gives you a dev environment with Ruby, Bundler, and all other project dependencies already installed.
