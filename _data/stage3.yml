@@ -12,36 +12,6 @@
     - date: November 2018
       url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-11/nov-29.md#kevins-1pm-talk
 
-- title: import()
-  id: proposal-dynamic-import
-  has_specification: true
-  description: Adding a "function-like" import() module loading syntactic form to JavaScript
-  authors:
-    - Domenic Denicola
-  champions:
-    - Domenic Denicola
-  tests:
-    - https://github.com/tc39/test262/issues/1164
-  example: >
-    const main = document.querySelector("main");
-      for (const link of document.querySelectorAll("nav > a")) {
-        link.addEventListener("click", e => {
-          e.preventDefault();
-
-          import(`./section-modules/${link.dataset.entryModule}.js`)
-            .then(module => {
-              module.loadPageInto(main);
-            })
-            .catch(err => {
-              main.textContent = err.message;
-            });
-        });
-      }
-  presented:
-    - date: December 2016
-      url: https://github.com/tc39/tc39-notes/blob/master/es7/2016-11/dec-1.md#14ii-import-open-issues-and-stage-3-discussion
-
-
 - title: Legacy RegExp features in JavaScript
   id: proposal-regexp-legacy-features
   has_specification: false
@@ -244,7 +214,9 @@
     - https://github.com/tc39/test262/pull/2124
   example: >
     const promises = [ fetch('index.html'), fetch('https://does-not-exist/') ];
+
     const results = await Promise.allSettled(promises);
+
     const successfulPromises = results.filter(p => p.status === 'fulfilled');
 
   presented:
@@ -284,3 +256,218 @@
   presented:
     - date: November 2018
       url: https://github.com/tc39/tc39-notes/blob/master/es9/2018-11/nov-28.md#hash-bang-grammar
+
+
+- title: Top level await
+  id: proposal-top-level-await
+  has_specification: true
+  description: Top-level await lets us rely on the module system itself to handle all of these promises, and make sure that things are well-coordinated.
+  authors:
+    - Myles Borins
+  champions:
+    - Myles Borins
+  example: >
+    // awaiting.mjs
+
+    import { process } from "./some-module.mjs";
+
+    const dynamic = import(computedModuleSpecifier);
+
+    const data = fetch(url);
+
+    export const output = process((await dynamic).default, await data);
+
+    // usage.mjs
+
+    import { output } from "./awaiting.mjs";
+
+    export function outputPlusValue(value) { return output + value }
+
+    console.log(outputPlusValue(100));
+
+    setTimeout(() => console.log(outputPlusValue(100), 1000);
+
+  presented:
+    - date: June 2019
+      url: https://github.com/tc39/tc39-notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
+
+- title: Weakrefs
+  id: proposal-weakrefs
+  has_specification: true
+  description: Top-level await lets us rely on the module system itself to handle all of these promises, and make sure that things are well-coordinated.
+  authors:
+    - Dean Tribble
+    - Sathya Gunasekaran
+  champions:
+    - Dean Tribble
+    - Mark Miller
+    - Till Schneidereit
+    - Sathya Gunasekaran
+  tests:
+    - https://github.com/tc39/test262/pull/2192
+  example: >
+    // Fixed version that doesn't leak memory.
+
+    function makeWeakCached(f) {
+
+      const cache = new Map();
+
+      const cleanup = new FinalizationGroup(iterator => {
+
+        for (const key of iterator) {
+
+          // See note below on concurrency considerations.
+
+          const ref = cache.get(key);
+
+          if (ref && !ref.deref()) cache.delete(key);
+        }
+
+      });
+
+      return key => {
+
+        const ref = cache.get(key);
+
+        if (ref) {
+
+          const cached = ref.deref();
+
+          // See note below on concurrency considerations.
+
+          if (cached !== undefined) return cached;
+
+        }
+
+        const fresh = f(key);
+
+        cache.set(key, new WeakRef(fresh));
+
+        cleanup.register(fresh, key, key);
+
+        return fresh;
+
+      };
+    }
+
+    var getImageCached = makeWeakCached(getImage);
+
+  presented:
+    - date: June 2019
+      url: https://github.com/tc39/tc39-notes/blob/master/meetings/2019-06/june-6.md#weakrefs
+
+- title: Nullish Coalescing for JavaScript
+  id: proposal-nullish-coalescing
+  has_specification: true
+  description: When performing property accesses, it is often desired to provide a default value if the result of that property access is null or undefined. At present, a typical way to express this intent in JavaScript is by using the `||` operator. This introduces a `??` operator.
+  authors:
+    - Gabriel Isenberg
+    - Daniel Ehrenberg
+    - Daniel Rosenwasser
+  champions:
+    - Gabriel Isenberg
+    - Daniel Rosenwasser
+    - Justin Ridgewell
+  example: >
+    const response = {
+
+      settings: {
+
+        nullValue: null,
+
+        height: 400,
+
+        animationDuration: 0,
+
+        headerText: '',
+
+        showSplashScreen: false
+
+      }
+
+    };
+
+    const undefinedValue = response.settings.undefinedValue || 'some other default'; // result: 'some other default'
+
+    const nullValue = response.settings.nullValue || 'some other default'; // result: 'some other default'
+
+  presented:
+    - date: July 2019
+
+- title: RegExp Match array offsets
+  id: proposal-regexp-match-indices
+  has_specification: true
+  description: ECMAScript RegExp Match Indicies provide additional information about the start and end indices of captured substrings relative to the start of the input string.
+  authors:
+    - Ron Buckton
+  champions:
+    - Ron Buckton
+  example: >
+    const re1 = /a+(?<Z>z)?/;
+
+    // indices are relative to start of the input string:
+
+    const s1 = "xaaaz";
+
+    const m1 = re1.exec(s1);
+
+    m1.indices[0][0] === 1;
+
+    m1.indices[0][1] === 5;
+
+    s1.slice(...m1.indices[0]) === "aaaz";
+
+
+    m1.indices[1][0] === 4;
+
+    m1.indices[1][1] === 5;
+
+    s1.slice(...m1.indices[1]) === "z";
+
+
+    m1.indices.groups["Z"][0] === 4;
+
+    m1.indices.groups["Z"][1] === 5;
+
+    s1.slice(...m1.indices.groups["Z"]) === "z";
+
+
+    // capture groups that are not matched return `undefined`:
+
+    const m2 = re1.exec("xaaay");
+
+    m2.indices[1] === undefined;
+
+    m2.indices.groups["Z"] === undefined;
+
+  presented:
+    - date: July 2019
+
+- title: Optional Chaining
+  id: proposal-optional-chaining
+  has_specification: true
+  description: The Optional Chaining Operator allows a developer to handle cases where if a property on an object is optional, they are able to check before accessing it.
+  authors:
+    - Claude Pache
+    - Gabriel Isenberg
+    - Dustin Savery
+  champions:
+    - Gabriel Isenberg
+    - Dustin Savery
+    - Justin Ridgewell
+    - Daniel Rosenwasser
+  example: >
+    // Before
+
+    var fooInput = myForm.querySelector('input[name=foo]')
+
+    var fooValue = fooInput ? fooInput.value : undefined
+
+    // After, with optional chaining
+
+    var street = user.address?.street
+
+    var fooValue = myForm.querySelector('input[name=foo]')?.value
+
+  presented:
+    - date: July 2019
