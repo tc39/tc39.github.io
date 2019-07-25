@@ -83,14 +83,14 @@ function start() {
       toggleMenu();
     });
 
-  document.querySelectorAll('.menu-link').forEach(function (link) {
-    var submenu = link.parentNode.querySelector('.submenu');
+  document.querySelectorAll(".menu-link").forEach(function(link) {
+    var submenu = link.parentNode.querySelector(".submenu");
     if (submenu) {
-      link.addEventListener('click', function (ev) {
-        var t = link.parentNode.querySelector('.submenu-toggle');
+      link.addEventListener("click", function(ev) {
+        var t = link.parentNode.querySelector(".submenu-toggle");
         ev.preventDefault();
         toggleMenu(submenu);
-        t.classList.toggle('open');
+        t.classList.toggle("open");
       });
     }
   });
