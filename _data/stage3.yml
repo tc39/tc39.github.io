@@ -294,7 +294,7 @@
 - title: Weakrefs
   id: proposal-weakrefs
   has_specification: true
-  description: Top-level await lets us rely on the module system itself to handle all of these promises, and make sure that things are well-coordinated.
+  description: The Weakrefs proposal introduces a WeakRef class for weak references and a FinalizationGroup class for running user-defined finalizers after objects are garbage-collected.
   authors:
     - Dean Tribble
     - Sathya Gunasekaran
