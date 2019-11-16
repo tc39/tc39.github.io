@@ -10,7 +10,7 @@
     - https://github.com/tc39/test262/issues/765
   presented:
     - date: November 2018
-      url: https://github.com/tc39/tc39-notes/blob/master/meetings/2018-11/nov-29.md#kevins-1pm-talk
+      url: https://github.com/tc39/notes/blob/master/meetings/2018-11/nov-29.md#kevins-1pm-talk
 
 - title: Legacy RegExp features in JavaScript
   id: proposal-regexp-legacy-features
@@ -25,7 +25,7 @@
     - https://github.com/tc39/test262/issues/1165
   presented:
     - date: May 2017
-      url: https://github.com/tc39/tc39-notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
+      url: https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
 
 - title: BigInt
   id: proposal-bigint
@@ -47,7 +47,7 @@
     // ↪ 9007199254740991n
   presented:
     - date: May 2018
-      url: https://github.com/tc39/tc39-notes/blob/master/meetings/2018-05/may-22.md#bigint-status-update
+      url: https://github.com/tc39/notes/blob/master/meetings/2018-05/may-22.md#bigint-status-update
 
 - title: import.meta
   id: proposal-import-meta
@@ -61,7 +61,7 @@
     - https://github.com/tc39/test262/issues/1342
   presented:
     - date: September 2017
-      url: https://github.com/tc39/tc39-notes/blob/master/meetings/2017-09/sept-27.md#12iiic-importmeta-for-stage-3
+      url: https://github.com/tc39/notes/blob/master/meetings/2017-09/sept-27.md#12iiic-importmeta-for-stage-3
 
 - title: Private instance methods and accessors
   id: proposal-private-methods
@@ -76,7 +76,7 @@
     - https://github.com/tc39/test262/issues/1343
   presented:
     - date: January 2019
-      url: https://github.com/tc39/tc39-notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
+      url: https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
   example: >
     class Counter extends HTMLElement {
       #xValue = 0;
@@ -129,7 +129,7 @@
     }
   presented:
     - date: January 2019
-      url: https://github.com/tc39/tc39-notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
+      url: https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
 
 - title: Static class fields and private static methods
   id: proposal-static-class-features
@@ -145,7 +145,7 @@
     - Daniel Ehrenberg
   presented:
     - date: January 2019
-      url: https://github.com/tc39/tc39-notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
+      url: https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
   example: >
     class ColorFinder {
       static #red = "#ff0000";
@@ -196,7 +196,7 @@
     var c = 0xFF_FF_FF;
   presented:
     - date: March 2019
-      url: https://github.com/tc39/tc39-notes/blob/master/meetings/2019-03/mar-28.md
+      url: https://github.com/tc39/notes/blob/master/meetings/2019-03/mar-28.md
 
 
 
@@ -221,7 +221,7 @@
 
   presented:
     - date: March 2019
-      url: https://github.com/tc39/tc39-notes/blob/master/meetings/2019-03/mar-26.md
+      url: https://github.com/tc39/notes/blob/master/meetings/2019-03/mar-26.md
 
 - title: Hashbang Grammar
   id: proposal-hashbang
@@ -255,7 +255,7 @@
 
   presented:
     - date: November 2018
-      url: https://github.com/tc39/tc39-notes/blob/master/meetings/2018-11/nov-28.md#hash-bang-grammar
+      url: https://github.com/tc39/notes/blob/master/meetings/2018-11/nov-28.md#hash-bang-grammar
 
 
 - title: Top level await
@@ -289,7 +289,7 @@
 
   presented:
     - date: June 2019
-      url: https://github.com/tc39/tc39-notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
+      url: https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
 
 - title: Weakrefs
   id: proposal-weakrefs
@@ -354,7 +354,7 @@
 
   presented:
     - date: June 2019
-      url: https://github.com/tc39/tc39-notes/blob/master/meetings/2019-06/june-6.md#weakrefs
+      url: https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#weakrefs
 
 - title: Nullish Coalescing for JavaScript
   id: proposal-nullish-coalescing
