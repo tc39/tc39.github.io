@@ -474,7 +474,7 @@
 - title: String.prototype.replaceAll
   id: proposal-string-replaceall
   has_specification: true
-  description: ECMAScript proposal: String.prototype.replaceAll
+  description: introduce String.prototype.replaceAll
   authors:
     - Peter Marshall
     - Jakob Gruber
@@ -492,7 +492,7 @@
 - title: Promise.any
   id: proposal-promise-any
   has_specification: true
-  description: ECMAScript proposal: String.prototype.replaceAll
+  description: Introduce String.prototype.replaceAll as a way to replace all in a string
   authors:
     - Mathias Bynens
     - Kevin Gibbons
