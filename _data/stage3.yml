@@ -1,17 +1,3 @@
-- title: globalThis
-  id: proposal-global
-  has_specification: true
-  description: ECMAScript Proposal, specs, and reference implementation for globalThis
-  authors:
-    - Jordan Harband
-  champions:
-    - Jordan Harband
-  tests:
-    - https://github.com/tc39/test262/issues/765
-  presented:
-    - date: November 2018
-      url: https://github.com/tc39/notes/blob/master/meetings/2018-11/nov-29.md#kevins-1pm-talk
-
 - title: Legacy RegExp features in JavaScript
   id: proposal-regexp-legacy-features
   has_specification: false
@@ -471,3 +457,55 @@
 
   presented:
     - date: July 2019
+
+- title: for-in mechanics
+  id: proposal-for-in-order
+  has_specification: true
+  description: Partially specifying object enumeration order in JavaScript
+  authors:
+    - Kevin Gibbons
+  champions:
+    - Kevin Gibbons
+  presented:
+    - date: October 2019
+      url: https://github.com/tc39/notes/blob/master/meetings/2019-10/october-1.md#for-in-order-for-stage-3
+
+
+- title: String.prototype.replaceAll
+  id: proposal-string-replaceall
+  has_specification: true
+  description: ECMAScript proposal: String.prototype.replaceAll
+  authors:
+    - Peter Marshall
+    - Jakob Gruber
+    - Mathias Bynens
+  champions:
+    - Mathias Bynens
+  example: >
+    const queryString = 'q=query+string+parameters';
+    const withSpaces = queryString.replaceAll('+', ' ');
+  presented:
+    - date: October 2019
+      url: https://github.com/tc39/notes/blob/master/meetings/2019-10/october-2.md#stringprototypereplaceall-for-stage-3
+
+
+- title: Promise.any
+  id: proposal-promise-any
+  has_specification: true
+  description: ECMAScript proposal: String.prototype.replaceAll
+  authors:
+    - Mathias Bynens
+    - Kevin Gibbons
+    - Sergey Rubanov
+  champions:
+    - Mathias Bynens
+  example: >
+    try {
+      const first = await Promise.any(promises);
+      // Any of the promises was fulfilled.
+    } catch (error) {
+      // All of the promises were rejected.
+    }
+  presented:
+    - date: October 2019
+      url: https://github.com/tc39/notes/blob/master/meetings/2019-10/october-3.md#promiseany-reprise
