@@ -509,3 +509,16 @@
   presented:
     - date: October 2019
       url: https://github.com/tc39/notes/blob/master/meetings/2019-10/october-3.md#promiseany-reprise
+
+
+- title: Atomics.waitAsync
+  id: proposal-atomics-wait-async
+  has_specification: true
+  description: A proposal for an "asynchronous atomic wait" for ECMAScript, primarily for use in agents that are not allowed to block.
+  authors:
+    - Lars Hansen
+  champions:
+    - Shu-yu Guo
+    - Lars Hansen
+  presented:
+    - date: December 2019
