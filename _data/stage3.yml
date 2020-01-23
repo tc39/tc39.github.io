@@ -492,7 +492,7 @@
 - title: Promise.any
   id: proposal-promise-any
   has_specification: true
-  description: This proposal is to match popular usage in libraries, adds a method which returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected if all of the given promises are rejected.
+  description: Adds a method which returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected if all of the given promises are rejected.
   authors:
     - Mathias Bynens
     - Kevin Gibbons
