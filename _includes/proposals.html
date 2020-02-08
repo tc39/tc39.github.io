@@ -16,18 +16,18 @@
       <strong>Types of tags and what they mean</strong>
       <ul class="featurelist__legend__tags">
           <li>Last Presented:
-            <div class="featurelist__item__presented featurelist__item__tag">
-              <a title="Notes from most recent presentation">December 2018</a>
+            <div title="Notes from most recent presentation" class="featurelist__item__presented featurelist__item__tag">
+              <a>December 2018</a>
             </div>
           </li>
           <li>Available Tests:
-            <div class="featurelist__item__tests featurelist__item__tag">
-              <a title="Patch introducing tests in test262 repository">Test</a>
+            <div title="Patch introducing tests in test262 repository" class="featurelist__item__tests featurelist__item__tag">
+              <a>Test</a>
             </div>
           </li>
           <li>Specification Text:
-            <div class="featurelist__item__spec featurelist__item__tag">
-              <a title="Read the specification text">Specification</a>
+            <div title="Read the specification text" class="featurelist__item__spec featurelist__item__tag">
+              <a>Specification</a>
             </div>
           </li>
       </ul>
@@ -45,21 +45,21 @@
               <ul class="featurelist__item__status featurelist__item__tags">
                 {% if proposal.presented | size %}
                 {% for presentation in proposal.presented %}
-                  <li class="featurelist__item__presented featurelist__item__tag">
-                    <a href="{{ presentation.url }}" title="Notes from most recent presentation">{{ presentation.date }}</a>
+                  <li title="Notes from most recent presentation" class="featurelist__item__presented featurelist__item__tag">
+                    <a href="{{ presentation.url }}">{{ presentation.date }}</a>
                   </li>
                 {% endfor %}
                 {% endif %}
                 {% if proposal.tests | size %}
                 {% for url in proposal.tests %}
-                  <li class="featurelist__item__tests featurelist__item__tag">
-                    <a href="{{ url }}" title="Patch introducing tests in test262 repository">Test</a>
+                  <li title="Patch introducing tests in test262 repository" class="featurelist__item__tests featurelist__item__tag">
+                    <a href="{{ url }}">Test</a>
                   </li>
                 {% endfor %}
                 {% endif %}
                 {% if proposal.has_specification %}
-                  <li class="featurelist__item__spec featurelist__item__tag">
-                    <a href="https://tc39.es/{{ proposal.id }}" title="Read the specification text">Specification</a>
+                  <li title="Read the specification text" class="featurelist__item__spec featurelist__item__tag">
+                    <a href="https://tc39.es/{{ proposal.id }}">Specification</a>
                   </li>
                 {% endif %}
               </ul>
