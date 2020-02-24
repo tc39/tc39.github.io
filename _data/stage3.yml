@@ -427,7 +427,7 @@
 - title: String.prototype.replaceAll
   id: proposal-string-replaceall
   has_specification: true
-  description: introduce String.prototype.replaceAll
+  description: Introduce String.prototype.replaceAll as a way to replace all in a string
   authors:
     - Peter Marshall
     - Jakob Gruber
@@ -440,7 +440,6 @@
   presented:
     - date: October 2019
       url: https://github.com/tc39/notes/blob/master/meetings/2019-10/october-2.md#stringprototypereplaceall-for-stage-3
-
 
 - title: Atomics.waitAsync
   id: proposal-atomics-wait-async
