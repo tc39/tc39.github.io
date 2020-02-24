@@ -13,28 +13,6 @@
     - date: May 2017
       url: https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
 
-- title: BigInt
-  id: proposal-bigint
-  has_specification: true
-  description: Arbitrary precision integers in JavaScript
-  authors:
-    - Daniel Ehrenberg
-  champions:
-    - Daniel Ehrenberg
-  tests:
-    - https://github.com/tc39/test262/issues/1056
-  example: >
-    const theBiggestInt = 9007199254740991n;
-
-    const alsoHuge = BigInt(9007199254740991);
-    // ↪ 9007199254740991n
-
-    const hugeButString = BigInt('9007199254740991');
-    // ↪ 9007199254740991n
-  presented:
-    - date: May 2018
-      url: https://github.com/tc39/notes/blob/master/meetings/2018-05/may-22.md#bigint-status-update
-
 - title: import.meta
   id: proposal-import-meta
   has_specification: true
@@ -184,31 +162,6 @@
     - date: March 2019
       url: https://github.com/tc39/notes/blob/master/meetings/2019-03/mar-28.md
 
-
-
-- title: Promise.allSettled
-  id: proposal-promise-allSettled
-  has_specification: true
-  description: This proposal is to match popular usage in libraries, adds a method which returns a promise that is fulfilled with an array of promise state snapshots, but only after all the original promises have settled, i.e. become either fulfilled or rejected.
-  authors:
-    - Jason Williams
-    - Robert Pamely
-    - Mathias Bynens
-  champions:
-    - Mathias Bynens
-  tests:
-    - https://github.com/tc39/test262/pull/2124
-  example: >
-    const promises = [ fetch('index.html'), fetch('https://does-not-exist/') ];
-
-    const results = await Promise.allSettled(promises);
-
-    const successfulPromises = results.filter(p => p.status === 'fulfilled');
-
-  presented:
-    - date: March 2019
-      url: https://github.com/tc39/notes/blob/master/meetings/2019-03/mar-26.md
-
 - title: Hashbang Grammar
   id: proposal-hashbang
   has_specification: true
@@ -277,7 +230,7 @@
     - date: June 2019
       url: https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
 
-- title: Weakrefs
+- title: WeakRefs
   id: proposal-weakrefs
   has_specification: true
   description: The Weakrefs proposal introduces a WeakRef class for weak references and a FinalizationGroup class for running user-defined finalizers after objects are garbage-collected.
@@ -488,37 +441,24 @@
     - date: October 2019
       url: https://github.com/tc39/notes/blob/master/meetings/2019-10/october-2.md#stringprototypereplaceall-for-stage-3
 
-
-- title: Promise.any
-  id: proposal-promise-any
-  has_specification: true
-  description: Adds a method which returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected if all of the given promises are rejected.
-  authors:
-    - Mathias Bynens
-    - Kevin Gibbons
-    - Sergey Rubanov
-  champions:
-    - Mathias Bynens
-  example: >
-    try {
-      const first = await Promise.any(promises);
-      // Any of the promises was fulfilled.
-    } catch (error) {
-      // All of the promises were rejected.
-    }
-  presented:
-    - date: October 2019
-      url: https://github.com/tc39/notes/blob/master/meetings/2019-10/october-3.md#promiseany-reprise
-
-
 - title: Atomics.waitAsync
   id: proposal-atomics-wait-async
   has_specification: true
   description: A proposal for an "asynchronous atomic wait" for ECMAScript, primarily for use in agents that are not allowed to block.
   authors:
-    - Lars Hansen
+    - Shu-yu Guo
+    - Lars T. Hansen
   champions:
     - Shu-yu Guo
-    - Lars Hansen
+    - Lars T. Hansen
+  example: >
+      var sab = new SharedArrayBuffer(4096);
+      var ia = new Int32Array(sab);
+      ia[37] = 0x1337;
+      test1();
+      function test1() {
+        Atomics.waitAsync(ia, 37, 0x1337, 1000).then(function (r) { log(`Resolved ${r}`); test2(); } );
+      }
   presented:
     - date: December 2019
+      url: https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
