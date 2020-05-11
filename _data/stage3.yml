@@ -13,20 +13,6 @@
     - date: May 2017
       url: https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
 
-- title: import.meta
-  id: proposal-import-meta
-  has_specification: true
-  description: A proposal for adding an import.meta metaproperty to JavaScript, for holding host-specific metadata about the current module.
-  authors:
-    - Domenic Denicola
-  champions:
-    - Domenic Denicola
-  tests:
-    - https://github.com/tc39/test262/issues/1342
-  presented:
-    - date: September 2017
-      url: https://github.com/tc39/notes/blob/master/meetings/2017-09/sept-27.md#12iiic-importmeta-for-stage-3
-
 - title: Private instance methods and accessors
   id: proposal-private-methods
   has_specification: true
@@ -463,3 +449,25 @@
   presented:
     - date: December 2019
       url: https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
+
+- title: Logical Assignment Operators
+  id: proposal-logical-assignment
+  has_specification: true
+  description: A proposal to combine Logical Operators and Assignment Expressions.
+  authors:
+    - Justin Ridgewell
+    - Hemanth HM
+  champions:
+    - Justin Ridgewell
+    - Hemanth HM
+  example: >
+    function example(opts) {
+      // Setters are not needlessly called.
+      opts.foo ??= 'bar'
+      // No repetition of `opts.baz`.
+      opts.baz ??= 'qux';
+    }
+    example({ foo: 'foo' })
+  presented:
+    - date: March 2020
+      url: https://github.com/tc39/notes/blob/master/meetings/2020-03/march-31.md#logicalassignment-for-stage-3
