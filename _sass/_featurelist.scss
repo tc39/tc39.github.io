@@ -15,21 +15,23 @@
     }
     &__tag {
       display: inline-block;
-      font-size: 0.8rem;
-      margin-top: 0.5rem;
-      opacity: 1;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      &:hover {
-        background-color: transparent;
-      }
-      &:focus-within {
-        background-color: transparent;
-      }
       a {
         color: white;
+        display: block;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        opacity: 1;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
         text-decoration: none;
         word-break: break-all;
+
+        &:hover {
+          background-color: transparent;
+        }
+        &:focus {
+          background-color: transparent;
+        }
       }
     }
     &__status {
@@ -55,49 +57,40 @@
       padding-top: 0;
       word-wrap: anywhere;
     }
-    &__tests {
+    /* stylelint-disable-next-line no-descending-specificity */
+    &__tests a {
       background-color: $tag-tests;
       border: 2px solid $tag-tests;
       border-radius: 10px;
-      &:focus-within {
-        a {
-          color: $tag-tests;
-        }
+      &:focus {
+        color: $tag-tests;
       }
       &:hover {
-        a {
-          color: $tag-tests;
-        }
+        color: $tag-tests;
       }
     }
-    &__spec {
+    /* stylelint-disable-next-line no-descending-specificity */
+    &__spec a {
       background-color: $tag-spec;
       border: 2px solid $tag-spec;
       border-radius: 10px;
-      &:focus-within {
-        a {
-          color: $tag-spec;
-        }
+      &:focus {
+        color: $tag-spec;
       }
       &:hover {
-        a {
-          color: $tag-spec;
-        }
+        color: $tag-spec;
       }
     }
-    &__presented {
+    /* stylelint-disable-next-line no-descending-specificity */
+    &__presented a {
       background-color: $tag-presented;
       border: 2px solid $tag-presented;
       border-radius: 10px;
-      &:focus-within {
-        a {
-          color: $tag-presented;
-        }
+      &:focus {
+        color: $tag-presented;
       }
       &:hover {
-        a {
-          color: $tag-presented;
-        }
+        color: $tag-presented;
       }
     }
     .no-js &:focus-within &__info {
