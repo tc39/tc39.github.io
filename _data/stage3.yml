@@ -281,45 +281,7 @@
     - date: June 2019
       url: https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#weakrefs
 
-- title: Nullish Coalescing for JavaScript
-  id: proposal-nullish-coalescing
-  has_specification: true
-  description: When performing property accesses, it is often desired to provide a default value if the result of that property access is null or undefined. At present, a typical way to express this intent in JavaScript is by using the `||` operator. This introduces a `??` operator.
-  authors:
-    - Gabriel Isenberg
-    - Daniel Ehrenberg
-    - Daniel Rosenwasser
-  champions:
-    - Gabriel Isenberg
-    - Daniel Rosenwasser
-    - Justin Ridgewell
-  example: >
-    const response = {
-
-      settings: {
-
-        nullValue: null,
-
-        height: 400,
-
-        animationDuration: 0,
-
-        headerText: '',
-
-        showSplashScreen: false
-
-      }
-
-    };
-
-    const undefinedValue = response.settings.undefinedValue || 'some other default'; // result: 'some other default'
-
-    const nullValue = response.settings.nullValue || 'some other default'; // result: 'some other default'
-
-  presented:
-    - date: July 2019
-
-- title: RegExp Match array offsets
+- title: RegExp Match Indices
   id: proposal-regexp-match-indices
   has_specification: true
   description: ECMAScript RegExp Match Indicies provide additional information about the start and end indices of captured substrings relative to the start of the input string.
@@ -368,83 +330,114 @@
   presented:
     - date: July 2019
 
-- title: Optional Chaining
-  id: proposal-optional-chaining
+- title: Promise.any
+  id: proposal-promise-any
   has_specification: true
-  description: The Optional Chaining Operator allows a developer to handle cases where if a property on an object is optional, they are able to check before accessing it.
+  description: Promise.any accepts an iterable of promises and returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected with an AggregateError holding the rejection reasons if all of the given promises are rejected. .
   authors:
-    - Claude Pache
-    - Gabriel Isenberg
-    - Dustin Savery
-  champions:
-    - Gabriel Isenberg
-    - Dustin Savery
-    - Justin Ridgewell
-    - Daniel Rosenwasser
-  example: >
-    // Before
-
-    var fooInput = myForm.querySelector('input[name=foo]')
-
-    var fooValue = fooInput ? fooInput.value : undefined
-
-    // After, with optional chaining
-
-    var street = user.address?.street
-
-    var fooValue = myForm.querySelector('input[name=foo]')?.value
-
-  presented:
-    - date: July 2019
-
-- title: for-in mechanics
-  id: proposal-for-in-order
-  has_specification: true
-  description: Partially specifying object enumeration order in JavaScript
-  authors:
-    - Kevin Gibbons
-  champions:
-    - Kevin Gibbons
-  presented:
-    - date: October 2019
-      url: https://github.com/tc39/notes/blob/master/meetings/2019-10/october-1.md#for-in-order-for-stage-3
-
-
-- title: String.prototype.replaceAll
-  id: proposal-string-replaceall
-  has_specification: true
-  description: Introduce String.prototype.replaceAll as a way to replace all in a string
-  authors:
-    - Peter Marshall
-    - Jakob Gruber
     - Mathias Bynens
+    - Kevin Gibbons
+    - Sergey Rubanov
   champions:
     - Mathias Bynens
   example: >
-    const queryString = 'q=query+string+parameters';
-    const withSpaces = queryString.replaceAll('+', ' ');
+    try {
+
+      const first = await Promise.any(promises);
+
+      // Any of the promises was fulfilled.
+
+    } catch (error) {
+
+      // All of the promises were rejected.
+
+    }
+
   presented:
-    - date: October 2019
-      url: https://github.com/tc39/notes/blob/master/meetings/2019-10/october-2.md#stringprototypereplaceall-for-stage-3
+    - date: June 2020
+      url: https://github.com/tc39/notes/blob/master/meetings/2020-06/june-2.md#aggregateerror-constructor-update
+
 
 - title: Atomics.waitAsync
   id: proposal-atomics-wait-async
   has_specification: true
   description: A proposal for an "asynchronous atomic wait" for ECMAScript, primarily for use in agents that are not allowed to block.
   authors:
-    - Shu-yu Guo
-    - Lars T. Hansen
+    - Lars Hansen
   champions:
-    - Shu-yu Guo
-    - Lars T. Hansen
+    - Shu-Yu Guo
+    - Lars Hansen
   example: >
-      var sab = new SharedArrayBuffer(4096);
-      var ia = new Int32Array(sab);
-      ia[37] = 0x1337;
-      test1();
-      function test1() {
-        Atomics.waitAsync(ia, 37, 0x1337, 1000).then(function (r) { log(`Resolved ${r}`); test2(); } );
+    var sab = new SharedArrayBuffer(4096);
+
+    var ia = new Int32Array(sab);
+
+    ia[37] = 0x1337;
+
+    test1();
+
+
+    function test1() {
+
+      Atomics.waitAsync(ia, 37, 0x1337, 1000).then(function (r) { log("Resolved: " + r); test2(); });
+
+    }
+
+
+    var code = `
+
+    var ia = null;
+
+    onmessage = function (ev) {
+
+      if (!ia) {
+
+        postMessage("Aux worker is running");
+
+        ia = new Int32Array(ev.data);
+
       }
+
+      postMessage("Aux worker is sleeping for a little bit");
+
+      setTimeout(function () { postMessage("Aux worker is waking"); Atomics.notify(ia, 37); }, 1000);
+
+    }`;
+
+
+    function test2() {
+
+      var w = new Worker("data:application/javascript," + encodeURIComponent(code));
+
+      w.onmessage = function (ev) { log(ev.data) };
+
+      w.postMessage(sab);
+
+      Atomics.waitAsync(ia, 37, 0x1337).then(function (r) { log("Resolved: " + r); test3(w); });
+
+    }
+
+
+    function test3(w) {
+
+      w.postMessage(false);
+
+      Atomics.waitAsync(ia, 37, 0x1337).then(function (r) { log("Resolved 1: " + r); });
+
+      Atomics.waitAsync(ia, 37, 0x1337).then(function (r) { log("Resolved 2: " + r); });
+
+      Atomics.waitAsync(ia, 37, 0x1337).then(function (r) { log("Resolved 3: " + r); });
+
+    }
+
+
+    function log(msg) {
+
+      document.getElementById("scrool").innerHTML += String(msg) + "\n";
+
+    }
+
+
   presented:
     - date: December 2019
       url: https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
