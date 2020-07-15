@@ -23,18 +23,8 @@
       {% include intro.html %}
       {% include proposals.html %}
     </section>
+    {% include_relative _layouts/page_footer.html %}
     </main>
-
-    <div class="popup">
-      <input type="checkbox" id="one" class="hidden" name="ossm">
-      <label for="one" class="alert-message">
-        <strong>We are
-        looking for feedback.</strong> Please add issues to our <a
-                    href="https://github.com/tc39/tc39-web-draft/issues" target="_blank">GitHub
-                    page</a>.
-        <span class="close">×</span>
-      </label>
-    </div>
-    <img src="https://d3nrsflo8ae6b5.cloudfront.net/1x1.png" alt="pixel" />
+    <img class="hidden" src="https://d3nrsflo8ae6b5.cloudfront.net/1x1.png" alt="pixel" />
   </body>
 </html>
