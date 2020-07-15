@@ -1,19 +1,17 @@
 .page-footer {
-  color: $color-gray59;
+  color: $color-dim-gray;
   font-size: 12px;
   min-height: 100px;
   width: 100%;
 }
 
 .page-footer a {
-  color: $color-eclipse;
-  font-weight: 400;
+  color: $color-link;
+  font-weight: $font-weight-regular;
   text-decoration: none;
 }
 
 .page-footer a:hover {
-  color: $color-eclipse;
-  font-weight: 400;
   text-decoration: underline;
 }
 
@@ -35,7 +33,7 @@
 }
 
 .page-footer .grid-container {
-  border-top: solid 1px $color-gray83;
+  border-top: solid 1px $color-dim-gray;
   margin: 0 auto;
   overflow: auto;
   padding: ($grid-gutter / 2) 0 $grid-gutter;
