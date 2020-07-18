@@ -33,7 +33,7 @@
 }
 
 .page-footer .grid-container {
-  border-top: solid 1px $color-dim-gray;
+  border-top: solid 1px mix($color-bg, $color-dim-gray, $weight: 80%);
   margin: 0 auto;
   overflow: auto;
   padding: ($grid-gutter / 2) 0 $grid-gutter;
