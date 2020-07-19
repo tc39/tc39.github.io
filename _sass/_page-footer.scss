@@ -8,11 +8,11 @@
 .page-footer a {
   color: $color-link;
   font-weight: $font-weight-regular;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .page-footer a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .page-footer .pipe-nav {
