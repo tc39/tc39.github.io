@@ -127,27 +127,6 @@
       // ^ Static private method
     }
 
-- title: Numeric Separators
-  id: proposal-numeric-separator
-  has_specification: true
-  description: This proposal adds the ability to utilize numeric literal separators for increased readability in Javascript source
-  authors:
-    - Sam Goto
-    - Rick Waldron
-  champions:
-    - Sam Goto
-    - Rick Waldron
-  tests:
-    - https://github.com/tc39/test262/pull/1189
-    - https://github.com/tc39/test262/pull/1176
-  example: >
-    var a = 31_557_600;
-    var b = 0b1111_1111;
-    var c = 0xFF_FF_FF;
-  presented:
-    - date: March 2019
-      url: https://github.com/tc39/notes/blob/master/meetings/2019-03/mar-28.md
-
 - title: Hashbang Grammar
   id: proposal-hashbang
   has_specification: true
@@ -216,71 +195,6 @@
     - date: June 2019
       url: https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
 
-- title: WeakRefs
-  id: proposal-weakrefs
-  has_specification: true
-  description: The Weakrefs proposal introduces a WeakRef class for weak references and a FinalizationGroup class for running user-defined finalizers after objects are garbage-collected.
-  authors:
-    - Dean Tribble
-    - Sathya Gunasekaran
-  champions:
-    - Dean Tribble
-    - Mark Miller
-    - Till Schneidereit
-    - Sathya Gunasekaran
-  tests:
-    - https://github.com/tc39/test262/pull/2192
-  example: >
-    // Fixed version that doesn't leak memory.
-
-    function makeWeakCached(f) {
-
-      const cache = new Map();
-
-      const cleanup = new FinalizationGroup(iterator => {
-
-        for (const key of iterator) {
-
-          // See note below on concurrency considerations.
-
-          const ref = cache.get(key);
-
-          if (ref && !ref.deref()) cache.delete(key);
-        }
-
-      });
-
-      return key => {
-
-        const ref = cache.get(key);
-
-        if (ref) {
-
-          const cached = ref.deref();
-
-          // See note below on concurrency considerations.
-
-          if (cached !== undefined) return cached;
-
-        }
-
-        const fresh = f(key);
-
-        cache.set(key, new WeakRef(fresh));
-
-        cleanup.register(fresh, key, key);
-
-        return fresh;
-
-      };
-    }
-
-    var getImageCached = makeWeakCached(getImage);
-
-  presented:
-    - date: June 2019
-      url: https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#weakrefs
-
 - title: RegExp Match Indices
   id: proposal-regexp-match-indices
   has_specification: true
@@ -329,34 +243,6 @@
 
   presented:
     - date: July 2019
-
-- title: Promise.any
-  id: proposal-promise-any
-  has_specification: true
-  description: Promise.any accepts an iterable of promises and returns a promise that is fulfilled by the first given promise to be fulfilled, or rejected with an AggregateError holding the rejection reasons if all of the given promises are rejected. .
-  authors:
-    - Mathias Bynens
-    - Kevin Gibbons
-    - Sergey Rubanov
-  champions:
-    - Mathias Bynens
-  example: >
-    try {
-
-      const first = await Promise.any(promises);
-
-      // Any of the promises was fulfilled.
-
-    } catch (error) {
-
-      // All of the promises were rejected.
-
-    }
-
-  presented:
-    - date: June 2020
-      url: https://github.com/tc39/notes/blob/master/meetings/2020-06/june-2.md#aggregateerror-constructor-update
-
 
 - title: Atomics.waitAsync
   id: proposal-atomics-wait-async
@@ -437,29 +323,8 @@
 
     }
 
-
   presented:
     - date: December 2019
       url: https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
 
-- title: Logical Assignment Operators
-  id: proposal-logical-assignment
-  has_specification: true
-  description: A proposal to combine Logical Operators and Assignment Expressions.
-  authors:
-    - Justin Ridgewell
-    - Hemanth HM
-  champions:
-    - Justin Ridgewell
-    - Hemanth HM
-  example: >
-    function example(opts) {
-      // Setters are not needlessly called.
-      opts.foo ??= 'bar'
-      // No repetition of `opts.baz`.
-      opts.baz ??= 'qux';
-    }
-    example({ foo: 'foo' })
-  presented:
-    - date: March 2020
-      url: https://github.com/tc39/notes/blob/master/meetings/2020-03/march-31.md#logicalassignment-for-stage-3
+
