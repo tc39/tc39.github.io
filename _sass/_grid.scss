@@ -17,6 +17,9 @@
     .g-col-2 {
       flex: 0 0 200px;
     }
+    .g-col-3 {
+      flex: 0 0 percentage(3/12);
+    }
     .g-col-4 {
       flex: 0 0 percentage(4/12);
     }

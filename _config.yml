@@ -1,5 +1,6 @@
 plugins:
     - jemoji
+    - jekyll-octicons
 exclude:
     - 'README.md'
     - 'screenshot.png'
@@ -10,5 +11,6 @@ exclude:
     - 'node_modules'
     - 'package.json'
     - 'package-lock.json'
+    - 'vendor'
 sass:
     style: compressed
