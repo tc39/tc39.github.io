@@ -104,17 +104,15 @@
     >
       Show Example
     </div>
-    {% endif %}
     <section
       class="featurelist__item__info"
       id="example-{{ proposal.id }}"
       aria-hidden="true"
       aria-labelledby="example-toggle-{{ proposal.id }}"
     >
-      {% if proposal.example %}
       <pre><code class="js" tabindex="-1">{{ proposal.example }}</code></pre>
-      {% endif %}
     </section>
+    {% endif %}
   </div>
 </article>
 {% endfor %}
