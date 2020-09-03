@@ -32,6 +32,7 @@
           </li>
       </ul>
     </details>
+  </div>
 </article>
 
     {% for proposal in site.data.stage3 %}
@@ -112,13 +113,14 @@
             aria-labelledby="example-toggle-{{ proposal.id }}"
           >
             {% if proposal.example %}
+            <div>
               <div>
-                <div>
-                  <pre><code class="js" tabindex="-1">{{ proposal.example }}</code></pre>
-                </div>
+                <pre><code class="js" tabindex="-1">{{ proposal.example }}</code></pre>
               </div>
+            </div>
             {% endif %}
-          </div>
+          </section>
+        </div>
       </article>
     {% endfor %}
   </div>
