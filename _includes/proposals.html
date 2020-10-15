@@ -32,99 +32,92 @@
           </li>
       </ul>
     </details>
+  </div>
 </article>
 
-    {% for proposal in site.data.stage3 %}
-      <article class="featurelist__item">
-        <div class="featurelist__item__intro">
-          <header class="g-row">
-            <h4 class="featurelist__item__title flex-grow">
-              <a href="https://github.com/tc39/{{ proposal.id }}">{{ proposal.title }}</a>
-            </h4>
-            <div class="featurelist__item__tags">
-              <ul class="featurelist__item__status featurelist__item__tags">
-                {% if proposal.presented | size %}
-                {% for presentation in proposal.presented %}
-                  <li class="featurelist__item__presented featurelist__item__tag">
-                    <a href="{{ presentation.url }}" title="Notes from most recent presentation">{{ presentation.date }}</a>
-                  </li>
-                {% endfor %}
-                {% endif %}
-                {% if proposal.tests | size %}
-                {% for url in proposal.tests %}
-                  <li class="featurelist__item__tests featurelist__item__tag">
-                    <a href="{{ url }}" title="Patch introducing tests in test262 repository">Test</a>
-                  </li>
-                {% endfor %}
-                {% endif %}
-                {% if proposal.has_specification %}
-                  <li class="featurelist__item__spec featurelist__item__tag">
-                    <a href="https://tc39.es/{{ proposal.id }}" title="Read the specification text">Specification</a>
-                  </li>
-                {% endif %}
-              </ul>
-            </div>
-          </header>
-          <div class="featurelist__item__author">
-            {% if proposal.authors == proposal.champions %}
-              Author and Champion:
-              {{ proposal.authors | join: ", " }}
-            {% else %}
-              {% if proposal.authors | size %}
-              {% if proposal.authors.size > 1 %}
-              Authors:
-              {% else %}
-              Author:
-              {% endif %}
-              {{ proposal.authors | join: ", " }}
-              {% endif %}
-              {% if proposal.champions | size %}
-              |
-              {% if proposal.champions.size > 1 %}
-              Champions:
-              {% else %}
-              Champion:
-              {% endif %}
-              {{ proposal.champions | join: ", " }}
-              {% endif %}
-            {% endif %}
-          </div>
-          {% if proposal.description %}
-          <div class="featurelist__item__desc">{{ proposal.description }}</div>
+{% for proposal in site.data.stage3 %}
+<article class="featurelist__item">
+  <div class="featurelist__item__intro">
+    <header class="g-row">
+      <h4 class="featurelist__item__title flex-grow">
+        <a href="https://github.com/tc39/{{ proposal.id }}">{{ proposal.title }}</a>
+      </h4>
+      <div class="featurelist__item__tags">
+        <ul class="featurelist__item__status featurelist__item__tags">
+          {% if proposal.presented | size %}
+          {% for presentation in proposal.presented %}
+            <li class="featurelist__item__presented featurelist__item__tag">
+              <a href="{{ presentation.url }}" title="Notes from most recent presentation">{{ presentation.date }}</a>
+            </li>
+          {% endfor %}
           {% endif %}
-          {% if proposal.example %}
-          <div
-            class="featurelist__item__example"
-            aria-controls="example-{{ proposal.id }}"
-            aria-expanded="false"
-            tabindex="0"
-            id="example-toggle-{{ proposal.id }}"
-            aria-selected="false"
-          >
-            Show Example
-          </div>
+          {% if proposal.tests | size %}
+          {% for url in proposal.tests %}
+            <li class="featurelist__item__tests featurelist__item__tag">
+              <a href="{{ url }}" title="Patch introducing tests in test262 repository">Test</a>
+            </li>
+          {% endfor %}
           {% endif %}
-          <section
-            class="featurelist__item__info"
-            id="example-{{ proposal.id }}"
-            role="region"
-            aria-hidden="true"
-            aria-labelledby="example-toggle-{{ proposal.id }}"
-          >
-            {% if proposal.example %}
-              <div>
-                <div>
-                  <pre><code class="js" tabindex="-1">{{ proposal.example }}</code></pre>
-                </div>
-              </div>
-            {% endif %}
-          </div>
-      </article>
-    {% endfor %}
+          {% if proposal.has_specification %}
+            <li class="featurelist__item__spec featurelist__item__tag">
+              <a href="https://tc39.es/{{ proposal.id }}" title="Read the specification text">Specification</a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </header>
+    <div class="featurelist__item__author">
+      {% if proposal.authors == proposal.champions %}
+        Author and Champion:
+        {{ proposal.authors | join: ", " }}
+      {% else %}
+        {% if proposal.authors | size %}
+        {% if proposal.authors.size > 1 %}
+        Authors:
+        {% else %}
+        Author:
+        {% endif %}
+        {{ proposal.authors | join: ", " }}
+        {% endif %}
+        {% if proposal.champions | size %}
+        |
+        {% if proposal.champions.size > 1 %}
+        Champions:
+        {% else %}
+        Champion:
+        {% endif %}
+        {{ proposal.champions | join: ", " }}
+        {% endif %}
+      {% endif %}
+    </div>
+    {% if proposal.description %}
+    <div class="featurelist__item__desc">{{ proposal.description }}</div>
+    {% endif %}
+    {% if proposal.example %}
+    <div
+      class="featurelist__item__example"
+      aria-controls="example-{{ proposal.id }}"
+      aria-expanded="false"
+      role="button"
+      tabindex="0"
+      id="example-toggle-{{ proposal.id }}"
+    >
+      Show Example
+    </div>
+    <section
+      class="featurelist__item__info"
+      id="example-{{ proposal.id }}"
+      aria-hidden="true"
+      aria-labelledby="example-toggle-{{ proposal.id }}"
+    >
+      <pre><code class="js" tabindex="-1">{{ proposal.example }}</code></pre>
+    </section>
+    {% endif %}
   </div>
-  <section class="featurelist__more">
-    <a href="https://github.com/tc39/proposals">
-      See proposals in all stages
-    </a>
-  </section>
+</article>
+{% endfor %}
+<section class="featurelist__more">
+  <a href="https://github.com/tc39/proposals">
+    See proposals in all stages
+  </a>
 </section>

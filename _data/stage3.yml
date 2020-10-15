@@ -204,7 +204,7 @@
   champions:
     - Ron Buckton
   example: >
-    const re1 = /a+(?<Z>z)?/;
+    const re1 = /a+(?&lt;Z&gt;z)?/;
 
     // indices are relative to start of the input string:
 

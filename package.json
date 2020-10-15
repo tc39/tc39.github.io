@@ -8,6 +8,7 @@
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "prettier -c --loglevel warn **/*.js",
     "lint:scss": "stylelint _sass",
+    "check:html": "bundle exec jekyll build && node _tasks/check-html.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,11 +21,15 @@
     "url": "https://github.com/tc39/tc39.github.io/issues"
   },
   "homepage": "https://tc39.es/",
+  "engines": {
+    "node": ">=14.8"
+  },
   "devDependencies": {
     "prettier": "^1.17.1",
     "stylelint": "^10.0.1",
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-config-standard": "^18.3.0",
-    "stylelint-order": "^3.0.0"
+    "stylelint-order": "^3.0.0",
+    "vnu-jar": "20.6.30"
   }
 }

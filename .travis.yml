@@ -1,9 +1,26 @@
-language: node_js
-node_js:
-  - "8"
+language: ruby
+
+sudo: required
+
+addons:
+  apt:
+    packages:
+      - wget
+
+jdk:
+  - openjdk14
+
+before_install:
+  - wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+  - source ~/.bashrc
+  - nvm install
+  - node --version
 
 install:
+  - bundle install
+  - gem install jekyll
   - travis_retry npm install
 
 script:
   - npm run lint
+  - npm run check:html
