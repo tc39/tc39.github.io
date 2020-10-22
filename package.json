@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "prettier -c --loglevel warn **/*.js",
+    "lint:js": "eslint --ext=.js,.mjs .",
+    "format:js": "npm run lint:js -- --fix",
     "lint:scss": "stylelint _sass",
     "check:html": "bundle exec jekyll build && node _tasks/check-html.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
