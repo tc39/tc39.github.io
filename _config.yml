@@ -2,6 +2,7 @@ plugins:
     - jemoji
     - jekyll-octicons
 exclude:
+    - 'babel.config.js'
     - 'README.md'
     - 'screenshot.png'
     - 'Dockerfile'
