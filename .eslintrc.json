@@ -1,0 +1,42 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "babelOptions": {
+      "configFile": "./babel.config.json"
+    },
+    "ecmaFeatures": {
+      "globalReturn": false
+    },
+    "sourceType": "module"
+  },
+  "plugins": ["prettier"],
+  "reportUnusedDisableDirectives": true,
+  "root": true,
+  "rules": {
+    "prettier/prettier": "error"
+  },
+  "overrides": [
+    {
+      "env": {
+        "browser": true
+      },
+      "extends": ["plugin:compat/recommended"],
+      "files": ["./assets/js/main.js"],
+      "parserOptions": {
+        "sourceType": "script"
+      },
+      "plugins": ["compat"],
+      "rules": {
+        "compat/compat": "error"
+      }
+    }
+  ]
+}
