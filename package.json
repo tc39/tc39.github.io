@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "npm run lint:js && npm run lint:scss",
-    "lint:js": "prettier -c --loglevel warn **/*.js",
+    "lint:js": "eslint --ext=.js,.mjs .",
+    "format:js": "npm run lint:js -- --fix",
     "lint:scss": "stylelint _sass",
     "check:html": "bundle exec jekyll build && node _tasks/check-html.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,6 +26,14 @@
     "node": ">=14.8"
   },
   "devDependencies": {
+    "@babel/core": "7.12.3",
+    "@babel/eslint-parser": "7.12.1",
+    "@babel/plugin-syntax-top-level-await": "7.12.1",
+    "@babel/preset-env": "7.12.1",
+    "eslint": "7.12.0",
+    "eslint-config-prettier": "6.14.0",
+    "eslint-plugin-compat": "3.8.0",
+    "eslint-plugin-prettier": "3.1.4",
     "prettier": "^1.17.1",
     "stylelint": "^10.0.1",
     "stylelint-config-prettier": "^5.2.0",
