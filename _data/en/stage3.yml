@@ -5,7 +5,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
   has_specification: false
-  description: This is a specification draft for the legacy (deprecated) RegExp features in JavaScript, i.e., static properties of the constructor like RegExp.$1 as well as the RegExp.prototype.compile method.
+  description: This is a specification draft for the legacy (deprecated) RegExp features in JavaScript, i.e., static properties of the constructor like <code>RegExp.$1</code> as well as the <code>RegExp.prototype.compile</code> method.
   authors:
     - Claude Pache
   champions:
@@ -189,7 +189,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
   has_specification: true
-  description: A proposal for an "asynchronous atomic wait" for ECMAScript, primarily for use in agents that are not allowed to block.
+  description: A proposal for an &ldquo;asynchronous atomic wait&rdquo; for ECMAScript, primarily for use in agents that are not allowed to block.
   authors:
     - Lars Hansen
   champions:

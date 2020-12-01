@@ -1,11 +1,11 @@
-- title: Возможности Legacy RegExp в JavaScript
+- title: Устаревшие возможности RegExp в JavaScript
   id: proposal-regexp-legacy-features
   presented:
-    - date: May&#xA0;2017
+    - date: Май&#xA0;2017
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
   has_specification: false
-  description: Legacy RegExp в JavaScriptThis - это черновик спецификации для унаследованных (устаревших) RegExp в JavaScript, т.е. статических свойств конструктора типа RegExp.$1, а также метода RegExp.prototype.compile.
+  description: Черновик спецификации для устаревших возможностей RegExp в JavaScript, т.е. статических свойств конструктора вида RegExp.$1, а также метода RegExp.prototype.compile.
   authors:
     - Claude Pache
   champions:
@@ -13,7 +13,7 @@
     - Claude Pache
   tests:
     - 'https://github.com/tc39/test262/pull/2650'
-- title: Методы и аксессуары Private экземпляров
+- title: Приватные методы экземпляра класса и аксессоры
   id: proposal-private-methods
   example: |-
     class Counter extends HTMLElement {
@@ -37,11 +37,11 @@
     }
     window.customElements.define(&#x27;num-counter&#x27;, Counter);
   presented:
-    - date: January&#xA0;2019
+    - date: Январь&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
   has_specification: true
-  description: Сохранение состояния и поведения, private к классу, позволяет авторам библиотеки представить четкий, стабильный интерфейс, при этом изменяя свой код с течением времени за кулисами.
+  description: Сохранение состояния и поведения приватным в классе позволяет авторам библиотек предоставить понятный и стабильный интерфейс, при этом изменяя свой код незаметно для пользователей.
   authors:
     - Daniel Ehrenberg
   champions:
@@ -50,7 +50,7 @@
   tests:
     - >-
       https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+private+methods
-- title: Класс Public Instance fields и Private Instance fields
+- title: Публичные и приватные поля экземпляра класса
   id: proposal-class-fields
   example: |-
     class X {
@@ -60,11 +60,11 @@
       }
     }
   presented:
-    - date: March&#xA0;2019
+    - date: Март&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2020-03/march-31.md#add-support-for-optionalchainprivateidentifier-in-class-features-proposals
   has_specification: true
-  description: Это предлагает комбинированное видение public fields и private fields, основанное на более ранних предложениях по ортогональным классам и порядку оценки классов.
+  description: Это предложение включает в себя комбинированное видение публичный и приватных полей и основано на предыдущих предложениях «Ортогональные классы» и «Порядок выполнения элементов класса».
   authors:
     - Daniel Ehrenberg
     - Kevin Gibbons
@@ -75,7 +75,7 @@
     - Kevin Gibbons
   tests:
     - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+private+fields'
-- title: Статические методы класса fields и private статические методы
+- title: Статические поля класса и приватные статические методы
   id: proposal-static-class-features
   example: |-
     class ColorFinder {
@@ -95,11 +95,11 @@
       // Somehow use colorName
     }
   presented:
-    - date: January&#xA0;2019
+    - date: Январь&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
   has_specification: true
-  description: Предложение по добавлению трех функций к классам JavaScript, основываясь на предложениях методов fields и private предыдущего класса.
+  description: Предложение по добавлению новой функциональности в JavaScript классах, основыванное на предыдущих предложениях о полях класса и приватных методах.
   authors:
     - Daniel Ehrenberg
     - Kevin Gibbons
@@ -110,7 +110,7 @@
     - Daniel Ehrenberg
   tests:
     - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+static+fields'
-- title: грамматика Хашбанга
+- title: Грамматика Hashbang
   id: proposal-hashbang
   example: |-
     #!/usr/bin/env node
@@ -118,18 +118,18 @@
     export {};
     console.log(1);
   presented:
-    - date: November&#xA0;2018
+    - date: Ноябрь&#xA0;2018
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2018-11/nov-28.md#hash-bang-grammar
   has_specification: true
-  description: Это предложение должно соответствовать де-факто использованию на некоторых хостах CLI JS, которые допускают Shebangs / Hashbang. Такие хосты удаляют хэшбанг для того, чтобы сгенерировать правильные исходные тексты JS перед тем, как перейти к JS-движкам в настоящее время. Это позволит унифицировать и стандартизировать то, как это делается.
+  description: Это предложение по стандартизации использования Shebang / Hashbang в соответствии с тем, как они фактически уже используются в некоторых CLI JS окружениях. В настоящее время такие окружения удаляют хэшбанг для того, чтобы сгенерировать валидный исходный текст JS перед тем, как отдать его на исполнение JS-движкам. Это позволит унифицировать и стандартизировать такое использование.
   authors:
     - Bradley Farias
   champions:
     - Bradley Farias
   tests:
     - 'https://github.com/tc39/test262/pull/2065'
-- title: Топ-уровень <code>await</code>
+- title: <code>await</code> на верхнем уровне модуля
   id: proposal-top-level-await
   example: |-
     // file.html
@@ -139,7 +139,7 @@
     // b.mjs
     await import(&#x22;./a.mjs&#x22;);
   presented:
-    - date: June&#xA0;2019
+    - date: Июнь&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
   has_specification: true
@@ -150,7 +150,7 @@
     - Myles Borins
   tests:
     - 'https://github.com/tc39/test262/pull/2274'
-- title: RegExp Match Indices
+- title: Индексы соответствия регулярных выражений
   id: proposal-regexp-match-indices
   example: |-
     const re1 = /a+(?&#x3C;Z&#x3E;z)?/;
@@ -171,11 +171,11 @@
     m2.indices[1] === undefined;
     m2.indices.groups[&#x22;Z&#x22;] === undefined;
   presented:
-    - date: December&#xA0;2019
+    - date: Декабрь&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-12/december-3.md#regexp-match-indices-performance-feedback
   has_specification: false
-  description: ECMAScript RegExp Match Indicies предоставляет дополнительную информацию о начальном и конечном индексах захваченных подстрок относительно начала входной строки.
+  description: Индексы соответствия регулярных выражений в ECMAScript предоставляют дополнительную информацию о начальном и конечном индексах захваченных подстрок относительно начала входной строки.
   authors:
     - Ron Buckton
   champions:
@@ -185,11 +185,11 @@
 - title: <code>Atomics.waitAsync</code>
   id: proposal-atomics-wait-async
   presented:
-    - date: December&#xA0;2019
+    - date: Декабрь&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
   has_specification: true
-  description: Предложение для "асинхронного атомного ожидания" ECMAScript, прежде всего, для использования в агентах, которые не могут быть заблокированы.
+  description: Предложение для добавления атомарной операции ожидания асинхронной операции в ECMAScript, прежде всего, для использования в агентах, в которых невозможна блокировка.
   authors:
     - Lars Hansen
   champions:
@@ -219,10 +219,10 @@
                                 configurable: true });
     }
   presented:
-    - date: September&#xA0;2020
+    - date: Сентябрь&#xA0;2020
       url: item
   has_specification: true
-  description:  Предложение добавить метод <code>.item()</code> во все основные индексируемые классы (<code>Array</code>, <code>String</code>, <code>TypedArray</code>).
+  description:  Предложение по добавлению метода <code>.item()</code> во все основные перечисляемые классы (<code>Array</code>, <code>String</code>, <code>TypedArray</code>).
   authors:
     - Shu-yu Guo
     - Tab Atkins
@@ -231,16 +231,16 @@
     - Tab Atkins
   tests:
     - 'https://github.com/tc39/test262/pull/2812'
-- title:  Импортные ассессоры
+- title:  Import assertions
   id: proposal-import-assertions
   example: >-
     new Worker(&#x22;foo.wasm&#x22;, { type: &#x22;module&#x22;, assert: { type:
     &#x22;webassembly&#x22; } });
   presented:
-    - date: September&#xA0;2020
+    - date: Сентябрь&#xA0;2020
       url: import-assertions
   has_specification: true
-  description:  Предложение по синтаксису для импорта модулей ES с утверждениями.
+  description:  Предложение по добавлению синтаксиса для импорта модулей ES с дополнительными параметрами.
   authors:
     - Myles Borins
     - Sven Sauleau
