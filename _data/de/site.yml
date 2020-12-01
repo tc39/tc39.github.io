@@ -1,0 +1,33 @@
+title: JavaScript entwerfen.
+navigation:
+  TC39:
+    title: TC39
+    agenda: Bevorstehende Agenda
+    notes: Notizen der letzten Sitzung
+    sub-menu: Umschalte das Untermenü für TC39
+  specs:
+    title: Spezifikationen
+    proposals: Aktive Vorschläge
+    ecma-262: ECMA-262, ECMAScript
+    ecma-402: ECMA-402, Intl API
+    sub-menu: Umschalte das Untermenü für Spezifikationen
+  contribute:
+    title: Mitmachen
+    proposals: Zu Vorschlägen beitragen
+    tests: Zu Tests beitragen
+    read: Lesen der Spezifikation
+    discourse: An der Diskussion teilnehmen
+    sub-menu: Umschalte das Untermenü für Mitmachen
+  state-of-proposals: Übersicht der Vorschläge
+  skip-content: Zum Inhalt springen
+  open: Menü öffnen
+footer:
+  connect: Verbinden
+  contribute: Mitmachen
+  standards: Standards
+  proposals: Vorschläge
+  archives: Archiv
+  process: Prozess
+  coc: Code of Conduct
+  feedback: Wir suchen nach Feedback
+  feedback-prompt: Bitte öffnen Sie <a href="https://github.com/tc39/tc39.github.io/issues/new" target="_blank">ein Issue </a> in <a href="https://github.com/tc39/tc39.github.io" target="_blank">unser Website-Repository</a>.

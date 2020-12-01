@@ -1,0 +1,25 @@
+title: Aktuelle Kandidaten für die Spezifikation
+description: Dieser Abschnitt enthält Vorschläge, die sich in Stufe 3 von <a href="https://tc39.es/process-document/">unserem Prozess</a> befinden, was bedeutet, dass sie kurz vor dem Abschluss stehen.
+how-to-read:
+  title:  Wie man die Vorschlagsliste liest
+  description: Jeder Vorschlag hat Links zu anderen Ressourcen. Die Tags identifizieren die folgenden Attribute. Unten finden Sie eine Tabelle mit Beispiel-Tags und deren Bedeutungen. Alle Tags haben Hover-Text, falls Sie Hilfe bei der Orientierung benötigen.
+  tags:
+    title: Arten von Tags und was sie bedeuten
+    last-presented: Zuletzt präsentiert
+    last-presented-fake-date: Dezember 2018
+    tests: Hat Tests
+    spec: Hat Spezifikations-Text
+last-presented-alt: Notizen aus der letzten Präsentation
+specification: Spezifikation
+specification-alt: Lesen Sie den Spezifikationstext
+tests: Tests
+tests-alt: Patch zur Einführung von Tests im test262-Repository
+show-example: Beispiel anzeigen
+author: Autor*in
+authors: Autor*innen
+champion: Meister*in
+champions: Meister*innen
+authors-and-champions: Autor*innen und Meister*innen
+see-more: Siehe Vorschläge in allen Phasen
+
+
