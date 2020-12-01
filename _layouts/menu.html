@@ -4,57 +4,89 @@
 </a>
 <ul class="menu" id="menu">
   <li class="menu-item has-submenu">
-    <a class="menu-link">TC39</a>
+    <a class="menu-link">
+      {{ site.data["site"]["navigation"]["TC39"]["title"] }}
+    </a>
     <button class="submenu-toggle" tabindex="-1">
-      <span class="sr-only">Toggle submenu for TC39</span>
+      <span class="sr-only">
+        {{ site.data["site"]["navigation"]["TC39"]["sub-menu"] }}
+      </span>
     </button>
     <ul class="submenu">
       <li class="submenu-item">
-        <a class="menu-link" href="https://github.com/tc39/agendas/blob/master/2020/11.md">Upcoming Agenda</a>
+        <a class="menu-link" href="https://github.com/tc39/agendas/blob/master/2020/11.md">
+          {{ site.data["site"]["navigation"]["TC39"]["agenda"] }}
+        </a>
       </li>
       <li class="submenu-item">
-        <a class="menu-link" href="https://github.com/tc39/notes/tree/master/meetings/2020-09">Recent Meeting Notes</a>
+        <a class="menu-link" href="https://github.com/tc39/notes/tree/master/meetings/2020-09">
+          {{ site.data["site"]["navigation"]["TC39"]["notes"] }}
+        </a>
       </li>
     </ul>
   </li>
   <li class="menu-item has-submenu">
-    <a class="menu-link">Specs</a>
+    <a class="menu-link">
+      {{ site.data["site"]["navigation"]["specs"]["title"] }}
+    </a>
     <button class="submenu-toggle" tabindex="-1">
-      <span class="sr-only">Toggle submenu for Specs</span>
+      <span class="sr-only">
+        {{ site.data["site"]["navigation"]["specs"]["sub-menu"] }}
+      </span>
     </button>
     <ul class="submenu">
       <li class="submenu-item">
-        <a class="menu-link" href="https://github.com/tc39/proposals">Active Proposals</a>
+        <a class="menu-link" href="https://github.com/tc39/proposals">
+          {{ site.data["site"]["navigation"]["specs"]["proposals"] }}
+        </a>
       </li>
       <li class="submenu-item">
-        <a class="menu-link" href="https://tc39.es/ecma262/">ECMA-262, ECMAScript</a>
+        <a class="menu-link" href="https://tc39.es/ecma262/">
+          {{ site.data["site"]["navigation"]["specs"]["ecma-262"] }}
+        </a>
       </li>
       <li class="submenu-item">
-        <a class="menu-link" href="https://tc39.es/ecma402/">ECMA-402, Intl API</a>
+        <a class="menu-link" href="https://tc39.es/ecma402/">
+          {{ site.data["site"]["navigation"]["specs"]["ecma-402"] }}
+        </a>
       </li>
     </ul>
   </li>
   <li class="menu-item has-submenu">
-    <a class="menu-link">Contribute</a>
+    <a class="menu-link">
+      {{ site.data["site"]["navigation"]["contribute"]["title"] }}
+    </a>
     <button class="submenu-toggle" tabindex="-1">
-      <span class="sr-only">Toggle submenu for Contribute</span>
+      <span class="sr-only">
+        {{ site.data["site"]["navigation"]["contribute"]["sub-menu"] }}
+      </span>
     </button>
     <ul class="submenu">
       <li class="submenu-item">
-        <a class="menu-link" href="https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md">Contributing to Proposals</a>
+        <a class="menu-link" href="https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md">
+          {{ site.data["site"]["navigation"]["contribute"]["proposals"] }}
+        </a>
       </li>
       <li class="submenu-item">
-        <a class="menu-link" href="https://github.com/tc39/test262/blob/master/CONTRIBUTING.md">Contributing to Tests</a>
+        <a class="menu-link" href="https://github.com/tc39/test262/blob/master/CONTRIBUTING.md">
+          {{ site.data["site"]["navigation"]["contribute"]["tests"] }}
+        </a>
       </li>
       <li class="submenu-item">
-        <a class="menu-link" href="https://timothygu.me/es-howto/">Reading the Spec</a>
+        <a class="menu-link" href="https://timothygu.me/es-howto/">
+          {{ site.data["site"]["navigation"]["contribute"]["read"] }}
+        </a>
       </li>
       <li class="submenu-item">
-        <a class="menu-link" href="https://es.discourse.group/">Join the Discourse</a>
+        <a class="menu-link" href="https://es.discourse.group/">
+          {{ site.data["site"]["navigation"]["contribute"]["discourse"] }}
+        </a>
       </li>
     </ul>
   </li>
   <li class="menu-item">
-    <a href="#proposals" class="menu-link">State of Proposals</a>
+    <a href="#proposals" class="menu-link">
+      {{ site.data["site"]["navigation"]["state-of-proposals"] }}
+    </a>
   </li>
 </ul>

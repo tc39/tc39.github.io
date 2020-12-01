@@ -1,0 +1,24 @@
+title: Current Candidates for the Specification
+description: This section features proposals that are in Stage 3 of <a href="https://tc39.es/process-document/">our process</a>, which means they are close to completion.
+how-to-read:
+  title: How to read the proposals list
+  description: Each proposal has links out to other resources. The tags identify the following attributes. Below you will find a table with example tags and their meanings. All tags have hover text if you need help getting oriented.
+  tags:
+    title: Types of tags and what they mean
+    last-presented: Last Presented
+    last-presented-fake-date: December 2018
+    tests: Available Tests
+    spec: Specification Text
+last-presented-alt: Notes from most recent presentation
+specification: Specification
+specification-alt: Read the specification text
+tests: Tests
+tests-alt: Patch introducing tests in test262 repository
+show-example: Show Example
+author: Author
+authors: Authors
+champion: Champion
+champions: Champions
+authors-and-champions: Authors and Champions
+see-more: See proposals in all stages
+
