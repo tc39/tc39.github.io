@@ -1,0 +1,33 @@
+title: Определение JavaScript.
+navigation:
+  TC39:
+    title: TC39
+    agenda: Предстоящая повестка дня
+    notes: Недавнее совещание Примечания
+    sub-menu: Тоггл-меню для TC39
+  specs:
+    title: Спецификации
+    proposals: Активные предложения
+    ecma-262: ECMA-262, ECMAScript
+    ecma-402: ECMA-402, Intl API
+    sub-menu: Тоггл-меню для Спецификации
+  contribute:
+    title: Участвуйте
+    proposals: Участвуйте в предложениях
+    tests: Участвовать в тестах
+    read: Чтение спецификации
+    discourse: Присоединяйся к разговору
+    sub-menu: Тоггл-меню для Участвуйте
+  state-of-proposals: Обзор предложения
+  skip-content: Перейти к содержанию
+  open: открытое меню
+footer:
+  connect: Связывать
+  contribute: Участвуйте
+  standards: Стандарты
+  proposals: Предложения
+  archives: Архивы
+  process: Процесс
+  coc: Code of Conduct
+  feedback: Мы ищем Обратную связь
+  feedback-prompt: Пожалуйста, <a href="https://github.com/tc39/tc39.github.io/issues/new" target="_blank">открыть вопрос</a> в <a href="https://github.com/tc39/tc39.github.io" target="_blank">нашем репозитории сайта</a>.
