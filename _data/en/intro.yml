@@ -1,0 +1,11 @@
+TC39:
+  title: TC39
+  desc: Ecma International's TC39 is a group of JavaScript developers, implementers, academics, and more, collaborating with the community to maintain and evolve the definition of JavaScript.
+  ecma-logo: We are part of <br/> <a class="ecma-logo-box" href="https://www.ecma-international.org/"> <img src="assets/img/ecma-logo.svg" alt="Ecma International" /> </a>
+contribute:
+  title: Contribute
+  desc: TC39 welcomes contributions from the JavaScript community, whether it is feedback on existing proposals, improved documentation, testing, implementations, or even language feature ideas. See our <a href="https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md">contributor guide</a> for details.
+  join-ecma: To participate in TC39 meetings as a member, <a href="https://ecma-international.org/memento/join.htm">join Ecma</a>.
+specs:
+  title: Specs
+  desc: We develop the JavaScript (formally, ECMAScript) specification <a href="https://github.com/tc39/ecma262/">on GitHub</a> and meet every two months to discuss proposals. To learn more about the process, please take a look at the <a href="https://tc39.es/process-document/">five stages</a> for new <a href="https://github.com/tc39/proposals/">language feature proposals</a>. See our <a href="https://github.com/tc39/agendas/">meeting agendas</a> and <a href="https://github.com/tc39/notes/">minutes</a> to learn more.

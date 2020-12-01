@@ -2,7 +2,9 @@
   <section class="synopsis grid-container">
     <div class="g-row">
       <div class="g-col-3">
-        <h3 id="connect-label">Connect</h3>
+        <h3 id="connect-label">
+          {{ site.data["site"]["footer"]["connect"] }}
+        </h3>
         <ul class="connect" aria-labelledby="connect-label">
           <li><a href="https://es.discourse.group" target="_blank">
             <span class="icon">{% octicon comment-discussion height:24 aria-label:Discourse %}</span>
@@ -19,14 +21,18 @@
         </ul>
       </div>
       <div class="g-col-3">
-        <h3 id="standards-label">Standards</h3>
+        <h3 id="standards-label">
+          {{ site.data["site"]["footer"]["standards"] }}
+        </h3>
         <ul aria-labelledby="standards-label">
           <li><a href="https://tc39.es/ecma262">ECMA-262, ECMAScript</a></li>
           <li><a href="https://tc39.es/ecma402">ECMA-402, Intl API</a></li>
         </ul>
       </div>
       <div class="g-col-3">
-        <h3 id="proposals-label">Proposals</h3>
+        <h3 id="proposals-label">
+          {{ site.data["site"]["footer"]["proposals"] }}
+        </h3>
         <ul aria-labelledby="proposals-label">
           <li><a href="https://github.com/tc39/proposals/blob/HEAD/stage-0-proposals.md#stage-0-proposals">Stage 0</a></li>
           <li><a href="https://github.com/tc39/proposals/blob/HEAD/stage-1-proposals.md#stage-1-proposals">Stage 1</a></li>
@@ -36,26 +42,42 @@
         </ul>
       </div>
       <div class="g-col-3">
-        <h3 id="contribute-label">Contribute</h3>
+        <h3 id="contribute-label">
+          {{ site.data["site"]["navigation"]["contribute"]["title"] }}
+        </h3>
         <ul aria-labelledby="contribute-label">
-          <li><a href="https://github.com/tc39/ecma262/blob/HEAD/CONTRIBUTING.md">Contributing to Proposals</a></li>
-          <li><a href="https://github.com/tc39/test262/blob/HEAD/CONTRIBUTING.md">Contributing to Tests</a></li>
-          <li><a href="https://timothygu.me/es-howto" target="_blank">Reading the Spec</a></li>
+          <li><a href="https://github.com/tc39/ecma262/blob/HEAD/CONTRIBUTING.md">
+              {{ site.data["site"]["navigation"]["contribute"]["proposals"] }}
+            </a></li>
+          <li><a href="https://github.com/tc39/test262/blob/HEAD/CONTRIBUTING.md">
+              {{ site.data["site"]["navigation"]["contribute"]["tests"] }}
+            </a></li>
+          <li><a href="https://timothygu.me/es-howto" target="_blank">
+              {{ site.data["site"]["navigation"]["contribute"]["read"] }}
+            </a></li>
         </ul>
       </div>
     </div>
   </section>
   <div class="grid-container">
     <div class="grid-start">
-      <span>We are looking for feedback.<br />Please <a href="https://github.com/tc39/tc39.github.io/issues/new"
-          target="_blank">open an issue</a> in <a href="https://github.com/tc39/tc39.github.io"
-          target="_blank">our site repository</a>.</span>
+      <span>
+         {{ site.data["site"]["footer"]["feedback"] }}
+         <br />
+         {{ site.data["site"]["footer"]["feedback-prompt"] }}
+      </span>
     </div>
     <nav class="grid-end" aria-label="site info">
       <ul class="pipe-nav">
-        <li><a href="https://tc39.es/archives">Archives</a></li>
-        <li><a href="https://tc39.es/process-document">Process</a></li>
-        <li><a href="https://tc39.es/code-of-conduct">Code of Conduct</a></li>
+        <li><a href="https://tc39.es/archives">
+            {{ site.data["site"]["footer"]["archives"] }}
+          </a></li>
+        <li><a href="https://tc39.es/process-document">
+            {{ site.data["site"]["footer"]["process"] }}
+          </a></li>
+        <li><a href="https://tc39.es/code-of-conduct">
+            {{ site.data["site"]["footer"]["coc"] }}
+          </a></li>
       </ul>
       <span>&copy; Ecma International</span>
     </nav>

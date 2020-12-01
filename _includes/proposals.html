@@ -1,33 +1,46 @@
 <article>
-  <h2 id="proposals" class="section-headline text-end">State of Proposals</h2>
+  <h2 id="proposals" class="section-headline text-end">
+    {{ site.data["site"]["navigation"]["state-of-proposals"] }}
+  </h2>
   <div class="featurelist">
-    <h3>Current Candidates for the Specification</h3>
+    <h3>
+      {{ site.data["proposals"]["title"] }}
+    </h3>
     <i class="featurelist__desc">
-      This section features proposals that are in Stage 3 of <a href="https://tc39.es/process-document/">our process</a>, which means they are close to completion.
+      {{ site.data["proposals"]["description"] }}
     </i>
     <details class="featurelist__legend">
-      <summary><strong>How to read the proposals list</strong></summary>
+      <summary><strong>
+          {{ site.data["proposals"]["how-to-read"]["title"] }}
+        </strong></summary>
       <p>
-      Each proposal has links out to other resources. The tags identify the following attributes.
-      Below you will find a table with example tags and their meanings.
-      All tags have hover text if you need help getting oriented.
+      {{ site.data["proposals"]["how-to-read"]["description"] }}
       </p>
 
-      <strong>Types of tags and what they mean</strong>
+      <strong>
+        {{ site.data["proposals"]["how-to-read"]["tags"]["title"] }}
+      </strong>
       <ul class="featurelist__legend__tags">
-          <li>Last Presented:
+          <li>
+            {{ site.data["proposals"]["how-to-read"]["tags"]["last-presented"] }}:
             <div class="featurelist__item__presented featurelist__item__tag">
-              <a title="Notes from most recent presentation">December 2018</a>
+              <a href="{{ presentation.url }}" title='{{ site.data["proposals"]["last-presented-alt"] }}'>{{ site.data["proposals"]["how-to-read"]["tags"]["last-presented-fake-date"] }}</a>
             </div>
           </li>
-          <li>Available Tests:
+          <li>
+            {{ site.data["proposals"]["how-to-read"]["tags"]["tests"] }}:
             <div class="featurelist__item__tests featurelist__item__tag">
-              <a title="Patch introducing tests in test262 repository">Test</a>
+              <a title='{{ site.data["proposals"]["test-alt"] }}'>
+                {{ site.data["proposals"]["tests"] }}
+              </a>
             </div>
           </li>
-          <li>Specification Text:
+          <li>
+            {{ site.data["proposals"]["how-to-read"]["tags"]["spec"] }}:
             <div class="featurelist__item__spec featurelist__item__tag">
-              <a title="Read the specification text">Specification</a>
+              <a title='{{ site.data["proposals"]["specification-alt"] }}'>
+                {{ site.data["proposals"]["specification"] }}
+              </a>
             </div>
           </li>
       </ul>
@@ -47,20 +60,24 @@
           {% if proposal.presented | size %}
           {% for presentation in proposal.presented %}
             <li class="featurelist__item__presented featurelist__item__tag">
-              <a href="{{ presentation.url }}" title="Notes from most recent presentation">{{ presentation.date }}</a>
+              <a href="{{ presentation.url }}" title='{{ site.data["proposals"]["last-presented-alt"] }}'>{{ presentation.date }}</a>
             </li>
           {% endfor %}
           {% endif %}
           {% if proposal.tests | size %}
           {% for url in proposal.tests %}
             <li class="featurelist__item__tests featurelist__item__tag">
-              <a href="{{ url }}" title="Patch introducing tests in test262 repository">Test</a>
+              <a href="{{ url }}" title='{{ site.data["proposals"]["test-alt"] }}'>
+                {{ site.data["proposals"]["tests"] }}
+              </a>
             </li>
           {% endfor %}
           {% endif %}
           {% if proposal.has_specification %}
             <li class="featurelist__item__spec featurelist__item__tag">
-              <a href="https://tc39.es/{{ proposal.id }}" title="Read the specification text">Specification</a>
+              <a href="https://tc39.es/{{ proposal.id }}" title='{{ site.data["proposals"]["specification-alt"] }}'>
+                {{ site.data["proposals"]["specification"] }}
+              </a>
             </li>
           {% endif %}
         </ul>
@@ -68,23 +85,23 @@
     </header>
     <div class="featurelist__item__author">
       {% if proposal.authors == proposal.champions %}
-        Author and Champion:
+        {{ site.data["proposals"]["authors-and-champions"] }}:
         {{ proposal.authors | join: ", " }}
       {% else %}
         {% if proposal.authors | size %}
         {% if proposal.authors.size > 1 %}
-        Authors:
+        {{ site.data["proposals"]["authors"] }}:
         {% else %}
-        Author:
+        {{ site.data["proposals"]["author"] }}:
         {% endif %}
         {{ proposal.authors | join: ", " }}
         {% endif %}
         {% if proposal.champions | size %}
         |
         {% if proposal.champions.size > 1 %}
-        Champions:
+        {{ site.data["proposals"]["champions"] }}:
         {% else %}
-        Champion:
+        {{ site.data["proposals"]["champion"] }}
         {% endif %}
         {{ proposal.champions | join: ", " }}
         {% endif %}
@@ -102,7 +119,7 @@
       tabindex="0"
       id="example-toggle-{{ proposal.id }}"
     >
-      Show Example
+      {{ site.data["proposals"]["show-example"] }}
     </div>
     <section
       class="featurelist__item__info"
@@ -118,6 +135,6 @@
 {% endfor %}
 <section class="featurelist__more">
   <a href="https://github.com/tc39/proposals">
-    See proposals in all stages
+    {{ site.data["proposals"]["see-more"] }}
   </a>
 </section>
