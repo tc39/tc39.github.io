@@ -1,0 +1,33 @@
+title: 指定JavaScript。
+navigation:
+  TC39:
+    title: TC39
+    agenda: 即将到来的议程
+    notes: 最近的会议记录
+    sub-menu: Toggle sub-menu for TC39
+  specs:
+    title: 规格文件
+    proposals: 积极的提案
+    ecma-262: ECMA-262, ECMAScript
+    ecma-402: ECMA-402, Intl API
+    sub-menu: Toggle sub-menu for Specs
+  contribute:
+    title: 贡献
+    proposals: 献计献策
+    tests: 为测试做贡献
+    read: 如何阅读规范文件
+    discourse: 加入对话
+    sub-menu: Toggle sub-menu for Contribute
+  state-of-proposals: 语文特征提案概述
+  skip-content: Skip to content
+  open: 打开菜单
+footer:
+  connect: 与我们联系
+  contribute: 贡献
+  standards: 标准化
+  proposals: 语言特点 提议
+  archives: 档案
+  process: 我们的流程
+  coc: Code of Conduct
+  feedback: 我们正在寻找反馈
+  feedback-prompt:  请<a href="https://github.com/tc39/tc39.github.io/issues/new" target="_blank">在<a href="https://github.com/tc39/tc39.github.io" target="_blank">我们的网站仓库</a>中打开一个问题</a>。

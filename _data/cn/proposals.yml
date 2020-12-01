@@ -1,0 +1,25 @@
+title: 目前的规范候选者
+description: 本节介绍的是处于<a href="https://tc39.es/process-document/">我们的进程</a>第三阶段的提案，这意味着它们即将完成
+how-to-read:
+  title: 如何阅读提案清单
+  description: 每项建议都有与其他资源的链接。标签标识以下属性。下面是一个表格，其中包含了标签示例及其含义。如果您需要帮助了解方向，所有标签都有悬浮文本。
+  tags:
+    title: 标签的类型及其含义
+    last-presented: 上次提交时间
+    last-presented-fake-date: 2018年12月
+    tests: 有测试
+    spec: 有规格文本
+last-presented-alt:  最近一次发言的说明
+specification: 规格
+specification-alt: 阅读说明书
+tests:  有测试
+tests-alt: 在test262 github仓库中引入测试的补丁。
+show-example: 示范码
+author: 作者
+authors: 作者
+champion: 冠军
+champions: 冠军
+authors-and-champions: 作者和冠军
+see-more: 查看各阶段的提案
+
+
