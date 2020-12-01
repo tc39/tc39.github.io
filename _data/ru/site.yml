@@ -1,9 +1,9 @@
-title: Определение JavaScript.
+title: Специфицируя JavaScript.
 navigation:
   TC39:
     title: TC39
     agenda: Предстоящая повестка дня
-    notes: Недавнее совещание Примечания
+    notes: Протокол последнего собрания
     sub-menu: Тоггл-меню для TC39
   specs:
     title: Спецификации
@@ -12,22 +12,22 @@ navigation:
     ecma-402: ECMA-402, Intl API
     sub-menu: Тоггл-меню для Спецификации
   contribute:
-    title: Участвуйте
-    proposals: Участвуйте в предложениях
-    tests: Участвовать в тестах
-    read: Чтение спецификации
-    discourse: Присоединяйся к разговору
+    title: Сделать вклад
+    proposals: Сделать вклад в спецификацию
+    tests: Участвовать в написании тестов
+    read: Как читать спецификацию
+    discourse: Присоединяйся к обсуждениям
     sub-menu: Тоггл-меню для Участвуйте
-  state-of-proposals: Обзор предложения
+  state-of-proposals: Статус предложений
   skip-content: Перейти к содержанию
   open: открытое меню
 footer:
-  connect: Связывать
-  contribute: Участвуйте
+  connect: Контакты
+  contribute: Сделать вклад
   standards: Стандарты
   proposals: Предложения
   archives: Архивы
   process: Процесс
-  coc: Code of Conduct
-  feedback: Мы ищем Обратную связь
-  feedback-prompt: Пожалуйста, <a href="https://github.com/tc39/tc39.github.io/issues/new" target="_blank">открыть вопрос</a> в <a href="https://github.com/tc39/tc39.github.io" target="_blank">нашем репозитории сайта</a>.
+  coc: Нормы поведения
+  feedback: Мы будем благодарны обратной связи
+  feedback-prompt: Пожалуйста, <a href="https://github.com/tc39/tc39.github.io/issues/new" target="_blank">откройте issue</a> в <a href="https://github.com/tc39/tc39.github.io" target="_blank">репозитории нашего сайта</a>.
