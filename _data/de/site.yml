@@ -18,7 +18,7 @@ navigation:
     read: Lesen der Spezifikation
     discourse: An der Diskussion teilnehmen
     sub-menu: Umschalte das Untermenü für Mitmachen
-  state-of-proposals: Übersicht der Vorschläge
+  state-of-proposals: Vorschläge
   skip-content: Zum Inhalt springen
   open: Menü öffnen
 footer:
