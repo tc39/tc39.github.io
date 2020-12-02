@@ -1,7 +1,7 @@
 TC39:
   title: TC39
   desc: Ecma International TC39 - это группа, состоящая из разработчиков JavaScript, имплементоров, ученых и других участников, сотрудничающих с сообществом для поддержки и развития JavaScript.
-  ecma-logo: Мы являемся частью <br/> <a class="ecma-logo-box" href="https://www.ecma-international.org/"> <img src="assets/img/ecma-logo.svg" alt="Ecma International" /> </a>.
+  ecma-logo: Мы являемся частью <br/> <a class="ecma-logo-box" href="https://www.ecma-international.org/"> <img src="assets/img/ecma-logo.svg" alt="Ecma International" /></a>
 contribute:
   title: Сделать вклад
   desc: TC39 приветствует участие сообщества JavaScript, будь то обратная связь по существующим предложениям, улучшения документации, тестирование, имплементации или даже идеи, связанные с особенностями языка. Подробности смотрите в нашем <a href="https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md">руководстве для желающих сделать вклад</a>.
