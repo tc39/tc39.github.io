@@ -1,11 +1,11 @@
-- title: JavaScript中的旧 RegExp功能
+- title: JavaScript 中的历史 RegExp 特性
   id: proposal-regexp-legacy-features
   presented:
     - date: May&#xA0;2017
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
   has_specification: false
-  description: 这是为JavaScript中传统（已废弃）的RegExp特性，即构造函数的静态属性（如RegExp.1-1）以及RegExp.prototype.compile方法的规范草案。
+  description: 该提案规范了 JavaScript 中已废弃的 RegExp 特性，即构造函数的静态属性以及 RegExp.prototype.compile 方法。
   authors:
     - Claude Pache
   champions:
@@ -13,7 +13,7 @@
     - Claude Pache
   tests:
     - 'https://github.com/tc39/test262/pull/2650'
-- title: 私有实例方法和访问器
+- title: 私有类方法和访问器
   id: proposal-private-methods
   example: |-
     class Counter extends HTMLElement {
@@ -41,7 +41,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
   has_specification: true
-  description: 保持一个类的状态和行为的私密性，可以让库作者呈现出一个清晰、稳定的界面，同时在幕后随时间的推移改变他们的代码。
+  description: 保持一个类的内部状态和内部行为的私有性，可以让库作者提供一个清晰、稳定的接口，允许在内部重构而不会因为私有接口被意外使用而破坏兼容性。
   authors:
     - Daniel Ehrenberg
   champions:
@@ -50,7 +50,7 @@
   tests:
     - >-
       https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+private+methods
-- title: 类公共实例字段和私有实例字段。
+- title: 类的实例字段和私有实例字段。
   id: proposal-class-fields
   example: |-
     class X {
@@ -64,7 +64,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2020-03/march-31.md#add-support-for-optionalchainprivateidentifier-in-class-features-proposals
   has_specification: true
-  description: 这就借鉴了之前的正交班和班级评价令的建议，提出了公田和私田相结合的设想。
+  description: 该提案合并了公开字段和私有字段的提案，借鉴了先前的 Orthogonal Classes 和 Class Evaluation Order 提案。
   authors:
     - Daniel Ehrenberg
     - Kevin Gibbons
@@ -75,7 +75,7 @@
     - Kevin Gibbons
   tests:
     - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+private+fields'
-- title:  静态类字段和私有静态方法
+- title: 静态类字段和私有静态方法
   id: proposal-static-class-features
   example: |-
     class ColorFinder {
@@ -99,7 +99,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
   has_specification: true
-  description: 在之前的类字段和私有方法提案的基础上，提出了为JavaScript类增加三个功能的提案。
+  description: 该提案在先前的类字段和私有方法提案的基础上，为 JavaScript 类增加三个新特性。
   authors:
     - Daniel Ehrenberg
     - Kevin Gibbons
@@ -110,7 +110,7 @@
     - Daniel Ehrenberg
   tests:
     - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+static+fields'
-- title: Hashbang语法
+- title: Hashbang 语法
   id: proposal-hashbang
   example: |-
     #!/usr/bin/env node
@@ -122,7 +122,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2018-11/nov-28.md#hash-bang-grammar
   has_specification: true
-  description: 这个建议是为了配合一些允许使用Shebangs/Hashbang的CLI JS主机的实际使用。这样的主机在传递给目前的JS引擎之前，会先剥离hashbang以生成有效的JS源文本。这将统一和规范这种做法。
+  description: 该提案意在配合一些允许/需要使用 Hashbang 的 JS 环境。在这种环境中，目前它们需要先删除 hashbang 以生成有效的 JS 代码。该提案将统一和规范这种做法。
   authors:
     - Bradley Farias
   champions:
@@ -143,7 +143,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
   has_specification: true
-  description: 顶层的<code>await</code>让我们依靠模块系统本身来处理所有这些承诺，并确保事情的协调性。
+  description: 该提案让我们依靠模块系统本身来处理所有这些 Promise，并确保模块以正确方式加载。
   authors:
     - Myles Borins
   champions:
@@ -175,7 +175,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-12/december-3.md#regexp-match-indices-performance-feedback
   has_specification: false
-  description: ECMAScript RegExp Match Indicies提供了关于捕获的子串相对于输入字符串开始的起始和结束索引的附加信息。
+  description: 该提案提供了 RegExp 中捕获的子串相对于输入字符串开始的起始和结束索引的附加信息。
   authors:
     - Ron Buckton
   champions:
@@ -189,7 +189,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
   has_specification: true
-  description: 为ECMAScript提出一个 "异步原子等待 "的建议，主要用于不允许阻塞的代理。
+  description: 该提案为 Atomics 添加一个异步的 <code>wait</code>，用于不允许阻塞线程的环境。
   authors:
     - Lars Hansen
   champions:
@@ -197,10 +197,10 @@
     - Lars Hansen
   tests:
     - 'https://github.com/tc39/test262/issues/2511'
-- title: <code>.item()</code>
-  id: proposal-item-method
+- title: <code>.at()</code>
+  id: proposal-relative-indexing-method
   example: |-
-    function item(n) {
+    function at(n) {
     &#x9;// ToInteger() abstract op
     &#x9;n = Math.trunc(n) || 0;
     &#x9;// Allow negative indexing from the end
@@ -212,17 +212,17 @@
     }
     // Other TypedArray constructors omitted for brevity.
     for (let C of [Array, String, Uint8Array]) {
-        Object.defineProperty(C.prototype, &#x22;item&#x22;,
-                              { value: item,
+        Object.defineProperty(C.prototype, &#x22;at&#x22;,
+                              { value: at,
                                 writable: true,
                                 enumerable: false,
                                 configurable: true });
     }
   presented:
     - date: September&#xA0;2020
-      url: item
+      url: at
   has_specification: true
-  description: 建议在所有基本的可索引类(<code>Array</code>, <code>String</code>, <code>TypedArray</code>)中添加一个<code>.item()</code>方法。
+  description: 该提案计划在所有可索引类（<code>Array</code>、<code>String</code>、<code>TypedArray</code>）中添加一个<code>.at()</code>方法。该方法允许负数索引。
   authors:
     - Shu-yu Guo
     - Tab Atkins
@@ -231,7 +231,7 @@
     - Tab Atkins
   tests:
     - 'https://github.com/tc39/test262/pull/2812'
-- title: Import 断言
+- title: import 断言
   id: proposal-import-assertions
   example: >-
     new Worker(&#x22;foo.wasm&#x22;, { type: &#x22;module&#x22;, assert: { type:
@@ -240,7 +240,7 @@
     - date: September&#xA0;2020
       url: import-assertions
   has_specification: true
-  description:  建议用断言导入ES模块的语法。
+  description: 该提案为 `import` 语句添加了断言语法。如果模块不符合期望的断言，则导入会失败。
   authors:
     - Myles Borins
     - Sven Sauleau
