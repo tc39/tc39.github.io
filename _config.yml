@@ -15,7 +15,7 @@ exclude:
     - 'vendor'
 sass:
     style: compressed
-languages: ["cn", "de", "en", "ru", ]
+languages: ["de", "en", "ru", "zh-Hans"]
 default_lang: "en"
 exclude_from_localization: ["tc39-notes", "README.md"]
 parallel_localization: true
