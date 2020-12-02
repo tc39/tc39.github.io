@@ -31,3 +31,9 @@ footer:
   coc: Code of Conduct
   feedback: 我们正在寻找反馈
   feedback-prompt: 请通过本链接 <a href="https://github.com/tc39/tc39.github.io/issues/new" target="_blank">提交您的问题</a>。
+links:
+  coc: https://tc39.es/code-of-conduct
+  process: https://tc39.es/process-document
+  contribute-to-proposals: https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md
+  contribute-to-tests: https://github.com/tc39/test262/blob/master/CONTRIBUTING.md
+  discourse: https://es.discourse.group/

@@ -46,10 +46,10 @@
           {{ site.data["site"]["navigation"]["contribute"]["title"] }}
         </h3>
         <ul aria-labelledby="contribute-label">
-          <li><a href="https://github.com/tc39/ecma262/blob/HEAD/CONTRIBUTING.md">
+          <li><a href='{{ site.data["site"]["links"]["contribute-to-proposals"] }}'>
               {{ site.data["site"]["navigation"]["contribute"]["proposals"] }}
             </a></li>
-          <li><a href="https://github.com/tc39/test262/blob/HEAD/CONTRIBUTING.md">
+          <li><a href='{{ site.data["site"]["links"]["contribute-to-tests"] }}'>
               {{ site.data["site"]["navigation"]["contribute"]["tests"] }}
             </a></li>
           <li><a href="https://timothygu.me/es-howto" target="_blank">
@@ -72,10 +72,10 @@
         <li><a href="https://tc39.es/archives">
             {{ site.data["site"]["footer"]["archives"] }}
           </a></li>
-        <li><a href="https://tc39.es/process-document">
+        <li><a href='{{ site.data["site"]["links"]["process"] }}'>
             {{ site.data["site"]["footer"]["process"] }}
           </a></li>
-        <li><a href="https://tc39.es/code-of-conduct">
+        <li><a href='{{ site.data["site"]["links"]["coc"] }}'>
             {{ site.data["site"]["footer"]["coc"] }}
           </a></li>
       </ul>
