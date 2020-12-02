@@ -30,4 +30,4 @@ footer:
   process: 我们的流程
   coc: Code of Conduct
   feedback: 我们正在寻找反馈
-  feedback-prompt:  请<a href="https://github.com/tc39/tc39.github.io/issues/new" target="_blank">在<a href="https://github.com/tc39/tc39.github.io" target="_blank">我们的网站仓库</a>中创建一个问题</a>。
+  feedback-prompt: 请通过本链接 <a href="https://github.com/tc39/tc39.github.io/issues/new" target="_blank">提交您的问题</a>。
