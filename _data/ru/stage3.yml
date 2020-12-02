@@ -143,7 +143,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
   has_specification: true
-  description: Top-level <code>await</code> позволяет нам полагаться на саму систему модулей для обработки всех этих обещаний, а также убедиться в том, что все хорошо скоординировано.
+  description: Top-level <code>await</code> позволяет использовать модули как асинхронные функции. ECMAScript модули (ESM) могут ожидать внешние ресурсы, заставляя другие модули, которые их импортируют, ждать, прежде чем они начнут исполняться.
   authors:
     - Myles Borins
   champions:
