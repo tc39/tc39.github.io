@@ -54,5 +54,13 @@ connection instructions [here](https://freenode.net/kb/answer/chat).
 
 ## Monthly planning call
 
+The monthly planning call is currently cancelled, as all of our work is taking place asynchronously.
+In case we want to start the calls again:
+
 We have planning meetings every month, on the _last Tuesday at 10:00 AM CEST_. If you would like to
 join, come say hi at the IRC channel! The meeting is held on Google Hangouts [here](https://hangouts.google.com/call/lxrlUjS_VlOcuRU6BsFBAAEI).
+
+## Site Deployment
+
+We use github actions to deploy the website to the branch gh-pages. If there are any issues with the
+deployment, please ping @codehag and she will fix it.
