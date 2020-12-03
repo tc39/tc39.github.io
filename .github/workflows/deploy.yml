@@ -22,3 +22,5 @@ jobs:
     - uses:  helaili/jekyll-action@02b43daed5ee9041657eaba9762aff434de3ff90
       env:
         JEKYLL_PAT: ${{ github.actor }}:${{ github.token }}
+      with:
+        target_branch: 'gh-pages'
