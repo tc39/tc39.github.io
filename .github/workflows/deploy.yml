@@ -1,0 +1,24 @@
+name: Deploy site
+
+on:
+  push:
+    branches: master
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-16.04
+    steps:
+    - uses: actions/checkout@v2
+
+    # Use GitHub Actions' cache to shorten build times and decrease load on servers
+    - uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+
+    # Standard usage
+    - uses:  helaili/jekyll-action@02b43daed5ee9041657eaba9762aff434de3ff90
+      env:
+        JEKYLL_PAT: ${{ github.actor }}:${{ github.token }}

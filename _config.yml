@@ -1,3 +1,6 @@
+baseurl: ''
+url: ''
+repository: 'https://github.com/tc39/tc39.github.io'
 plugins:
     - jemoji
     - jekyll-octicons
