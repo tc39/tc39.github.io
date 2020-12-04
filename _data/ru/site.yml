@@ -1,4 +1,4 @@
-title: Специфицируя JavaScript.
+title: Спецификация JavaScript.
 lang: ru
 navigation:
   TC39:
@@ -24,14 +24,14 @@ navigation:
   open: Открыть меню
 footer:
   connect: Контакты
-  contribute: Сделать вклад
+  contribute: Принять участие
   standards: Стандарты
   proposals: Предложения
   archives: Архивы
   process: Процесс
   coc: Нормы поведения
   feedback: Мы будем благодарны обратной связи.
-  feedback-prompt: Пожалуйста, <a href="https://github.com/tc39/tc39.github.io/issues/new" target="_blank">откройте issue</a> в <a href="https://github.com/tc39/tc39.github.io" target="_blank">репозитории нашего сайта</a>.
+  feedback-prompt: Пожалуйста, <a href="https://github.com/tc39/tc39.github.io/issues/new" target="_blank">откройте ишью</a> в <a href="https://github.com/tc39/tc39.github.io" target="_blank">репозитории нашего сайта</a>.
 links:
   coc: https://tc39.es/code-of-conduct
   process: https://tc39.es/process-document
