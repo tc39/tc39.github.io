@@ -1,7 +1,7 @@
 - title: Veraltete RegExp-Funktionen in JavaScript
   id: proposal-regexp-legacy-features
   presented:
-    - date: May&#xA0;2017
+    - date: Mai&#xA0;2017
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
   has_specification: false
@@ -37,11 +37,11 @@
     }
     window.customElements.define(&#x27;num-counter&#x27;, Counter);
   presented:
-    - date: January&#xA0;2019
+    - date: Januar&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
   has_specification: true
-  description: Durch die Geheimhaltung von Zustand und Verhalten gegenüber einer Klasse können Bibliotheksautoren eine klare, stabile Oberfläche präsentieren und ihren Code im Laufe der Zeit hinter den Kulissen ändern.
+  description: Durch die Geheimhaltung von Zustand und Verhalten innerhalb einer Klasse können Bibliotheksautoren eine klare, stabile Oberfläche präsentieren und ihren Code im Laufe der Zeit hinter den Kulissen ändern.
   authors:
     - Daniel Ehrenberg
   champions:
@@ -50,7 +50,7 @@
   tests:
     - >-
       https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+private+methods
-- title:  Instanz-Felder der Klasse Public und Private
+- title: Public und Private Instanz-Felder von Klassen
   id: proposal-class-fields
   example: |-
     class X {
@@ -60,11 +60,11 @@
       }
     }
   presented:
-    - date: March&#xA0;2019
+    - date: März&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2020-03/march-31.md#add-support-for-optionalchainprivateidentifier-in-class-features-proposals
   has_specification: true
-  description:  Darin wird eine kombinierte Vision für Public Felder und Private Felder vorgeschlagen, die sich auf die früheren Vorschläge für orthogonale Klassen und Klassenbewertungsreihenfolge stützt
+  description: Dies ist ein Vorschlag für eine kombinierte Vision von Public und Private Feldern, welcher auf früheren Vorschläge für orthogonale Klassen und die Reihenfolge zur Auswertung von Klassen basiert.
   authors:
     - Daniel Ehrenberg
     - Kevin Gibbons
@@ -95,11 +95,11 @@
       // Somehow use colorName
     }
   presented:
-    - date: January&#xA0;2019
+    - date: Januar&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
   has_specification: true
-  description: Ein Vorschlag zum Hinzufügen von drei Funktionen zu JavaScript-Klassen, aufbauend auf den vorherigen Klassenfeldern und privaten Methodenvorschlägen.
+  description: Ein Vorschlag zum Hinzufügen von drei Neuerungen zu JavaScript-Klassen, aufbauend auf den vorherigen Klassenfeldern und privaten Methodenvorschlägen.
   authors:
     - Daniel Ehrenberg
     - Kevin Gibbons
@@ -122,7 +122,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2018-11/nov-28.md#hash-bang-grammar
   has_specification: true
-  description: Dieser Vorschlag soll der De-facto-Nutzung in einigen CLI JS-Hosts entsprechen, die Shebangs / Hashbang erlauben. Solche Hosts strippen das Hash-Bang, um gültige JS-Quelltexte zu erzeugen, bevor sie derzeit an JS-Engines übergeben werden. Dies würde die Art und Weise, wie dies geschieht, vereinheitlichen und standardisieren.
+  description: Dieser Vorschlag soll der De-facto-Nutzung in einigen CLI JS-Hosts entsprechen, die Shebangs / Hashbang erlauben. Derzeit entfernen solche Hosts die Hashbang-Zeile, um gültige JS-Quelltexte zu erzeugen, bevor sie an JS-Engines übergeben werden. Dieser Vorschlag würde die Art und Weise, wie dies geschieht, vereinheitlichen und standardisieren.
   authors:
     - Bradley Farias
   champions:
@@ -139,18 +139,18 @@
     // b.mjs
     await import(&#x22;./a.mjs&#x22;);
   presented:
-    - date: June&#xA0;2019
+    - date: Juni&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
   has_specification: true
-  description: Top-level <code>await</code> lässt uns auf das Modulsystem selbst vertrauen, um all diese Versprechen zu handhaben und sicherzustellen, dass die Dinge gut koordiniert sind.
+  description: Top-level <code>await</code> erlaubt es JS-Modulen sich wie große <code>async</code> Funktionen zu verhalten. Mit Top-level <code>await</code> können ECMAScript Module (ESM) die Ausführung von anderen Modulen, die diese importieren, verzögern, wenn diese selbst auf Ressourcen warten.
   authors:
     - Myles Borins
   champions:
     - Myles Borins
   tests:
     - 'https://github.com/tc39/test262/pull/2274'
-- title: RegExp Match Indices
+- title: RegExp Match Indizes
   id: proposal-regexp-match-indices
   example: |-
     const re1 = /a+(?&#x3C;Z&#x3E;z)?/;
@@ -175,7 +175,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-12/december-3.md#regexp-match-indices-performance-feedback
   has_specification: false
-  description: ECMAScript RegExp Match Indicies liefern zusätzliche Informationen über die Start- und Endindizes der erfassten Teilzeichenketten relativ zum Anfang der Eingabezeichenkette.
+  description: ECMAScript RegExp Match Indizes liefern zusätzliche Informationen über die Start- und Endindizes der erfassten Teilzeichenketten relativ zum Anfang der Eingabezeichenkette.
   authors:
     - Ron Buckton
   champions:
@@ -185,11 +185,11 @@
 - title: <code>Atomics.waitAsync</code>
   id: proposal-atomics-wait-async
   presented:
-    - date: December&#xA0;2019
+    - date: Dezember&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
   has_specification: true
-  description: Ein Vorschlag für eine "asynchrone atomare Wartezeit" für ECMAScript, in erster Linie zur Verwendung in Agenten, die nicht blockieren dürfen.
+  description: Ein Vorschlag für eine "asynchrone atomare Wartezeit" für ECMAScript, in erster Linie zur Verwendung in Prozessen, die nicht blockieren dürfen.
   authors:
     - Lars Hansen
   champions:
