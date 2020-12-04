@@ -1,11 +1,11 @@
 TC39:
   title: TC39
-  desc: Ecma International TC39 - это группа, состоящая из разработчиков JavaScript, имплементоров, ученых и других участников, сотрудничающих с сообществом для поддержки и развития JavaScript.
+  desc: Ecma International TC39 — это группа, состоящая из разработчиков JavaScript, создателей языка, исследователей и других участников, сотрудничающих с сообществом для поддержки и развития JavaScript.
   ecma-logo: Мы являемся частью <br/> <a class="ecma-logo-box" href="https://www.ecma-international.org/"> <img src="assets/img/ecma-logo.svg" alt="Ecma International" /></a>
 contribute:
-  title: Сделать вклад
-  desc: TC39 приветствует участие сообщества JavaScript, будь то обратная связь по существующим предложениям, улучшения документации, тестирование, имплементации или даже идеи, связанные с особенностями языка. Подробности смотрите в нашем <a href="https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md">руководстве для желающих сделать вклад</a>.
+  title: Принять участие
+  desc: "TC39 приветствует любую помощь от сообщества JavaScript: отзывы и мнения о существующих предложениях, улучшение документации, написание тестов или реализаций, или даже представление идей новых возможностей языка. Подробности смотрите в нашем <a href="https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md">руководстве для желающих поучаствовать в проекте</a>."
   join-ecma: Для участия в заседаниях TC39 в качестве члена необходимо <a href="https://ecma-international.org/memento/join.htm">присоединиться к Ecma</a>.
 specs:
   title: Спецификации
-  desc: Мы разрабатываем спецификацию JavaScript (формально называемый ECMAScript) <a href="https://github.com/tc39/ecma262/">на GitHub</a> и проводим встречи каждые два месяца для обсуждения предложений. Чтобы узнать больше о процессе, пожалуйста, ознакомьтесь с <a href="https://tc39.es/process-document/">пятью этапами</a> для новых <a href="https://github.com/tc39/proposals/">предложений по особенностям языка</a>. Читайте наши <a href="https://github.com/tc39/agendas/">программы заседаний</a> и <a href="https://github.com/tc39/notes/">протоколы собраний</a>, чтобы узнать больше.
+  desc: Мы разрабатываем спецификацию JavaScript (формально называемый ECMAScript) <a href="https://github.com/tc39/ecma262/">на GitHub</a> и проводим встречи каждые два месяца для обсуждения предложений. Чтобы узнать больше о процессе, пожалуйста, ознакомьтесь с <a href="https://tc39.es/process-document/">пятью этапами</a> для новых <a href="https://github.com/tc39/proposals/">предложений по улучшению и развитию языка</a>. Читайте наши <a href="https://github.com/tc39/agendas/">программы заседаний</a> и <a href="https://github.com/tc39/notes/">протоколы собраний</a> для получения дополнительной информации.
