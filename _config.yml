@@ -2,23 +2,23 @@ baseurl: ''
 url: ''
 repository: 'https://github.com/tc39/tc39.github.io'
 plugins:
-    - jemoji
-    - jekyll-octicons
+  - jemoji
+  - jekyll-octicons
 exclude:
-    - 'babel.config.json'
-    - 'README.md'
-    - 'screenshot.png'
-    - 'Dockerfile'
-    - 'Makefile'
-    - 'Gemfile'
-    - 'Gemfile.lock'
-    - 'node_modules'
-    - 'package.json'
-    - 'package-lock.json'
-    - 'vendor'
+  - 'babel.config.json'
+  - 'README.md'
+  - 'screenshot.png'
+  - 'Dockerfile'
+  - 'Makefile'
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - 'node_modules'
+  - 'package.json'
+  - 'package-lock.json'
+  - 'vendor'
 sass:
-    style: compressed
-languages: ["de", "en", "ru", "zh-Hans"]
-default_lang: "en"
-exclude_from_localization: ["tc39-notes", "README.md"]
+  style: compressed
+languages: ['de', 'en', 'ja', 'ru', 'zh-Hans']
+default_lang: 'en'
+exclude_from_localization: ['tc39-notes', 'README.md']
 parallel_localization: true
