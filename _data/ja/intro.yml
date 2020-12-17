@@ -1,7 +1,7 @@
 TC39:
   title: TC39
   desc: Ecma InternationalのTC39は、JavaScript開発者、実装者、専門家などのグループで、JavaScriptの仕様をメンテナンスし発展させるためにコミュニティと協力しています。
-  ecma-logo: 私達は<br/> <a class="ecma-logo-box" href="https://www.ecma-international.org/"> <img src="assets/img/ecma-logo.svg" alt="Ecma International" /> </a> <br/>の一員です。
+  ecma-logo: <a class="ecma-logo-box" href="https://www.ecma-international.org/"> <img src="assets/img/ecma-logo.svg" alt="Ecma International" /> </a> <br/>所属の委員会です。
 contribute:
   title: 貢献
   desc: 既存のプロポーザルに対するフィードバック、ドキュメントの改善、テスト、実装、さらには言語機能に関するアイデアなど、JavaScriptコミュニティからの貢献をTC39は歓迎します。詳細については、<a href="https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md">コントリビュータガイド</a>をご覧ください。
