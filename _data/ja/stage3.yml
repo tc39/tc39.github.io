@@ -1,0 +1,253 @@
+- title: Legacy RegExp features in JavaScript
+  id: proposal-regexp-legacy-features
+  presented:
+    - date: May&#xA0;2017
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
+  has_specification: false
+  description: This is a specification draft for the legacy (deprecated) RegExp features in JavaScript, i.e., static properties of the constructor like RegExp.$1 as well as the RegExp.prototype.compile method.
+  authors:
+    - Claude Pache
+  champions:
+    - Mark Miller
+    - Claude Pache
+  tests:
+    - 'https://github.com/tc39/test262/pull/2650'
+- title: Private instance methods and accessors
+  id: proposal-private-methods
+  example: |-
+    class Counter extends HTMLElement {
+      #xValue = 0;
+      get #x() { return #xValue; }
+      set #x(value) {
+        this.#xValue = value;
+        window.requestAnimationFrame(this.#render.bind(this));
+      }
+      #clicked() {
+        this.#x++;
+      }
+      constructor() {
+        super();
+        this.onclick = this.#clicked.bind(this);
+      }
+      connectedCallback() { this.#render(); }
+      #render() {
+        this.textContent = this.#x.toString();
+      }
+    }
+    window.customElements.define(&#x27;num-counter&#x27;, Counter);
+  presented:
+    - date: January&#xA0;2019
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
+  has_specification: true
+  description: Keeping state and behavior private to a class lets library authors present a clear, stable interface, while changing their code over time behind the scenes.
+  authors:
+    - Daniel Ehrenberg
+  champions:
+    - Daniel Ehrenberg
+    - Kevin Gibbons
+  tests:
+    - >-
+      https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+private+methods
+- title: Class Public Instance Fields &amp; Private Instance Fields
+  id: proposal-class-fields
+  example: |-
+    class X {
+      #foo;
+      method() {
+        console.log(this.#foo)
+      }
+    }
+  presented:
+    - date: March&#xA0;2019
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2020-03/march-31.md#add-support-for-optionalchainprivateidentifier-in-class-features-proposals
+  has_specification: true
+  description: This proposes a combined vision for public fields and private fields, drawing on the earlier Orthogonal Classes and Class Evaluation Order proposals.
+  authors:
+    - Daniel Ehrenberg
+    - Kevin Gibbons
+  champions:
+    - Daniel Ehrenberg
+    - Jeff Morrison
+    - Kevin Smith
+    - Kevin Gibbons
+  tests:
+    - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+private+fields'
+- title: Static class fields and private static methods
+  id: proposal-static-class-features
+  example: |-
+    class ColorFinder {
+      static #red = &#x22;#ff0000&#x22;;
+      static #green = &#x22;#00ff00&#x22;;
+      static #blue = &#x22;#0000ff&#x22;;
+
+      static colorName(name) {
+        switch (name) {
+          case &#x22;red&#x22;: return ColorFinder.#red;
+          case &#x22;blue&#x22;: return ColorFinder.#blue;
+          case &#x22;green&#x22;: return ColorFinder.#green;
+          default: throw new RangeError(&#x22;unknown color&#x22;);
+        }
+      }
+
+      // Somehow use colorName
+    }
+  presented:
+    - date: January&#xA0;2019
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
+  has_specification: true
+  description: A proposal to add three features to JavaScript classes, building on the previous class fields and private methods proposals.
+  authors:
+    - Daniel Ehrenberg
+    - Kevin Gibbons
+    - Jeff Morrison
+    - Kevin Smith
+  champions:
+    - Shu-Yu Guo
+    - Daniel Ehrenberg
+  tests:
+    - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+static+fields'
+- title: Hashbang Grammar
+  id: proposal-hashbang
+  example: |-
+    #!/usr/bin/env node
+    // in the Module Goal
+    export {};
+    console.log(1);
+  presented:
+    - date: November&#xA0;2018
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2018-11/nov-28.md#hash-bang-grammar
+  has_specification: true
+  description: This proposal is to match de-facto usage in some CLI JS hosts that allow for Shebangs / Hashbang. Such hosts strip the hashbang in order to generate valid JS source texts before passing to JS engines currently. This would unify and standardize how that is done.
+  authors:
+    - Bradley Farias
+  champions:
+    - Bradley Farias
+  tests:
+    - 'https://github.com/tc39/test262/pull/2065'
+- title: Top-level <code>await</code>
+  id: proposal-top-level-await
+  example: |-
+    // file.html
+    &#x3C;script type=module src=&#x22;a.mjs&#x22;&#x3E;&#x3C;/script&#x3E;
+    // a.mjs
+    await import(&#x22;./b.mjs&#x22;);
+    // b.mjs
+    await import(&#x22;./a.mjs&#x22;);
+  presented:
+    - date: June&#xA0;2019
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
+  has_specification: true
+  description: Top-level <code>await</code> enables modules to act as big async functions. With top-level <code>await</code>, ECMAScript Modules (ESM) can await resources, causing other modules who import them to wait before they start evaluating their body.
+  authors:
+    - Myles Borins
+  champions:
+    - Myles Borins
+  tests:
+    - 'https://github.com/tc39/test262/pull/2274'
+- title: RegExp Match Indices
+  id: proposal-regexp-match-indices
+  example: |-
+    const re1 = /a+(?&#x3C;Z&#x3E;z)?/;
+    // indices are relative to start of the input string:
+    const s1 = &#x22;xaaaz&#x22;;
+    const m1 = re1.exec(s1);
+    m1.indices[0][0] === 1;
+    m1.indices[0][1] === 5;
+    s1.slice(...m1.indices[0]) === &#x22;aaaz&#x22;;
+    m1.indices[1][0] === 4;
+    m1.indices[1][1] === 5;
+    s1.slice(...m1.indices[1]) === &#x22;z&#x22;;
+    m1.indices.groups[&#x22;Z&#x22;][0] === 4;
+    m1.indices.groups[&#x22;Z&#x22;][1] === 5;
+    s1.slice(...m1.indices.groups[&#x22;Z&#x22;]) === &#x22;z&#x22;;
+    // capture groups that are not matched return &#x60;undefined&#x60;:
+    const m2 = re1.exec(&#x22;xaaay&#x22;);
+    m2.indices[1] === undefined;
+    m2.indices.groups[&#x22;Z&#x22;] === undefined;
+  presented:
+    - date: December&#xA0;2019
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2019-12/december-3.md#regexp-match-indices-performance-feedback
+  has_specification: false
+  description: ECMAScript RegExp Match Indicies provide additional information about the start and end indices of captured substrings relative to the start of the input string.
+  authors:
+    - Ron Buckton
+  champions:
+    - Ron Buckton
+  tests:
+    - 'https://github.com/tc39/test262/pull/2309'
+- title: <code>Atomics.waitAsync</code>
+  id: proposal-atomics-wait-async
+  presented:
+    - date: December&#xA0;2019
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
+  has_specification: true
+  description: A proposal for an "asynchronous atomic wait" for ECMAScript, primarily for use in agents that are not allowed to block.
+  authors:
+    - Lars Hansen
+  champions:
+    - Shu-yu Guo
+    - Lars Hansen
+  tests:
+    - 'https://github.com/tc39/test262/issues/2511'
+- title: <code>.item()</code>
+  id: proposal-item-method
+  example: |-
+    function item(n) {
+    &#x9;// ToInteger() abstract op
+    &#x9;n = Math.trunc(n) || 0;
+    &#x9;// Allow negative indexing from the end
+    &#x9;if(n &#x3C; 0) n += this.length;
+    &#x9;// OOB access is guaranteed to return undefined
+    &#x9;if(n &#x3C; 0 || n &#x3E;= this.length) return undefined;
+    &#x9;// Otherwise, this is just normal property access
+    &#x9;return this[n];
+    }
+    // Other TypedArray constructors omitted for brevity.
+    for (let C of [Array, String, Uint8Array]) {
+        Object.defineProperty(C.prototype, &#x22;item&#x22;,
+                              { value: item,
+                                writable: true,
+                                enumerable: false,
+                                configurable: true });
+    }
+  presented:
+    - date: September&#xA0;2020
+      url: item
+  has_specification: true
+  description: A proposal to add a <code>.item()</code> method to all the basic indexable classes (<code>Array</code>, <code>String</code>, <code>TypedArray</code>).
+  authors:
+    - Shu-yu Guo
+    - Tab Atkins
+  champions:
+    - Shu-yu Guo
+    - Tab Atkins
+  tests:
+    - 'https://github.com/tc39/test262/pull/2812'
+- title: Import Assertions
+  id: proposal-import-assertions
+  example: >-
+    new Worker(&#x22;foo.wasm&#x22;, { type: &#x22;module&#x22;, assert: { type:
+    &#x22;webassembly&#x22; } });
+  presented:
+    - date: September&#xA0;2020
+      url: import-assertions
+  has_specification: true
+  description: A proposal for syntax to import ES modules with assertions.
+  authors:
+    - Myles Borins
+    - Sven Sauleau
+    - Dan Clark
+    - Daniel Ehrenberg
+  champions:
+    - Myles Borins
+    - Sven Sauleau
+    - Dan Clark
+    - Daniel Ehrenberg
