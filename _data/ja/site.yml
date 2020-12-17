@@ -1,0 +1,39 @@
+title: Specifying JavaScript.
+lang: ja
+navigation:
+  TC39:
+    title: TC39
+    agenda: Upcoming Agenda
+    notes: Recent Meeting Notes
+    sub-menu: Toggle sub-menu for TC39
+  specs:
+    title: Specs
+    proposals: Active Proposals
+    ecma-262: ECMA-262, ECMAScript
+    ecma-402: ECMA-402, Intl API
+    sub-menu: Toggle sub-menu for specs
+  contribute:
+    title: Contribute
+    proposals: Contribute to Proposals
+    tests: Contribute to Tests
+    read: Reading the Spec
+    discourse: Join the Discourse
+    sub-menu: Toggle sub-menu for Contribute
+  state-of-proposals: State of Proposals
+  skip-content: Skip to content
+  open: Open Menu
+footer:
+  connect: Connect
+  standards: Standards
+  proposals: Proposals
+  archives: Archives
+  process: Process
+  coc: Code of Conduct
+  feedback: We are looking for feedback.
+  feedback-prompt: Please <a href="https://github.com/tc39/tc39.github.io/issues/new" target="_blank">open an issue</a> in <a href="https://github.com/tc39/tc39.github.io" target="_blank">our site repository</a>.
+links:
+  coc: https://tc39.es/code-of-conduct
+  process: https://tc39.es/process-document
+  contribute-to-proposals: https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md
+  contribute-to-tests: https://github.com/tc39/test262/blob/master/CONTRIBUTING.md
+  discourse: https://es.discourse.group/
