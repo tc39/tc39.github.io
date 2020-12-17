@@ -1,11 +1,11 @@
 TC39:
   title: TC39
-  desc: Ecma International's TC39 is a group of JavaScript developers, implementers, academics, and more, collaborating with the community to maintain and evolve the definition of JavaScript.
-  ecma-logo: We are part of <br/> <a class="ecma-logo-box" href="https://www.ecma-international.org/"> <img src="assets/img/ecma-logo.svg" alt="Ecma International" /> </a>
+  desc: Ecma InternationalのTC39は、JavaScript開発者、実装者、専門家などのグループで、JavaScriptの仕様をメンテナンスし発展させるためにコミュニティと協力しています。
+  ecma-logo: 私達は<br/> <a class="ecma-logo-box" href="https://www.ecma-international.org/"> <img src="assets/img/ecma-logo.svg" alt="Ecma International" /> </a> <br/>の一員です。
 contribute:
-  title: Contribute
-  desc: TC39 welcomes contributions from the JavaScript community, whether it is feedback on existing proposals, improved documentation, testing, implementations, or even language feature ideas. See our <a href="https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md">contributor guide</a> for details.
-  join-ecma: To participate in TC39 meetings as a member, <a href="https://ecma-international.org/memento/join.htm">join Ecma</a>.
+  title: 貢献
+  desc: 既存のプロポーザルに対するフィードバック、ドキュメントの改善、テスト、実装、さらには言語機能に関するアイデアなど、JavaScriptコミュニティからの貢献をTC39は歓迎します。詳細については、<a href="https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md">コントリビュータガイド</a>をご覧ください。
+  join-ecma: TC39のミーティングにメンバーとして参加するには、<a href="https://ecma-international.org/memento/join.htm">Ecmaに参加</a>してください。
 specs:
-  title: Specs
-  desc: We develop the JavaScript (formally, ECMAScript) specification <a href="https://github.com/tc39/ecma262/">on GitHub</a> and meet every two months to discuss proposals. To learn more about the process, please take a look at the <a href="https://tc39.es/process-document/">five stages</a> for new <a href="https://github.com/tc39/proposals/">language feature proposals</a>. See our <a href="https://github.com/tc39/agendas/">meeting agendas</a> and <a href="https://github.com/tc39/notes/">minutes</a> to learn more.
+  title: 仕様
+  desc: 我々はJavaScript(正式には、ECMAScript)の仕様を<a href="https://github.com/tc39/ecma262/">GitHub</a>上で開発し、2ヶ月ごとにミーティングを行い、プロポーザルについて議論しています。このプロセスの詳細については、新しい言語機能のプロポーザルの<a href="https://tc39.es/process-document/">5つのステージ</a>を参照してください。より詳細な情報については、ミーティングの<a href="https://github.com/tc39/agendas/">議題</a>と<a href="https://github.com/tc39/notes/">議事録</a>をご覧ください。
