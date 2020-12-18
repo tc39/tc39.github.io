@@ -1,24 +1,23 @@
-title: Current Candidates for the Specification
-description: This section features proposals that are in Stage 3 of <a href="https://tc39.es/process-document/">our process</a>, which means they are close to completion.
+title: 現在の仕様候補一覧
+description: このセクションでは、<a href="https://tc39.es/process-document/">我々のプロセス</a>においてステージ3に到達している、つまり完了が近いプロポーザルを紹介しています。
 how-to-read:
-  title: How to read the proposals list
-  description: Each proposal has links out to other resources. The tags identify the following attributes. Below you will find a table with example tags and their meanings. All tags have hover text if you need help getting oriented.
+  title: プロポーザル一覧の読み方
+  description: 各プロポーザルは他の資料へのリンクが貼ってあります。表示されているタグは以下の属性を示しています。各タグが何を意味しているかは以下の例を参照ください。全てのタグはマウスカーソルをホバーさせたら詳細が表示されます。
   tags:
-    title: Types of tags and what they mean
-    last-presented: Last Presented
+    title: タグの種類とそれぞれの意味
+    last-presented: 最終提案日
     last-presented-fake-date: December 2018
-    tests: Available Tests
-    spec: Specification Text
-last-presented-alt: Notes from most recent presentation
-specification: Specification
-specification-alt: Read the specification text
-tests: Tests
-tests-alt: Patch introducing tests in test262 repository
-show-example: Show Example
-author: Author
-authors: Authors
-champion: Champion
-champions: Champions
-authors-and-champions: Authors and Champions
-see-more: See proposals in all stages
-
+    tests: テストケース
+    spec: 仕様詳細
+last-presented-alt: 直近の提案のノート
+specification: 仕様
+specification-alt: 仕様文をを読む
+tests: テスト
+tests-alt: test262のリポジトリにテストを追加するパッチ
+show-example: 例を表示する
+author: 提出者
+authors: 提出者
+champion: 支持者
+champions: 支持者
+authors-and-champions: 提出者、及び支持者
+see-more: 全ステージのプロポーザルを見る
