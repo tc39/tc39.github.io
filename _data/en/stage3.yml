@@ -197,32 +197,19 @@
     - Lars Hansen
   tests:
     - 'https://github.com/tc39/test262/issues/2511'
-- title: <code>.item()</code>
-  id: proposal-item-method
+- title: <code>.at()</code>
+  id: proposal-relative-indexing-method
   example: |-
-    function item(n) {
-    &#x9;// ToInteger() abstract op
-    &#x9;n = Math.trunc(n) || 0;
-    &#x9;// Allow negative indexing from the end
-    &#x9;if(n &#x3C; 0) n += this.length;
-    &#x9;// OOB access is guaranteed to return undefined
-    &#x9;if(n &#x3C; 0 || n &#x3E;= this.length) return undefined;
-    &#x9;// Otherwise, this is just normal property access
-    &#x9;return this[n];
-    }
-    // Other TypedArray constructors omitted for brevity.
-    for (let C of [Array, String, Uint8Array]) {
-        Object.defineProperty(C.prototype, &#x22;item&#x22;,
-                              { value: item,
-                                writable: true,
-                                enumerable: false,
-                                configurable: true });
-    }
+    var list = ["apple", "orange", "banana"];
+    list.at(-1) // banana, using negative index
+    list.at(0)  // apple
+    list.at(1)  // orange
+    list.at(2)  // banana
   presented:
     - date: September&#xA0;2020
-      url: item
+      url: at
   has_specification: true
-  description: A proposal to add a <code>.item()</code> method to all the basic indexable classes (<code>Array</code>, <code>String</code>, <code>TypedArray</code>).
+  description: A proposal to add a <code>.at()</code> method to all the basic indexable classes (<code>Array</code>, <code>String</code>, <code>TypedArray</code>).
   authors:
     - Shu-yu Guo
     - Tab Atkins
