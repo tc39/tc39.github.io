@@ -1,36 +1,36 @@
-title: Specifying JavaScript.
+title: JavaScriptを定義する。
 lang: ja
 navigation:
   TC39:
     title: TC39
-    agenda: Upcoming Agenda
-    notes: Recent Meeting Notes
-    sub-menu: Toggle sub-menu for TC39
+    agenda: 今後の議題
+    notes: 直近の議事録
+    sub-menu: TC39のサブメニューを表示する
   specs:
-    title: Specs
-    proposals: Active Proposals
+    title: 仕様
+    proposals: 議論中のプロポーザル
     ecma-262: ECMA-262, ECMAScript
     ecma-402: ECMA-402, Intl API
-    sub-menu: Toggle sub-menu for specs
+    sub-menu: 仕様のサブメニューを表示する
   contribute:
-    title: Contribute
-    proposals: Contribute to Proposals
-    tests: Contribute to Tests
-    read: Reading the Spec
-    discourse: Join the Discourse
-    sub-menu: Toggle sub-menu for Contribute
-  state-of-proposals: State of Proposals
-  skip-content: Skip to content
-  open: Open Menu
+    title: コントリビュート
+    proposals: プロポーザルへのコントリビュートについて
+    tests: テストケースへのコントリビュートについて
+    read: 仕様の読み方について
+    discourse: Discourseに参加する
+    sub-menu: コントリビュートのサブメニューを表示する
+  state-of-proposals: プロポーザルの状態
+  skip-content: プロポーザルの状態へ飛ぶ
+  open: メニューを表示する
 footer:
-  connect: Connect
-  standards: Standards
-  proposals: Proposals
-  archives: Archives
-  process: Process
-  coc: Code of Conduct
-  feedback: We are looking for feedback.
-  feedback-prompt: Please <a href="https://github.com/tc39/tc39.github.io/issues/new" target="_blank">open an issue</a> in <a href="https://github.com/tc39/tc39.github.io" target="_blank">our site repository</a>.
+  connect: 繋がる
+  standards: 標準
+  proposals: プロポーザル一覧
+  archives: アーカイブ
+  process: プロセス
+  coc: 行動規範
+  feedback: フィードバックを募集しています。
+  feedback-prompt: ご意見等は<a href="https://github.com/tc39/tc39.github.io" target="_blank">このサイトのリポジトリ</a>に<a href="https://github.com/tc39/tc39.github.io/issues/new" target="_blank">issueを開いて</a>ください。
 links:
   coc: https://tc39.es/code-of-conduct
   process: https://tc39.es/process-document
