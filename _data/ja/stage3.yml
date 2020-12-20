@@ -1,4 +1,4 @@
-- title: Legacy RegExp features in JavaScript
+- title: JavaScriptの古いRegExpの機能
   id: proposal-regexp-legacy-features
   presented:
     - date: May&#xA0;2017
@@ -13,7 +13,7 @@
     - Claude Pache
   tests:
     - 'https://github.com/tc39/test262/pull/2650'
-- title: Private instance methods and accessors
+- title: プライベートインスタンスメソッドとアクセサ
   id: proposal-private-methods
   example: |-
     class Counter extends HTMLElement {
@@ -50,7 +50,7 @@
   tests:
     - >-
       https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+private+methods
-- title: Class Public Instance Fields &amp; Private Instance Fields
+- title: クラスのパブリックインスタンスフィールドとプライベートインスタンスフィールド
   id: proposal-class-fields
   example: |-
     class X {
@@ -75,7 +75,7 @@
     - Kevin Gibbons
   tests:
     - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+private+fields'
-- title: Static class fields and private static methods
+- title: 静的クラスフィールドとプライベート静的メソッド
   id: proposal-static-class-features
   example: |-
     class ColorFinder {
@@ -110,7 +110,7 @@
     - Daniel Ehrenberg
   tests:
     - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+static+fields'
-- title: Hashbang Grammar
+- title: ハッシュバンの文法
   id: proposal-hashbang
   example: |-
     #!/usr/bin/env node
@@ -129,7 +129,7 @@
     - Bradley Farias
   tests:
     - 'https://github.com/tc39/test262/pull/2065'
-- title: Top-level <code>await</code>
+- title: トップレベル<code>await</code>
   id: proposal-top-level-await
   example: |-
     // file.html
@@ -143,7 +143,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
   has_specification: true
-  description: top-level <code>await</code> はモジュールを大きな非同期関数として実行することを可能にします。top-level <code>await</code> を使うことで、ECMAScript Modules (ESM)はリソースを待機できるので、それらをimportする他のモジュールはボディの評価が始まる前に待機します。
+  description: トップレベル<code>await</code>はモジュールを大きな非同期関数として実行することを可能にします。トップレベル<code>await</code> を使うことで、ECMAScript Modules (ESM)はリソースを待機できるので、それらをimportする他のモジュールはボディの評価が始まる前に待機します。
   authors:
     - Myles Borins
   champions:
@@ -218,7 +218,7 @@
     - Tab Atkins
   tests:
     - 'https://github.com/tc39/test262/pull/2812'
-- title: Import Assertions
+- title: Importアサーション
   id: proposal-import-assertions
   example: >-
     new Worker(&#x22;foo.wasm&#x22;, { type: &#x22;module&#x22;, assert: { type:
