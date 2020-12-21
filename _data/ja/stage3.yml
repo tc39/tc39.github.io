@@ -227,7 +227,7 @@
     - date: September&#xA0;2020
       url: import-assertions
   has_specification: true
-  description: ES modulesのimportをアサートする構文のためのプロポーザルです。
+  description: ESモジュールをアサーション付きでインポートする構文のためのプロポーザルです。
   authors:
     - Myles Borins
     - Sven Sauleau
