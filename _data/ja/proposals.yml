@@ -11,7 +11,7 @@ how-to-read:
     spec: 仕様詳細
 last-presented-alt: 直近の発表のノート
 specification: 仕様
-specification-alt: 仕様文をを読む
+specification-alt: 仕様文を読む
 tests: テスト
 tests-alt: test262のリポジトリにテストを追加するパッチ
 show-example: 例を表示する
