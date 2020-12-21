@@ -1,11 +1,11 @@
-- title: JavaScriptの古いRegExpの機能
+- title: JavaScriptの古い正規表現機能
   id: proposal-regexp-legacy-features
   presented:
     - date: May&#xA0;2017
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
   has_specification: false
-  description: JavaScriptの古い(非推奨の)RegExpの機能の仕様のドラフトです。たとえば、<code>RegExp.$1</code>や<code>RegExp.prototype.compile</code>メソッドなどのコンストラクタの静的プロパティなどがあります。
+  description: JavaScriptの古い(非推奨の)正規表現機能の仕様ドラフトです。例えば、<code>RegExp.$1</code>や<code>RegExp.prototype.compile</code>メソッドのようなコンストラクタのスタティックプロパティなどです。
   authors:
     - Claude Pache
   champions:
