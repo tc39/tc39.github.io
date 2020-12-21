@@ -189,7 +189,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
   has_specification: true
-  description: ECMAScriptに"非同期アトミック待機"を追加するプロポーザルで、主にブロックが許可されていないエージェントで使用されます。
+  description: ECMAScriptに"Atomics.waitの非同期版"を追加するプロポーザルで、主にブロックが許可されていないエージェントで使用されます。
   authors:
     - Lars Hansen
   champions:
