@@ -110,7 +110,7 @@
     - Daniel Ehrenberg
   tests:
     - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+static+fields'
-- title: ハッシュバンの文法
+- title: ハッシュバン文法
   id: proposal-hashbang
   example: |-
     #!/usr/bin/env node
