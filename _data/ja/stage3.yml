@@ -143,7 +143,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
   has_specification: true
-  description: トップレベル<code>await</code>はモジュールを大きな非同期関数として実行することを可能にします。トップレベル<code>await</code> を使うことで、ECMAScript Modules (ESM)はリソースを待機できるので、それらをimportする他のモジュールはボディの評価が始まる前に待機します。
+  description: トップレベル<code>await</code>はモジュールを大きな非同期関数として実行することを可能にします。トップレベル<code>await</code>を使うことで、ECMAScript Modules (ESM)はリソースをawaitすることが可能となり、それらのモジュールをimportする他のモジュールは自身の評価が始まる前に待機することになります。
   authors:
     - Myles Borins
   champions:
