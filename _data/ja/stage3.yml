@@ -1,7 +1,7 @@
 - title: JavaScriptの古い正規表現機能
   id: proposal-regexp-legacy-features
   presented:
-    - date: May&#xA0;2017
+    - date: 5月&#xA0;2017
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
   has_specification: false
@@ -37,7 +37,7 @@
     }
     window.customElements.define(&#x27;num-counter&#x27;, Counter);
   presented:
-    - date: January&#xA0;2019
+    - date: 1月&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
   has_specification: true
@@ -60,7 +60,7 @@
       }
     }
   presented:
-    - date: March&#xA0;2019
+    - date: 3月&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2020-03/march-31.md#add-support-for-optionalchainprivateidentifier-in-class-features-proposals
   has_specification: true
@@ -95,7 +95,7 @@
       // Somehow use colorName
     }
   presented:
-    - date: January&#xA0;2019
+    - date: 1月&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
   has_specification: true
@@ -118,7 +118,7 @@
     export {};
     console.log(1);
   presented:
-    - date: November&#xA0;2018
+    - date: 11月&#xA0;2018
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2018-11/nov-28.md#hash-bang-grammar
   has_specification: true
@@ -139,7 +139,7 @@
     // b.mjs
     await import(&#x22;./a.mjs&#x22;);
   presented:
-    - date: June&#xA0;2019
+    - date: 6月&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
   has_specification: true
@@ -171,7 +171,7 @@
     m2.indices[1] === undefined;
     m2.indices.groups[&#x22;Z&#x22;] === undefined;
   presented:
-    - date: December&#xA0;2019
+    - date: 12月&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-12/december-3.md#regexp-match-indices-performance-feedback
   has_specification: false
@@ -185,7 +185,7 @@
 - title: <code>Atomics.waitAsync</code>
   id: proposal-atomics-wait-async
   presented:
-    - date: December&#xA0;2019
+    - date: 12月&#xA0;2019
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
   has_specification: true
@@ -206,7 +206,7 @@
     list.at(1)  // orange
     list.at(2)  // banana
   presented:
-    - date: September&#xA0;2020
+    - date: 9月&#xA0;2020
       url: at
   has_specification: true
   description: すべての基本的なインデックス可能なクラス(<code>Array</code>, <code>String</code>, <code>TypedArray</code>)に、<code>.at()</code>メソッドを追加するプロポーザルです。
@@ -224,7 +224,7 @@
     new Worker(&#x22;foo.wasm&#x22;, { type: &#x22;module&#x22;, assert: { type:
     &#x22;webassembly&#x22; } });
   presented:
-    - date: September&#xA0;2020
+    - date: 9月&#xA0;2020
       url: import-assertions
   has_specification: true
   description: ESモジュールをアサーション付きでインポートする構文のためのプロポーザルです。
