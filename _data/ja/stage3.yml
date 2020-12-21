@@ -99,7 +99,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
   has_specification: true
-  description: 過去のクラスフィールドプロポーザルとプライベートメソッドプロポーザルに基づいて、新しい3つの機能を JavaScript のクラスに追加するプロポーザルです。
+  description: 過去のクラスフィールドプロポーザルとプライベートメソッドプロポーザルに基づいて、新しい3つの機能をJavaScriptのクラスに追加するプロポーザルです。
   authors:
     - Daniel Ehrenberg
     - Kevin Gibbons
