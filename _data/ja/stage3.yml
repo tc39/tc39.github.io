@@ -64,7 +64,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2020-03/march-31.md#add-support-for-optionalchainprivateidentifier-in-class-features-proposals
   has_specification: true
-  description: 過去のOrthogonal ClassesプロポーザルとClass Evaluation Orderプロポーザルを利用して、プライベートおよびパブリックなフィールドのための複合的なビジョンを提案します。
+  description: 過去の直交クラスとクラス評価順序に関するプロポーザルに基づいて、パブリックフィールドとプライベートフィールドのための複合的なビジョンを提案します。
   authors:
     - Daniel Ehrenberg
     - Kevin Gibbons
@@ -143,7 +143,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
   has_specification: true
-  description: トップレベル<code>await</code>はモジュールを大きな非同期関数として実行することを可能にします。トップレベル<code>await</code>を使うことで、ECMAScript Modules (ESM)はリソースをawaitすることが可能となり、それらのモジュールをimportする他のモジュールは自身の評価が始まる前に待機することになります。
+  description: トップレベル<code>await</code>はモジュールを大きな非同期関数として実行することを可能にします。トップレベル<code>await</code>を使うことで、ECMAScript Modules (ESM)はリソースを待機することが可能となり、それらのモジュールをインポートする他のモジュールは自身の評価が始まる前に待機することになります。
   authors:
     - Myles Borins
   champions:
@@ -175,7 +175,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-12/december-3.md#regexp-match-indices-performance-feedback
   has_specification: false
-  description: ECMAScript RegExp Match Indicies は入力された文字列の先頭を基準にキャプチャされた部分文字列の開始インデックスと終了インデックスについての追加の情報を提供します。
+  description: ECMAScript RegExp Match Indiciesは入力された文字列の先頭を基準にキャプチャされた部分文字列の開始インデックスと終了インデックスについての追加の情報を提供します。
   authors:
     - Ron Buckton
   champions:
@@ -189,7 +189,7 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
   has_specification: true
-  description: 主にブロッキングが許されないエージェントで使用するための"Atomics.waitの非同期版"をECMAScriptに追加するためのプロポーザルです。
+  description: 主にブロッキングが許されないエージェントで使用するための"<code>Atomics.wait</code>の非同期版"をECMAScriptに追加するためのプロポーザルです。
   authors:
     - Lars Hansen
   champions:
@@ -227,7 +227,7 @@
     - date: 9月&#xA0;2020
       url: import-assertions
   has_specification: true
-  description: ESモジュールをアサーション付きでインポートする構文のためのプロポーザルです。
+  description: ES Modulesをアサーション付きでインポートする構文のためのプロポーザルです。
   authors:
     - Myles Borins
     - Sven Sauleau
