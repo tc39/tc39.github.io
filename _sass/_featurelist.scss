@@ -15,11 +15,11 @@
     }
     &__tag {
       display: inline-block;
+      font-size: 0.8rem;
+
       a {
         color: white;
-        display: block;
-        font-size: 0.8rem;
-        margin-top: 0.5rem;
+        margin-top: 0.5rem;  
         opacity: 1;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
@@ -32,6 +32,17 @@
         &:focus {
           background-color: transparent;
         }
+      }
+
+      span {
+        background-color: $color-dim-gray;
+        border: 2px solid $color-dim-gray;
+        border-radius: 10px;
+        color: white;
+        font-weight: 550;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-top: 0.5rem;
       }
     }
     &__status {

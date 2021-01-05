@@ -59,9 +59,13 @@
         <ul class="featurelist__item__status featurelist__item__tags">
           {% if proposal.presented | size %}
           {% for presentation in proposal.presented %}
-            <li class="featurelist__item__presented featurelist__item__tag">
-              <a href="{{ presentation.url }}" title='{{ site.data["proposals"]["last-presented-alt"] }}'>{{ presentation.date }}</a>
-            </li>
+          <li class="featurelist__item__presented featurelist__item__tag">
+            {%- if presentation.url -%}
+            <a href="{{ presentation.url }}" title='{{ site.data["proposals"]["last-presented-alt"] }}'>{{ presentation.date }}</a>
+            {%- else -%}
+            <span>{{ presentation.date }}</span>
+            {%- endif -%}
+          </li>
           {% endfor %}
           {% endif %}
           {% if proposal.tests | size %}
