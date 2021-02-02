@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnusedLabels": false,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "strict": true,
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "typeRoots": [
+      "./_typings",
+      "./node_modules/@types",
+    ]
+  },
+  "include": [
+    "./**/*.ts",
+  ]
+}
