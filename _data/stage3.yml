@@ -6,8 +6,9 @@
     - Claude Pache
   description: >-
     This is a specification draft for the legacy (deprecated) RegExp features in
-    JavaScript, i.e., static properties of the constructor like <code>RegExp.$1</code> as
-    well as the <code>RegExp.prototype.compile</code> method.
+    JavaScript, i.e., static properties of the constructor like
+    <code>RegExp.$1</code> as well as the <code>RegExp.prototype.compile</code>
+    method.
   has_specification: false
   presented:
     - date: "May\_2017"
@@ -15,7 +16,7 @@
         https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
   title: Legacy RegExp features in JavaScript
   tests:
-    - 'https://github.com/tc39/test262/pull/2650'
+    - https://github.com/tc39/test262/pull/2650
 - id: proposal-private-methods
   authors:
     - Daniel Ehrenberg
@@ -88,7 +89,7 @@
         https://github.com/tc39/notes/blob/master/meetings/2020-09/sept-23.md#status-update-for-class-fields-private-methods-static-class-features
   title: Class Public Instance Fields &amp; Private Instance Fields
   tests:
-    - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+private+fields'
+    - https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+private+fields
 - id: proposal-static-class-features
   authors:
     - Daniel Ehrenberg
@@ -125,7 +126,7 @@
         https://github.com/tc39/notes/blob/master/meetings/2020-09/sept-23.md#status-update-for-class-fields-private-methods-static-class-features
   title: Static class fields and private static methods
   tests:
-    - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+static+fields'
+    - https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+static+fields
 - id: proposal-hashbang
   authors:
     - Bradley Farias
@@ -148,7 +149,7 @@
         https://github.com/tc39/notes/blob/master/meetings/2018-11/nov-28.md#hash-bang-grammar
   title: Hashbang Grammar
   tests:
-    - 'https://github.com/tc39/test262/pull/2065'
+    - https://github.com/tc39/test262/pull/2065
 - id: proposal-top-level-await
   authors:
     - Myles Borins
@@ -175,7 +176,7 @@
         https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
   title: Top-level <code>await</code>
   tests:
-    - 'https://github.com/tc39/test262/pull/2274'
+    - https://github.com/tc39/test262/pull/2274
 - id: proposal-regexp-match-indices
   authors:
     - Ron Buckton
@@ -209,12 +210,12 @@
     m2.indices.groups[&#x22;Z&#x22;] === undefined;
   has_specification: false
   presented:
-    - date: "December\_2019"
+    - date: "November\_2020"
       url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2019-12/december-3.md#regexp-match-indices-performance-feedback
+        https://github.com/tc39/notes/blob/master/meetings/2020-11/nov-16.md#regexp-matches-indices-jsc-implementation-feedback
   title: RegExp Match Indices
   tests:
-    - 'https://github.com/tc39/test262/pull/2309'
+    - https://github.com/tc39/test262/pull/2309
 - id: proposal-atomics-wait-async
   authors:
     - Lars Hansen
@@ -222,8 +223,8 @@
     - Shu-yu Guo
     - Lars Hansen
   description: >-
-    A proposal for an &ldquo;asynchronous atomic wait&rdquo; for ECMAScript, primarily for
-    use in agents that are not allowed to block.
+    A proposal for an &ldquo;asynchronous atomic wait&rdquo; for ECMAScript,
+    primarily for use in agents that are not allowed to block.
   has_specification: true
   presented:
     - date: "December\_2019"
@@ -231,7 +232,7 @@
         https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
   title: <code>Atomics.waitAsync</code>
   tests:
-    - 'https://github.com/tc39/test262/issues/2511'
+    - https://github.com/tc39/test262/issues/2511
 - id: proposal-relative-indexing-method
   authors:
     - Shu-yu Guo
@@ -251,10 +252,11 @@
   has_specification: true
   presented:
     - date: "November\_2020"
-      url: https://github.com/tc39/notes/blob/master/meetings/2020-11/nov-17.md#item-rename--revisit-inclusion-on-string
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2020-11/nov-17.md#item-rename--revisit-inclusion-on-string
   title: <code>.at()</code>
   tests:
-    - 'https://github.com/tc39/test262/pull/2812'
+    - https://github.com/tc39/test262/pull/2812
 - id: proposal-import-assertions
   authors:
     - Myles Borins
@@ -272,7 +274,49 @@
     &#x22;webassembly&#x22; } });
   has_specification: true
   presented:
-    - date: "September\_2020"
+    - date: "November\_2020"
       url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2020-09/sept-22.md#import-assertions-for-stage-3
+        https://github.com/tc39/notes/blob/master/meetings/2020-11/nov-17.md#import-assertions-status-update
   title: Import Assertions
+- id: proposal-json-modules
+  authors:
+    - Myles Borins
+    - Sven Sauleau
+    - Dan Clark
+    - Daniel Ehrenberg
+  champions:
+    - Myles Borins
+    - Sven Sauleau
+    - Dan Clark
+    - Daniel Ehrenberg
+  description: A proposal to import JSON files as modules.
+  example: |-
+    import json from &#x22;./foo.json&#x22; assert { type: &#x22;json&#x22; };
+    import(&#x22;foo.json&#x22;, { assert: { type: &#x22;json&#x22; } });
+  has_specification: true
+  presented:
+    - date: "January\_2021"
+  title: JSON Modules
+- id: proposal-private-fields-in-in
+  authors:
+    - Jordan Harband
+  champions:
+    - Jordan Harband
+  description: A proposal to provide brand checks without exceptions.
+  example: |
+    class C {
+      #brand;
+
+      static isC(obj) {
+        try {
+          obj.#brand;
+          return true;
+        } catch {
+          return false;
+        }
+      }
+    }
+  has_specification: false
+  presented:
+    - date: "January\_2021"
+  title: Ergonomic brand checks for Private Fields

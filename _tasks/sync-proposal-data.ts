@@ -223,7 +223,7 @@ function json2yaml(buffer:Uint8Array, options:yaml.DumpOptions):Uint8Array {
  * Gets the proposal short description.
  *
  * First checks `stage3.yml` for pre-existing short description. If present,
- * uses that. If missing, prompts the user for a short description.
+ * uses that. If missing, fetches them from the GitHub repo.
  */
 async function getShortDescription(prpslId:string):Promise<(string | undefined)> {
   let description = undefined;
