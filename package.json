@@ -32,7 +32,7 @@
     "@babel/eslint-parser": "7.12.1",
     "@babel/plugin-syntax-top-level-await": "7.12.1",
     "@babel/preset-env": "7.12.11",
-    "@openinf/gh-file-importer": "^1.1.0",
+    "@openinf/gh-file-importer": "^2.0.0",
     "@openinf/util-md-table": "^1.1.0",
     "@openinf/util-object": "^1.2.0",
     "@openinf/util-text": "^1.0.1",
