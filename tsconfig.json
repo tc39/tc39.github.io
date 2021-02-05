@@ -16,7 +16,6 @@
     "target": "ESNext",
     "lib": ["ESNext"],
     "typeRoots": [
-      "./_typings",
       "./node_modules/@types",
     ]
   },

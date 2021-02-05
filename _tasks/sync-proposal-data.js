@@ -5,7 +5,7 @@
 // -----------------------------------------------------------------------------
 // Requirements
 // -----------------------------------------------------------------------------
-import { curlyQuote } from '@openinf/util-text';
+import { curlyQuote, mdCodeSpans2html } from '@openinf/util-text';
 import { GhFileImporter } from '@openinf/gh-file-importer';
 import { mdTbl2json } from '@openinf/util-md-table';
 import { hasOwn } from '@openinf/util-object';
@@ -13,12 +13,7 @@ import { promises as fsp, readFileSync } from 'fs';
 import { resolve as pathResolve } from 'path';
 import { toArray } from '@openinf/util-types';
 import consoleLogLevel from 'console-log-level';
-import htmlStringify from 'rehype-stringify';
-import markdown from 'remark-parse';
-import raw from 'rehype-raw';
-import remark2rehype from 'remark-rehype';
 import sanitizeHtml from 'sanitize-html';
-import unified from 'unified';
 import yaml from 'js-yaml';
 const DIR_DATA = '_data';
 const FILE_PROPOSAL_DATA = pathResolve(DIR_DATA, 'stage3.yml');
@@ -64,15 +59,6 @@ function isFullRefLink(cellContents) {
 function getFullRefLinkContent(fullRefLink, index) {
     const array = fullRefLink.split('][');
     return index === 0 ? array[index].slice(1) : array[index].slice(0, -1);
-}
-async function mkCodeTags(markdownSrc) {
-    const compiledSrc = await unified()
-        .use(markdown)
-        .use(remark2rehype, { allowDangerousHtml: true })
-        .use(raw)
-        .use(htmlStringify)
-        .process(markdownSrc);
-    return sanitizeHtml(String(compiledSrc), { allowedTags: ['code'] });
 }
 /**
  * Gets the URL from the partial 'link text' of a 'full reference link' in the
@@ -199,7 +185,7 @@ const prpslRcrdPromiseArr = jsonTbl.map(async (value) => {
         example: await getCodeSample(prpslRcrdId),
         has_specification: await hasSpec(prpslRcrdId),
         presented: [presenceObjFrom(value)],
-        title: await mkCodeTags(getFullRefLinkContent(value.proposal, 0)),
+        title: await mdCodeSpans2html(getFullRefLinkContent(value.proposal, 0)),
         tests: hasOwn(value, 'tests') && isFullRefLink(value.tests) ?
             [getUrlFromDoc(getFullRefLinkContent(value.tests, 1))] : undefined,
     };
