@@ -238,3 +238,44 @@
     - Sven Sauleau
     - Dan Clark
     - Daniel Ehrenberg
+- title: JSON Modules
+  id: proposal-json-modules
+  example: >-
+    import json from &#x22;./foo.json&#x22; assert { type: &#x22;json&#x22; };
+  presented:
+    - date: January&#xA0;2021
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2021-01/jan-25.md#json-modules-for-stage-3
+  has_specification: true
+  description: Proposal to import JSON files as modules.
+  authors:
+    - Sven Sauleau
+    - Daniel Ehrenberg
+    - Myles Borins
+    - Dan Clark
+  champions:
+    - Sven Sauleau
+    - Daniel Ehrenberg
+    - Myles Borins
+    - Dan Clark
+- title: Ergonomic Brand Checks
+  id: proposal-private-fields-in-in
+  example: >-
+    class C {
+      #brand;
+      #method() {}
+      get #getter() {}
+      static isC(obj) {
+        return #brand in obj && #method in obj && #getter in obj;
+      }
+    }
+  presented:
+    - date: January&#xA0;2021
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2021-01/jan-27.md#ergonomic-brand-checks
+  has_specification: true
+  description: EcmaScript proposal to provide brand checks without exceptions.
+  authors:
+    - Jordan Harband
+  champions:
+    - Jordan Harband
