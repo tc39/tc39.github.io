@@ -106,7 +106,7 @@
       static #red = &#x22;#ff0000&#x22;;
       static #green = &#x22;#00ff00&#x22;;
       static #blue = &#x22;#0000ff&#x22;;
-      
+
       static colorName(name) {
         switch (name) {
           case &#x22;red&#x22;: return ColorFinder.#red;
@@ -115,7 +115,7 @@
           default: throw new RangeError(&#x22;unknown color&#x22;);
         }
       }
-      
+
       // Somehow use colorName
     }
   has_specification: true
@@ -276,3 +276,42 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2020-09/sept-22.md#import-assertions-for-stage-3
   title: Import Assertions
+- title: JSON Modules
+  id: proposal-json-modules
+  example: >-
+    import json from &#x22;./foo.json&#x22; assert { type: &#x22;json&#x22; };
+  presented:
+    - date: January\_2021
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2021-01/jan-25.md#json-modules-for-stage-3
+  has_specification: true
+  description: Proposal to import JSON files as modules.
+  authors:
+    - Sven Sauleau
+    - Daniel Ehrenberg
+    - Myles Borins
+    - Dan Clark
+  champions:
+    - Sven Sauleau
+    - Daniel Ehrenberg
+    - Myles Borins
+    - Dan Clark
+- title: Ergonomic Brand Checks
+  id: proposal-private-fields-in-in
+  example: >-
+    class C {
+      #brand;
+      #method() {}
+      get #getter() {}
+      static isC(obj) {
+        return #brand in obj && #method in obj && #getter in obj;
+      }
+    }
+  presented:
+    - date: January\_2021
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2021-01/jan-27.md#ergonomic-brand-checks
+  has_specification: true
+  description: EcmaScript proposal to provide brand checks without exceptions.
+  authors:
+    - Jordan Harband
