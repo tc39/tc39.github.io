@@ -279,3 +279,84 @@
     - Jordan Harband
   champions:
     - Jordan Harband
+  has_specification: true
+- id: proposal-class-static-block
+  title: Class Static Block
+  authors:
+    - Ron Buckton
+  champions:
+    - Ron Buckton
+  description: Class static blocks provide a mechanism to perform additional static initialization during class definition evaluation. This is not intended as a replacement for public fields, as they provide useful information for static analysis tools and are a valid target for decorators. Rather, this is intended to augment existing use cases and enable new use cases not currently handled by that proposal.
+  example: >-
+    // "friend" access (same module)
+    let A, B;
+    {
+      let friendA;
+
+      A = class A {
+        #x;
+
+        static {
+            friendA = {
+              getX(obj) { return obj.#x },
+              setX(obj, value) { obj.#x = value }
+            };
+        }
+      };
+
+      B = class B {
+        constructor(a) {
+          const x = friendA.getX(a); // ok
+          friendA.setX(a, x); // ok
+        }
+      };
+    }
+  has_specification: true
+  presented:
+    - date: 3月&#xA0;2021
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2021-03/mar-9.md#class-static-initialization-blocks
+- id: proposal-error-cause
+  title: Error Cause
+  authors:
+    - Chengzhong Wu
+  champions:
+    - Ron Buckton
+    - Chengzhong Wu
+    - Hemanth HM
+  description: Errors will be constructed to represent runtime abnormalities. To help unexpected behavior diagnosis, errors need to be augmented with contextual information like error messages, error instance properties to explain what happened at the time.  If the error were thrown from deep internal methods, the thrown error may not be straightforward to be easily conducted without proper exception design pattern. This proposal introduces a convenient way to forward the cause.
+  example: >-
+    await fetch('//domain/upload', { method: 'POST', body: jobResult })
+    .catch(err => {
+      throw new Error('Upload job result failed', { cause: err });
+    });
+  has_specification: true
+  presented:
+    - date: 3月&#xA0;2021
+- id: proposal-temporal
+  title: Temporal
+  authors:
+    - Maggie Pint
+    - Matt Johnson
+    - Philipp Dunkel
+  champions:
+    - Maggie Pint
+    - Matt Johnson
+    - Philipp Dunkel
+  description: Date has been a long-standing pain point in ECMAScript. This proposes Temporal, a global Object that acts as a top-level namespace (like Math), that brings a modern date/time API to the ECMAScript language. For a detailed breakdown of motivations, see  the proposal readme.
+  example: >-
+    // See the repo for detailed examples.
+    // small example from the cook book
+
+    const date = Temporal.now.plainDateISO(); // Gets the current date
+
+    date.toString(); // returns the date in ISO 8601 date format
+
+    // If you additionally want the time
+
+    Temporal.now.plainDateTimeISO().toString(); // date and time in ISO 8601 format
+  has_specification: true
+  presented:
+    - date: 3月&#xA0;2021
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2021-03/mar-9.md#temporal-for-stage-3
