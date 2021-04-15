@@ -286,7 +286,7 @@
     - Ron Buckton
   champions:
     - Ron Buckton
-  description: Class static blocks provide a mechanism to perform additional static initialization during class definition evaluation. This is not intended as a replacement for public fields, as they provide useful information for static analysis tools and are a valid target for decorators. Rather, this is intended to augment existing use cases and enable new use cases not currently handled by that proposal.
+  description: Class static blockは、クラス定義の評価中に追加の静的初期化を実行する仕組みを提供します。これは、静的解析ツールに役立つ情報を提供し、デコレーターのための妥当なターゲットであるため、パブリックフィールドの置き換えを意図したものではありません。むしろ、これは既存のユースケースを補強し、このプロポーザルで現在処理されていない新しいユースケースを実現できるようにすることを目的としています。
   example: >-
     // "friend" access (same module)
     let A, B;
@@ -324,7 +324,7 @@
     - Ron Buckton
     - Chengzhong Wu
     - Hemanth HM
-  description: Errors will be constructed to represent runtime abnormalities. To help unexpected behavior diagnosis, errors need to be augmented with contextual information like error messages, error instance properties to explain what happened at the time.  If the error were thrown from deep internal methods, the thrown error may not be straightforward to be easily conducted without proper exception design pattern. This proposal introduces a convenient way to forward the cause.
+  description: エラーは、実行時の異常を表現するために作られます。予期しない動作の診断を容易にするためは、エラーメッセージやエラーインスタンスのプロパティなど、その時点で何が起こったかを明らかにする状況情報をエラーに追加する必要があります。エラーが内部の深いメソッドからスローされた場合、スローされたエラーは、適切な例外設計パターンなしに簡単に処理できるとは限りません。このプロポーザルは原因を伝達するための便利な手段を導入します。
   example: >-
     await fetch('//domain/upload', { method: 'POST', body: jobResult })
     .catch(err => {
@@ -343,7 +343,7 @@
     - Maggie Pint
     - Matt Johnson
     - Philipp Dunkel
-  description: Date has been a long-standing pain point in ECMAScript. This proposes Temporal, a global Object that acts as a top-level namespace (like Math), that brings a modern date/time API to the ECMAScript language. For a detailed breakdown of motivations, see  the proposal readme.
+  description: ECMAScriptでは、Dateが長年の悩みの種でした。そこで提案されたのがTemporalであり、これは(Mathのような)トップレベルの名前空間として振る舞い、ECMAScriptに最新のdate/time APIをもたらすグローバルオブジェクトです。動機の詳しい説明については、プロポーザルのREADMEをご覧ください。
   example: >-
     // See the repo for detailed examples.
     // small example from the cook book
