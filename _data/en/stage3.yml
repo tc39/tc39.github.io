@@ -13,103 +13,6 @@
     - Claude Pache
   tests:
     - 'https://github.com/tc39/test262/pull/2650'
-- title: Private instance methods and accessors
-  id: proposal-private-methods
-  example: |-
-    class Counter extends HTMLElement {
-      #xValue = 0;
-      get #x() { return #xValue; }
-      set #x(value) {
-        this.#xValue = value;
-        window.requestAnimationFrame(this.#render.bind(this));
-      }
-      #clicked() {
-        this.#x++;
-      }
-      constructor() {
-        super();
-        this.onclick = this.#clicked.bind(this);
-      }
-      connectedCallback() { this.#render(); }
-      #render() {
-        this.textContent = this.#x.toString();
-      }
-    }
-    window.customElements.define(&#x27;num-counter&#x27;, Counter);
-  presented:
-    - date: January&#xA0;2019
-      url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
-  has_specification: true
-  description: Keeping state and behavior private to a class lets library authors present a clear, stable interface, while changing their code over time behind the scenes.
-  authors:
-    - Daniel Ehrenberg
-  champions:
-    - Daniel Ehrenberg
-    - Kevin Gibbons
-  tests:
-    - >-
-      https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+private+methods
-- title: Class Public Instance Fields &amp; Private Instance Fields
-  id: proposal-class-fields
-  example: |-
-    class X {
-      #foo;
-      method() {
-        console.log(this.#foo)
-      }
-    }
-  presented:
-    - date: March&#xA0;2019
-      url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2020-03/march-31.md#add-support-for-optionalchainprivateidentifier-in-class-features-proposals
-  has_specification: true
-  description: This proposes a combined vision for public fields and private fields, drawing on the earlier Orthogonal Classes and Class Evaluation Order proposals.
-  authors:
-    - Daniel Ehrenberg
-    - Kevin Gibbons
-  champions:
-    - Daniel Ehrenberg
-    - Jeff Morrison
-    - Kevin Smith
-    - Kevin Gibbons
-  tests:
-    - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+private+fields'
-- title: Static class fields and private static methods
-  id: proposal-static-class-features
-  example: |-
-    class ColorFinder {
-      static #red = &#x22;#ff0000&#x22;;
-      static #green = &#x22;#00ff00&#x22;;
-      static #blue = &#x22;#0000ff&#x22;;
-
-      static colorName(name) {
-        switch (name) {
-          case &#x22;red&#x22;: return ColorFinder.#red;
-          case &#x22;blue&#x22;: return ColorFinder.#blue;
-          case &#x22;green&#x22;: return ColorFinder.#green;
-          default: throw new RangeError(&#x22;unknown color&#x22;);
-        }
-      }
-
-      // Somehow use colorName
-    }
-  presented:
-    - date: January&#xA0;2019
-      url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2019-01/jan-30.md#private-fields-and-methods-refresher
-  has_specification: true
-  description: A proposal to add three features to JavaScript classes, building on the previous class fields and private methods proposals.
-  authors:
-    - Daniel Ehrenberg
-    - Kevin Gibbons
-    - Jeff Morrison
-    - Kevin Smith
-  champions:
-    - Shu-Yu Guo
-    - Daniel Ehrenberg
-  tests:
-    - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Aclosed+static+fields'
 - title: Hashbang Grammar
   id: proposal-hashbang
   example: |-
@@ -146,8 +49,13 @@
   description: Top-level <code>await</code> enables modules to act as big async functions. With top-level <code>await</code>, ECMAScript Modules (ESM) can await resources, causing other modules who import them to wait before they start evaluating their body.
   authors:
     - Myles Borins
+    - Yulia Startsev
+    - Dan Ehrenberg
+    - Guy Bedford
+    - Ms2Ger
   champions:
     - Myles Borins
+    - Yulia Startsev
   tests:
     - 'https://github.com/tc39/test262/pull/2274'
 - title: RegExp Match Indices
