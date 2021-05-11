@@ -140,12 +140,25 @@ $trans-timing: 600ms;
         font-weight: $font-weight-semi-bold;
         text-decoration: none;
       }
+      &__language {
+        height: 40px;
+        margin-left: auto;
+        min-width: 24px;
+      }
     }
     &-item {
       display: block;
       &.has-submenu {
         display: flex;
         flex-wrap: wrap;
+      }
+      &__language {
+        display:block;
+        margin-left: auto;
+        width: 100%;
+        .submenu {
+          margin-left: 0px;
+        }
       }
     }
     @media (min-width: $bp-desktop) {
@@ -207,9 +220,29 @@ $trans-timing: 600ms;
           max-height: none;
           overflow: visible;
         }
+        &__language {
+          margin-left: 0px;
+          width: 50px;
+          .submenu {
+            margin-left: -105px;
+          }
+        }
       }
       &-link {
         flex: none;
+        &__language {
+          flex-shrink: 1;
+          min-width: 50px;
+          overflow: hidden;
+          padding: 10px 0px;
+          height: 47px;
+          svg {
+            width: 24px;
+          }
+          &-text {
+            display: none;
+          }
+        }
       }
     }
   }
