@@ -19,6 +19,18 @@ navigation:
     read: 如何阅读规范文件
     discourse: ES Discourse 论坛
     sub-menu: 展开 “贡献” 的子列表
+  language:
+    title: 语言
+    url: "/zh-Hans"
+    languages:
+      - title: English
+        url: "/"
+      - title: Deutsch
+        url: "/de"
+      - title: 日本語
+        url: "/ja"
+      - title: Русский
+        url: "/ru"
   state-of-proposals: 提案进展概要
   skip-content: 跳转到正文
   open: 打开菜单
