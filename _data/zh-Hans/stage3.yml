@@ -32,59 +32,6 @@
     - Bradley Farias
   tests:
     - 'https://github.com/tc39/test262/pull/2065'
-- title: 顶层 <code>await</code>
-  id: proposal-top-level-await
-  example: |-
-    // file.html
-    &#x3C;script type=module src=&#x22;a.mjs&#x22;&#x3E;&#x3C;/script&#x3E;
-    // a.mjs
-    await import(&#x22;./b.mjs&#x22;);
-    // b.mjs
-    await import(&#x22;./a.mjs&#x22;);
-  presented:
-    - date: June&#xA0;2019
-      url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2019-06/june-6.md#top-level-await-for-stage-3
-  has_specification: true
-  description: 该提案让我们依靠模块系统本身来处理所有这些 Promise，并确保模块以正确方式加载。
-  authors:
-    - Myles Borins
-  champions:
-    - Myles Borins
-  tests:
-    - 'https://github.com/tc39/test262/pull/2274'
-- title: RegExp Match Indices
-  id: proposal-regexp-match-indices
-  example: |-
-    const re1 = /a+(?&#x3C;Z&#x3E;z)?/;
-    // indices are relative to start of the input string:
-    const s1 = &#x22;xaaaz&#x22;;
-    const m1 = re1.exec(s1);
-    m1.indices[0][0] === 1;
-    m1.indices[0][1] === 5;
-    s1.slice(...m1.indices[0]) === &#x22;aaaz&#x22;;
-    m1.indices[1][0] === 4;
-    m1.indices[1][1] === 5;
-    s1.slice(...m1.indices[1]) === &#x22;z&#x22;;
-    m1.indices.groups[&#x22;Z&#x22;][0] === 4;
-    m1.indices.groups[&#x22;Z&#x22;][1] === 5;
-    s1.slice(...m1.indices.groups[&#x22;Z&#x22;]) === &#x22;z&#x22;;
-    // capture groups that are not matched return &#x60;undefined&#x60;:
-    const m2 = re1.exec(&#x22;xaaay&#x22;);
-    m2.indices[1] === undefined;
-    m2.indices.groups[&#x22;Z&#x22;] === undefined;
-  presented:
-    - date: December&#xA0;2019
-      url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2019-12/december-3.md#regexp-match-indices-performance-feedback
-  has_specification: false
-  description: 该提案提供了 RegExp 中捕获的子串相对于输入字符串开始的起始和结束索引的附加信息。
-  authors:
-    - Ron Buckton
-  champions:
-    - Ron Buckton
-  tests:
-    - 'https://github.com/tc39/test262/pull/2309'
 - title: <code>Atomics.waitAsync</code>
   id: proposal-atomics-wait-async
   presented:
@@ -267,3 +214,48 @@
     - date: "March\_2021"
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2021-03/mar-9.md#temporal-for-stage-3
+- id: proposal-accessible-object-hasownproperty
+  title: Accessible Object.prototype.hasOwnProperty()
+  authors:
+    - James Kyle
+    - Tierney Cyren
+  champions:
+    - Tierney Cyren
+  description: Proposal for an Object.hasOwn() method to make Object.prototype.hasOwnProperty() more accessible.
+  example: >-
+    if (Object.hasOwn(object, "foo")) {
+      console.log("has property foo")
+    }
+  has_specification: true
+  presented:
+    - date: "May\_2021"
+- id: proposal-resizablearraybuffer
+  title: In-Place Resizable and Growable ArrayBuffers
+  authors:
+    - Shu-yu Guo
+  champions:
+    - Shu-yu Guo
+  description: ArrayBuffers have enabled in-memory handling of binary data and have enjoyed great success. This proposal extends the ArrayBuffer constructors to take an additional maximum length that allows in-place growth and shrinking of buffers. Similarly, SharedArrayBuffer is extended to take an additional maximum length that allows in-place growth. The transfer method is also re-introduced here as a standard way to detach ArrayBuffers, perform zero-copy moves, and to "fix" resizable ArrayBuffer instances to ArrayBuffer instances.
+  example: |-
+    // Resizable ArrayBuffer
+
+    let rab = new ArrayBuffer(1024, { maximumByteLength: 1024 ** 2 });
+    assert(rab.byteLength === 1024);
+    assert(rab.maximumByteLength === 1024 ** 2);
+    assert(rab.resizable);
+    rab.resize(rab.byteLength * 2);
+    assert(rab.byteLength === 1024 * 2);
+
+    // Transfer the first 1024 bytes.
+    let ab = rab.transfer(1024);
+
+    // rab is now detached
+    assert(rab.byteLength === 0);
+    assert(rab.maximumByteLength === 0);
+
+    // The contents are moved to ab.
+    assert(!ab.resizable);
+    assert(ab.byteLength === 1024);
+  has_specification: true
+  presented:
+    - date: "May\_2021"
