@@ -21,3 +21,19 @@ champion: Meister*in
 champions: Meister*innen
 authors-and-champions: Autor*innen und Meister*innen
 see-more: Siehe Vorschläge in allen Phasen
+needs_translation: Needs Translation
+needs_translation_url: https://github.com/tc39/tc39.github.io/blob/master/translation_de.md
+community_translations: This page is translated by the community. If you want to contribute, read our <a href="https://github.com/tc39/tc39.github.io/blob/master/translation_de.md">guidelines</a>.
+months:
+  1: Januar
+  2: Februar
+  3: März
+  4: April
+  5: Mai
+  6: Juni
+  7: Juli
+  8: August
+  9: September
+  10: Oktober
+  11: November
+  12: Dezember

@@ -21,3 +21,19 @@ champion: Champion
 champions: Champions
 authors-and-champions: Authors and Champions
 see-more: See proposals in all stages
+needs_translation: Needs Translation
+needs_translation_url: https://github.com/tc39/tc39.github.io/blob/master/translation.md
+community_translations: This page is translated by the community. If you want to contribute, read our <a href="https://github.com/tc39/tc39.github.io/blob/master/translation.md">guidelines</a>.
+months:
+  1: January
+  2: February
+  3: March
+  4: April
+  5: May
+  6: June
+  7: July
+  8: August
+  9: September
+  10: October
+  11: November
+  12: December

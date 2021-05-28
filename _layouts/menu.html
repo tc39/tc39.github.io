@@ -108,12 +108,20 @@
     </button>
 
     <ul class="submenu">
-      {%- for language in site.data["site"]["navigation"]["language"]["languages"] -%}
+      {%- for language in site.data.languages -%}
+      {%- unless language.id == site.active_lang -%}
         <li class="submenu-item">
-          <a class="menu-link" href='{{ language.url }}'>
-            {{ language.title }}
-          </a>
+          {%- if language.id == site.default_lang -%}
+            <a class="menu-link" href='/'>
+                {{ language.title }}
+            </a>
+          {%- else -%}
+            <a class="menu-link" href='/{{ language.id }}'>
+              {{ language.title }}
+            </a>
+          {%- endif -%}
         </li>
+      {%- endunless -%}
       {%- endfor -%}
     </ul>
   </li>

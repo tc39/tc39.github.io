@@ -140,6 +140,7 @@ $trans-timing: 600ms;
         font-weight: $font-weight-semi-bold;
         text-decoration: none;
       }
+      /* stylelint-disable-next-line no-descending-specificity */
       &__language {
         height: 40px;
         margin-left: auto;
@@ -156,8 +157,9 @@ $trans-timing: 600ms;
         display:block;
         margin-left: auto;
         width: 100%;
+        /* stylelint-disable-next-line no-descending-specificity */
         .submenu {
-          margin-left: 0px;
+          margin-left: 0;
         }
       }
     }
@@ -221,8 +223,9 @@ $trans-timing: 600ms;
           overflow: visible;
         }
         &__language {
-          margin-left: 0px;
+          margin-left: 0;
           width: 50px;
+          /* stylelint-disable-next-line no-descending-specificity */
           .submenu {
             margin-left: -105px;
           }
@@ -232,10 +235,10 @@ $trans-timing: 600ms;
         flex: none;
         &__language {
           flex-shrink: 1;
+          height: 47px;
           min-width: 50px;
           overflow: hidden;
-          padding: 10px 0px;
-          height: 47px;
+          padding: 10px 0;
           svg {
             width: 24px;
           }

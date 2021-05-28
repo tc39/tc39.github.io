@@ -19,18 +19,6 @@ navigation:
     read: Lesen der Spezifikation
     discourse: An Diskussionen teilnehmen
     sub-menu: Mitmachen Untermenü umschalten
-  language:
-    title: Sprache
-    url: "/de"
-    languages:
-      - title: English
-        url: "/"
-      - title: 简体中文
-        url: "/zh-Hans"
-      - title: 日本語
-        url: "/ja"
-      - title: Русский
-        url: "/ru"
   state-of-proposals: Vorschläge
   skip-content: Zum Inhalt springen
   open: Menü öffnen

@@ -9,6 +9,11 @@
     <i class="featurelist__desc">
       {{ site.data["proposals"]["description"] }}
     </i>
+    {% if site.active_lang != site.default_lang %}
+    <p>
+    {{ site.data.proposals.community_translations }}
+    </p>
+    {% endif %}
     <details class="featurelist__legend">
       <summary><strong>
           {{ site.data["proposals"]["how-to-read"]["title"] }}
@@ -16,6 +21,7 @@
       <p>
       {{ site.data["proposals"]["how-to-read"]["description"] }}
       </p>
+
 
       <strong>
         {{ site.data["proposals"]["how-to-read"]["tags"]["title"] }}
@@ -48,22 +54,30 @@
   </div>
 </article>
 
-{% for proposal in site.data.stage3 %}
+{% for proposal in site.data.stage3_base %}
 <article class="featurelist__item">
   <div class="featurelist__item__intro">
     <header class="g-row">
       <h4 class="featurelist__item__title flex-grow">
-        <a href="https://github.com/tc39/{{ proposal.id }}">{{ proposal.title }}</a>
+        <a href="https://github.com/tc39/{{ proposal.id }}">{{ site.data.stage3[proposal.id].title }}</a>
       </h4>
       <div class="featurelist__item__tags">
         <ul class="featurelist__item__status featurelist__item__tags">
+          {% unless site.data.stage3[proposal.id].description %}
+          <li class="featurelist__item__translation featurelist__item__tag">
+            <a href="{{ site.data.proposals.needs_translation_url }}" title='{{ site.data.proposals.needs_translation }}'>
+              {{ site.data.proposals.needs_translation }}</a>
+          </li>
+          {% endunless %}
           {% if proposal.presented | size %}
           {% for presentation in proposal.presented %}
           <li class="featurelist__item__presented featurelist__item__tag">
             {%- if presentation.url -%}
-            <a href="{{ presentation.url }}" title='{{ site.data["proposals"]["last-presented-alt"] }}'>{{ presentation.date }}</a>
+            <a href="{{ presentation.url }}" title='{{ site.data["proposals"]["last-presented-alt"] }}'>
+              {{ site.data.proposals.months[presentation.month] }} {{ presentation.year}}
+            </a>
             {%- else -%}
-            <span>{{ presentation.date }}</span>
+            <span>{{ site.data.proposals.months[presentation.month] }} {{ presentation.year}}</span>
             {%- endif -%}
           </li>
           {% endfor %}
@@ -111,7 +125,9 @@
         {% endif %}
       {% endif %}
     </div>
-    {% if proposal.description %}
+    {% if site.data.stage3[proposal.id].description %}
+    <div class="featurelist__item__desc">{{ site.data.stage3[proposal.id].description }}</div>
+    {% else %}
     <div class="featurelist__item__desc">{{ proposal.description }}</div>
     {% endif %}
     {% if proposal.example %}

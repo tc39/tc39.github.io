@@ -21,3 +21,21 @@ champion: 支持者
 champions: 支持者
 authors-and-champions: 提出者、及び支持者
 see-more: 全ステージのプロポーザルを見る
+needs_translation: Needs Translation
+needs_translation_url: https://github.com/tc39/tc39.github.io/blob/master/translation_ja.md
+community_translations: This page is translated by the community. If you want to contribute, read our <a href="https://github.com/tc39/tc39.github.io/blob/master/translation_ja.md">guidelines</a>.
+months:
+  1: 1月
+  2: 2月
+  3: 3月
+  4: 4月
+  5: 5月
+  6: 6月
+  7: 7月
+  8: 8月
+  9: 9月
+  10: 10月
+  11: 11月
+  12: 12月
+
+

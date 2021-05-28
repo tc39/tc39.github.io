@@ -19,18 +19,6 @@ navigation:
     read: Reading the Spec
     discourse: Join the Discourse
     sub-menu: Toggle sub-menu for Contribute
-  language:
-    title: Language
-    url: ""
-    languages:
-      - title: Deutsch
-        url: "/de"
-      - title: 简体中文
-        url: "/zh-Hans"
-      - title: 日本語
-        url: "/ja"
-      - title: Русский
-        url: "/ru"
   state-of-proposals: State of Proposals
   skip-content: Skip to content
   open: Open Menu

@@ -1,257 +1,36 @@
-- title: Legacy RegExp features in JavaScript
-  id: proposal-regexp-legacy-features
-  presented:
-    - date: 5月&#xA0;2017
-      url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
-  has_specification: false
+proposal-regexp-legacy-features:
+  title: Legacy RegExp features in JavaScript
   description: JavaScriptの古い(非推奨の)正規表現機能の仕様ドラフトです。例えば、<code>RegExp.$1</code>や<code>RegExp.prototype.compile</code>メソッドのようなコンストラクタのスタティックプロパティなどです。
-  authors:
-    - Claude Pache
-  champions:
-    - Mark Miller
-    - Claude Pache
-  tests:
-    - 'https://github.com/tc39/test262/pull/2650'
-- title: Hashbang Grammar
-  id: proposal-hashbang
-  example: |-
-    #!/usr/bin/env node
-    // in the Module Goal
-    export {};
-    console.log(1);
-  presented:
-    - date: 11月&#xA0;2018
-      url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2018-11/nov-28.md#hash-bang-grammar
-  has_specification: true
+proposal-hashbang:
+  title: Hashbang Grammar
   description: このプロポーザルは、シェバン/ハッシュバンに対応しているいくつかのCLI JSのホストでデファクトとなっている使用方法と合わせるものです。それらのホストは現在、JSエンジンにソーステキストを渡す前にそれらを有効なものにするためにハッシュバンを取り除いています。これはそれがどのように行われるかを統一、また標準化します。
-  authors:
-    - Bradley Farias
-  champions:
-    - Bradley Farias
-  tests:
-    - 'https://github.com/tc39/test262/pull/2065'
-- title: <code>Atomics.waitAsync</code>
-  id: proposal-atomics-wait-async
-  presented:
-    - date: 12月&#xA0;2019
-      url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
-  has_specification: true
+proposal-atomics-wait-async:
+  title: <code>Atomics.waitAsync</code>
   description: 主にブロッキングが許されないエージェントで使用するための"<code>Atomics.wait</code>の非同期版"をECMAScriptに追加するためのプロポーザルです。
-  authors:
-    - Lars Hansen
-  champions:
-    - Shu-yu Guo
-    - Lars Hansen
-  tests:
-    - 'https://github.com/tc39/test262/issues/2511'
-- title: <code>.at()</code>
-  id: proposal-relative-indexing-method
-  example: |-
-    var list = ["apple", "orange", "banana"];
-    list.at(-1) // banana, using negative index
-    list.at(0)  // apple
-    list.at(1)  // orange
-    list.at(2)  // banana
-  presented:
-    - date: 9月&#xA0;2020
-      url: at
-  has_specification: true
+proposal-relative-indexing-method:
+  title: <code>.at()</code>
   description: すべての基本的なインデックス可能なクラス(<code>Array</code>, <code>String</code>, <code>TypedArray</code>)に、<code>.at()</code>メソッドを追加するプロポーザルです。
-  authors:
-    - Shu-yu Guo
-    - Tab Atkins
-  champions:
-    - Shu-yu Guo
-    - Tab Atkins
-  tests:
-    - 'https://github.com/tc39/test262/pull/2812'
-- title: Import Assertions
-  id: proposal-import-assertions
-  example: >-
-    new Worker(&#x22;foo.wasm&#x22;, { type: &#x22;module&#x22;, assert: { type:
-    &#x22;webassembly&#x22; } });
-  presented:
-    - date: 9月&#xA0;2020
-      url: import-assertions
-  has_specification: true
+proposal-import-assertions:
+  title: Import Assertions
   description: ES Modulesをアサーション付きでインポートする構文のためのプロポーザルです。
-  authors:
-    - Myles Borins
-    - Sven Sauleau
-    - Dan Clark
-    - Daniel Ehrenberg
-  champions:
-    - Myles Borins
-    - Sven Sauleau
-    - Dan Clark
-    - Daniel Ehrenberg
-- title: JSON Modules
-  id: proposal-json-modules
-  example: >-
-    import json from &#x22;./foo.json&#x22; assert { type: &#x22;json&#x22; };
-  presented:
-    - date: 1月&#xA0;2021
-      url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2021-01/jan-25.md#json-modules-for-stage-3
-  has_specification: true
+proposal-json-modules:
+  title: JSON Modules
   description: JSONファイルをモジュールとしてインポートするためのプロポーザルです。
-  authors:
-    - Sven Sauleau
-    - Daniel Ehrenberg
-    - Myles Borins
-    - Dan Clark
-  champions:
-    - Sven Sauleau
-    - Daniel Ehrenberg
-    - Myles Borins
-    - Dan Clark
-- title: Ergonomic Brand Checks
-  id: proposal-private-fields-in-in
-  example: >-
-    class C {
-      #brand;
-      #method() {}
-      get #getter() {}
-      static isC(obj) {
-        return #brand in obj && #method in obj && #getter in obj;
-      }
-    }
-  presented:
-    - date: 1月&#xA0;2021
-      url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2021-01/jan-27.md#ergonomic-brand-checks
-  has_specification: true
+proposal-private-fields-in-in:
+  title: Ergonomic Brand Checks
   description: 例外なしにブランドチェックを実現するためのプロポーザルです。
-  authors:
-    - Jordan Harband
-  champions:
-    - Jordan Harband
-  has_specification: true
-- id: proposal-class-static-block
+proposal-class-static-block:
   title: Class Static Block
-  authors:
-    - Ron Buckton
-  champions:
-    - Ron Buckton
   description: Class static blockは、クラス定義の評価中に追加の静的初期化を実行する仕組みを提供します。これは、静的解析ツールに役立つ情報を提供し、デコレーターのための妥当なターゲットであるため、パブリックフィールドの置き換えを意図したものではありません。むしろ、これは既存のユースケースを補強し、このプロポーザルで現在処理されていない新しいユースケースを実現できるようにすることを目的としています。
-  example: >-
-    // "friend" access (same module)
-    let A, B;
-    {
-      let friendA;
-
-      A = class A {
-        #x;
-
-        static {
-            friendA = {
-              getX(obj) { return obj.#x },
-              setX(obj, value) { obj.#x = value }
-            };
-        }
-      };
-
-      B = class B {
-        constructor(a) {
-          const x = friendA.getX(a); // ok
-          friendA.setX(a, x); // ok
-        }
-      };
-    }
-  has_specification: true
-  presented:
-    - date: 3月&#xA0;2021
-      url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2021-03/mar-9.md#class-static-initialization-blocks
-- id: proposal-error-cause
+proposal-error-cause:
   title: Error Cause
-  authors:
-    - Chengzhong Wu
-  champions:
-    - Ron Buckton
-    - Chengzhong Wu
-    - Hemanth HM
   description: エラーは、実行時の異常を表現するために作られます。予期しない動作の診断を容易にするためは、エラーメッセージやエラーインスタンスのプロパティなど、その時点で何が起こったかを明らかにする状況情報をエラーに追加する必要があります。エラーが内部の深いメソッドからスローされた場合、スローされたエラーは、適切な例外設計パターンなしに簡単に処理できるとは限りません。このプロポーザルは原因を伝達するための便利な手段を導入します。
-  example: >-
-    await fetch('//domain/upload', { method: 'POST', body: jobResult })
-    .catch(err => {
-      throw new Error('Upload job result failed', { cause: err });
-    });
-  has_specification: true
-  presented:
-    - date: 3月&#xA0;2021
-- id: proposal-temporal
+proposal-temporal:
   title: Temporal
-  authors:
-    - Maggie Pint
-    - Matt Johnson
-    - Philipp Dunkel
-  champions:
-    - Maggie Pint
-    - Matt Johnson
-    - Philipp Dunkel
   description: ECMAScriptでは、Dateが長年の悩みの種でした。そこで提案されたのがTemporalであり、これは(Mathのような)トップレベルの名前空間として振る舞い、ECMAScriptに最新のdate/time APIをもたらすグローバルオブジェクトです。動機の詳しい説明については、プロポーザルのREADMEをご覧ください。
-  example: >-
-    // See the repo for detailed examples.
-    // small example from the cook book
-
-    const date = Temporal.now.plainDateISO(); // Gets the current date
-
-    date.toString(); // returns the date in ISO 8601 date format
-
-    // If you additionally want the time
-
-    Temporal.now.plainDateTimeISO().toString(); // date and time in ISO 8601 format
-  has_specification: true
-  presented:
-    - date: 3月&#xA0;2021
-      url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2021-03/mar-9.md#temporal-for-stage-3
-- id: proposal-accessible-object-hasownproperty
+proposal-accessible-object-hasownproperty:
   title: Accessible Object.prototype.hasOwnProperty()
-  authors:
-    - Jamie Kyle
-    - Tierney Cyren
-  champions:
-    - Tierney Cyren
   description: よりObject.prototype.hasOwnProperty()を利用しやすくするためのObject.hasOwn()のプロポーザルです。
-  example: >-
-    if (Object.hasOwn(object, "foo")) {
-      console.log("has property foo")
-    }
-  has_specification: true
-  presented:
-    - date: "May\_2021"
-- id: proposal-resizablearraybuffer
+proposal-resizablearraybuffer:
   title: In-Place Resizable and Growable ArrayBuffers
-  authors:
-    - Shu-yu Guo
-  champions:
-    - Shu-yu Guo
   description: ArrayBufferは、バイナリデータをインメモリで処理できるようにし、大きな成功を収めました。このプロポーザルは、ArrayBufferコンストラクタを拡張することで、バッファのインプレースの拡張と縮小が可能な最大長を新たに受け取れるようにします。同様に、SharedArrayBufferは、インプレースの拡張が可能な最大長を新たに受け取れるように拡張されています。transferメソッドは、ArrayBufferをデタッチし、ゼロコピーによる移動を行い、リサイズ可能なArrayBufferインスタンスをArrayBufferインスタンスとして「固定」するための標準的な方法としてもここで再導入されています。
-  example: |-
-    // Resizable ArrayBuffer
-
-    let rab = new ArrayBuffer(1024, { maximumByteLength: 1024 ** 2 });
-    assert(rab.byteLength === 1024);
-    assert(rab.maximumByteLength === 1024 ** 2);
-    assert(rab.resizable);
-    rab.resize(rab.byteLength * 2);
-    assert(rab.byteLength === 1024 * 2);
-
-    // Transfer the first 1024 bytes.
-    let ab = rab.transfer(1024);
-
-    // rab is now detached
-    assert(rab.byteLength === 0);
-    assert(rab.maximumByteLength === 0);
-
-    // The contents are moved to ab.
-    assert(!ab.resizable);
-    assert(ab.byteLength === 1024);
-  has_specification: true
-  presented:
-    - date: "May\_2021"
