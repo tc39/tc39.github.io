@@ -21,3 +21,19 @@ champion: 推进者
 champions: 推进者
 authors-and-champions: 作者和推进者
 see-more: 查看各阶段的提案
+needs_translation: Needs Translation
+needs_translation_url: https://github.com/tc39/tc39.github.io/blob/master/translation_zh-Hans.md
+community_translations: This page is translated by the community. If you want to contribute, read our <a href="https://github.com/tc39/tc39.github.io/blob/master/translation_zh-Hans.md">guidelines</a>.
+months:
+  1: January
+  2: February
+  3: March
+  4: April
+  5: May
+  6: June
+  7: July
+  8: August
+  9: September
+  10: October
+  11: November
+  12: December

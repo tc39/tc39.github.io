@@ -1,0 +1,268 @@
+- title: Legacy RegExp features in JavaScript
+  id: proposal-regexp-legacy-features
+  presented:
+    - month: 5
+      year: 2017
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3
+  has_specification: false
+  description: This is a specification draft for the legacy (deprecated) RegExp features in JavaScript, i.e., static properties of the constructor like <code>RegExp.$1</code> as well as the <code>RegExp.prototype.compile</code> method.
+  authors:
+    - Claude Pache
+  champions:
+    - Mark Miller
+    - Claude Pache
+  tests:
+    - 'https://github.com/tc39/test262/pull/2650'
+- title: Hashbang Grammar
+  id: proposal-hashbang
+  example: |-
+    #!/usr/bin/env node
+    // in the Module Goal
+    export {};
+    console.log(1);
+  presented:
+    - month: 11
+      year: 2018
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2018-11/nov-28.md#hash-bang-grammar
+  has_specification: true
+  description: This proposal is to match de-facto usage in some CLI JS hosts that allow for Shebangs / Hashbang. Such hosts strip the hashbang in order to generate valid JS source texts before passing to JS engines currently. This would unify and standardize how that is done.
+  authors:
+    - Bradley Farias
+  champions:
+    - Bradley Farias
+  tests:
+    - 'https://github.com/tc39/test262/pull/2065'
+- title: <code>Atomics.waitAsync</code>
+  id: proposal-atomics-wait-async
+  presented:
+    - month: 12
+      year: 2019
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3
+  has_specification: true
+  description: A proposal for an &ldquo;asynchronous atomic wait&rdquo; for ECMAScript, primarily for use in agents that are not allowed to block.
+  authors:
+    - Lars Hansen
+  champions:
+    - Shu-yu Guo
+    - Lars Hansen
+  tests:
+    - 'https://github.com/tc39/test262/issues/2511'
+- title: <code>.at()</code>
+  id: proposal-relative-indexing-method
+  example: |-
+    var list = ["apple", "orange", "banana"];
+    list.at(-1) // banana, using negative index
+    list.at(0)  // apple
+    list.at(1)  // orange
+    list.at(2)  // banana
+  presented:
+    - month: 9
+      year: 2020
+      url: at
+  has_specification: true
+  description: A proposal to add a <code>.at()</code> method to all the basic indexable classes (<code>Array</code>, <code>String</code>, <code>TypedArray</code>).
+  authors:
+    - Shu-yu Guo
+    - Tab Atkins
+  champions:
+    - Shu-yu Guo
+    - Tab Atkins
+  tests:
+    - 'https://github.com/tc39/test262/pull/2812'
+- title: Import Assertions
+  id: proposal-import-assertions
+  example: >-
+    new Worker(&#x22;foo.wasm&#x22;, { type: &#x22;module&#x22;, assert: { type:
+    &#x22;webassembly&#x22; } });
+  presented:
+    - month: 9
+      year: 2020
+      url: import-assertions
+  has_specification: true
+  description: A proposal for syntax to import ES modules with assertions.
+  authors:
+    - Myles Borins
+    - Sven Sauleau
+    - Dan Clark
+    - Daniel Ehrenberg
+  champions:
+    - Myles Borins
+    - Sven Sauleau
+    - Dan Clark
+    - Daniel Ehrenberg
+- title: JSON Modules
+  id: proposal-json-modules
+  example: >-
+    import json from &#x22;./foo.json&#x22; assert { type: &#x22;json&#x22; };
+  presented:
+    - month: 1
+      year: 2021
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2021-01/jan-25.md#json-modules-for-stage-3
+  has_specification: true
+  description: Proposal to import JSON files as modules.
+  authors:
+    - Sven Sauleau
+    - Daniel Ehrenberg
+    - Myles Borins
+    - Dan Clark
+  champions:
+    - Sven Sauleau
+    - Daniel Ehrenberg
+    - Myles Borins
+    - Dan Clark
+- title: Ergonomic Brand Checks
+  id: proposal-private-fields-in-in
+  example: >-
+    class C {
+      #brand;
+      #method() {}
+      get #getter() {}
+      static isC(obj) {
+        return #brand in obj && #method in obj && #getter in obj;
+      }
+    }
+  presented:
+    - month: 1
+      year: 2021
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2021-01/jan-27.md#ergonomic-brand-checks
+  has_specification: true
+  description: EcmaScript proposal to provide brand checks without exceptions.
+  authors:
+    - Jordan Harband
+  champions:
+    - Jordan Harband
+- id: proposal-class-static-block
+  title: Class Static Block
+  authors:
+    - Ron Buckton
+  champions:
+    - Ron Buckton
+  description: Class static blocks provide a mechanism to perform additional static initialization during class definition evaluation. This is not intended as a replacement for public fields, as they provide useful information for static analysis tools and are a valid target for decorators. Rather, this is intended to augment existing use cases and enable new use cases not currently handled by that proposal.
+  example: >-
+    // "friend" access (same module)
+    let A, B;
+    {
+      let friendA;
+
+      A = class A {
+        #x;
+
+        static {
+            friendA = {
+              getX(obj) { return obj.#x },
+              setX(obj, value) { obj.#x = value }
+            };
+        }
+      };
+
+      B = class B {
+        constructor(a) {
+          const x = friendA.getX(a); // ok
+          friendA.setX(a, x); // ok
+        }
+      };
+    }
+  has_specification: true
+  presented:
+    - month: 3
+      year: 2021
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2021-03/mar-9.md#class-static-initialization-blocks
+- id: proposal-error-cause
+  title: Error Cause
+  authors:
+    - Chengzhong Wu
+  champions:
+    - Ron Buckton
+    - Chengzhong Wu
+    - Hemanth HM
+  description: Errors will be constructed to represent runtime abnormalities. To help unexpected behavior diagnosis, errors need to be augmented with contextual information like error messages, error instance properties to explain what happened at the time.  If the error were thrown from deep internal methods, the thrown error may not be straightforward to be easily conducted without proper exception design pattern. This proposal introduces a convenient way to forward the cause.
+  example: >-
+    await fetch('//domain/upload', { method: 'POST', body: jobResult })
+    .catch(err => {
+      throw new Error('Upload job result failed', { cause: err });
+    });
+  has_specification: true
+  presented:
+    - month: 3
+      year: 2021
+- id: proposal-temporal
+  title: Temporal
+  authors:
+    - Maggie Pint
+    - Matt Johnson
+    - Philipp Dunkel
+  champions:
+    - Maggie Pint
+    - Matt Johnson
+    - Philipp Dunkel
+  description: Date has been a long-standing pain point in ECMAScript. This proposes Temporal, a global Object that acts as a top-level namespace (like Math), that brings a modern date/time API to the ECMAScript language. For a detailed breakdown of motivations, see  the proposal readme.
+  example: >-
+    // See the repo for detailed examples.
+    // small example from the cook book
+
+    const date = Temporal.now.plainDateISO(); // Gets the current date
+
+    date.toString(); // returns the date in ISO 8601 date format
+
+    // If you additionally want the time
+
+    Temporal.now.plainDateTimeISO().toString(); // date and time in ISO 8601 format
+  has_specification: true
+  presented:
+    - month: 3
+      year: 2021
+      url: >-
+        https://github.com/tc39/notes/blob/master/meetings/2021-03/mar-9.md#temporal-for-stage-3
+- id: proposal-accessible-object-hasownproperty
+  title: Accessible Object.prototype.hasOwnProperty()
+  authors:
+    - James Kyle
+    - Tierney Cyren
+  champions:
+    - Tierney Cyren
+  description: Proposal for an Object.hasOwn() method to make Object.prototype.hasOwnProperty() more accessible.
+  example: >-
+    if (Object.hasOwn(object, "foo")) {
+      console.log("has property foo")
+    }
+  has_specification: true
+  presented:
+    - month: 5
+      year: 2021
+- id: proposal-resizablearraybuffer
+  title: In-Place Resizable and Growable ArrayBuffers
+  authors:
+    - Shu-yu Guo
+  champions:
+    - Shu-yu Guo
+  description: ArrayBuffers have enabled in-memory handling of binary data and have enjoyed great success. This proposal extends the ArrayBuffer constructors to take an additional maximum length that allows in-place growth and shrinking of buffers. Similarly, SharedArrayBuffer is extended to take an additional maximum length that allows in-place growth. The transfer method is also re-introduced here as a standard way to detach ArrayBuffers, perform zero-copy moves, and to "fix" resizable ArrayBuffer instances to ArrayBuffer instances.
+  example: |-
+    // Resizable ArrayBuffer
+
+    let rab = new ArrayBuffer(1024, { maximumByteLength: 1024 ** 2 });
+    assert(rab.byteLength === 1024);
+    assert(rab.maximumByteLength === 1024 ** 2);
+    assert(rab.resizable);
+    rab.resize(rab.byteLength * 2);
+    assert(rab.byteLength === 1024 * 2);
+
+    // Transfer the first 1024 bytes.
+    let ab = rab.transfer(1024);
+
+    // rab is now detached
+    assert(rab.byteLength === 0);
+    assert(rab.maximumByteLength === 0);
+
+    // The contents are moved to ab.
+    assert(!ab.resizable);
+    assert(ab.byteLength === 1024);
+  has_specification: true
+  presented:
+    - month: 5
+      year: 2021
