@@ -231,7 +231,7 @@
     - Shu-yu Guo
   champions:
     - Shu-yu Guo
-  description: ArrayBuffersは、バイナリデータをインメモリで処理できるようにし、大きな成功を収めました。このプロポーザルは、ArrayBufferコンストラクタを拡張することで、バッファのインプレースの拡張と縮小が可能な最大長を新たに受け取れるようにします。同様に、SharedArrayBufferは、インプレースの拡張が可能な最大長を新たに受け取れるように拡張されています。transferメソッドは、ArrayBuffersをデタッチし、ゼロコピーによる移動を行い、リサイズ可能なArrayBufferインスタンスをArrayBufferインスタンスとして「固定」するための標準的な方法としてもここで再導入されています。
+  description: ArrayBufferは、バイナリデータをインメモリで処理できるようにし、大きな成功を収めました。このプロポーザルは、ArrayBufferコンストラクタを拡張することで、バッファのインプレースの拡張と縮小が可能な最大長を新たに受け取れるようにします。同様に、SharedArrayBufferは、インプレースの拡張が可能な最大長を新たに受け取れるように拡張されています。transferメソッドは、ArrayBufferをデタッチし、ゼロコピーによる移動を行い、リサイズ可能なArrayBufferインスタンスをArrayBufferインスタンスとして「固定」するための標準的な方法としてもここで再導入されています。
   example: |-
     // Resizable ArrayBuffer
 
