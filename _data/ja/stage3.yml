@@ -217,7 +217,7 @@
     - Tierney Cyren
   champions:
     - Tierney Cyren
-  description: よりObject.prototype.hasOwnProperty()へアクセスしやすくするためのObject.hasOwn()のプロポーザルです。
+  description: よりObject.prototype.hasOwnProperty()を利用しやすくするためのObject.hasOwn()のプロポーザルです。
   example: >-
     if (Object.hasOwn(object, "foo")) {
       console.log("has property foo")
@@ -231,7 +231,7 @@
     - Shu-yu Guo
   champions:
     - Shu-yu Guo
-  description: ArrayBuffersは、バイナリデータをインメモリで処理できるようにし、大きな成功を収めました。このプロポーザルは、ArrayBufferコンストラクタを拡張することで、バッファのインプレースの拡張と縮小を可能にする追加の最大長を取得可能にします。同様に、SharedArrayBufferは、インプレース拡張が可能な追加の最大長を取得できるよう拡張されています。Transferメソッドは、ArrayBuffersをデタッチし、ゼロコピーによる移動を行い、リサイズ可能なArrayBufferインスタンスをArrayBufferインスタンスとして"固定"するための標準的な方法としてもここで再導入されています。
+  description: ArrayBuffersは、バイナリデータをインメモリで処理できるようにし、大きな成功を収めました。このプロポーザルは、ArrayBufferコンストラクタを拡張することで、バッファのインプレースの拡張と縮小が可能な最大長を新たに受け取れるようにします。同様に、SharedArrayBufferは、インプレースの拡張が可能な最大長を新たに受け取れるように拡張されています。transferメソッドは、ArrayBuffersをデタッチし、ゼロコピーによる移動を行い、リサイズ可能なArrayBufferインスタンスをArrayBufferインスタンスとして「固定」するための標準的な方法としてもここで再導入されています。
   example: |-
     // Resizable ArrayBuffer
 
