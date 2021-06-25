@@ -212,7 +212,7 @@
 - id: proposal-accessible-object-hasownproperty
   title: Accessible Object.prototype.hasOwnProperty()
   authors:
-    - James Kyle
+    - Jamie Kyle
     - Tierney Cyren
   champions:
     - Tierney Cyren
