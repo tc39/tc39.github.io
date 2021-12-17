@@ -27,6 +27,8 @@
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2018-11/nov-28.md#hash-bang-grammar
   has_specification: true
+  tests:
+    - 'https://github.com/tc39/test262/pull/2065'
   description: This proposal is to match de-facto usage in some CLI JS hosts that allow for Shebangs / Hashbang. Such hosts strip the hashbang in order to generate valid JS source texts before passing to JS engines currently. This would unify and standardize how that is done.
   authors:
     - Bradley Farias
@@ -50,28 +52,6 @@
     - Lars Hansen
   tests:
     - 'https://github.com/tc39/test262/issues/2511'
-- title: <code>.at()</code>
-  id: proposal-relative-indexing-method
-  example: |-
-    var list = ["apple", "orange", "banana"];
-    list.at(-1) // banana, using negative index
-    list.at(0)  // apple
-    list.at(1)  // orange
-    list.at(2)  // banana
-  presented:
-    - month: 9
-      year: 2020
-      url: at
-  has_specification: true
-  description: A proposal to add a <code>.at()</code> method to all the basic indexable classes (<code>Array</code>, <code>String</code>, <code>TypedArray</code>).
-  authors:
-    - Shu-yu Guo
-    - Tab Atkins
-  champions:
-    - Shu-yu Guo
-    - Tab Atkins
-  tests:
-    - 'https://github.com/tc39/test262/pull/2812'
 - title: Import Assertions
   id: proposal-import-assertions
   example: >-
@@ -93,6 +73,8 @@
     - Sven Sauleau
     - Dan Clark
     - Daniel Ehrenberg
+  tests:
+    -
 - title: JSON Modules
   id: proposal-json-modules
   example: >-
@@ -114,83 +96,8 @@
     - Daniel Ehrenberg
     - Myles Borins
     - Dan Clark
-- title: Ergonomic Brand Checks
-  id: proposal-private-fields-in-in
-  example: >-
-    class C {
-      #brand;
-      #method() {}
-      get #getter() {}
-      static isC(obj) {
-        return #brand in obj && #method in obj && #getter in obj;
-      }
-    }
-  presented:
-    - month: 1
-      year: 2021
-      url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2021-01/jan-27.md#ergonomic-brand-checks
-  has_specification: true
-  description: EcmaScript proposal to provide brand checks without exceptions.
-  authors:
-    - Jordan Harband
-  champions:
-    - Jordan Harband
-- id: proposal-class-static-block
-  title: Class Static Block
-  authors:
-    - Ron Buckton
-  champions:
-    - Ron Buckton
-  description: Class static blocks provide a mechanism to perform additional static initialization during class definition evaluation. This is not intended as a replacement for public fields, as they provide useful information for static analysis tools and are a valid target for decorators. Rather, this is intended to augment existing use cases and enable new use cases not currently handled by that proposal.
-  example: >-
-    // "friend" access (same module)
-    let A, B;
-    {
-      let friendA;
-
-      A = class A {
-        #x;
-
-        static {
-            friendA = {
-              getX(obj) { return obj.#x },
-              setX(obj, value) { obj.#x = value }
-            };
-        }
-      };
-
-      B = class B {
-        constructor(a) {
-          const x = friendA.getX(a); // ok
-          friendA.setX(a, x); // ok
-        }
-      };
-    }
-  has_specification: true
-  presented:
-    - month: 3
-      year: 2021
-      url: >-
-        https://github.com/tc39/notes/blob/master/meetings/2021-03/mar-9.md#class-static-initialization-blocks
-- id: proposal-error-cause
-  title: Error Cause
-  authors:
-    - Chengzhong Wu
-  champions:
-    - Ron Buckton
-    - Chengzhong Wu
-    - Hemanth HM
-  description: Errors will be constructed to represent runtime abnormalities. To help unexpected behavior diagnosis, errors need to be augmented with contextual information like error messages, error instance properties to explain what happened at the time.  If the error were thrown from deep internal methods, the thrown error may not be straightforward to be easily conducted without proper exception design pattern. This proposal introduces a convenient way to forward the cause.
-  example: >-
-    await fetch('//domain/upload', { method: 'POST', body: jobResult })
-    .catch(err => {
-      throw new Error('Upload job result failed', { cause: err });
-    });
-  has_specification: true
-  presented:
-    - month: 3
-      year: 2021
+  tests:
+    - 'https://github.com/tc39/test262/pull/2999'
 - id: proposal-temporal
   title: Temporal
   authors:
@@ -219,22 +126,8 @@
       year: 2021
       url: >-
         https://github.com/tc39/notes/blob/master/meetings/2021-03/mar-9.md#temporal-for-stage-3
-- id: proposal-accessible-object-hasownproperty
-  title: Accessible Object.prototype.hasOwnProperty()
-  authors:
-    - James Kyle
-    - Tierney Cyren
-  champions:
-    - Tierney Cyren
-  description: Proposal for an Object.hasOwn() method to make Object.prototype.hasOwnProperty() more accessible.
-  example: >-
-    if (Object.hasOwn(object, "foo")) {
-      console.log("has property foo")
-    }
-  has_specification: true
-  presented:
-    - month: 5
-      year: 2021
+  tests:
+    - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Amerged+temporal+in%3Atitle+'
 - id: proposal-resizablearraybuffer
   title: In-Place Resizable and Growable ArrayBuffers
   authors:
@@ -263,6 +156,91 @@
     assert(!ab.resizable);
     assert(ab.byteLength === 1024);
   has_specification: true
+  tests:
+    - 'https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Amerged+resizable+in%3Atitle+'
   presented:
     - month: 5
+      year: 2021
+      url: >-
+        https://github.com/tc39/notes/blob/HEAD/meetings/2021-05/may-25.md#resizable-arraybuffers-for-stage-3
+- id: proposal-array-find-from-last
+  title: Array.prototype.findLast and Array.prototype.findLastIndex
+  description: Proposal for finding the first match from the end of the array for both elements and indices.
+  authors:
+    - Wenlu Wang
+  champions:
+    - Wenlu Wang
+    - Daniel Rosenwasser
+  example: >-
+    const array = [{ value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }];
+    array.find(n => n.value % 2 === 1); // { value: 1 }
+    array.findIndex(n => n.value % 2 === 1); // 0
+  has_specification: true
+  tests:
+    - 'https://github.com/tc39/test262/pull/3045'
+  presented:
+    - month: 07
+      year: 2021
+      url: >-
+        https://github.com/tc39/notes/blob/HEAD/meetings/2021-07/july-14.md#array-find-from-last
+- id: proposal-shadowrealm
+  title: ShadowRealm API
+  description: ShadowRealms are a distinct global environment, with its own global object containing its own intrinsics and built-ins (standard objects that are not bound to global variables, like the initial value of Object.prototype)..
+  authors:
+    - Caridy Patiño
+    - Jean-Francois Paradis
+  champions:
+    - Dave Herman
+    - Mark Miller
+    - Caridy Patiño
+    - Leo Balter
+  example: >-
+    const red = new ShadowRealm();
+
+    // realms can import modules that will execute within it's own environment.
+    // When the module is resolved, it captured the binding value, or creates a new
+    // wrapped function that is connected to the callable binding.
+    const redAdd = await red.importValue('./inside-code.js', 'add');
+
+    // redAdd is a wrapped function exotic object that chains it's call to the
+    // respective imported binding.
+    let result = redAdd(2, 3);
+  tests:
+    - 'https://github.com/tc39/test262/pull/3046'
+  has_specification: true
+  presented:
+    - month: 8
+      year: 2021
+      url: >-
+        https://github.com/tc39/notes/blob/HEAD/meetings/2021-08/aug-31.md#realms-renaming-bikeshedding-thread
+- id: proposal-array-grouping
+  title: Array Grouping
+  description: A proposal to make grouping of array items easier.
+  authors:
+    - Justin Ridgewell
+  champions:
+    - Justin Ridgewell
+  example: >-
+    const array = [1, 2, 3, 4, 5];
+
+    // groupBy groups items by arbitrary key.
+    // In this case, we're grouping by even/odd keys
+    array.groupBy((num, index, array) => {
+      return num % 2 === 0 ? 'even': 'odd';
+    });
+
+    // =>  { odd: [1, 3, 5], even: [2, 4] }
+
+    // groupByToMap returns items in a Map, and is useful for grouping using
+    // an object key.
+    const odd  = { odd: true };
+    const even = { even: true };
+    array.groupByToMap((num, index, array) => {
+      return num % 2 === 0 ? even: odd;
+    });
+
+    // =>  Map { {odd: true}: [1, 3, 5], {even: true}: [2, 4] }
+  has_specification: true
+  presented:
+    - month: 12
       year: 2021
