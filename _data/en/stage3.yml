@@ -34,3 +34,12 @@ proposal-accessible-object-hasownproperty:
 proposal-resizablearraybuffer:
   title: In-Place Resizable and Growable ArrayBuffers
   description: ArrayBuffers have enabled in-memory handling of binary data and have enjoyed great success. This proposal extends the ArrayBuffer constructors to take an additional maximum length that allows in-place growth and shrinking of buffers. Similarly, SharedArrayBuffer is extended to take an additional maximum length that allows in-place growth. The transfer method is also re-introduced here as a standard way to detach ArrayBuffers, perform zero-copy moves, and to "fix" resizable ArrayBuffer instances to ArrayBuffer instances.
+proposal-array-find-from-last:
+  title: Array.prototype.findLast and Array.prototype.findLastIndex
+  description: Proposal for finding the first match from the end of the array for both elements and indices.
+proposal-shadowrealm:
+  title: ShadowRealm API
+  description: ShadowRealms are a distinct global environment, with its own global object containing its own intrinsics and built-ins (standard objects that are not bound to global variables, like the initial value of Object.prototype)..
+proposal-array-grouping:
+  title: Array Grouping
+  description: A proposal to make grouping of array items easier.
