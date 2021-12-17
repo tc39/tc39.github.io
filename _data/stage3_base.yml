@@ -171,7 +171,7 @@
   champions:
     - Wenlu Wang
     - Daniel Rosenwasser
-  example: >-
+  example: |-
     const array = [{ value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }];
     array.find(n => n.value % 2 === 1); // { value: 1 }
     array.findIndex(n => n.value % 2 === 1); // 0
@@ -194,7 +194,7 @@
     - Mark Miller
     - Caridy Patiño
     - Leo Balter
-  example: >-
+  example: |-
     const red = new ShadowRealm();
 
     // realms can import modules that will execute within it's own environment.
@@ -220,7 +220,7 @@
     - Justin Ridgewell
   champions:
     - Justin Ridgewell
-  example: >-
+  example: |-
     const array = [1, 2, 3, 4, 5];
 
     // groupBy groups items by arbitrary key.
