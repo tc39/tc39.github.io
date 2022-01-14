@@ -9,7 +9,7 @@
     "lint:js": "eslint --ext=.js,.mjs .",
     "format:js": "npm run lint:js -- --fix",
     "lint:scss": "stylelint _sass",
-    "check:html": "bundle exec jekyll build && html-validate _site/index.html",
+    "lint:html": "bundle exec jekyll build && html-validate _site/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
