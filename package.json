@@ -39,6 +39,7 @@
     "stylelint": "^10.0.1",
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-config-standard": "^18.3.0",
-    "stylelint-order": "^3.0.0"
+    "stylelint-order": "^3.0.0",
+    "@11ty/eleventy": "1.0.0"
   }
 }
