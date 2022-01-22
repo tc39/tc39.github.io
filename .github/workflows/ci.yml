@@ -14,5 +14,4 @@ jobs:
         with:
           node-version: '16'
       - run: npm ci
-      - run: npm run lint:html
       - run: npm run lint
