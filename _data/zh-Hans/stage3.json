@@ -1,0 +1,41 @@
+{
+  "proposal-regexp-legacy-features": {
+    "title": "JavaScript 中的历史 RegExp 特性",
+    "description": "该提案规范了 JavaScript 中已废弃的 RegExp 特性，即构造函数的静态属性以及 RegExp.prototype.compile 方法。"
+  },
+  "proposal-hashbang": {
+    "title": "Hashbang 语法",
+    "description": "该提案意在配合一些允许/需要使用 Hashbang 的 JS 环境。在这种环境中，目前它们需要先删除 hashbang 以生成有效的 JS 代码。该提案将统一和规范这种做法。"
+  },
+  "proposal-atomics-wait-async": {
+    "title": "<code>Atomics.waitAsync</code>",
+    "description": "该提案为 Atomics 添加一个异步的 <code>wait</code>，用于不允许阻塞线程的环境。"
+  },
+  "proposal-relative-indexing-method": {
+    "title": "<code>.at()</code>",
+    "description": "该提案计划在所有可索引类（<code>Array</code>、<code>String</code>、<code>TypedArray</code>）中添加一个<code>.at()</code>方法。该方法允许负数索引。"
+  },
+  "proposal-import-assertions": {
+    "title": "import 断言",
+    "description": "该提案为 `import` 语句添加了断言语法。如果模块不符合期望的断言，则导入会失败。"
+  },
+  "proposal-json-modules": { "title": "JSON Modules", "description": null },
+  "proposal-private-fields-in-in": {
+    "title": "Ergonomic Brand Checks",
+    "description": null
+  },
+  "proposal-class-static-block": {
+    "title": "Class Static Block",
+    "description": null
+  },
+  "proposal-error-cause": { "title": "Error Cause", "description": null },
+  "proposal-temporal": { "title": "Temporal", "description": null },
+  "proposal-accessible-object-hasownproperty": {
+    "title": "Accessible Object.prototype.hasOwnProperty()",
+    "description": "Proposal for an Object.hasOwn() method to make Object.prototype.hasOwnProperty() more accessible."
+  },
+  "proposal-resizablearraybuffer": {
+    "title": "In-Place Resizable and Growable ArrayBuffers",
+    "description": null
+  }
+}

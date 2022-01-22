@@ -1,0 +1,47 @@
+{
+  "title": "JavaScriptを定義する。",
+  "lang": "ja",
+  "navigation": {
+    "TC39": {
+      "title": "TC39",
+      "agenda": "今後の議題",
+      "notes": "直近の議事録",
+      "sub-menu": "TC39のサブメニューを表示する"
+    },
+    "specs": {
+      "title": "仕様",
+      "proposals": "議論中のプロポーザル",
+      "ecma-262": "ECMA-262, ECMAScript",
+      "ecma-402": "ECMA-402, Intl API",
+      "sub-menu": "仕様のサブメニューを表示する"
+    },
+    "contribute": {
+      "title": "コントリビュート",
+      "proposals": "プロポーザルへのコントリビュートについて",
+      "tests": "テストケースへのコントリビュートについて",
+      "read": "仕様の読み方について",
+      "discourse": "Discourseに参加する",
+      "sub-menu": "コントリビュートのサブメニューを表示する"
+    },
+    "state-of-proposals": "プロポーザルの状態",
+    "skip-content": "プロポーザルの状態へ飛ぶ",
+    "open": "メニューを表示する"
+  },
+  "footer": {
+    "connect": "繋がる",
+    "standards": "標準",
+    "proposals": "プロポーザル一覧",
+    "archives": "アーカイブ",
+    "process": "プロセス",
+    "coc": "行動規範",
+    "feedback": "フィードバックを募集しています。",
+    "feedback-prompt": "ご意見等は<a href=\"https://github.com/tc39/tc39.github.io\" target=\"_blank\">このサイトのリポジトリ</a>に<a href=\"https://github.com/tc39/tc39.github.io/issues/new\" target=\"_blank\">issueを開いて</a>ください。"
+  },
+  "links": {
+    "coc": "https://tc39.es/code-of-conduct",
+    "process": "https://tc39.es/process-document",
+    "contribute-to-proposals": "https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md#new-feature-proposals",
+    "contribute-to-tests": "https://github.com/tc39/test262/blob/master/CONTRIBUTING.md",
+    "discourse": "https://es.discourse.group/"
+  }
+}

@@ -1,4 +1,5 @@
-module.exports = function() {
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addPassthroughCopy('assets');
   return {
     dir: {
       input: './', // Equivalent to Jekyll's source property

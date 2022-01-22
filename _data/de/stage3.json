@@ -1,0 +1,50 @@
+{
+  "proposal-regexp-legacy-features": {
+    "title": "Veraltete RegExp-Funktionen in JavaScript",
+    "description": "Dies ist ein Spezifikationsentwurf für die veralteten (deprecated) RegExp-Features in JavaScript, d.h. statische Eigenschaften des Konstruktors wie RegExp.$1 sowie die RegExp.prototype.compile-Methode."
+  },
+  "proposal-hashbang": {
+    "title": "Hashbang Grammatik",
+    "description": "Dieser Vorschlag soll der De-facto-Nutzung in einigen CLI JS-Hosts entsprechen, die Shebangs / Hashbang erlauben. Derzeit entfernen solche Hosts die Hashbang-Zeile, um gültige JS-Quelltexte zu erzeugen, bevor sie an JS-Engines übergeben werden. Dieser Vorschlag würde die Art und Weise, wie dies geschieht, vereinheitlichen und standardisieren."
+  },
+  "proposal-atomics-wait-async": {
+    "title": "<code>Atomics.waitAsync</code>",
+    "description": "Ein Vorschlag für eine \"asynchrone atomare Wartezeit\" für ECMAScript, in erster Linie zur Verwendung in Prozessen, die nicht blockieren dürfen."
+  },
+  "proposal-relative-indexing-method": {
+    "title": "<code>.at()</code>",
+    "description": "Ein Vorschlag zum Hinzufügen einer Methode <code>.at()</code> zu allen grundlegenden indizierbaren Klassen (<code>Array</code>, <code>String</code>, <code>TypedArray</code>)."
+  },
+  "proposal-import-assertions": {
+    "title": "Import Assertions",
+    "description": "Ein Vorschlag für die Syntax zum Import von ES-Modulen mit Assertions."
+  },
+  "proposal-json-modules": {
+    "title": "JSON Modules",
+    "description": null
+  },
+  "proposal-private-fields-in-in": {
+    "title": "Ergonomic Brand Checks",
+    "description": null
+  },
+  "proposal-class-static-block": {
+    "title": "Class Static Block",
+    "description": null
+  },
+  "proposal-error-cause": {
+    "title": "Error Cause",
+    "description": null
+  },
+  "proposal-temporal": {
+    "title": "Temporal",
+    "description": null
+  },
+  "proposal-accessible-object-hasownproperty": {
+    "title": "Accessible Object.prototype.hasOwnProperty()",
+    "description": "Proposal for an Object.hasOwn() method to make Object.prototype.hasOwnProperty() more accessible."
+  },
+  "proposal-resizablearraybuffer": {
+    "title": "In-Place Resizable and Growable ArrayBuffers",
+    "description": null
+  }
+}

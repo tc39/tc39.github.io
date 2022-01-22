@@ -1,0 +1,183 @@
+[
+  {
+    "title": "Legacy RegExp features in JavaScript",
+    "id": "proposal-regexp-legacy-features",
+    "presented": [
+      {
+        "month": 5,
+        "year": 2017,
+        "url": "https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3"
+      }
+    ],
+    "has_specification": false,
+    "description": "This is a specification draft for the legacy (deprecated) RegExp features in JavaScript, i.e., static properties of the constructor like <code>RegExp.$1</code> as well as the <code>RegExp.prototype.compile</code> method.",
+    "authors": ["Claude Pache"],
+    "champions": ["Mark Miller", "Claude Pache"],
+    "tests": ["https://github.com/tc39/test262/pull/2650"]
+  },
+  {
+    "title": "Hashbang Grammar",
+    "id": "proposal-hashbang",
+    "example": "#!/usr/bin/env node\n// in the Module Goal\nexport {};\nconsole.log(1);",
+    "presented": [
+      {
+        "month": 11,
+        "year": 2018,
+        "url": "https://github.com/tc39/notes/blob/master/meetings/2018-11/nov-28.md#hash-bang-grammar"
+      }
+    ],
+    "has_specification": true,
+    "tests": ["https://github.com/tc39/test262/pull/2065"],
+    "description": "This proposal is to match de-facto usage in some CLI JS hosts that allow for Shebangs / Hashbang. Such hosts strip the hashbang in order to generate valid JS source texts before passing to JS engines currently. This would unify and standardize how that is done.",
+    "authors": ["Bradley Farias"],
+    "champions": ["Bradley Farias"]
+  },
+  {
+    "title": "<code>Atomics.waitAsync</code>",
+    "id": "proposal-atomics-wait-async",
+    "presented": [
+      {
+        "month": 12,
+        "year": 2019,
+        "url": "https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3"
+      }
+    ],
+    "has_specification": true,
+    "description": "A proposal for an &ldquo;asynchronous atomic wait&rdquo; for ECMAScript, primarily for use in agents that are not allowed to block.",
+    "authors": ["Lars Hansen"],
+    "champions": ["Shu-yu Guo", "Lars Hansen"],
+    "tests": ["https://github.com/tc39/test262/issues/2511"]
+  },
+  {
+    "title": "Import Assertions",
+    "id": "proposal-import-assertions",
+    "example": "new Worker(&#x22;foo.wasm&#x22;, { type: &#x22;module&#x22;, assert: { type: &#x22;webassembly&#x22; } });",
+    "presented": [{ "month": 9, "year": 2020, "url": "import-assertions" }],
+    "has_specification": true,
+    "description": "A proposal for syntax to import ES modules with assertions.",
+    "authors": [
+      "Myles Borins",
+      "Sven Sauleau",
+      "Dan Clark",
+      "Daniel Ehrenberg"
+    ],
+    "champions": [
+      "Myles Borins",
+      "Sven Sauleau",
+      "Dan Clark",
+      "Daniel Ehrenberg"
+    ],
+    "tests": [
+      null,
+      {
+        "title": "JSON Modules",
+        "id": "proposal-json-modules",
+        "example": "import json from &#x22;./foo.json&#x22; assert { type: &#x22;json&#x22; };",
+        "presented": [
+          {
+            "month": 1,
+            "year": 2021,
+            "url": "https://github.com/tc39/notes/blob/master/meetings/2021-01/jan-25.md#json-modules-for-stage-3"
+          }
+        ],
+        "has_specification": true,
+        "description": "Proposal to import JSON files as modules.",
+        "authors": [
+          "Sven Sauleau",
+          "Daniel Ehrenberg",
+          "Myles Borins",
+          "Dan Clark"
+        ],
+        "champions": [
+          "Sven Sauleau",
+          "Daniel Ehrenberg",
+          "Myles Borins",
+          "Dan Clark"
+        ],
+        "tests": ["https://github.com/tc39/test262/pull/2999"]
+      }
+    ]
+  },
+  {
+    "id": "proposal-temporal",
+    "title": "Temporal",
+    "authors": ["Maggie Pint", "Matt Johnson", "Philipp Dunkel"],
+    "champions": ["Maggie Pint", "Matt Johnson", "Philipp Dunkel"],
+    "description": "Date has been a long-standing pain point in ECMAScript. This proposes Temporal, a global Object that acts as a top-level namespace (like Math), that brings a modern date/time API to the ECMAScript language. For a detailed breakdown of motivations, see  the proposal readme.",
+    "example": "// See the repo for detailed examples. // small example from the cook book\nconst date = Temporal.now.plainDateISO(); // Gets the current date\ndate.toString(); // returns the date in ISO 8601 date format\n// If you additionally want the time\nTemporal.now.plainDateTimeISO().toString(); // date and time in ISO 8601 format",
+    "has_specification": true,
+    "presented": [
+      {
+        "month": 3,
+        "year": 2021,
+        "url": "https://github.com/tc39/notes/blob/master/meetings/2021-03/mar-9.md#temporal-for-stage-3"
+      }
+    ],
+    "tests": [
+      "https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Amerged+temporal+in%3Atitle+"
+    ]
+  },
+  {
+    "id": "proposal-resizablearraybuffer",
+    "title": "In-Place Resizable and Growable ArrayBuffers",
+    "authors": ["Shu-yu Guo"],
+    "champions": ["Shu-yu Guo"],
+    "description": "ArrayBuffers have enabled in-memory handling of binary data and have enjoyed great success. This proposal extends the ArrayBuffer constructors to take an additional maximum length that allows in-place growth and shrinking of buffers. Similarly, SharedArrayBuffer is extended to take an additional maximum length that allows in-place growth. The transfer method is also re-introduced here as a standard way to detach ArrayBuffers, perform zero-copy moves, and to \"fix\" resizable ArrayBuffer instances to ArrayBuffer instances.",
+    "example": "// Resizable ArrayBuffer\n\nlet rab = new ArrayBuffer(1024, { maximumByteLength: 1024 ** 2 });\nassert(rab.byteLength === 1024);\nassert(rab.maximumByteLength === 1024 ** 2);\nassert(rab.resizable);\nrab.resize(rab.byteLength * 2);\nassert(rab.byteLength === 1024 * 2);\n\n// Transfer the first 1024 bytes.\nlet ab = rab.transfer(1024);\n\n// rab is now detached\nassert(rab.byteLength === 0);\nassert(rab.maximumByteLength === 0);\n\n// The contents are moved to ab.\nassert(!ab.resizable);\nassert(ab.byteLength === 1024);",
+    "has_specification": true,
+    "tests": [
+      "https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Amerged+resizable+in%3Atitle+"
+    ],
+    "presented": [
+      {
+        "month": 5,
+        "year": 2021,
+        "url": "https://github.com/tc39/notes/blob/HEAD/meetings/2021-05/may-25.md#resizable-arraybuffers-for-stage-3"
+      }
+    ]
+  },
+  {
+    "id": "proposal-array-find-from-last",
+    "title": "Array.prototype.findLast and Array.prototype.findLastIndex",
+    "description": "Proposal for finding the first match from the end of the array for both elements and indices.",
+    "authors": ["Wenlu Wang"],
+    "champions": ["Wenlu Wang", "Daniel Rosenwasser"],
+    "example": "const array = [{ value: 1 }, { value: 2 }, { value: 3 }, { value: 4 }];\narray.find(n => n.value % 2 === 1); // { value: 1 }\narray.findIndex(n => n.value % 2 === 1); // 0",
+    "has_specification": true,
+    "tests": ["https://github.com/tc39/test262/pull/3045"],
+    "presented": [
+      {
+        "month": 7,
+        "year": 2021,
+        "url": "https://github.com/tc39/notes/blob/HEAD/meetings/2021-07/july-14.md#array-find-from-last"
+      }
+    ]
+  },
+  {
+    "id": "proposal-shadowrealm",
+    "title": "ShadowRealm API",
+    "description": "ShadowRealms are a distinct global environment, with its own global object containing its own intrinsics and built-ins (standard objects that are not bound to global variables, like the initial value of Object.prototype)..",
+    "authors": ["Caridy Patiño", "Jean-Francois Paradis"],
+    "champions": ["Dave Herman", "Mark Miller", "Caridy Patiño", "Leo Balter"],
+    "example": "const red = new ShadowRealm();\n\n// realms can import modules that will execute within it's own environment.\n// When the module is resolved, it captured the binding value, or creates a new\n// wrapped function that is connected to the callable binding.\nconst redAdd = await red.importValue('./inside-code.js', 'add');\n\n// redAdd is a wrapped function exotic object that chains it's call to the\n// respective imported binding.\nlet result = redAdd(2, 3);",
+    "tests": ["https://github.com/tc39/test262/pull/3046"],
+    "has_specification": true,
+    "presented": [
+      {
+        "month": 8,
+        "year": 2021,
+        "url": "https://github.com/tc39/notes/blob/HEAD/meetings/2021-08/aug-31.md#realms-renaming-bikeshedding-thread"
+      }
+    ]
+  },
+  {
+    "id": "proposal-array-grouping",
+    "title": "Array Grouping",
+    "description": "A proposal to make grouping of array items easier.",
+    "authors": ["Justin Ridgewell"],
+    "champions": ["Justin Ridgewell"],
+    "example": "const array = [1, 2, 3, 4, 5];\n\n// groupBy groups items by arbitrary key.\n// In this case, we're grouping by even/odd keys\narray.groupBy((num, index, array) => {\n  return num % 2 === 0 ? 'even': 'odd';\n});\n\n// =>  { odd: [1, 3, 5], even: [2, 4] }\n\n// groupByToMap returns items in a Map, and is useful for grouping using\n// an object key.\nconst odd  = { odd: true };\nconst even = { even: true };\narray.groupByToMap((num, index, array) => {\n  return num % 2 === 0 ? even: odd;\n});\n\n// =>  Map { {odd: true}: [1, 3, 5], {even: true}: [2, 4] }",
+    "has_specification": true,
+    "presented": [{ "month": 12, "year": 2021 }]
+  }
+]

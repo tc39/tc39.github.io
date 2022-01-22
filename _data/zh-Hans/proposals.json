@@ -1,0 +1,44 @@
+{
+  "title": "目前的提案",
+  "description": "本节介绍的是处于<a href=\"https://tc39.es/process-document/\">提案流程</a>中第三阶段的提案，这意味着它们即将完成。",
+  "how-to-read": {
+    "title": "如何查看提案列表",
+    "description": "每项提案都相关的链接。标签标记了它的类型。下面是一个表格，其中包含了标签示例及其含义。如果您需要更清晰的解释，所有标签上都有悬浮文本。",
+    "tags": {
+      "title": "标签的类型及其含义",
+      "last-presented": "上一次在 TC39 会议上被代表讨论的日期",
+      "last-presented-fake-date": "2018 年 12 月",
+      "tests": "测试覆盖",
+      "spec": "规范文本"
+    }
+  },
+  "last-presented-alt": "最近一次发言的说明",
+  "specification": "规范",
+  "specification-alt": "阅读提案规范内容",
+  "tests": "测试覆盖",
+  "tests-alt": "在 test262 GitHub 仓库中引入测试的 PR。",
+  "show-example": "示例",
+  "author": "作者",
+  "authors": "作者",
+  "champion": "推进者",
+  "champions": "推进者",
+  "authors-and-champions": "作者和推进者",
+  "see-more": "查看各阶段的提案",
+  "needs_translation": "Needs Translation",
+  "needs_translation_url": "https://github.com/tc39/tc39.github.io/blob/master/translation_zh-Hans.md",
+  "community_translations": "This page is translated by the community. If you want to contribute, read our <a href=\"https://github.com/tc39/tc39.github.io/blob/master/translation_zh-Hans.md\">guidelines</a>.",
+  "months": {
+    "1": "January",
+    "2": "February",
+    "3": "March",
+    "4": "April",
+    "5": "May",
+    "6": "June",
+    "7": "July",
+    "8": "August",
+    "9": "September",
+    "10": "October",
+    "11": "November",
+    "12": "December"
+  }
+}

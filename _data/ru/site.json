@@ -1,0 +1,48 @@
+{
+  "title": "Специфицируя JavaScript.",
+  "lang": "ru",
+  "navigation": {
+    "TC39": {
+      "title": "TC39",
+      "agenda": "Предстоящая повестка дня",
+      "notes": "Протокол последнего собрания",
+      "sub-menu": "Открыть меню «TC39»"
+    },
+    "specs": {
+      "title": "Спецификации",
+      "proposals": "Активные предложения",
+      "ecma-262": "ECMA-262, ECMAScript",
+      "ecma-402": "ECMA-402, Intl API",
+      "sub-menu": "Открыть меню «Спецификации»"
+    },
+    "contribute": {
+      "title": "Сделать вклад",
+      "proposals": "Сделать вклад в спецификацию",
+      "tests": "Участвовать в написании тестов",
+      "read": "Как читать спецификацию",
+      "discourse": "Присоединяйся к обсуждениям",
+      "sub-menu": "Открыть меню «Сделать вклад»"
+    },
+    "state-of-proposals": "Статус предложений",
+    "skip-content": "Перейти к содержанию",
+    "open": "Открыть меню"
+  },
+  "footer": {
+    "connect": "Контакты",
+    "contribute": "Принять участие",
+    "standards": "Стандарты",
+    "proposals": "Предложения",
+    "archives": "Архивы",
+    "process": "Процесс",
+    "coc": "Нормы поведения",
+    "feedback": "Мы будем благодарны обратной связи.",
+    "feedback-prompt": "Пожалуйста, <a href=\"https://github.com/tc39/tc39.github.io/issues/new\" target=\"_blank\">откройте issue</a> в <a href=\"https://github.com/tc39/tc39.github.io\" target=\"_blank\">репозитории нашего сайта</a>."
+  },
+  "links": {
+    "coc": "https://tc39.es/code-of-conduct",
+    "process": "https://tc39.es/process-document",
+    "contribute-to-proposals": "https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md#new-feature-proposals",
+    "contribute-to-tests": "https://github.com/tc39/test262/blob/master/CONTRIBUTING.md",
+    "discourse": "https://es.discourse.group/"
+  }
+}

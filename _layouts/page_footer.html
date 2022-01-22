@@ -3,15 +3,13 @@
     <div class="g-row">
       <div class="g-col-3">
         <h3 id="connect-label">
-          {{ site.data["site"]["footer"]["connect"] }}
+          {{ footer["connect"] }}
         </h3>
         <ul class="connect" aria-labelledby="connect-label">
           <li><a href="https://es.discourse.group" target="_blank">
-            <span class="icon">{% octicon comment-discussion height:24 aria-label:Discourse %}</span>
             <span>Discourse</span>
           </a></li>
           <li><a href="https://github.com/tc39" target="_blank">
-            <span class="icon">{% octicon mark-github height:24 aria-label:GitHub %}</span>
             <span>GitHub</span>
           </a></li>
           <li><a href="http://twitter.com/tc39" target="_blank">
@@ -22,7 +20,7 @@
       </div>
       <div class="g-col-3">
         <h3 id="standards-label">
-          {{ site.data["site"]["footer"]["standards"] }}
+          {{ footer["standards"] }}
         </h3>
         <ul aria-labelledby="standards-label">
           <li><a href="https://tc39.es/ecma262">ECMA-262, ECMAScript</a></li>
@@ -31,7 +29,7 @@
       </div>
       <div class="g-col-3">
         <h3 id="proposals-label">
-          {{ site.data["site"]["footer"]["proposals"] }}
+          {{ footer["proposals"] }}
         </h3>
         <ul aria-labelledby="proposals-label">
           <li><a href="https://github.com/tc39/proposals/blob/HEAD/stage-0-proposals.md#stage-0-proposals">Stage 0</a></li>
@@ -43,17 +41,17 @@
       </div>
       <div class="g-col-3">
         <h3 id="contribute-label">
-          {{ site.data["site"]["navigation"]["contribute"]["title"] }}
+          {{ site["navigation"]["contribute"]["title"] }}
         </h3>
         <ul aria-labelledby="contribute-label">
-          <li><a href='{{ site.data["site"]["links"]["contribute-to-proposals"] }}'>
-              {{ site.data["site"]["navigation"]["contribute"]["proposals"] }}
+          <li><a href='{{ site["links"]["contribute-to-proposals"] }}'>
+              {{ site["navigation"]["contribute"]["proposals"] }}
             </a></li>
-          <li><a href='{{ site.data["site"]["links"]["contribute-to-tests"] }}'>
-              {{ site.data["site"]["navigation"]["contribute"]["tests"] }}
+          <li><a href='{{ site["links"]["contribute-to-tests"] }}'>
+              {{ site["navigation"]["contribute"]["tests"] }}
             </a></li>
           <li><a href="https://timothygu.me/es-howto" target="_blank">
-              {{ site.data["site"]["navigation"]["contribute"]["read"] }}
+              {{ site["navigation"]["contribute"]["read"] }}
             </a></li>
         </ul>
       </div>
@@ -62,21 +60,21 @@
   <div class="grid-container">
     <div class="grid-start">
       <span>
-         {{ site.data["site"]["footer"]["feedback"] }}
+         {{ footer["feedback"] }}
          <br />
-         {{ site.data["site"]["footer"]["feedback-prompt"] }}
+         {{ footer["feedback-prompt"] }}
       </span>
     </div>
     <nav class="grid-end" aria-label="site info">
       <ul class="pipe-nav">
         <li><a href="https://tc39.es/archives">
-            {{ site.data["site"]["footer"]["archives"] }}
+            {{ footer["archives"] }}
           </a></li>
-        <li><a href='{{ site.data["site"]["links"]["process"] }}'>
-            {{ site.data["site"]["footer"]["process"] }}
+        <li><a href='{{ site["links"]["process"] }}'>
+            {{ footer["process"] }}
           </a></li>
-        <li><a href='{{ site.data["site"]["links"]["coc"] }}'>
-            {{ site.data["site"]["footer"]["coc"] }}
+        <li><a href='{{ site["links"]["coc"] }}'>
+            {{ footer["coc"] }}
           </a></li>
       </ul>
       <span>&copy; Ecma International</span>

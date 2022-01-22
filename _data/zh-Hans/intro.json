@@ -1,0 +1,16 @@
+{
+  "TC39": {
+    "title": "TC39",
+    "desc": "所属 Ecma International 的 TC39 是一个由 JavaScript 开发者、实现者、学者等组成的团体，与 JavaScript 社区合作维护和发展 JavaScript 的标准。",
+    "ecma-logo": "我们是 <a class=\"ecma-logo-box\" href=\"https://www.ecma-international.org/\"> <img src=\"assets/img/ecma-logo.svg\" alt=\"Ecma International\" /></a> 的一部分。"
+  },
+  "contribute": {
+    "title": "贡献",
+    "desc": "TC39 欢迎贡献。您可以通过对提案提供反馈、改进文档、编写测试或实现，或提出语言特性的想法来提供帮助。详情请看我们的<a href=\"https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md\">贡献者指南</a>。",
+    "join-ecma": "要以代表的身份参加 TC39 会议，您需要是 Ecma International 的会员组织的成员（雇员、学者等）。详见：<a href=\"https://ecma-international.org/memento/join.htm\">加入 Ecma</a>。"
+  },
+  "specs": {
+    "title": "规范文件",
+    "desc": "我们在 <a href=\"https://github.com/tc39/ecma262/\">GitHub</a> 上开发 JavaScript（正式名称为 ECMAScript）规范，每两个月开会讨论一次提案。要了解更多关于这个过程的信息，请查看<a href=\"https://tc39.es/process-document/\">新语言功能提案的五个阶段</a>。请参阅我们的<a href=\"https://github.com/tc39/agendas/\">会议议程</a>和<a href=\"https://github.com/tc39/notes/\">会议记录</a>，了解更多信息。"
+  }
+}
