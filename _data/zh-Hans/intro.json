@@ -2,7 +2,7 @@
   "TC39": {
     "title": "TC39",
     "desc": "所属 Ecma International 的 TC39 是一个由 JavaScript 开发者、实现者、学者等组成的团体，与 JavaScript 社区合作维护和发展 JavaScript 的标准。",
-    "ecma-logo": "我们是 <a class=\"ecma-logo-box\" href=\"https://www.ecma-international.org/\"> <img src=\"assets/img/ecma-logo.svg\" alt=\"Ecma International\" /></a> 的一部分。"
+    "ecma-logo": "我们是 <a class=\"ecma-logo-box\" href=\"https://www.ecma-international.org/\"> <img src=\"/assets/img/ecma-logo.svg\" alt=\"Ecma International\" /></a> 的一部分。"
   },
   "contribute": {
     "title": "贡献",

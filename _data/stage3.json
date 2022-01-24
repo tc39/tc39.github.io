@@ -1,5 +1,5 @@
-[
-  {
+{
+  "proposal-regexp-legacy-features": {
     "title": "Legacy RegExp features in JavaScript",
     "id": "proposal-regexp-legacy-features",
     "presented": [
@@ -15,7 +15,7 @@
     "champions": ["Mark Miller", "Claude Pache"],
     "tests": ["https://github.com/tc39/test262/pull/2650"]
   },
-  {
+  "proposal-hashbang": {
     "title": "Hashbang Grammar",
     "id": "proposal-hashbang",
     "example": "#!/usr/bin/env node\n// in the Module Goal\nexport {};\nconsole.log(1);",
@@ -32,7 +32,7 @@
     "authors": ["Bradley Farias"],
     "champions": ["Bradley Farias"]
   },
-  {
+  "proposal-atomics-wait-async": {
     "title": "<code>Atomics.waitAsync</code>",
     "id": "proposal-atomics-wait-async",
     "presented": [
@@ -48,7 +48,7 @@
     "champions": ["Shu-yu Guo", "Lars Hansen"],
     "tests": ["https://github.com/tc39/test262/issues/2511"]
   },
-  {
+  "proposal-import-assertions": {
     "title": "Import Assertions",
     "id": "proposal-import-assertions",
     "example": "new Worker(&#x22;foo.wasm&#x22;, { type: &#x22;module&#x22;, assert: { type: &#x22;webassembly&#x22; } });",
@@ -67,38 +67,36 @@
       "Dan Clark",
       "Daniel Ehrenberg"
     ],
-    "tests": [
-      null,
-      {
-        "title": "JSON Modules",
-        "id": "proposal-json-modules",
-        "example": "import json from &#x22;./foo.json&#x22; assert { type: &#x22;json&#x22; };",
-        "presented": [
-          {
-            "month": 1,
-            "year": 2021,
-            "url": "https://github.com/tc39/notes/blob/master/meetings/2021-01/jan-25.md#json-modules-for-stage-3"
-          }
-        ],
-        "has_specification": true,
-        "description": "Proposal to import JSON files as modules.",
-        "authors": [
-          "Sven Sauleau",
-          "Daniel Ehrenberg",
-          "Myles Borins",
-          "Dan Clark"
-        ],
-        "champions": [
-          "Sven Sauleau",
-          "Daniel Ehrenberg",
-          "Myles Borins",
-          "Dan Clark"
-        ],
-        "tests": ["https://github.com/tc39/test262/pull/2999"]
-      }
-    ]
+    "tests": [null]
   },
-  {
+  "proposal-json-modules": {
+    "title": "JSON Modules",
+    "id": "proposal-json-modules",
+    "example": "import json from &#x22;./foo.json&#x22; assert { type: &#x22;json&#x22; };",
+    "presented": [
+      {
+        "month": 1,
+        "year": 2021,
+        "url": "https://github.com/tc39/notes/blob/master/meetings/2021-01/jan-25.md#json-modules-for-stage-3"
+      }
+    ],
+    "has_specification": true,
+    "description": "Proposal to import JSON files as modules.",
+    "authors": [
+      "Sven Sauleau",
+      "Daniel Ehrenberg",
+      "Myles Borins",
+      "Dan Clark"
+    ],
+    "champions": [
+      "Sven Sauleau",
+      "Daniel Ehrenberg",
+      "Myles Borins",
+      "Dan Clark"
+    ],
+    "tests": ["https://github.com/tc39/test262/pull/2999"]
+  },
+  "proposal-temporal": {
     "id": "proposal-temporal",
     "title": "Temporal",
     "authors": ["Maggie Pint", "Matt Johnson", "Philipp Dunkel"],
@@ -117,7 +115,7 @@
       "https://github.com/tc39/test262/pulls?q=is%3Apr+is%3Amerged+temporal+in%3Atitle+"
     ]
   },
-  {
+  "proposal-resizablearraybuffer": {
     "id": "proposal-resizablearraybuffer",
     "title": "In-Place Resizable and Growable ArrayBuffers",
     "authors": ["Shu-yu Guo"],
@@ -136,7 +134,7 @@
       }
     ]
   },
-  {
+  "proposal-array-find-from-last": {
     "id": "proposal-array-find-from-last",
     "title": "Array.prototype.findLast and Array.prototype.findLastIndex",
     "description": "Proposal for finding the first match from the end of the array for both elements and indices.",
@@ -153,7 +151,7 @@
       }
     ]
   },
-  {
+  "proposal-shadowrealm": {
     "id": "proposal-shadowrealm",
     "title": "ShadowRealm API",
     "description": "ShadowRealms are a distinct global environment, with its own global object containing its own intrinsics and built-ins (standard objects that are not bound to global variables, like the initial value of Object.prototype)..",
@@ -170,7 +168,7 @@
       }
     ]
   },
-  {
+  "proposal-array-grouping": {
     "id": "proposal-array-grouping",
     "title": "Array Grouping",
     "description": "A proposal to make grouping of array items easier.",
@@ -180,4 +178,4 @@
     "has_specification": true,
     "presented": [{ "month": 12, "year": 2021 }]
   }
-]
+}

@@ -2,7 +2,7 @@
   "TC39": {
     "title": "TC39",
     "desc": "Das TC39 von Ecma International ist eine Gruppe von JavaScript-Entwicklern, -Implementierern, -Wissenschaftlern und anderen, die mit der Gemeinschaft zusammenarbeiten, um die Definition von JavaScript zu pflegen und weiterzuentwickeln.",
-    "ecma-logo": "Wir sind Teil von <br/> <a class=\"ecma-logo-box\" href=\"https://www.ecma-international.org/\"> <img src=\"assets/img/ecma-logo.svg\" alt=\"Ecma International\" /> </a>"
+    "ecma-logo": "Wir sind Teil von <br/> <a class=\"ecma-logo-box\" href=\"https://www.ecma-international.org/\"> <img src=\"/assets/img/ecma-logo.svg\" alt=\"Ecma International\" /> </a>"
   },
   "contribute": {
     "title": "Mitmachen",

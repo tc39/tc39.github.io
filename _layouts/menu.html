@@ -109,7 +109,7 @@
 
     <ul class="submenu">
       {%- for language in languages -%}
-      {%- unless language.id == site.active_lang -%}
+      {%- unless language.id == site.lang -%}
         <li class="submenu-item">
           {%- if language.id == site.default_lang -%}
             <a class="menu-link" href='/'>
