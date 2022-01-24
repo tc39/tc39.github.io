@@ -35,24 +35,20 @@ merge commit).
 The repo contains a [prettier](https://prettier.io/) and [stylelint](https://stylelint.io/) configuration.
 Code style is checked via CI. To prevent unnecessary red builds you should check locally before committing via `npm run lint`.
 
-This website is intended as a content website. While it is a landing page for the Committee responsible for developing the language, our goal here is not to showcase what JavaScript can do, but to present an accessible interface to orient people looking for resources. In order to achieve this, the website intentionally uses as little JavaScript as possible. 
+This website is intended as a content website. While it is a landing page for the Committee responsible for developing the language, our goal here is not to showcase what JavaScript can do, but to present an accessible interface to orient people looking for resources. In order to achieve this, the website intentionally uses as little JavaScript as possible.
 
 ## Local development
 
-Building the website requires [Docker](https://docs.docker.com/install/). This gives you a dev environment with Ruby, Bundler, and all other project dependencies already installed.
+Building the website requires a relatively up to date version of NodeJS.
 
-After installing Docker and cloning this repo, you can build and serve the website as follows.
 ```bash
-cd tc39-web-draft
-make install      # install the site's Docker image
-make build        # run Jekyll and rebuild site folder
-make serve        # run Jekyll, serve site on localhost:8000, and watch for local changes
+npm ci           # install dependencies from package-lock.json
+npm start        # start 11ty server
 ```
 
 ## Discussion
 
-We use IRC to communicate. The channel we use is #tc39-website on freenode. You can find
-connection instructions [here](https://freenode.net/kb/answer/chat).
+We use Matrix to communicate. See https://github.com/tc39/how-we-work/blob/master/matrix-guide.md for more details and join us at #tc39-website.
 
 ## Monthly planning call
 
