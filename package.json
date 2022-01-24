@@ -35,6 +35,7 @@
     "@babel/eslint-parser": "7.12.1",
     "@babel/plugin-syntax-top-level-await": "7.12.1",
     "@babel/preset-env": "7.12.1",
+    "@primer/octicons": "16.2.0",
     "eslint": "7.12.0",
     "eslint-config-prettier": "6.14.0",
     "eslint-plugin-compat": "3.8.0",
