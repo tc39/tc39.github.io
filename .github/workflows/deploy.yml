@@ -2,25 +2,26 @@ name: Deploy site
 
 on:
   push:
-    branches: master
+    branches:
+      - master
 
 jobs:
-  jekyll:
+  build:
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
 
-    # Use GitHub Actions' cache to shorten build times and decrease load on servers
-    - uses: actions/cache@v1
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
+      - name: Install dependencies & build
+        run: |
+          npm ci
+          npm run build
 
-    # Standard usage
-    - uses:  helaili/jekyll-action@02b43daed5ee9041657eaba9762aff434de3ff90
-      env:
-        JEKYLL_PAT: ${{ github.actor }}:${{ github.token }}
-      with:
-        target_branch: 'gh-pages'
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./_site
+          github_token: ${{ secrets.GITHUB_TOKEN }}

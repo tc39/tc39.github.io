@@ -1,4 +1,4 @@
-name: Deploy site
+name: Perform CI
 
 on:
   pull_request:
