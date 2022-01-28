@@ -5,18 +5,8 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:prettier/recommended"
+    "prettier"
   ],
-  "parser": "@babel/eslint-parser",
-  "parserOptions": {
-    "babelOptions": {
-      "configFile": "./babel.config.json"
-    },
-    "ecmaFeatures": {
-      "globalReturn": false
-    },
-    "sourceType": "module"
-  },
   "plugins": ["prettier"],
   "reportUnusedDisableDirectives": true,
   "root": true,

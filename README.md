@@ -43,8 +43,16 @@ Building the website requires a relatively up to date version of NodeJS.
 
 ```bash
 npm ci           # install dependencies from package-lock.json
-npm start        # start 11ty server
+npm start        # start 11ty server in watch mode
 ```
+
+### Data files
+
+Global data files live in [\_data](./_data), these files act at the fallback if there's no overrides.
+
+The locale-specific data files live within each locale folder, such as [de](./de). If these have the same keys as the global data files they will override, or even merge with the global data files. Think `Object.assign(de, _data)`. The majority of this site is driven by data from these files.
+
+For more information on how these data files work see [The Data Cascade](https://www.11ty.dev/docs/data-cascade/).
 
 ## Discussion
 
