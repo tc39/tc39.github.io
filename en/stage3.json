@@ -53,7 +53,7 @@
   },
   "proposal-shadowrealm": {
     "title": "ShadowRealm API",
-    "description": "ShadowRealms are a distinct global environment, with its own global object containing its own intrinsics and built-ins (standard objects that are not bound to global variables, like the initial value of Object.prototype).."
+    "description": "ShadowRealms are a distinct global environment, with its own global object containing its own intrinsics and built-ins (standard objects that are not bound to global variables, like the initial value of Object.prototype)."
   },
   "proposal-array-grouping": {
     "title": "Array Grouping",

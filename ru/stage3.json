@@ -21,7 +21,7 @@
   },
   "proposal-json-modules": {
     "title": "JSON Modules",
-    "description": null
+    "description": "Предложение по импорту JSON-файлов как модулей."
   },
   "proposal-private-fields-in-in": {
     "title": "Ergonomic Brand Checks",
@@ -41,10 +41,22 @@
   },
   "proposal-accessible-object-hasownproperty": {
     "title": "Accessible Object.prototype.hasOwnProperty()",
-    "description": "Proposal for an Object.hasOwn() method to make Object.prototype.hasOwnProperty() more accessible."
+    "description": "Предложение по добавлению метода Object.hasOwn(), который делает Object.prototype.hasOwnProperty() более доступным."
   },
   "proposal-resizablearraybuffer": {
     "title": "In-Place Resizable and Growable ArrayBuffers",
     "description": null
+  },
+  "proposal-array-find-from-last": {
+    "title": "Array.prototype.findLast and Array.prototype.findLastIndex",
+    "description": "Методы по поиску соответствия с конца масси для элементов и их индексов."
+  },
+  "proposal-shadowrealm": {
+    "title": "ShadowRealm API",
+    "description": "ShadowRealms — это отдельное глобальное окружение со своим глобальным объектом, интристиками и встроенными объектами (стандартные объекты, которые не привязаны к глобальным переменным, таким как изначальное значение Object.prototype)."
+  },
+  "proposal-array-grouping": {
+    "title": "Array Grouping",
+    "description": "Предложение о том, как сделать группировку массивов проще."
   }
 }
