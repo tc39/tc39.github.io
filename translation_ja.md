@@ -29,7 +29,7 @@ To land your changes, you can request reviews from the following active reviewer
 
 ### For New Languages:
 
-- @codehag
+- [@codehag](https://github.com/codehag)
 
 ### German transation:
 
@@ -45,7 +45,7 @@ See the [Japanese Translation documentation](translation_ja.md) for more info.
 
 ### Russian Translation:
 
-- ...
+- [@chicoxyzzy](https://github.com/chicoxyzzy)
 
 See the [Russian Translation documentation](translation_ru.md) for more info.
 
