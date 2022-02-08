@@ -3,7 +3,7 @@
     <div class="g-row">
       <div class="g-col-3">
         <h3 id="connect-label">
-          {{ footer["connect"] }}
+          {{ site["footer"]["connect"] }}
         </h3>
         <ul class="connect" aria-labelledby="connect-label">
           <li><a href="https://es.discourse.group" target="_blank">
@@ -22,7 +22,7 @@
       </div>
       <div class="g-col-3">
         <h3 id="standards-label">
-          {{ footer["standards"] }}
+          {{ site["footer"]["standards"] }}
         </h3>
         <ul aria-labelledby="standards-label">
           <li><a href="https://tc39.es/ecma262">ECMA-262, ECMAScript</a></li>
@@ -31,7 +31,7 @@
       </div>
       <div class="g-col-3">
         <h3 id="proposals-label">
-          {{ footer["proposals"] }}
+          {{ site["footer"]["proposals"] }}
         </h3>
         <ul aria-labelledby="proposals-label">
           <li><a href="https://github.com/tc39/proposals/blob/HEAD/stage-0-proposals.md#stage-0-proposals">Stage 0</a></li>
@@ -62,21 +62,21 @@
   <div class="grid-container">
     <div class="grid-start">
       <span>
-         {{ footer["feedback"] }}
+         {{ site["footer"]["feedback"] }}
          <br />
-         {{ footer["feedback-prompt"] }}
+         {{ site["footer"]["feedback-prompt"] }}
       </span>
     </div>
     <nav class="grid-end" aria-label="site info">
       <ul class="pipe-nav">
         <li><a href="https://tc39.es/archives">
-            {{ footer["archives"] }}
+            {{ site["footer"]["archives"] }}
           </a></li>
         <li><a href='{{ site["links"]["process"] }}'>
-            {{ footer["process"] }}
+            {{ site["footer"]["process"] }}
           </a></li>
         <li><a href='{{ site["links"]["coc"] }}'>
-            {{ footer["coc"] }}
+            {{ site["footer"]["coc"] }}
           </a></li>
       </ul>
       <span>&copy; Ecma International</span>
