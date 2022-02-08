@@ -2,14 +2,14 @@
 
 function openMenu(menu) {
   menu.style.maxHeight = menu.scrollHeight + 'px';
-  setTimeout(function() {
+  setTimeout(function () {
     menu.style.maxHeight = 'none';
   }, 600);
 }
 
 function closeMenu(menu) {
   menu.style.maxHeight = menu.scrollHeight + 'px';
-  setTimeout(function() {
+  setTimeout(function () {
     menu.style.maxHeight = '';
   }, 0);
 }
@@ -44,11 +44,11 @@ function start() {
 
   document.body.classList.remove('no-js');
 
-  items.forEach(function(v) {
-    v.addEventListener('click', function() {
+  items.forEach(function (v) {
+    v.addEventListener('click', function () {
       toggleProposal(this.parentNode);
     });
-    v.addEventListener('keypress', function(ev) {
+    v.addEventListener('keypress', function (ev) {
       if (ev.key === 'Enter' || ev.key === ' ') {
         ev.preventDefault();
         toggleProposal(this.parentNode);
@@ -58,15 +58,15 @@ function start() {
 
   document
     .querySelector('.menu-toggle')
-    .addEventListener('click', function(ev) {
+    .addEventListener('click', function (ev) {
       ev.preventDefault();
       toggleMenu();
     });
 
-  document.querySelectorAll('.menu-link').forEach(function(link) {
+  document.querySelectorAll('.menu-link').forEach(function (link) {
     var submenu = link.parentNode.querySelector('.submenu');
     if (submenu) {
-      link.addEventListener('click', function(ev) {
+      link.addEventListener('click', function (ev) {
         var t = link.parentNode.querySelector('.submenu-toggle');
         ev.preventDefault();
         toggleMenu(submenu);
@@ -75,8 +75,8 @@ function start() {
     }
   });
 
-  document.querySelectorAll('.submenu-toggle').forEach(function(toggle) {
-    toggle.addEventListener('click', function(ev) {
+  document.querySelectorAll('.submenu-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function (ev) {
       var t = ev.target;
       var submenu = t.parentNode.querySelector('.submenu');
       toggleMenu(submenu);

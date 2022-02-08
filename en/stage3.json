@@ -1,0 +1,62 @@
+{
+  "proposal-regexp-legacy-features": {
+    "title": "Legacy RegExp features in JavaScript",
+    "description": "This is a specification draft for the legacy (deprecated) RegExp features in JavaScript, i.e., static properties of the constructor like <code>RegExp.$1</code> as well as the <code>RegExp.prototype.compile</code> method."
+  },
+  "proposal-hashbang": {
+    "title": "Hashbang Grammar",
+    "description": "This proposal is to match de-facto usage in some CLI JS hosts that allow for Shebangs / Hashbang. Such hosts strip the hashbang in order to generate valid JS source texts before passing to JS engines currently. This would unify and standardize how that is done."
+  },
+  "proposal-atomics-wait-async": {
+    "title": "<code>Atomics.waitAsync</code>",
+    "description": "A proposal for an &ldquo;asynchronous atomic wait&rdquo; for ECMAScript, primarily for use in agents that are not allowed to block."
+  },
+  "proposal-relative-indexing-method": {
+    "title": "<code>.at()</code>",
+    "description": "A proposal to add a <code>.at()</code> method to all the basic indexable classes (<code>Array</code>, <code>String</code>, <code>TypedArray</code>)."
+  },
+  "proposal-import-assertions": {
+    "title": "Import Assertions",
+    "description": "A proposal for syntax to import ES modules with assertions."
+  },
+  "proposal-json-modules": {
+    "title": "JSON Modules",
+    "description": "Proposal to import JSON files as modules."
+  },
+  "proposal-private-fields-in-in": {
+    "title": "Ergonomic Brand Checks",
+    "description": "EcmaScript proposal to provide brand checks without exceptions."
+  },
+  "proposal-class-static-block": {
+    "title": "Class Static Block",
+    "description": "Class static blocks provide a mechanism to perform additional static initialization during class definition evaluation. This is not intended as a replacement for public fields, as they provide useful information for static analysis tools and are a valid target for decorators. Rather, this is intended to augment existing use cases and enable new use cases not currently handled by that proposal."
+  },
+  "proposal-error-cause": {
+    "title": "Error Cause",
+    "description": "Errors will be constructed to represent runtime abnormalities. To help unexpected behavior diagnosis, errors need to be augmented with contextual information like error messages, error instance properties to explain what happened at the time.  If the error were thrown from deep internal methods, the thrown error may not be straightforward to be easily conducted without proper exception design pattern. This proposal introduces a convenient way to forward the cause."
+  },
+  "proposal-temporal": {
+    "title": "Temporal",
+    "description": "Date has been a long-standing pain point in ECMAScript. This proposes Temporal, a global Object that acts as a top-level namespace (like Math), that brings a modern date/time API to the ECMAScript language. For a detailed breakdown of motivations, see  the proposal readme."
+  },
+  "proposal-accessible-object-hasownproperty": {
+    "title": "Accessible Object.prototype.hasOwnProperty()",
+    "description": "Proposal for an Object.hasOwn() method to make Object.prototype.hasOwnProperty() more accessible."
+  },
+  "proposal-resizablearraybuffer": {
+    "title": "In-Place Resizable and Growable ArrayBuffers",
+    "description": "ArrayBuffers have enabled in-memory handling of binary data and have enjoyed great success. This proposal extends the ArrayBuffer constructors to take an additional maximum length that allows in-place growth and shrinking of buffers. Similarly, SharedArrayBuffer is extended to take an additional maximum length that allows in-place growth. The transfer method is also re-introduced here as a standard way to detach ArrayBuffers, perform zero-copy moves, and to \"fix\" resizable ArrayBuffer instances to ArrayBuffer instances."
+  },
+  "proposal-array-find-from-last": {
+    "title": "Array.prototype.findLast and Array.prototype.findLastIndex",
+    "description": "Proposal for finding the first match from the end of the array for both elements and indices."
+  },
+  "proposal-shadowrealm": {
+    "title": "ShadowRealm API",
+    "description": "ShadowRealms are a distinct global environment, with its own global object containing its own intrinsics and built-ins (standard objects that are not bound to global variables, like the initial value of Object.prototype).."
+  },
+  "proposal-array-grouping": {
+    "title": "Array Grouping",
+    "description": "A proposal to make grouping of array items easier."
+  }
+}

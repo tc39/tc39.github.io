@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang='{{ site.data["site"]["lang"] | default: "en-US" }}'>
+<html lang='{{ locale | default: "en-US" }}'>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <meta name="theme-color" content="#157878">
     <title>
-      TC39 – {{ site.data["site"]["title"] }}
+      TC39 – {{ site["title"] }}
     </title>
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/assets/css/normalize.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url}}">
+    <link rel="stylesheet" href="{{ '/assets/css/normalize.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | url}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-    <script defer src="{{ '/assets/js/main.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+    <script defer src="{{ '/assets/js/main.js?v=' | append: site.github.build_revision | url }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body class="no-js">
-    {% include_relative _layouts/page_header.html %}
+    {% include "./page_header.html" %}
     <main class="container">
-    <h1 id="content" class="page-title">{{ site.data["site"]["title"] }}</h1>
+    <h1 id="content" class="page-title">{{ site["title"] }}</h1>
     <section class="main-content">
-      {% include intro.html %}
-      {% include proposals.html %}
+      {% include "intro.html" %}
+      {% include "proposals.html" %}
     </section>
     </main>
-    {% include_relative _layouts/page_footer.html %}
+    {% include "./page_footer.html" %}
     <img class="hidden" src="https://d3nrsflo8ae6b5.cloudfront.net/1x1.png" alt="pixel" />
   </body>
 </html>

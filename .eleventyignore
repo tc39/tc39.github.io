@@ -1,0 +1,10 @@
+README.md
+screenshot.png
+Dockerfile
+Makefile
+Gemfile
+Gemfile.lock
+node_modules
+package.json
+package-lock.json
+vendor
