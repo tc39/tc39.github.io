@@ -49,7 +49,7 @@
   },
   "proposal-array-find-from-last": {
     "title": "Array.prototype.findLast and Array.prototype.findLastIndex",
-    "description": "Методы по поиску соответствия с конца масси для элементов и их индексов."
+    "description": "Методы по поиску соответствия с конца массива для элементов и их индексов."
   },
   "proposal-shadowrealm": {
     "title": "ShadowRealm API",
