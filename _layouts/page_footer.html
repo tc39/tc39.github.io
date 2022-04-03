@@ -2,43 +2,105 @@
   <section class="synopsis grid-container">
     <div class="g-row">
       <div class="g-col-3">
-        <h3 id="connect-label">
-          {{ site["footer"]["connect"] }}
-        </h3>
+        <h3 id="connect-label">{{ site["footer"]["connect"] }}</h3>
         <ul class="connect" aria-labelledby="connect-label">
-          <li><a href="https://es.discourse.group" target="_blank">
-            <span class="icon"><svg height="24" aria-label="discussion" class="octicon octicon-comment-discussion" viewBox="0 0 16 16" version="1.1" width="24" role="img">{{ octicons["commentDiscussion"] }}</svg></span>
-            <span>Discourse</span>
-          </a></li>
-          <li><a href="https://github.com/tc39" target="_blank">
-            <span class="icon"><svg height="24" aria-label="github" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" role="img">{{ octicons["markGithub"] }}</svg></span>
-            <span>GitHub</span>
-          </a></li>
-          <li><a href="http://twitter.com/tc39" target="_blank">
-            <span class="icon"><svg height="24" aria-label="Twitter" class="octicon octicon-mark-twitter" viewBox="0 0 16 16" version="1.1" width="24" role="img"><path d="m14.115 3.3111c0.67809-0.42788 1.1984-1.1064 1.4425-1.9146-0.63482 0.39718-1.3364 0.68442-2.0849 0.83993-0.59725-0.67353-1.4509-1.0935-2.3956-1.0935-1.8126 0-3.2814 1.5501-3.2814 3.4617 0 0.27139 0.027277 0.53585 0.083581 0.78842-2.7272-0.14461-5.1455-1.5214-6.7655-3.6172-0.28268 0.51307-0.44421 1.1074-0.44421 1.7413 0 1.2005 0.57944 2.2603 1.4603 2.8823-0.53812-0.017828-1.0443-0.17532-1.4876-0.43284v0.04259c0 1.6779 1.1307 3.0774 2.6343 3.3944-0.27611 0.081219-0.56535 0.12183-0.86588 0.12183-0.2113 0-0.41791-0.020801-0.617-0.061409 0.41697 1.3748 1.6294 2.3772 3.0662 2.4039-1.1241 0.92906-2.5394 1.4817-4.0767 1.4817-0.26484 0-0.52685-0.01486-0.78323-0.04755 1.4528 0.98156 3.178 1.555 5.0318 1.555 6.0386 0 9.3387-5.2753 9.3387-9.8503 0-0.15056-0.0018-0.30012-0.0084-0.4477 0.64147-0.48831 1.1993-1.0984 1.6379-1.7928-0.5888 0.27536-1.2218 0.46157-1.8849 0.54477z"/></svg></span>
-            <span>Twitter</span>
-          </a></li>
+          <li>
+            <a href="https://es.discourse.group" target="_blank">
+              <span class="icon"
+                ><svg
+                  height="24"
+                  aria-label="discussion"
+                  class="octicon octicon-comment-discussion"
+                  viewBox="0 0 16 16"
+                  version="1.1"
+                  width="24"
+                  role="img"
+                >
+                  {{ octicons["commentDiscussion"] }}
+                </svg></span
+              >
+              <span>Discourse</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/tc39" target="_blank">
+              <span class="icon"
+                ><svg
+                  height="24"
+                  aria-label="github"
+                  class="octicon octicon-mark-github"
+                  viewBox="0 0 16 16"
+                  version="1.1"
+                  width="24"
+                  role="img"
+                >
+                  {{ octicons["markGithub"] }}
+                </svg></span
+              >
+              <span>GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://twitter.com/tc39" target="_blank">
+              <span class="icon"
+                ><svg
+                  height="24"
+                  aria-label="Twitter"
+                  class="octicon octicon-mark-twitter"
+                  viewBox="0 0 16 16"
+                  version="1.1"
+                  width="24"
+                  role="img"
+                >
+                  <path
+                    d="m14.115 3.3111c0.67809-0.42788 1.1984-1.1064 1.4425-1.9146-0.63482 0.39718-1.3364 0.68442-2.0849 0.83993-0.59725-0.67353-1.4509-1.0935-2.3956-1.0935-1.8126 0-3.2814 1.5501-3.2814 3.4617 0 0.27139 0.027277 0.53585 0.083581 0.78842-2.7272-0.14461-5.1455-1.5214-6.7655-3.6172-0.28268 0.51307-0.44421 1.1074-0.44421 1.7413 0 1.2005 0.57944 2.2603 1.4603 2.8823-0.53812-0.017828-1.0443-0.17532-1.4876-0.43284v0.04259c0 1.6779 1.1307 3.0774 2.6343 3.3944-0.27611 0.081219-0.56535 0.12183-0.86588 0.12183-0.2113 0-0.41791-0.020801-0.617-0.061409 0.41697 1.3748 1.6294 2.3772 3.0662 2.4039-1.1241 0.92906-2.5394 1.4817-4.0767 1.4817-0.26484 0-0.52685-0.01486-0.78323-0.04755 1.4528 0.98156 3.178 1.555 5.0318 1.555 6.0386 0 9.3387-5.2753 9.3387-9.8503 0-0.15056-0.0018-0.30012-0.0084-0.4477 0.64147-0.48831 1.1993-1.0984 1.6379-1.7928-0.5888 0.27536-1.2218 0.46157-1.8849 0.54477z"
+                  /></svg
+              ></span>
+              <span>Twitter</span>
+            </a>
+          </li>
         </ul>
       </div>
       <div class="g-col-3">
-        <h3 id="standards-label">
-          {{ site["footer"]["standards"] }}
-        </h3>
+        <h3 id="standards-label">{{ site["footer"]["standards"] }}</h3>
         <ul aria-labelledby="standards-label">
           <li><a href="https://tc39.es/ecma262">ECMA-262, ECMAScript</a></li>
           <li><a href="https://tc39.es/ecma402">ECMA-402, Intl API</a></li>
         </ul>
       </div>
       <div class="g-col-3">
-        <h3 id="proposals-label">
-          {{ site["footer"]["proposals"] }}
-        </h3>
+        <h3 id="proposals-label">{{ site["footer"]["proposals"] }}</h3>
         <ul aria-labelledby="proposals-label">
-          <li><a href="https://github.com/tc39/proposals/blob/HEAD/stage-0-proposals.md#stage-0-proposals">Stage 0</a></li>
-          <li><a href="https://github.com/tc39/proposals/blob/HEAD/stage-1-proposals.md#stage-1-proposals">Stage 1</a></li>
-          <li><a href="https://github.com/tc39/proposals/blob/HEAD/README.md#stage-2">Stage 2</a></li>
-          <li><a href="https://github.com/tc39/proposals/blob/HEAD/README.md#stage-3">Stage 3</a></li>
-          <li><a href="https://github.com/tc39/proposals/blob/HEAD/finished-proposals.md#finished-proposals">Stage 4</a></li>
+          <li>
+            <a
+              href="https://github.com/tc39/proposals/blob/HEAD/stage-0-proposals.md#stage-0-proposals"
+              >Stage 0</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/tc39/proposals/blob/HEAD/stage-1-proposals.md#stage-1-proposals"
+              >Stage 1</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/tc39/proposals/blob/HEAD/README.md#stage-2"
+              >Stage 2</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/tc39/proposals/blob/HEAD/README.md#stage-3"
+              >Stage 3</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/tc39/proposals/blob/HEAD/finished-proposals.md#finished-proposals"
+              >Stage 4</a
+            >
+          </li>
         </ul>
       </div>
       <div class="g-col-3">
@@ -46,15 +108,21 @@
           {{ site["navigation"]["contribute"]["title"] }}
         </h3>
         <ul aria-labelledby="contribute-label">
-          <li><a href='{{ site["links"]["contribute-to-proposals"] }}'>
+          <li>
+            <a href='{{ site["links"]["contribute-to-proposals"] }}'>
               {{ site["navigation"]["contribute"]["proposals"] }}
-            </a></li>
-          <li><a href='{{ site["links"]["contribute-to-tests"] }}'>
+            </a>
+          </li>
+          <li>
+            <a href='{{ site["links"]["contribute-to-tests"] }}'>
               {{ site["navigation"]["contribute"]["tests"] }}
-            </a></li>
-          <li><a href="https://timothygu.me/es-howto" target="_blank">
+            </a>
+          </li>
+          <li>
+            <a href="https://timothygu.me/es-howto" target="_blank">
               {{ site["navigation"]["contribute"]["read"] }}
-            </a></li>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -62,22 +130,26 @@
   <div class="grid-container">
     <div class="grid-start">
       <span>
-         {{ site["footer"]["feedback"] }}
-         <br />
-         {{ site["footer"]["feedback-prompt"] }}
+        {{ site["footer"]["feedback"] }}
+        <br />
+        {{ site["footer"]["feedback-prompt"] }}
       </span>
     </div>
     <nav class="grid-end" aria-label="site info">
       <ul class="pipe-nav">
-        <li><a href="https://tc39.es/archives">
+        <li>
+          <a href="https://tc39.es/archives">
             {{ site["footer"]["archives"] }}
-          </a></li>
-        <li><a href='{{ site["links"]["process"] }}'>
+          </a>
+        </li>
+        <li>
+          <a href='{{ site["links"]["process"] }}'>
             {{ site["footer"]["process"] }}
-          </a></li>
-        <li><a href='{{ site["links"]["coc"] }}'>
-            {{ site["footer"]["coc"] }}
-          </a></li>
+          </a>
+        </li>
+        <li>
+          <a href='{{ site["links"]["coc"] }}'> {{ site["footer"]["coc"] }} </a>
+        </li>
       </ul>
       <span>&copy; Ecma International</span>
     </nav>

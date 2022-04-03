@@ -3,10 +3,7 @@
     "es2021": true,
     "node": true
   },
-  "extends": [
-    "eslint:recommended",
-    "prettier"
-  ],
+  "extends": ["eslint:recommended", "prettier"],
   "plugins": ["prettier"],
   "reportUnusedDisableDirectives": true,
   "root": true,

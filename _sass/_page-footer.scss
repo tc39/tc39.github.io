@@ -89,9 +89,9 @@
   list-style: none;
 }
 
-.page-footer .pipe-nav li+li::before {
+.page-footer .pipe-nav li + li::before {
   content: '| ';
-  padding: 0 .5em;
+  padding: 0 0.5em;
 }
 
 .page-footer .grid-container {

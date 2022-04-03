@@ -57,7 +57,7 @@ $trans-timing: 600ms;
       &::after {
         background: url(../img/menu-down.svg) no-repeat 50%;
         background-size: 1.5rem;
-        content: "";
+        content: '';
         display: block;
         height: 1.5rem;
         transition: transform $trans-timing ease;
@@ -87,7 +87,7 @@ $trans-timing: 600ms;
     transition: max-height $trans-timing ease;
     width: 100%;
     z-index: 2;
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       padding: ($svg-height + $mobile-mt) 0 10px 20px;
     }
     &:focus-within,
@@ -110,7 +110,7 @@ $trans-timing: 600ms;
       &::after {
         @include svgMenuIcon($color-tc39);
         background-size: 1.5rem;
-        content: "";
+        content: '';
         display: block;
         height: 1.5rem;
         width: 1.5rem;
@@ -126,10 +126,10 @@ $trans-timing: 600ms;
       padding: 10px 10px;
       text-decoration: none;
       &:focus {
-        ~.submenu-toggle {
+        ~ .submenu-toggle {
           @include rotateSubmenuToggle();
         }
-        ~.submenu {
+        ~ .submenu {
           max-height: none;
           overflow: visible;
         }
@@ -154,7 +154,7 @@ $trans-timing: 600ms;
         flex-wrap: wrap;
       }
       &__language {
-        display:block;
+        display: block;
         margin-left: auto;
         width: 100%;
         /* stylelint-disable-next-line no-descending-specificity */
