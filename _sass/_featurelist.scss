@@ -144,7 +144,7 @@
       &::before {
         background: url(../img/menu-down.svg) no-repeat 20%;
         background-size: 1.2rem;
-        content: "";
+        content: '';
         display: block;
         float: right;
         height: 1.2em;
@@ -154,7 +154,7 @@
         .open & {
           transform: rotateX(180deg);
         }
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           float: left;
           margin-left: 0;
           margin-right: 0.5rem;
