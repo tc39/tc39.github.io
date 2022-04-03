@@ -1,22 +1,14 @@
 {
-  "extends": [
-    "stylelint-config-standard",
-    "stylelint-config-prettier"
-  ],
-  "plugins": [
-    "stylelint-order"
-  ],
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "plugins": ["stylelint-order"],
   "rules": {
     "at-rule-empty-line-before": null,
-    "at-rule-no-unknown": [true, {
-      "ignoreAtRules": [
-        "else",
-        "extends",
-        "if",
-        "include",
-        "mixin"
-      ]
-    }],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["else", "extends", "if", "include", "mixin", "use"]
+      }
+    ],
     "declaration-empty-line-before": null,
     "order/properties-alphabetical-order": true
   }
