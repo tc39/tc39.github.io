@@ -39,7 +39,7 @@ See the [German Translation documentation](translation_de.md) for more info.
 
 ### Japanese Translation:
 
-- ...
+- [@smorimoto](https://github.com/smorimoto)
 
 See the [Japanese Translation documentation](translation_ja.md) for more info.
 
