@@ -46,5 +46,13 @@
   "proposal-resizablearraybuffer": {
     "title": "In-Place Resizable and Growable ArrayBuffers",
     "description": "ArrayBufferは、バイナリデータをインメモリで処理できるようにし、大きな成功を収めました。このプロポーザルは、ArrayBufferコンストラクタを拡張することで、バッファのインプレースの拡張と縮小が可能な最大長を新たに受け取れるようにします。同様に、SharedArrayBufferは、インプレースの拡張が可能な最大長を新たに受け取れるように拡張されています。transferメソッドは、ArrayBufferをデタッチし、ゼロコピーによる移動を行い、リサイズ可能なArrayBufferインスタンスをArrayBufferインスタンスとして「固定」するための標準的な方法としてもここで再導入されています。"
+  },
+  "proposal-array-find-from-last": {
+    "title": "Array.prototype.findLast and Array.prototype.findLastIndex",
+    "description": "与えられた要素及び添字を配列の末尾から検索するArray.findLastIndex()プロポーザルです。"
+  },
+  "proposal-array-grouping": {
+    "title": "Array Grouping",
+    "description": "配列の要素のグルーピングを容易に行うメソッドを追加するためのプロポーザルです。"
   }
 }
