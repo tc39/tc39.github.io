@@ -49,7 +49,7 @@
   },
   "proposal-array-find-from-last": {
     "title": "Array.prototype.findLast and Array.prototype.findLastIndex",
-    "description": "与えられた要素、もしくは添字を配列の末尾から検索するメソッドのプロポーザルです。"
+    "description": "与えられた要素、もしくは添字を配列の末尾から検索するメソッドを追加するためのプロポーザルです。"
   },
   "proposal-array-grouping": {
     "title": "Array Grouping",
