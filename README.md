@@ -3,9 +3,6 @@
 The TC39 website aims to improve the web presence and host the documentation of TC39. We want to
 make the JavaScript spec more accessible and help people understand what the committee does!
 
-This site is built using GitHub Pages and Jekyll and is currently an MVP. We are looking for
-feedback from people of all areas.
-
 ## Getting involved
 
 This project adheres to the TC39 [Code of Conduct](https://tc39.es/code-of-conduct/).
