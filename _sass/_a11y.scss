@@ -1,24 +1,23 @@
 .sr-only {
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(100%);
+  position: absolute;
+  width: 1px;
   height: 1px;
   overflow: hidden;
-  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(100%);
   white-space: nowrap;
-  width: 1px;
 }
 
 :focus {
-  outline-offset: 0.125rem;
-  outline-style: solid;
   outline-width: 0.125rem;
+  outline-style: solid;
+  outline-offset: 0.125rem;
 }
 
 .logo-box a:focus {
   outline-color: $color-nav;
 }
 
-.featurelist__item__tag,
 .submenu {
   :focus {
     outline: 0;

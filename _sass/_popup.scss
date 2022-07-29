@@ -1,7 +1,7 @@
 .popup {
+  position: fixed;
   bottom: 0;
   left: 0;
-  position: fixed;
   width: 100%;
 
   input[type='checkbox'] + label {
@@ -16,26 +16,26 @@
   }
 
   .close {
+    float: right;
     color: #b94b45;
     cursor: pointer;
-    float: right;
   }
 
   .alert-message {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 20px 44px;
+    line-height: 30px;
+    color: #fff;
+    color: rgb(255 255 255 / 90%);
     background: black;
     background-color: black;
     border: 1px solid rgba(#34495e, 0.25);
     border-radius: 3px;
-    bottom: 0;
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.6);
-    box-sizing: border-box;
-    color: #fff;
-    color: rgba(255, 255, 255, 0.9);
-    display: block;
-    left: 0;
-    line-height: 30px;
-    padding: 20px 44px;
-    position: absolute;
-    width: 100%;
+    box-shadow: 0 10px 50px rgb(0 0 0 / 60%);
   }
 }

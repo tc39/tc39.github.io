@@ -26,19 +26,19 @@
     }
 
     .g-col-3 {
-      flex: 0 0 percentage(math.div(3, 12));
+      flex: 0 0 math.percentage(math.div(3, 12));
     }
 
     .g-col-4 {
-      flex: 0 0 percentage(math.div(4, 12));
+      flex: 0 0 math.percentage(math.div(4, 12));
     }
 
     .g-col-8 {
-      flex: 0 0 percentage(math.div(8, 12));
+      flex: 0 0 math.percentage(math.div(8, 12));
     }
 
     .g-col-10 {
-      flex: 0 0 percentage(math.div(10, 12));
+      flex: 0 0 math.percentage(math.div(10, 12));
       flex-grow: 2;
     }
   }
