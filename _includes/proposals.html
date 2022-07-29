@@ -18,10 +18,8 @@
       <ul class="featurelist__legend__tags">
         <li>
           {{ proposals["how-to-read"]["tags"]["last-presented"] }}:
-          <div class="featurelist__item__presented featurelist-item-tag">
-            <a
-              href="{{ presentation.url }}"
-              title='{{ proposals["last-presented-alt"] }}'
+          <div class="featurelist__item__presented featurelist__item__tag">
+            <a title='{{ proposals["last-presented-alt"] }}'
               >{{ proposals["how-to-read"]["tags"]["last-presented-fake-date"]
               }}</a
             >
@@ -29,7 +27,7 @@
         </li>
         <li>
           {{ proposals["how-to-read"]["tags"]["tests"] }}:
-          <div class="featurelist__item__tests featurelist-item-tag">
+          <div class="featurelist__item__tests featurelist__item__tag">
             <a title='{{ proposals["tests-alt"] }}'>
               {{ proposals["tests"] }}
             </a>
@@ -37,7 +35,7 @@
         </li>
         <li>
           {{ proposals["how-to-read"]["tags"]["spec"] }}:
-          <div class="featurelist__item__spec featurelist-item-tag">
+          <div class="featurelist__item__spec featurelist__item__tag">
             <a title='{{ proposals["specification-alt"] }}'>
               {{ proposals["specification"] }}
             </a>
@@ -53,15 +51,13 @@
   <div class="featurelist__item__intro">
     <header class="g-row">
       <h4 class="featurelist__item__title flex-grow">
-        <a href="https://github.com/tc39/{{ proposal.url }}"
-          >{{ proposal.name }}</a
-        >
+        <a href="{{ proposal.url }}">{{ proposal.name }}</a>
       </h4>
       <div class="featurelist__item__tags">
         <ul class="featurelist__item__status featurelist__item__tags">
           <!-- {% if proposal[1].presented | size %} {% for
           presentation in proposal[1].presented %}
-          <li class="featurelist__item__presented featurelist-item-tag">
+          <li class="featurelist__item__presented featurelist__item__tag">
             {%- if presentation.url -%}
             <a
               href="{{ presentation.url }}"
@@ -78,13 +74,13 @@
           </li>
           {% endfor %} {% endif %}  -->
           {% if proposal.tests | size %} {% for url in proposal.tests %}
-          <li class="featurelist__item__tests featurelist-item-tag">
+          <li class="featurelist__item__tests featurelist__item__tag">
             <a href="{{ url }}" title='{{ proposals["test-alt"] }}'>
               {{ proposals["tests"] }}
             </a>
           </li>
           {% endfor %} {% endif %} {% if proposal['has-specification'] %}
-          <li class="featurelist__item__spec featurelist-item-tag">
+          <li class="featurelist__item__spec featurelist__item__tag">
             <a
               href="https://tc39.es/{{ proposal.id }}"
               title='{{ proposals["specification-alt"] }}'
