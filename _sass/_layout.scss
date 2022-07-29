@@ -11,26 +11,26 @@ html {
 }
 
 body {
-  background: $color-bg;
+  padding: 0;
+  margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: $font-weight-regular;
   line-height: 1.5;
-  margin: 0;
-  padding: 0;
+  background: $color-bg;
 }
 
 .container {
-  margin: 0 auto;
+  width: 100%;
   max-width: 1280px;
   padding: 0 math.div($grid-gutter, 2);
-  width: 100%;
+  margin: 0 auto;
 }
 
 .page-title {
+  margin: 50px 0 0;
   font-size: 36px;
   line-height: 54px;
-  margin: 50px 0 0;
 }
 
 @media (min-width: $bp-tablet) {

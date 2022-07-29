@@ -1,22 +1,24 @@
 .logo-box {
-  flex-shrink: 0;
   z-index: 3;
+  flex-shrink: 0;
+
   img {
     display: block;
-    height: 90px;
     width: 90px;
+    height: 90px;
   }
   @media (min-width: $bp-tablet) {
     img {
-      height: 120px;
       width: 120px;
+      height: 120px;
     }
   }
 }
 
 .ecma-logo-box {
-  flex-shrink: 2;
   z-index: 3;
+  flex-shrink: 2;
+
   img {
     display: inline-block;
     width: 120px;

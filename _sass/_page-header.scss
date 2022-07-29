@@ -1,26 +1,30 @@
 .page-header {
-  align-items: flex-start;
-  background: inherit;
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  background: inherit;
   @media (min-width: $bp-tablet) {
     $spacing: 30px;
+
     .page-menu {
       margin-left: $spacing;
+
       [dir='rtl'] & {
-        margin-left: 0;
         margin-right: $spacing;
+        margin-left: 0;
       }
     }
   }
   @media (min-width: $bp-desktop) {
     $spacing: 90px;
+
     .page-menu {
-      font-size: 1.1em;
       margin-left: $spacing;
+      font-size: 1.1em;
+
       [dir='rtl'] & {
-        margin-left: 0;
         margin-right: $spacing;
+        margin-left: 0;
       }
     }
   }
