@@ -1,15 +1,7 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
-  "plugins": ["stylelint-order"],
-  "rules": {
-    "at-rule-empty-line-before": null,
-    "at-rule-no-unknown": [
-      true,
-      {
-        "ignoreAtRules": ["else", "extends", "if", "include", "mixin", "use"]
-      }
-    ],
-    "declaration-empty-line-before": null,
-    "order/properties-alphabetical-order": true
-  }
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss",
+    "stylelint-config-recess-order"
+  ]
 }
