@@ -13,6 +13,8 @@
       "proposals": "議論中のプロポーザル",
       "ecma-262": "ECMA-262, ECMAScript",
       "ecma-402": "ECMA-402, Intl API",
+      "ecma-404": "ECMA-404, JSON",
+      "ecma-414": "ECMA-414, ECMAScript Specification Suite",
       "sub-menu": "仕様のサブメニューを表示する"
     },
     "contribute": {
