@@ -13,6 +13,8 @@
       "proposals": "Активные предложения",
       "ecma-262": "ECMA-262, ECMAScript",
       "ecma-402": "ECMA-402, Intl API",
+      "ecma-404": "ECMA-404, JSON",
+      "ecma-414": "ECMA-414, ECMAScript Specification Suite",
       "sub-menu": "Открыть меню «Спецификации»"
     },
     "contribute": {
