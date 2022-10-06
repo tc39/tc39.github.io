@@ -1,0 +1,49 @@
+{
+  "title": "Spécifier le JavaScript.",
+  "lang": "fr-fr",
+  "navigation": {
+    "TC39": {
+      "title": "TC39",
+      "agenda": "Agenda à venir",
+      "notes": "Notes de réunions récentes",
+      "sub-menu": "Basculer le sous-menu pour TC39"
+    },
+    "specs": {
+      "title": "Specs",
+      "proposals": "Active Proposals",
+      "ecma-262": "ECMA-262, ECMAScript",
+      "ecma-402": "ECMA-402, Intl API",
+      "ecma-404": "ECMA-404, JSON",
+      "ecma-414": "ECMA-414, ECMAScript Specification Suite",
+      "sub-menu": "Basculer le sous-menu pour les spécifications"
+    },
+    "contribute": {
+      "title": "Contribuer",
+      "proposals": "Contribuer aux propositions",
+      "tests": "Contribuer aux tests",
+      "read": "Lecture de la spécification",
+      "discourse": "Rejoignez le débat",
+      "sub-menu": "Basculer le sous-menu pour Contribuer"
+    },
+    "state-of-proposals": "État des propositions",
+    "skip-content": "Aller au contenu",
+    "open": "Ouvrir le menu"
+  },
+  "footer": {
+    "connect": "Connect",
+    "standards": "Standards",
+    "proposals": "Proposals",
+    "archives": "Archives",
+    "process": "Process",
+    "coc": "Code of Conduct",
+    "feedback": "Nous sommes à la recherche de commentaires.",
+    "feedback-prompt": "S'il vous plaît <a href=\"https://github.com/tc39/tc39.github.io/issues/new\" target=\"_blank\">ouvrir une issue</a> dans <a href=\"https://github.com/tc39/tc39.github.io\" target=\"_blank\">le dépôt de notre site</a>."
+  },
+  "links": {
+    "coc": "https://tc39.es/code-of-conduct",
+    "process": "https://tc39.es/process-document",
+    "contribute-to-proposals": "https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md#new-feature-proposals",
+    "contribute-to-tests": "https://github.com/tc39/test262/blob/master/CONTRIBUTING.md",
+    "discourse": "https://es.discourse.group/"
+  }
+}
