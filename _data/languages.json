@@ -18,5 +18,9 @@
   {
     "title": "Русский",
     "id": "ru"
+  },
+  {
+    "title": "Français",
+    "id": "fr"
   }
 ]
