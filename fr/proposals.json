@@ -28,7 +28,7 @@
   "needs_translation_url": "https://github.com/tc39/tc39.github.io/blob/master/translation.md",
   "community_translations": "Cette page est traduite par la communauté. Si vous souhaitez contribuer, lisez nos <a href=\"https://github.com/tc39/tc39.github.io/blob/master/translation.md\">directives</a>.",
   "months": {
-    "1": "Janvier",
+     "1": "Janvier",
      "2": "Février",
      "3": "mars",
      "4": "Avril",
