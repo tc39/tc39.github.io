@@ -34,7 +34,7 @@
     "node": ">=14.8"
   },
   "devDependencies": {
-    "@11ty/eleventy": "1.0.2",
+    "@11ty/eleventy": "2.0.0",
     "@11ty/eleventy-fetch": "3.0.0",
     "@primer/octicons": "17.4.1",
     "eslint": "8.23.0",
