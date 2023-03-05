@@ -1,29 +1,14 @@
 {
-  "env": {
-    "es2021": true,
-    "node": true
-  },
-  "extends": ["eslint:recommended", "prettier"],
-  "plugins": ["prettier"],
-  "reportUnusedDisableDirectives": true,
   "root": true,
-  "rules": {
-    "prettier/prettier": "error"
-  },
+  "env": { "node": true, "es2022": true },
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "reportUnusedDisableDirectives": true,
   "overrides": [
     {
-      "env": {
-        "browser": true
-      },
+      "env": { "browser": true },
       "extends": ["plugin:compat/recommended"],
-      "files": ["./assets/js/main.js"],
-      "parserOptions": {
-        "sourceType": "script"
-      },
       "plugins": ["compat"],
-      "rules": {
-        "compat/compat": "error"
-      }
+      "files": ["./assets/js/main.js"]
     }
   ]
 }
