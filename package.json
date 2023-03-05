@@ -36,16 +36,15 @@
   "devDependencies": {
     "@11ty/eleventy": "2.0.0",
     "@11ty/eleventy-fetch": "3.0.0",
-    "@primer/octicons": "17.4.1",
-    "eslint": "8.23.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-compat": "4.0.2",
+    "@primer/octicons": "18.0.0",
+    "eslint": "8.35.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-compat": "4.1.2",
     "eslint-plugin-prettier": "4.2.1",
-    "prettier": "2.7.1",
-    "sass": "1.54.5",
-    "stylelint": "14.11.0",
-    "stylelint-config-prettier-scss": "0.0.1",
-    "stylelint-config-recess-order": "3.0.0",
-    "stylelint-config-standard-scss": "5.0.0"
+    "prettier": "2.8.4",
+    "sass": "1.58.3",
+    "stylelint": "15.2.0",
+    "stylelint-config-recess-order": "4.0.0",
+    "stylelint-config-standard-scss": "7.0.1"
   }
 }
