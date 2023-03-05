@@ -70,6 +70,7 @@
       margin-top: 0;
       clear: both;
       list-style: none;
+
       @media (min-width: $bp-tablet) {
         float: right;
         padding: 0 5px;
@@ -197,6 +198,7 @@
     &__tags {
       padding: 0;
       list-style: none;
+
       @media (min-width: $bp-tablet) {
         padding-inline-start: 2em;
       }

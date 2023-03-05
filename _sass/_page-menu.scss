@@ -1,5 +1,6 @@
 $svg-height: 24;
 $trans-timing: 600ms;
+
 @mixin svg-menu-icon($color: currentColor, $height: $svg-height) {
   background: url('../img/menu.svg') no-repeat 50%;
 }
@@ -188,6 +189,7 @@ $trans-timing: 600ms;
         }
       }
     }
+
     @media (min-width: $bp-desktop) {
       &-link {
         padding: 10px 40px;
@@ -201,6 +203,7 @@ $trans-timing: 600ms;
       @include svg-menu-icon;
     }
   }
+
   @media (min-width: $bp-tablet) {
     $mt: 73.6px;
 

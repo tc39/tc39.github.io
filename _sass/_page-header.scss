@@ -3,6 +3,7 @@
   flex-direction: row;
   align-items: flex-start;
   background: inherit;
+
   @media (min-width: $bp-tablet) {
     $spacing: 30px;
 
@@ -15,6 +16,7 @@
       }
     }
   }
+
   @media (min-width: $bp-desktop) {
     $spacing: 90px;
 

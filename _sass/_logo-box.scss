@@ -7,6 +7,7 @@
     width: 90px;
     height: 90px;
   }
+
   @media (min-width: $bp-tablet) {
     img {
       width: 120px;
@@ -23,6 +24,7 @@
     display: inline-block;
     width: 120px;
   }
+
   @media (min-width: $bp-tablet) {
     img {
       width: 120px;
