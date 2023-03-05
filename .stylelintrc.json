@@ -1,7 +1,3 @@
 {
-  "extends": [
-    "stylelint-config-standard-scss",
-    "stylelint-config-recess-order",
-    "stylelint-config-prettier-scss"
-  ]
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-recess-order"]
 }
