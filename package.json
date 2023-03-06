@@ -1,9 +1,10 @@
 {
-  "name": "tc39-web-draft",
-  "private": true,
-  "version": "0.0.0",
-  "description": "Draft for TC39 website",
-  "main": "index.js",
+  "name": "@tc39/tc39.github.io",
+  "description": "Get involved in specifying JavaScript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tc39/tc39.github.io.git"
+  },
   "scripts": {
     "lint": "npm run lint:js && npm run lint:scss && npm run lint:format",
     "lint:js": "eslint --ext=.js,.mjs .",
@@ -20,19 +21,6 @@
     "prebuild": "npm run sass",
     "start": "npx @11ty/eleventy --serve --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tc39/tc39.github.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tc39/tc39.github.io/issues"
-  },
-  "homepage": "https://tc39.es/",
-  "engines": {
-    "node": ">=14.8"
-  },
   "devDependencies": {
     "@11ty/eleventy": "2.0.0",
     "@11ty/eleventy-fetch": "3.0.0",
@@ -46,5 +34,9 @@
     "stylelint": "15.2.0",
     "stylelint-config-recess-order": "4.0.0",
     "stylelint-config-standard-scss": "7.0.1"
-  }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "private": true
 }
