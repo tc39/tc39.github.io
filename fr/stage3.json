@@ -1,10 +1,10 @@
 {
   "proposal-regexp-legacy-features": {
     "title": "Fonctionnalités RegExp héritées en JavaScript",
-    "description": "Il s'agit d'un projet de spécification pour les fonctionnalités RegExp héritées (obsolètes) en JavaScript, c'est-à-dire les propriétés statiques du constructeur comme <code>RegExp.$1</code> ainsi que le <code>RegExp.prototype.compile</code> méthode."
+    "description": "Il s'agit d'un projet de spécification pour les fonctionnalités RegExp héritées (obsolètes) en JavaScript, c'est-à-dire les propriétés statiques du constructeur comme <code>RegExp.$1</code> ainsi que la méthode <code>RegExp.prototype.compile</code> méthode."
   },
   "proposal-hashbang": {
-    "title": "Hashbang Grammar",
+    "title": "Grammaire HashBang",
     "description": "Cette proposition vise à correspondre à l'usage de facto de certains hôtes JS CLI qui autorisent les Shebangs / Hashbang. Ces hôtes enlèvent le hashbang afin de générer des textes sources JS valides avant de les transmettre aux moteurs JS actuels. Cela permettrait d'unifier et de standardiser la façon dont cela est fait."
   },
   "proposal-atomics-wait-async": {
@@ -13,7 +13,7 @@
   },
   "proposal-relative-indexing-method": {
     "title": "<code>.at()</code>",
-    "description": "A proposal to add a <code>.at()</code> method to all the basic indexable classes (<code>Array</code>, <code>String</code>, <code>TypedArray</code>)."
+    "description": "Une proposition pour ajouter une méthode <code>.at()</code> à toutes les classes indexables de base (<code>Array</code>, <code>String</code>, <code>TypedArray</code>)."
   },
   "proposal-import-assertions": {
     "title": "Import Assertions",

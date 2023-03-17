@@ -10,7 +10,7 @@
     },
     "specs": {
       "title": "Specs",
-      "proposals": "Active Proposals",
+      "proposals": "Propositions actives",
       "ecma-262": "ECMA-262, ECMAScript",
       "ecma-402": "ECMA-402, Intl API",
       "ecma-404": "ECMA-404, JSON",
@@ -30,14 +30,14 @@
     "open": "Ouvrir le menu"
   },
   "footer": {
-    "connect": "Connect",
+    "connect": "Connecter",
     "standards": "Standards",
-    "proposals": "Proposals",
+    "proposals": "Propositions",
     "archives": "Archives",
-    "process": "Process",
-    "coc": "Code of Conduct",
+    "process": "Procedure",
+    "coc": "Code de Conduite",
     "feedback": "Nous sommes à la recherche de commentaires.",
-    "feedback-prompt": "S'il vous plaît <a href=\"https://github.com/tc39/tc39.github.io/issues/new\" target=\"_blank\">ouvrir une issue</a> dans <a href=\"https://github.com/tc39/tc39.github.io\" target=\"_blank\">le dépôt de notre site</a>."
+    "feedback-prompt": "S'il vous plaît <a href=\"https://github.com/tc39/tc39.github.io/issues/new\" target=\"_blank\">ouvrez une issue</a> dans <a href=\"https://github.com/tc39/tc39.github.io\" target=\"_blank\">le dépôt de notre site</a>."
   },
   "links": {
     "coc": "https://tc39.es/code-of-conduct",
