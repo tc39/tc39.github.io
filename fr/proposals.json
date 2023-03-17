@@ -1,6 +1,6 @@
 {
   "title": "Candidats actuels pour la spécification",
-  "description": "Cette section présente les propositions qui sont à l'étape 3 de <a href=\"https://tc39.es/process-document/\">nos processus</a>, ce qui signifie qu'ils sont presque terminés.",
+  "description": "Cette section présente les propositions qui sont à l'étape 3 de <a href=\"https://tc39.es/process-document/\">nos processus</a>, ce qui signifie qu'elles sont presque terminées.",
   "how-to-read": {
     "title": "Comment lire la liste des propositions",
     "description": "Chaque proposition comporte des liens vers d'autres ressources. Les balises identifient les attributs suivants. Vous trouverez ci-dessous un tableau avec des exemples de balises et leurs significations. Toutes les balises ont un texte de survol si vous avez besoin d'aide pour vous orienter.",
