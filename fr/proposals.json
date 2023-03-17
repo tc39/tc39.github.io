@@ -1,0 +1,44 @@
+{
+  "title": "Candidats actuels pour la spécification",
+  "description": "Cette section présente les propositions qui sont à l'étape 3 de <a href=\"https://tc39.es/process-document/\">nos processus</a>, ce qui signifie qu'ils sont presque terminés.",
+  "how-to-read": {
+    "title": "Comment lire la liste des propositions",
+    "description": "Chaque proposition comporte des liens vers d'autres ressources. Les balises identifient les attributs suivants. Vous trouverez ci-dessous un tableau avec des exemples de balises et leurs significations. Toutes les balises ont un texte de survol si vous avez besoin d'aide pour vous orienter.",
+    "tags": {
+      "title": "Types d'étiquettes et leur signification",
+      "last-presented": "Dernière présentation",
+      "last-presented-fake-date": "Décembre 2018",
+      "tests": "Tests disponibles",
+      "spec": "Texte de spécification"
+    }
+  },
+  "last-presented-alt": "Notes de la dernière présentation",
+  "specification": "Specification",
+  "specification-alt": "Lire le texte de la spécification",
+  "tests": "Tests",
+  "tests-alt": "Correctif introduisant des tests dans le référentiel test262",
+  "show-example": "Afficher l'exemple",
+  "author": "Auteur",
+  "authors": "Auteurs",
+  "champion": "Champion",
+  "champions": "Champions",
+  "authors-and-champions": "Auteurs et champions",
+  "see-more": "Voir les propositions à toutes les étapes",
+  "needs_translation": "Besoin de traduction",
+  "needs_translation_url": "https://github.com/tc39/tc39.github.io/blob/master/translation.md",
+  "community_translations": "Cette page est traduite par la communauté. Si vous souhaitez contribuer, lisez nos <a href=\"https://github.com/tc39/tc39.github.io/blob/master/translation.md\">directives</a>.",
+  "months": {
+    "1": "Janvier",
+    "2": "Février",
+    "3": "mars",
+    "4": "Avril",
+    "5": "Mai",
+    "6": "juin",
+    "7": "juillet",
+    "8": "août",
+    "9": "septembre",
+    "10": "Octobre",
+    "11": "novembre",
+    "12": "Décembre"
+  }
+}
