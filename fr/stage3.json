@@ -1,0 +1,62 @@
+{
+  "proposal-regexp-legacy-features": {
+    "title": "Fonctionnalités RegExp héritées en JavaScript",
+    "description": "Il s'agit d'un projet de spécification pour les fonctionnalités RegExp héritées (obsolètes) en JavaScript, c'est-à-dire les propriétés statiques du constructeur comme <code>RegExp.$1</code> ainsi que le <code>RegExp.prototype.compile</code> méthode."
+  },
+  "proposal-hashbang": {
+    "title": "Hashbang Grammar",
+    "description": "Cette proposition vise à correspondre à l'usage de facto de certains hôtes JS CLI qui autorisent les Shebangs / Hashbang. Ces hôtes enlèvent le hashbang afin de générer des textes sources JS valides avant de les transmettre aux moteurs JS actuels. Cela permettrait d'unifier et de standardiser la façon dont cela est fait."
+  },
+  "proposal-atomics-wait-async": {
+    "title": "<code>Atomics.waitAsync</code>",
+    "description": "Une proposition pour un &ldquo;asynchronous atomic wait&rdquo ; pour ECMAScript, principalement pour une utilisation dans les agents qui ne sont pas autorisés à bloquer."
+  },
+  "proposal-relative-indexing-method": {
+    "title": "<code>.at()</code>",
+    "description": "A proposal to add a <code>.at()</code> method to all the basic indexable classes (<code>Array</code>, <code>String</code>, <code>TypedArray</code>)."
+  },
+  "proposal-import-assertions": {
+    "title": "Import Assertions",
+    "description": "Une proposition de syntaxe pour importer des modules ES avec des assertions."
+  },
+  "proposal-json-modules": {
+    "title": "JSON Modules",
+    "description": "Proposition d'importer des fichiers JSON en tant que modules."
+  },
+  "proposal-private-fields-in-in": {
+    "title": "Ergonomic Brand Checks",
+    "description": "Proposition d'EcmaScript pour fournir des contrôles de marque sans exceptions."
+  },
+  "proposal-class-static-block": {
+    "title": "Class Static Block",
+    "description": "Les blocs statiques de classe fournissent un mécanisme permettant d'effectuer une initialisation statique supplémentaire pendant l'évaluation de la définition de la classe. Il ne s'agit pas de remplacer les champs publics, car ils fournissent des informations utiles aux outils d'analyse statique et constituent une cible valable pour les décorateurs. Il s'agit plutôt d'augmenter les cas d'utilisation existants et de permettre de nouveaux cas d'utilisation qui ne sont pas actuellement traités par cette proposition."
+  },
+  "proposal-error-cause": {
+    "title": "Error Cause",
+    "description": "Les erreurs seront construites pour représenter les anomalies d'exécution. Pour faciliter le diagnostic des comportements inattendus, les erreurs doivent être complétées par des informations contextuelles telles que des messages d'erreur, des propriétés d'instance d'erreur pour expliquer ce qui s'est passé à ce moment-là.  Si l'erreur est déclenchée à partir de méthodes internes profondes, il se peut que l'erreur déclenchée ne soit pas simple à gérer sans un modèle de conception d'exception approprié. Cette proposition introduit un moyen pratique de transmettre la cause."
+  },
+  "proposal-temporal": {
+    "title": "Temporal",
+    "description": "La date est un point sensible de longue date dans ECMAScript. Cette proposition propose Temporal, un objet global qui agit comme un espace de nom de haut niveau (comme Math), qui apporte une API date/heure moderne au langage ECMAScript. Pour une analyse détaillée des motivations, voir le fichier readme de la proposition."
+  },
+  "proposal-accessible-object-hasownproperty": {
+    "title": "Accessible Object.prototype.hasOwnProperty()",
+    "description": "Proposition d'une méthode Object.hasOwn() pour rendre Object.prototype.hasOwnProperty() plus accessible."
+  },
+  "proposal-resizablearraybuffer": {
+    "title": "In-Place Resizable et Growable ArrayBuffers",
+    "description": "Les ArrayBuffers ont permis la manipulation en mémoire de données binaires et ont connu un grand succès. Cette proposition étend les constructeurs de ArrayBuffer pour prendre une longueur maximale supplémentaire qui permet la croissance et le rétrécissement des tampons sur place. De même, SharedArrayBuffer est étendu pour prendre une longueur maximale supplémentaire qui permet la croissance sur place. La méthode de transfert est également réintroduite ici en tant que moyen standard de détacher les ArrayBuffers, d'effectuer des déplacements sans copie et de \"fixer\" les instances de ArrayBuffer redimensionnables en instances de ArrayBuffer."
+  },
+  "proposal-array-find-from-last": {
+    "title": "Array.prototype.findLast er Array.prototype.findLastIndex",
+    "description": "Proposition pour trouver la première correspondance à partir de la fin du tableau pour les éléments et les indices."
+  },
+  "proposal-shadowrealm": {
+    "title": "ShadowRealm API",
+    "description": "Les ShadowRealms sont un environnement global distinct, avec son propre objet global contenant ses propres intrinsèques et built-ins (objets standards qui ne sont pas liés à des variables globales, comme la valeur initiale de Object.prototype)."
+  },
+  "proposal-array-grouping": {
+    "title": "Array Grouping",
+    "description": "Une proposition pour faciliter le regroupement des éléments d'un tableau."
+  }
+}
