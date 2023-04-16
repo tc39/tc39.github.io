@@ -22,18 +22,18 @@
     "start": "npx @11ty/eleventy --serve --watch"
   },
   "devDependencies": {
-    "@11ty/eleventy": "2.0.0",
+    "@11ty/eleventy": "2.0.1",
     "@11ty/eleventy-fetch": "4.0.0",
-    "@primer/octicons": "18.2.0",
-    "eslint": "8.36.0",
-    "eslint-config-prettier": "8.7.0",
-    "eslint-plugin-compat": "4.1.2",
+    "@primer/octicons": "18.3.0",
+    "eslint": "8.38.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-compat": "4.1.4",
     "eslint-plugin-prettier": "4.2.1",
-    "prettier": "2.8.5",
-    "sass": "1.59.3",
-    "stylelint": "15.3.0",
+    "prettier": "2.8.7",
+    "sass": "1.62.0",
+    "stylelint": "15.5.0",
     "stylelint-config-recess-order": "4.0.0",
-    "stylelint-config-standard-scss": "7.0.1"
+    "stylelint-config-standard-scss": "8.0.0"
   },
   "engines": {
     "node": ">=18"
