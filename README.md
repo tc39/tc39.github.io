@@ -36,11 +36,11 @@ This website is intended as a content website. While it is a landing page for th
 
 ## Local development
 
-Building the website requires a relatively up to date version of NodeJS.
+The website is built using [11ty](https://www.11ty.dev/) and requires a relatively up-to-date version of Node.js - preferably the version in [.nvmrc](./.nvmrc).
 
-```bash
-npm ci           # install dependencies from package-lock.json
-npm start        # start 11ty server in watch mode
+```sh
+npm ci       # install dependencies from package-lock.json
+npm start    # start 11ty server in watch mode
 ```
 
 ### Data files
@@ -53,15 +53,7 @@ For more information on how these data files work see [The Data Cascade](https:/
 
 ## Discussion
 
-We use Matrix to communicate. See https://github.com/tc39/how-we-work/blob/master/matrix-guide.md for more details and join us at #tc39-website.
-
-## Monthly planning call
-
-The monthly planning call is currently cancelled, as all of our work is taking place asynchronously.
-In case we want to start the calls again:
-
-We have planning meetings every month, on the _last Tuesday at 10:00 AM CEST_. If you would like to
-join, come say hi at the IRC channel! The meeting is held on Google Hangouts [here](https://hangouts.google.com/call/lxrlUjS_VlOcuRU6BsFBAAEI).
+We use Matrix to communicate. See [the Matrix guide](https://github.com/tc39/how-we-work/blob/main/matrix-guide.md) for more details and join us at [#tc39-website](https://matrix.to/#/#tc39-website:matrix.org).
 
 ## Site Deployment
 
