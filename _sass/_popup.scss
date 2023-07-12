@@ -6,7 +6,9 @@
 
   input[type='checkbox'] + label {
     position: absolute;
-    transition: opacity 0.3s ease-in-out, transform 0.6s ease-in-out;
+    transition:
+      opacity 0.3s ease-in-out,
+      transform 0.6s ease-in-out;
     will-change: opacity, transform;
   }
 
