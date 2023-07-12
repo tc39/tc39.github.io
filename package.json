@@ -9,7 +9,7 @@
     "lint": "npm run lint:js && npm run lint:scss && npm run lint:format",
     "lint:js": "eslint --ext=.js,.mjs .",
     "lint:scss": "stylelint _sass",
-    "lint:format": "prettier --check .",
+    "lint:format": "prettier --check . '!tc39-notes'",
     "fix": "npm run fix:js && npm run fix:scss && npm run fix:format",
     "fix:js": "npm run lint:js -- --fix",
     "fix:scss": "npm run lint:scss -- --fix",
