@@ -24,13 +24,13 @@
   "devDependencies": {
     "@11ty/eleventy": "2.0.1",
     "@11ty/eleventy-fetch": "4.0.0",
-    "@primer/octicons": "19.4.0",
-    "eslint": "8.45.0",
-    "eslint-config-prettier": "8.8.0",
+    "@primer/octicons": "19.5.0",
+    "eslint": "8.46.0",
+    "eslint-config-prettier": "9.0.0",
     "eslint-plugin-compat": "4.1.4",
     "eslint-plugin-prettier": "5.0.0",
-    "prettier": "3.0.0",
-    "sass": "1.64.1",
+    "prettier": "3.0.1",
+    "sass": "1.64.2",
     "stylelint": "15.10.2",
     "stylelint-config-recess-order": "4.3.0",
     "stylelint-config-standard-scss": "10.0.0"
