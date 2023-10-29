@@ -26,7 +26,7 @@
   "see-more": "查看各阶段的提案",
   "needs_translation": "Needs Translation",
   "needs_translation_url": "https://github.com/tc39/tc39.github.io/blob/master/translation_zh-Hans.md",
-  "community_translations": "This page is translated by the community. If you want to contribute, read our <a href=\"https://github.com/tc39/tc39.github.io/blob/master/translation_zh-Hans.md\">guidelines</a>.",
+  "community_translations": "此页面由社区翻译。如果您想做出贡献，请阅读我们的<a href=\"https://github.com/tc39/tc39.github.io/blob/master/translation_zh-Hans.md\">guidelines</a>.",
   "months": {
     "1": "January",
     "2": "February",

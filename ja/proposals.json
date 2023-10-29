@@ -26,7 +26,7 @@
   "see-more": "全ステージのプロポーザルを見る",
   "needs_translation": "Needs Translation",
   "needs_translation_url": "https://github.com/tc39/tc39.github.io/blob/master/translation_ja.md",
-  "community_translations": "This page is translated by the community. If you want to contribute, read our <a href=\"https://github.com/tc39/tc39.github.io/blob/master/translation_ja.md\">guidelines</a>.",
+  "community_translations": "このページはコミュニティによって翻訳されています。貢献したい場合は、こちらをお読みください<a href=\"https://github.com/tc39/tc39.github.io/blob/master/translation_ja.md\">guidelines</a>.",
   "months": {
     "1": "1月",
     "2": "2月",
