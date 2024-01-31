@@ -24,9 +24,9 @@
   "champions": "支持者",
   "authors-and-champions": "提出者、及び支持者",
   "see-more": "全ステージのプロポーザルを見る",
-  "needs_translation": "Needs Translation",
+  "needs_translation": "翻訳が必要",
   "needs_translation_url": "https://github.com/tc39/tc39.github.io/blob/master/translation_ja.md",
-  "community_translations": "This page is translated by the community. If you want to contribute, read our <a href=\"https://github.com/tc39/tc39.github.io/blob/master/translation_ja.md\">guidelines</a>.",
+  "community_translations": "このページはコミュニティによって翻訳されています。貢献したい場合は、<a href=\"https://github.com/tc39/tc39.github.io/blob/master/translation_ja.md\">ガイドライン</a>をお読みください。",
   "months": {
     "1": "1月",
     "2": "2月",
