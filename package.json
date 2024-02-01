@@ -1,25 +1,26 @@
 {
   "name": "@tc39/tc39.github.io",
+  "private": true,
   "description": "Get involved in specifying JavaScript",
   "repository": {
     "type": "git",
     "url": "https://github.com/tc39/tc39.github.io.git"
   },
   "scripts": {
-    "lint": "npm run lint:js && npm run lint:scss && npm run lint:format",
-    "lint:js": "eslint --ext=.js,.mjs .",
-    "lint:scss": "stylelint _sass",
-    "lint:format": "prettier --check . '!tc39-notes'",
+    "prebuild": "npm run sass",
+    "build": "eleventy",
     "fix": "npm run fix:js && npm run fix:scss && npm run fix:format",
+    "fix:format": "npm run lint:format -- --write",
     "fix:js": "npm run lint:js -- --fix",
     "fix:scss": "npm run lint:scss -- --fix",
-    "fix:format": "npm run lint:format -- --write",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npm run lint:js && npm run lint:scss && npm run lint:format",
+    "lint:format": "prettier --check . '!tc39-notes'",
+    "lint:js": "eslint --ext=.js,.mjs .",
+    "lint:scss": "stylelint _sass",
     "sass": "sass --style=compressed _sass/style.scss assets/css/style.css",
     "sass:watch": "sass --style=compressed _sass/style.scss assets/css/style.css --watch",
-    "build": "npx @11ty/eleventy",
-    "prebuild": "npm run sass",
-    "start": "npx @11ty/eleventy --serve --watch"
+    "start": "eleventy --serve --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "@11ty/eleventy": "2.0.1",
@@ -37,6 +38,5 @@
   },
   "engines": {
     "node": ">=20"
-  },
-  "private": true
+  }
 }
