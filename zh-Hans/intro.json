@@ -6,7 +6,7 @@
   },
   "contribute": {
     "title": "贡献",
-    "desc": "TC39 欢迎贡献。您可以通过对提案提供反馈、改进文档、编写测试或实现，或提出语言特性的想法来提供帮助。详情请看我们的<a href=\"https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md\">贡献者指南</a>。",
+    "desc": "TC39 欢迎贡献。您可以通过对提案提供反馈、改进文档、编写测试或实现，或提出语言特性的想法来提供帮助。详情请看我们的<a href=\"https://github.com/tc39/ecma262/blob/main/CONTRIBUTING.md\">贡献者指南</a>。",
     "join-ecma": "要以代表的身份参加 TC39 会议，您需要是 Ecma International 的会员组织的成员（雇员、学者等）。详见：<a href=\"https://ecma-international.org/memento/join.htm\">加入 Ecma</a>。"
   },
   "specs": {

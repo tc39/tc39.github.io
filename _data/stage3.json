@@ -6,7 +6,7 @@
       {
         "month": 5,
         "year": 2017,
-        "url": "https://github.com/tc39/notes/blob/master/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3"
+        "url": "https://github.com/tc39/notes/blob/main/meetings/2017-05/may-25.md#15ia-regexp-legacy-features-for-stage-3"
       }
     ],
     "has_specification": false,
@@ -23,7 +23,7 @@
       {
         "month": 11,
         "year": 2018,
-        "url": "https://github.com/tc39/notes/blob/master/meetings/2018-11/nov-28.md#hash-bang-grammar"
+        "url": "https://github.com/tc39/notes/blob/main/meetings/2018-11/nov-28.md#hash-bang-grammar"
       }
     ],
     "has_specification": true,
@@ -39,7 +39,7 @@
       {
         "month": 12,
         "year": 2019,
-        "url": "https://github.com/tc39/notes/blob/master/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3"
+        "url": "https://github.com/tc39/notes/blob/main/meetings/2019-12/december-4.md#atomicswaitasync-for-stage-3"
       }
     ],
     "has_specification": true,
@@ -77,7 +77,7 @@
       {
         "month": 1,
         "year": 2021,
-        "url": "https://github.com/tc39/notes/blob/master/meetings/2021-01/jan-25.md#json-modules-for-stage-3"
+        "url": "https://github.com/tc39/notes/blob/main/meetings/2021-01/jan-25.md#json-modules-for-stage-3"
       }
     ],
     "has_specification": true,
@@ -108,7 +108,7 @@
       {
         "month": 3,
         "year": 2021,
-        "url": "https://github.com/tc39/notes/blob/master/meetings/2021-03/mar-9.md#temporal-for-stage-3"
+        "url": "https://github.com/tc39/notes/blob/main/meetings/2021-03/mar-9.md#temporal-for-stage-3"
       }
     ],
     "tests": [

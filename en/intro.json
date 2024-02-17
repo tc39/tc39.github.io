@@ -6,7 +6,7 @@
   },
   "contribute": {
     "title": "Contribute",
-    "desc": "TC39 welcomes contributions from the JavaScript community, whether it is feedback on existing proposals, improved documentation, testing, implementations, or even language feature ideas. See our <a href=\"https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md\">contributor guide</a> for details.",
+    "desc": "TC39 welcomes contributions from the JavaScript community, whether it is feedback on existing proposals, improved documentation, testing, implementations, or even language feature ideas. See our <a href=\"https://github.com/tc39/ecma262/blob/main/CONTRIBUTING.md\">contributor guide</a> for details.",
     "join-ecma": "To participate in TC39 meetings as a member, <a href=\"https://ecma-international.org/memento/join.htm\">join Ecma</a>."
   },
   "specs": {

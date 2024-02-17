@@ -6,7 +6,7 @@
   },
   "contribute": {
     "title": "コントリビュート",
-    "desc": "既存のプロポーザルに対するフィードバック、ドキュメントの改善、テスト、実装、さらには言語機能に関するアイデアなど、JavaScriptコミュニティからのコントリビュートをTC39は歓迎します。詳細については、<a href=\"https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md\">コントリビュータガイド</a>をご覧ください。",
+    "desc": "既存のプロポーザルに対するフィードバック、ドキュメントの改善、テスト、実装、さらには言語機能に関するアイデアなど、JavaScriptコミュニティからのコントリビュートをTC39は歓迎します。詳細については、<a href=\"https://github.com/tc39/ecma262/blob/main/CONTRIBUTING.md\">コントリビュータガイド</a>をご覧ください。",
     "join-ecma": "TC39のミーティングにメンバーとして参加するには、<a href=\"https://ecma-international.org/memento/join.htm\">Ecmaに参加</a>してください。"
   },
   "specs": {
