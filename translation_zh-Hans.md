@@ -21,7 +21,7 @@ clone the [english language directory](_data/en) or any other language to start 
 Once you have created your folder, you will want to translate all text into your language. You will
 also want to copy this readme file and translate it, so others can help you.
 
-With that finished, add your language to the [language list](https://github.com/tc39/tc39.github.io/blob/master/_config.yml#L21) and [language file](_data/languages.yml) of the site. You will need a reviewer to proof read your translations, and request a review from @codehag to make sure everything looks right.
+With that finished, add your language to the [language file](_data/languages.yml) of the site. You will need a reviewer to proof read your translations, and request a review from @codehag to make sure everything looks right.
 
 ## Active reviewers
 
