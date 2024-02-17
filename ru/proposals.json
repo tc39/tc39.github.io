@@ -25,8 +25,8 @@
   "authors-and-champions": "Авторы и чемпионы",
   "see-more": "Предложения на всех этапах",
   "needs_translation": "Требует перевода",
-  "needs_translation_url": "https://github.com/tc39/tc39.github.io/blob/master/translation_ru.md",
-  "community_translations": "Эта страница переведена сообществом. Если Вы хотите сделать вклад, прочитайте наши <a href=\"https://github.com/tc39/tc39.github.io/blob/master/translation_ru.md\">гайдлайны</a>.",
+  "needs_translation_url": "https://github.com/tc39/tc39.github.io/blob/main/translation_ru.md",
+  "community_translations": "Эта страница переведена сообществом. Если Вы хотите сделать вклад, прочитайте наши <a href=\"https://github.com/tc39/tc39.github.io/blob/main/translation_ru.md\">гайдлайны</a>.",
   "months": {
     "1": "январь",
     "2": "февраль",
