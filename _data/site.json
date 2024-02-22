@@ -4,8 +4,8 @@
   "navigation": {
     "TC39": {
       "title": "TC39",
-      "agenda": "Upcoming Agenda",
-      "notes": "Recent Meeting Notes",
+      "agenda": "Meeting Agendas",
+      "notes": "Meeting Notes",
       "sub-menu": "Toggle sub-menu for TC39"
     },
     "specs": {

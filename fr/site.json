@@ -4,8 +4,8 @@
   "navigation": {
     "TC39": {
       "title": "TC39",
-      "agenda": "Agenda à venir",
-      "notes": "Notes de réunions récentes",
+      "agenda": "Meeting Agendas",
+      "notes": "Meeting Notes",
       "sub-menu": "Basculer le sous-menu pour TC39"
     },
     "specs": {

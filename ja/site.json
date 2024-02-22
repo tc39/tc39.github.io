@@ -4,8 +4,8 @@
   "navigation": {
     "TC39": {
       "title": "TC39",
-      "agenda": "今後の議題",
-      "notes": "直近の議事録",
+      "agenda": "Meeting Agendas",
+      "notes": "Meeting Notes",
       "sub-menu": "TC39のサブメニューを表示する"
     },
     "specs": {

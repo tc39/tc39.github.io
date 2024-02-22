@@ -4,8 +4,8 @@
   "navigation": {
     "TC39": {
       "title": "TC39",
-      "agenda": "下一次会议的议程",
-      "notes": "历史会议记录",
+      "agenda": "Meeting Agendas",
+      "notes": "Meeting Notes",
       "sub-menu": "展开 “TC39” 的子列表"
     },
     "specs": {
