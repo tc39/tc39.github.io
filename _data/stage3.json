@@ -130,7 +130,7 @@
       {
         "month": 5,
         "year": 2021,
-        "url": "https://github.com/tc39/notes/blob/HEAD/meetings/2021-05/may-25.md#resizable-arraybuffers-for-stage-3"
+        "url": "https://github.com/tc39/notes/blob/main/meetings/2021-05/may-25.md#resizable-arraybuffers-for-stage-3"
       }
     ]
   },
@@ -147,7 +147,7 @@
       {
         "month": 7,
         "year": 2021,
-        "url": "https://github.com/tc39/notes/blob/HEAD/meetings/2021-07/july-14.md#array-find-from-last"
+        "url": "https://github.com/tc39/notes/blob/main/meetings/2021-07/july-14.md#array-find-from-last"
       }
     ]
   },
@@ -164,7 +164,7 @@
       {
         "month": 8,
         "year": 2021,
-        "url": "https://github.com/tc39/notes/blob/HEAD/meetings/2021-08/aug-31.md#realms-renaming-bikeshedding-thread"
+        "url": "https://github.com/tc39/notes/blob/main/meetings/2021-08/aug-31.md#realms-renaming-bikeshedding-thread"
       }
     ]
   },
