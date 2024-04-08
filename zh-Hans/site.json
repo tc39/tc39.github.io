@@ -4,8 +4,8 @@
   "navigation": {
     "TC39": {
       "title": "TC39",
-      "agenda": "Meeting Agendas",
-      "notes": "Meeting Notes",
+      "agenda": "会议日程",
+      "notes": "会议记录",
       "sub-menu": "展开 “TC39” 的子列表"
     },
     "specs": {
@@ -14,7 +14,7 @@
       "ecma-262": "ECMA-262, ECMAScript",
       "ecma-402": "ECMA-402, 国际化 API",
       "ecma-404": "ECMA-404, JSON",
-      "ecma-414": "ECMA-414, ECMAScript Specification Suite",
+      "ecma-414": "ECMA-414, ECMAScript 规范套件",
       "sub-menu": "展开 “规范文件” 的子列表"
     },
     "contribute": {

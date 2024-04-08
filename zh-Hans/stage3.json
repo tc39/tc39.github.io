@@ -19,23 +19,35 @@
     "title": "import 断言",
     "description": "该提案为 `import` 语句添加了断言语法。如果模块不符合期望的断言，则导入会失败。"
   },
-  "proposal-json-modules": { "title": "JSON Modules", "description": null },
+  "proposal-json-modules": { "title": "JSON 模块", "description": "该提案添加了将 JSON 文件当成模块导入的功能。" },
   "proposal-private-fields-in-in": {
-    "title": "Ergonomic Brand Checks",
-    "description": null
+    "title": "符合人体工学的对象种类检查",
+    "description": "提供符合人体工学的对象检查，而不需要用到 try-catch"
   },
   "proposal-class-static-block": {
-    "title": "Class Static Block",
-    "description": null
+    "title": "类的静态初始化块",
+    "description": "该提案提供了一种在类的定义时执行额外初始化代码的办法。这不是公共字段的替代品，因为公共字段提供了可静态分析的信息、能被装饰器装饰。这被用于解决一些现有的问题。"
   },
-  "proposal-error-cause": { "title": "Error Cause", "description": null },
-  "proposal-temporal": { "title": "Temporal", "description": null },
+  "proposal-error-cause": { "title": "Error Cause", "description": "Error 是用来表示异常的对象。为了帮助诊断，错误会包含错误消息等上下文信息。如果错误是从更深层的内部方法中抛出的，目前没有方法来简单的附加额外信息。这个提案添加了 cause 来表明这个错误的来源错误。" },
+  "proposal-temporal": { "title": "Temporal", "description": "Date 是 ECMAScript 中很长时间的痛点。这个提案通过添加新的 Temporal 对象，带来了现代的时间与日期 API。" },
   "proposal-accessible-object-hasownproperty": {
-    "title": "Accessible Object.prototype.hasOwnProperty()",
-    "description": "Proposal for an Object.hasOwn() method to make Object.prototype.hasOwnProperty() more accessible."
+    "title": "更容易的调用 Object.prototype.hasOwnProperty()",
+    "description": "该提案提出了 Object.hasOwn() 作为 Object.prototype.hasOwnProperty() 更容易调用的替代品。"
   },
   "proposal-resizablearraybuffer": {
-    "title": "In-Place Resizable and Growable ArrayBuffers",
-    "description": null
+    "title": "原地调整大小的 ArrayBuffer",
+    "description": "ArrayBuffer 使得二进制管理变得方便。该提案扩展了 ArrayBuffer 构造器的功能，使得其可以设置最大大小，并且在未来进行扩容和收缩。ShareArrayBuffer 也支持同样的操作，但是只能扩容不能收缩。该提案同时还添加了 tranfer 方法来进行零拷贝的移动、固定可变的 ArrayBuffer。"
+  },
+  "proposal-array-find-from-last": {
+    "title": "Array.prototype.findLast 和 Array.prototype.findLastIndex",
+    "description": "该提案允许在数组中找到第一个或最后一个满足条件的元素的值或者索引。"
+  },
+  "proposal-shadowrealm": {
+    "title": "ShadowRealm API",
+    "description": "ShadowRealms 是一个独立的全局环境，拥有它自己的全局对象和内置函数。"
+  },
+  "proposal-array-grouping": {
+    "title": "Array Grouping",
+    "description": "该提案使给数组分组更加容易。"
   }
 }
