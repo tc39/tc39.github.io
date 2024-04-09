@@ -1,4 +1,4 @@
-const EleventyFetch = require('@11ty/eleventy-fetch');
+const EleventyFetch = require("@11ty/eleventy-fetch");
 
 function arrayEquals(a, b) {
   return (
@@ -9,10 +9,10 @@ function arrayEquals(a, b) {
   );
 }
 
-module.exports = async function () {
-  let json = await EleventyFetch('https://tc39.es/dataset/proposals.json', {
-    duration: '1h', // 1 day
-    type: 'json', // also supports "text" or "buffer"
+module.exports = async () => {
+  const json = await EleventyFetch("https://tc39.es/dataset/proposals.json", {
+    duration: "1h", // 1 day
+    type: "json", // also supports "text" or "buffer"
   });
 
   const stage3 = json.filter((v) => v.stage === 3);
