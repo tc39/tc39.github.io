@@ -166,8 +166,8 @@
         width: 1.2rem;
         height: 1.2em;
         margin-left: 0.5rem;
-        content: '';
-        background: url('../img/menu-down.svg') no-repeat 20%;
+        content: "";
+        background: url("../img/menu-down.svg") no-repeat 20%;
         background-size: 1.2rem;
         transition: transform 600ms ease;
 
@@ -175,7 +175,7 @@
           transform: rotateX(180deg);
         }
 
-        [dir='rtl'] & {
+        [dir="rtl"] & {
           float: left;
           margin-right: 0.5rem;
           margin-left: 0;

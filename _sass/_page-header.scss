@@ -10,7 +10,7 @@
     .page-menu {
       margin-left: $spacing;
 
-      [dir='rtl'] & {
+      [dir="rtl"] & {
         margin-right: $spacing;
         margin-left: 0;
       }
@@ -24,7 +24,7 @@
       margin-left: $spacing;
       font-size: 1.1em;
 
-      [dir='rtl'] & {
+      [dir="rtl"] & {
         margin-right: $spacing;
         margin-left: 0;
       }
