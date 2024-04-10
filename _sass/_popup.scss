@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
 
-  input[type='checkbox'] + label {
+  input[type="checkbox"] + label {
     position: absolute;
     transition:
       opacity 0.3s ease-in-out,
@@ -12,7 +12,7 @@
     will-change: opacity, transform;
   }
 
-  input[type='checkbox']:checked + label {
+  input[type="checkbox"]:checked + label {
     opacity: 0;
     transform: translateY(100%);
   }
