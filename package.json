@@ -26,7 +26,7 @@
     "@11ty/eleventy": "2.0.1",
     "@11ty/eleventy-fetch": "4.0.1",
     "@primer/octicons": "19.9.0",
-    "eslint": "8.57.0",
+    "eslint": "9.1.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-compat": "4.2.0",
     "eslint-plugin-prettier": "5.1.3",
