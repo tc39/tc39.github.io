@@ -4,8 +4,8 @@
   "navigation": {
     "TC39": {
       "title": "TC39",
-      "agenda": "Meeting Agendas",
-      "notes": "Meeting Notes",
+      "agenda": "Meeting-Agenden",
+      "notes": "Meeting-Notizen",
       "sub-menu": "TC39 Untermenü umschalten"
     },
     "specs": {
@@ -30,7 +30,7 @@
     "open": "Menü öffnen"
   },
   "footer": {
-    "connect": "Verbinden",
+    "connect": "Vernetzen",
     "contribute": "Mitmachen",
     "standards": "Standards",
     "proposals": "Vorschläge",
