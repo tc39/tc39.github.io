@@ -24,9 +24,9 @@
   "champions": "Meister*innen",
   "authors-and-champions": "Autor*innen und Meister*innen",
   "see-more": "Siehe Vorschläge in allen Phasen",
-  "needs_translation": "Needs Translation",
+  "needs_translation": "Übersetzungen gesucht",
   "needs_translation_url": "https://github.com/tc39/tc39.github.io/blob/main/translation_de.md",
-  "community_translations": "This page is translated by the community. If you want to contribute, read our <a href=\"https://github.com/tc39/tc39.github.io/blob/main/translation_de.md\">guidelines</a>.",
+  "community_translations": "Diese Seite wird durch die Allgemeinheit übersetzt. Möchtest du dazu beitragen, dann wirf einen Blick auf unsere <a href=\"https://github.com/tc39/tc39.github.io/blob/main/translation_de.md\">Richtlinien</a>.",
   "months": {
     "1": "Januar",
     "2": "Februar",
