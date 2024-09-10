@@ -1,0 +1,16 @@
+{
+  "TC39": {
+    "title": "TC39",
+    "desc": "Ecma International TC39 — це група, що складається із JavaScript-розробників, авторів імплементацій, дослідників та інших учасників, співпрацюючих із спільнотою для підтримки та розвитку мови програмування JavaScript.",
+    "ecma-logo": "Ми є частиною <br/> <a class=\"ecma-logo-box\" href=\"https://www.ecma-international.org/\"> <img src=\"/assets/img/ecma-logo.svg\" alt=\"Ecma International\" /></a>"
+  },
+  "contribute": {
+    "title": "Взяти участь",
+    "desc": "TC39 вітає будь-яку допомогу від спільноти JavaScript: відгуки та думки про існуючі пропозиції, покращення документації, тестування або імплеметації, або навіть ідеї для нових можливостей мови. Подробиці дивіться в нашему <a href=\"https://github.com/tc39/ecma262/blob/main/CONTRIBUTING.md\">довіднику для бажаючих взяти участь у проекті</a>.",
+    "join-ecma": "для участі у засіданнях TC39 як член комітету, необхідно <a href=\"https://ecma-international.org/memento/join.htm\">приєднатись до Ecma</a>."
+  },
+  "specs": {
+    "title": "Специфікації",
+    "desc": "Ми розробляємо специфікацію JavaScript (формально, ECMAScript) <a href=\"https://github.com/tc39/ecma262/\">на GitHub</a> та проводимо зустрічі кожні два місяці для обговорення пропозицій. Щоб дізнатись більше про процес, будь ласка, ознайомтесь з <a href=\"https://tc39.es/process-document/\">шістьма етапами</a> для нових <a href=\"https://github.com/tc39/proposals/\">пропозицій щодо покращення та розвитку мови</a>. Читайте наші <a href=\"https://github.com/tc39/agendas/\">програми засідань</a> та <a href=\"https://github.com/tc39/notes/\">протоколи зустрічей</a> для отримання додаткової іформації."
+  }
+}
