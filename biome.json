@@ -1,8 +1,11 @@
 {
   "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
+  "files": {
+    "ignore": ["assets/css"]
+  },
   "formatter": {
     "enabled": true,
-    "indentStyle": "space"
+    "useEditorconfig": true
   },
   "linter": {
     "enabled": true,
