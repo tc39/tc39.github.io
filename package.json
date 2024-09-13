@@ -12,7 +12,7 @@
     "fix": "npm run fix:biome & npm run fix:scss",
     "fix:biome": "npm run lint:biome -- --fix",
     "fix:scss": "npm run lint:scss -- --fix",
-    "lint": "npm run lint:biome & npm run lint:scss",
+    "lint": "npm run lint:biome && npm run lint:scss",
     "lint:biome": "biome check",
     "lint:scss": "stylelint _sass",
     "sass": "sass --style=compressed _sass/style.scss assets/css/style.css",
