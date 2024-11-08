@@ -1,7 +1,7 @@
-const octicons = require("@primer/octicons");
+import octicons from "@primer/octicons";
 
 // @ts-check
-module.exports = {
+export default {
   commentDiscussion: octicons["comment-discussion"].heights[16].path,
   markGithub: octicons["mark-github"].heights[16].path,
 };

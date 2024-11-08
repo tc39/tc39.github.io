@@ -1,4 +1,4 @@
-module.exports = (eleventyConfig) => {
+export default (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("favicon*");
   return {

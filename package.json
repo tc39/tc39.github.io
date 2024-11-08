@@ -6,6 +6,7 @@
     "type": "git",
     "url": "https://github.com/tc39/tc39.github.io.git"
   },
+  "type": "module",
   "scripts": {
     "prebuild": "npm run sass",
     "build": "eleventy",
