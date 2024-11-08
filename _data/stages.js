@@ -1,4 +1,4 @@
-const EleventyFetch = require("@11ty/eleventy-fetch");
+import EleventyFetch from "@11ty/eleventy-fetch";
 
 function arrayEquals(a, b) {
   return (
@@ -9,7 +9,7 @@ function arrayEquals(a, b) {
   );
 }
 
-module.exports = async () => {
+export default async () => {
   const json = await EleventyFetch("https://tc39.es/dataset/proposals.json", {
     duration: "1h", // 1 day
     type: "json", // also supports "text" or "buffer"
