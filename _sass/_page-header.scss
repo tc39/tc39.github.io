@@ -1,10 +1,12 @@
+@use "variables";
+
 .page-header {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   background: inherit;
 
-  @media (min-width: $bp-tablet) {
+  @media (min-width: variables.$bp-tablet) {
     $spacing: 30px;
 
     .page-menu {
@@ -17,7 +19,7 @@
     }
   }
 
-  @media (min-width: $bp-desktop) {
+  @media (min-width: variables.$bp-desktop) {
     $spacing: 90px;
 
     .page-menu {

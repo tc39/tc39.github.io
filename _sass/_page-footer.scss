@@ -1,8 +1,9 @@
 @use "sass:color";
+@use "variables";
 
 .synopsis {
   width: 100%;
-  padding: 0 4% $grid-gutter;
+  padding: 0 4% variables.$grid-gutter;
   overflow: auto;
   clear: both;
   font-weight: 400;
@@ -16,42 +17,44 @@
 
 .synopsis a,
 .synopsis h3 {
-  font-weight: $font-weight-regular;
+  font-weight: variables.$font-weight-regular;
 }
 
 .page-footer {
   width: 100%;
   min-height: 100px;
   font-size: 12px;
-  color: $color-dim-gray;
+  color: variables.$color-dim-gray;
 }
 
 .page-footer h3 {
   padding-bottom: 1em;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
-  border-bottom: 1px solid color.mix($color-bg, $color-dim-gray, $weight: 80%);
+  border-bottom: 1px solid
+    color.mix(variables.$color-bg, variables.$color-dim-gray, $weight: 80%);
 }
 
-@media (min-width: $bp-tablet) {
+@media (min-width: variables.$bp-tablet) {
   .page-footer h3 {
     margin-top: 0;
   }
 
   .page-footer .synopsis .g-col-3:not(:last-child) {
-    padding-right: $grid-gutter;
-    border-right: solid 1px color.mix($color-bg, $color-dim-gray, $weight: 80%);
+    padding-right: variables.$grid-gutter;
+    border-right: solid 1px
+      color.mix(variables.$color-bg, variables.$color-dim-gray, $weight: 80%);
   }
 
   .page-footer .synopsis .g-col-3:not(:first-child) {
-    padding-left: $grid-gutter;
+    padding-left: variables.$grid-gutter;
   }
 }
 
 .page-footer a {
-  font-weight: $font-weight-regular;
+  font-weight: variables.$font-weight-regular;
   line-height: 24px;
-  color: $color-link;
+  color: variables.$color-link;
   text-decoration: underline;
 
   .icon {
@@ -61,13 +64,13 @@
   }
 
   .icon path {
-    fill: $color-dim-gray;
+    fill: variables.$color-dim-gray;
   }
 
   &:active .icon path,
   &:focus .icon path,
   &:hover .icon path {
-    fill: $color-link;
+    fill: variables.$color-link;
   }
 
   span {
@@ -97,10 +100,11 @@
 }
 
 .page-footer .grid-container {
-  padding: $grid-gutter 0;
+  padding: variables.$grid-gutter 0;
   margin: 0 auto;
   overflow: auto;
-  border-top: solid 1px color.mix($color-bg, $color-dim-gray, $weight: 80%);
+  border-top: solid 1px
+    color.mix(variables.$color-bg, variables.$color-dim-gray, $weight: 80%);
 }
 
 .page-footer .grid-start {
@@ -114,7 +118,7 @@
   text-align: center;
 }
 
-@media (min-width: $bp-tablet) {
+@media (min-width: variables.$bp-tablet) {
   .page-footer .grid-start {
     float: left;
     text-align: left;

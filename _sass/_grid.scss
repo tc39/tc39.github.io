@@ -1,15 +1,16 @@
 @use "sass:math";
+@use "variables";
 
 .intro {
-  margin: 0 math.div($grid-gutter, -2) (2 * $grid-gutter);
+  margin: 0 math.div(variables.$grid-gutter, -2) (2 * variables.$grid-gutter);
 
   [class*="g-col-"] {
-    padding: 0 math.div($grid-gutter, 2);
+    padding: 0 math.div(variables.$grid-gutter, 2);
   }
 }
 
 .g-row {
-  @media (min-width: $bp-tablet) {
+  @media (min-width: variables.$bp-tablet) {
     display: flex;
     flex-direction: row;
 

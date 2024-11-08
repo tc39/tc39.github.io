@@ -1,3 +1,5 @@
+@use "variables";
+
 $svg-height: 24;
 $trans-timing: 600ms;
 
@@ -51,7 +53,7 @@ $trans-timing: 600ms;
 
       &:hover {
         font-weight: 500;
-        color: $color-primary;
+        color: variables.$color-primary;
         text-decoration: none;
       }
     }
@@ -97,8 +99,8 @@ $trans-timing: 600ms;
     margin: 0;
     overflow: hidden;
     list-style-type: none;
-    background: $color-submenu-bg;
-    border-bottom: 1px solid $color-spacer;
+    background: variables.$color-submenu-bg;
+    border-bottom: 1px solid variables.$color-spacer;
     transition: max-height $trans-timing ease;
 
     [dir="rtl"] & {
@@ -126,7 +128,7 @@ $trans-timing: 600ms;
       }
 
       &::after {
-        @include svg-menu-icon($color-tc39);
+        @include svg-menu-icon(variables.$color-tc39);
 
         display: block;
         width: 1.5rem;
@@ -142,7 +144,7 @@ $trans-timing: 600ms;
       min-width: 150px;
       padding: 10px;
       font-weight: 600;
-      color: $color-nav;
+      color: variables.$color-nav;
       text-decoration: none;
       cursor: pointer;
 
@@ -159,8 +161,8 @@ $trans-timing: 600ms;
 
       &:hover,
       &:focus {
-        font-weight: $font-weight-semi-bold;
-        color: $color-primary;
+        font-weight: variables.$font-weight-semi-bold;
+        color: variables.$color-primary;
         text-decoration: none;
       }
       /* stylelint-disable-next-line no-descending-specificity */
@@ -190,7 +192,7 @@ $trans-timing: 600ms;
       }
     }
 
-    @media (min-width: $bp-desktop) {
+    @media (min-width: variables.$bp-desktop) {
       &-link {
         padding: 10px 40px;
       }
@@ -204,25 +206,25 @@ $trans-timing: 600ms;
     }
   }
 
-  @media (min-width: $bp-tablet) {
+  @media (min-width: variables.$bp-tablet) {
     $mt: 73.6px;
 
     margin-top: $mt;
-    border-bottom: 1px solid $color-spacer;
+    border-bottom: 1px solid variables.$color-spacer;
 
     .submenu {
       position: absolute;
       font-size: 16px;
-      background: $color-submenu-bg;
-      border-top: 2px solid $color-spacer;
+      background: variables.$color-submenu-bg;
+      border-top: 2px solid variables.$color-spacer;
 
       &-toggle {
         display: none;
       }
 
       &-item {
-        border-bottom: 1px solid $color-spacer;
-        border-left: 4px solid $color-link;
+        border-bottom: 1px solid variables.$color-spacer;
+        border-left: 4px solid variables.$color-link;
       }
 
       &-item:last-child {
@@ -246,7 +248,7 @@ $trans-timing: 600ms;
       padding: 0;
       overflow: visible;
       text-align: start;
-      background: $color-submenu-bg;
+      background: variables.$color-submenu-bg;
 
       &-toggle {
         display: none;

@@ -1,3 +1,5 @@
+@use "variables";
+
 .logo-box {
   z-index: 3;
   flex-shrink: 0;
@@ -8,7 +10,7 @@
     height: 90px;
   }
 
-  @media (min-width: $bp-tablet) {
+  @media (min-width: variables.$bp-tablet) {
     img {
       width: 120px;
       height: 120px;
@@ -25,7 +27,7 @@
     width: 120px;
   }
 
-  @media (min-width: $bp-tablet) {
+  @media (min-width: variables.$bp-tablet) {
     img {
       width: 120px;
     }

@@ -1,10 +1,12 @@
+@use "variables";
+
 .featurelist {
   &__item {
     padding: 0 1rem;
     margin-bottom: 1.125rem;
     font-size: 0.9em;
     background-color: white;
-    border-bottom: 1px solid $color-spacer;
+    border-bottom: 1px solid variables.$color-spacer;
 
     &__info {
       max-height: 0;
@@ -44,23 +46,23 @@
         margin-top: 0.5rem;
         font-weight: 550;
         color: white;
-        background-color: $color-dim-gray;
-        border: 2px solid $color-dim-gray;
+        background-color: variables.$color-dim-gray;
+        border: 2px solid variables.$color-dim-gray;
         border-radius: 10px;
       }
     }
     /* stylelint-disable-next-line no-descending-specificity */
     &__translation a {
-      background-color: $tag-translation;
-      border: 2px solid $tag-translation;
+      background-color: variables.$tag-translation;
+      border: 2px solid variables.$tag-translation;
       border-radius: 10px;
 
       &:focus {
-        color: $tag-translation;
+        color: variables.$tag-translation;
       }
 
       &:hover {
-        color: $tag-translation;
+        color: variables.$tag-translation;
       }
     }
 
@@ -71,7 +73,7 @@
       clear: both;
       list-style: none;
 
-      @media (min-width: $bp-tablet) {
+      @media (min-width: variables.$bp-tablet) {
         float: right;
         padding: 0 5px;
         margin-top: 0.5rem;
@@ -90,44 +92,44 @@
     }
     /* stylelint-disable-next-line no-descending-specificity */
     &__tests a {
-      background-color: $tag-tests;
-      border: 2px solid $tag-tests;
+      background-color: variables.$tag-tests;
+      border: 2px solid variables.$tag-tests;
       border-radius: 10px;
 
       &:focus {
-        color: $tag-tests;
+        color: variables.$tag-tests;
       }
 
       &:hover {
-        color: $tag-tests;
+        color: variables.$tag-tests;
       }
     }
     /* stylelint-disable-next-line no-descending-specificity */
     &__spec a {
-      background-color: $tag-spec;
-      border: 2px solid $tag-spec;
+      background-color: variables.$tag-spec;
+      border: 2px solid variables.$tag-spec;
       border-radius: 10px;
 
       &:focus {
-        color: $tag-spec;
+        color: variables.$tag-spec;
       }
 
       &:hover {
-        color: $tag-spec;
+        color: variables.$tag-spec;
       }
     }
     /* stylelint-disable-next-line no-descending-specificity */
     &__presented a {
-      background-color: $tag-presented;
-      border: 2px solid $tag-presented;
+      background-color: variables.$tag-presented;
+      border: 2px solid variables.$tag-presented;
       border-radius: 10px;
 
       &:focus {
-        color: $tag-presented;
+        color: variables.$tag-presented;
       }
 
       &:hover {
-        color: $tag-presented;
+        color: variables.$tag-presented;
       }
     }
 
@@ -197,7 +199,7 @@
       padding: 0;
       list-style: none;
 
-      @media (min-width: $bp-tablet) {
+      @media (min-width: variables.$bp-tablet) {
         padding-inline-start: 2em;
       }
     }

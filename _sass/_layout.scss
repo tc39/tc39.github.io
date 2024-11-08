@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "variables";
 
 *,
 *::before,
@@ -15,15 +16,15 @@ body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  font-weight: $font-weight-regular;
+  font-weight: variables.$font-weight-regular;
   line-height: 1.5;
-  background: $color-bg;
+  background: variables.$color-bg;
 }
 
 .container {
   width: 100%;
   max-width: 1280px;
-  padding: 0 math.div($grid-gutter, 2);
+  padding: 0 math.div(variables.$grid-gutter, 2);
   margin: 0 auto;
 }
 
@@ -33,7 +34,7 @@ body {
   line-height: 54px;
 }
 
-@media (min-width: $bp-tablet) {
+@media (min-width: variables.$bp-tablet) {
   .container {
     padding: 0 45px;
   }

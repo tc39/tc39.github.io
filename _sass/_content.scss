@@ -1,3 +1,5 @@
+@use "variables";
+
 .main-content {
   padding: 50px 0;
   font-size: 1rem;
@@ -8,8 +10,8 @@
   h4,
   h5,
   h6 {
-    font-weight: $font-weight-semi-bold;
-    color: $color-text;
+    font-weight: variables.$font-weight-semi-bold;
+    color: variables.$color-text;
   }
 
   h3 {
@@ -17,20 +19,20 @@
     margin-right: -15px;
     margin-left: -15px;
     color: white;
-    background-color: $color-primary;
+    background-color: variables.$color-primary;
   }
 
   .section-headline {
     margin-top: 0;
     font-size: 2rem;
-    font-weight: $font-weight-semi-bold;
+    font-weight: variables.$font-weight-semi-bold;
   }
 
   p {
-    margin: 0 0 $spacing-paragraph;
+    margin: 0 0 variables.$spacing-paragraph;
   }
 
-  @media (min-width: $bp-tablet) {
+  @media (min-width: variables.$bp-tablet) {
     padding: 130px 0;
 
     .section-headline {
@@ -50,8 +52,8 @@
 }
 
 a {
-  font-weight: $font-weight-semi-bold;
-  color: $color-link;
+  font-weight: variables.$font-weight-semi-bold;
+  color: variables.$color-link;
 }
 
 .text-end {

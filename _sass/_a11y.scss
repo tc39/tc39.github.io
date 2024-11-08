@@ -1,3 +1,5 @@
+@use "variables";
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -15,7 +17,7 @@
 }
 
 .logo-box a:focus {
-  outline-color: $color-nav;
+  outline-color: variables.$color-nav;
 }
 
 .submenu {
