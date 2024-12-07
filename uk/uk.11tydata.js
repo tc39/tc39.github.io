@@ -1,12 +1,13 @@
-import { createRequire } from "node:module";
-
-const require = createRequire(import.meta.url);
+import intro from "./intro.json" with { type: "json" };
+import proposals from "./proposals.json" with { type: "json" };
+import site from "./site.json" with { type: "json" };
+import stage3 from "./stage3.json" with { type: "json" };
 
 export default {
-  intro: require("./intro.json"),
-  proposals: require("./proposals.json"),
-  site: require("./site.json"),
-  stage3: require("./stage3.json"),
+  intro: intro,
+  proposals: proposals,
+  site: site,
+  stage3: stage3,
   locale: "ua",
   lang: "ua",
 };
