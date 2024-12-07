@@ -39,8 +39,8 @@ This website is intended as a content website. While it is a landing page for th
 The website is built using [11ty](https://www.11ty.dev/) and requires a relatively up-to-date version of Node.js - preferably the version in [.nvmrc](./.nvmrc).
 
 ```sh
-npm ci       # install dependencies from package-lock.json
-npm start    # start 11ty server in watch mode
+npm ci    # install dependencies from package-lock.json
+npm start # start 11ty server in watch mode
 ```
 
 ### Data files

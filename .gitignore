@@ -1,5 +1,3 @@
-_site
-node_modules
-.bundle
-vendor
-.cache
+/_site/
+/.cache/
+/node_modules/
