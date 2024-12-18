@@ -29,7 +29,7 @@ merge commit).
 
 ### Code style
 
-The repo contains a [prettier](https://prettier.io/) and [stylelint](https://stylelint.io/) configuration.
+The repo contains a [Biome](https://biomejs.dev/) and [stylelint](https://stylelint.io/) configuration.
 Code style is checked via CI. To prevent unnecessary red builds you should check locally before committing via `npm run lint`.
 
 This website is intended as a content website. While it is a landing page for the Committee responsible for developing the language, our goal here is not to showcase what JavaScript can do, but to present an accessible interface to orient people looking for resources. In order to achieve this, the website intentionally uses as little JavaScript as possible.
