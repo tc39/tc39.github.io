@@ -4,8 +4,10 @@ on:
   - push
   - pull_request
 
+permissions: read-all
+
 jobs:
-  CI:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
