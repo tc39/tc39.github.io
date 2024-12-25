@@ -27,6 +27,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: package.json
+          check-latest: true
       - run: npm ci
       - run: npm run build
       - uses: actions/configure-pages@v5
