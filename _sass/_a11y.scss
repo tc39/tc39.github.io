@@ -5,9 +5,9 @@
   width: 1px;
   height: 1px;
   overflow: hidden;
+  white-space: nowrap;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(100%);
-  white-space: nowrap;
 }
 
 :focus {

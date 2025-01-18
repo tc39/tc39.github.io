@@ -27,8 +27,8 @@
         padding-left: 0.5rem;
         margin-top: 0.5rem;
         color: white;
-        text-decoration: none;
         word-break: break-all;
+        text-decoration: none;
         opacity: 1;
 
         &:hover {
@@ -68,16 +68,16 @@
 
     &__status {
       float: left;
+      clear: both;
       padding: 0;
       margin-top: 0;
-      clear: both;
       list-style: none;
 
       @media (min-width: variables.$bp-tablet) {
         float: right;
+        clear: none;
         padding: 0 5px;
         margin-top: 0.5rem;
-        clear: none;
       }
     }
 
@@ -142,16 +142,16 @@
     }
 
     &__desc {
+      clear: both;
       display: block;
       padding: 0;
       margin: 1em 0;
-      clear: both;
     }
 
     &__author {
+      clear: both;
       padding-top: 0;
       margin: 0;
-      clear: both;
       font-weight: 800;
     }
 
@@ -163,8 +163,8 @@
       cursor: pointer;
 
       &::before {
-        display: block;
         float: right;
+        display: block;
         width: 1.2rem;
         height: 1.2em;
         margin-left: 0.5rem;

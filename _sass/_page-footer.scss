@@ -2,10 +2,10 @@
 @use "variables";
 
 .synopsis {
+  clear: both;
   width: 100%;
   padding: 0 4% variables.$grid-gutter;
   overflow: auto;
-  clear: both;
   font-weight: 400;
 }
 
@@ -59,8 +59,8 @@
 
   .icon {
     float: left;
-    padding-right: 1em;
     clear: left;
+    padding-right: 1em;
   }
 
   .icon path {
