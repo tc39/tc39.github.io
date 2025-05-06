@@ -32,6 +32,6 @@
     "stylelint-config-standard-scss": "14.0.0"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   }
 }
