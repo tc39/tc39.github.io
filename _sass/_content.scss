@@ -26,6 +26,7 @@
     margin-top: 0;
     font-size: 2rem;
     font-weight: variables.$font-weight-semi-bold;
+    text-align: left;
   }
 
   p {
@@ -37,6 +38,14 @@
 
     .section-headline {
       border-bottom: none;
+    }
+
+    .intro .section-headline {
+      text-align: center;
+    }
+
+    .section-headline:not(.intro .section-headline) {
+      text-align: left;
     }
 
     h3 {
