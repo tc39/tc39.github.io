@@ -22,7 +22,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.1.0",
+    "@11ty/eleventy": "3.1.1",
     "@11ty/eleventy-fetch": "5.1.0",
     "@biomejs/biome": "^1.9.4",
     "@primer/octicons": "19.15.2",
