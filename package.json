@@ -28,7 +28,7 @@
     "@primer/octicons": "19.19.0",
     "sass-embedded": "1.93.2",
     "stylelint": "16.25.0",
-    "stylelint-config-recess-order": "7.3.0",
+    "stylelint-config-recess-order": "7.4.0",
     "stylelint-config-standard-scss": "16.0.0",
     "stylelint-order": "7.0.0"
   },
