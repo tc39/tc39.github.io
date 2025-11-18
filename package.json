@@ -24,7 +24,7 @@
   "devDependencies": {
     "@11ty/eleventy": "3.1.2",
     "@11ty/eleventy-fetch": "5.1.0",
-    "@biomejs/biome": "^2.2.7",
+    "@biomejs/biome": "^2.3.6",
     "@primer/octicons": "19.21.0",
     "sass-embedded": "1.93.3",
     "stylelint": "16.25.0",
