@@ -26,7 +26,7 @@
     "@11ty/eleventy-fetch": "5.1.1",
     "@biomejs/biome": "2.2.7",
     "@primer/octicons": "19.22.0",
-    "sass-embedded": "1.97.3",
+    "sass-embedded": "1.98.0",
     "stylelint": "17.4.0",
     "stylelint-config-recess-order": "7.6.1",
     "stylelint-config-standard-scss": "17.0.0",
