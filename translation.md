@@ -4,7 +4,7 @@ The translation of the TC39 web page aims to make the work of TC39 more accessib
 
 ## Adding a translation of a feature
 
-To translate a feature, edit the [stage 3 file](_data/en/stage3.yml) for that language. If a description field is empty, that proposal needs a translation. Once you finish the translation(s), you can open a pull request and ping a reviewer who can ok your translation.
+To translate a feature, edit the [stage 3 file](_data/en/stage3.json) for that language. If a description field is empty, that proposal needs a translation. Once you finish the translation(s), you can open a pull request and ping a reviewer who can ok your translation.
 
 ## Adding support for a new language
 
@@ -12,7 +12,7 @@ To add a new language, you will need to create a couple of files. A good way to 
 
 Once you have created your folder, you will want to translate all text into your language. You will also want to copy this readme file and translate it, so others can help you.
 
-With that finished, add your language to the [language file](_data/languages.yml) of the site. You will need a reviewer to proof read your translations, and request a review from @codehag to make sure everything looks right.
+With that finished, add your language to the [language file](_data/languages.json) of the site. You will need a reviewer to proof read your translations, and request a review from @codehag to make sure everything looks right.
 
 ## Active reviewers
 
@@ -22,26 +22,18 @@ To land your changes, you can request reviews from the following active reviewer
 
 - [@codehag](https://github.com/codehag)
 
-### German transation:
+### German Translation:
 
 - ...
-
-See the [German Translation documentation](translation_de.md) for more info.
 
 ### Japanese Translation:
 
 - [@smorimoto](https://github.com/smorimoto)
 
-See the [Japanese Translation documentation](translation_ja.md) for more info.
-
 ### Russian Translation:
 
 - [@chicoxyzzy](https://github.com/chicoxyzzy)
 
-See the [Russian Translation documentation](translation_ru.md) for more info.
-
-### Traditional Chinese Translation:
+### Simplified Chinese Translation:
 
 - ...
-
-See the [Traditional Chinese Translation documentation](translation_zh-Hans.md) for more info.
