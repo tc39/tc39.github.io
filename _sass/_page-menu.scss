@@ -4,6 +4,7 @@
   position: relative;
   z-index: 2;
   width: 100%;
+  anchor-name: --navigation;
   font-size: 1rem;
   line-height: 1.4;
   border-top: 1px solid variables.$color-spacer;
@@ -22,18 +23,6 @@
   .menu-item {
     min-width: 0;
     max-width: 100%;
-  }
-
-  .menu-dropdown {
-    position: relative;
-
-    &[open] {
-      z-index: 1;
-    }
-
-    .no-js & {
-      position: static;
-    }
   }
 
   .menu-link {
@@ -63,8 +52,13 @@
     }
   }
 
-  summary.menu-link {
+  .menu-toggle {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
     list-style: none;
+    background: none;
+    border: 0;
 
     &::-webkit-details-marker {
       display: none;
@@ -82,7 +76,7 @@
     }
   }
 
-  .menu-dropdown[open] > summary {
+  .menu-dropdown[open] > .menu-toggle {
     color: variables.$color-interaction-text;
     background: variables.$color-interaction-bg;
 
@@ -94,11 +88,8 @@
 
   .submenu {
     position: absolute;
-    inset-inline: 0 auto;
+    inset-inline: 0;
     top: calc(100% + 8px);
-    width: max-content;
-    min-width: min(16rem, var(--submenu-available-width, calc(100vw - 40px)));
-    max-width: min(18rem, var(--submenu-available-width, calc(100vw - 40px)));
     max-height: min(70vh, 32rem);
     padding: 6px;
     margin: 0;
@@ -109,23 +100,54 @@
     border: 1px solid variables.$color-spacer;
     border-radius: 6px;
     box-shadow: 0 8px 20px rgb(0 0 0 / 8%);
-    transform: translateX(var(--submenu-offset-x, 0));
-
-    .no-js & {
-      inset-inline: 0;
-      width: auto;
-      min-width: 0;
-      max-width: none;
-    }
   }
 
-  .menu-item-language .submenu {
-    inset-inline: auto 0;
-    min-width: min(12rem, var(--submenu-available-width, calc(100vw - 40px)));
+  @supports (inset-inline-start: anchor(start)) and
+    (width: anchor-size(--navigation inline)) and (max-block-size: stretch) and
+    (position-try-fallbacks: flip-block) {
+    .submenu[popover] {
+      --submenu-width: min(18rem, anchor-size(--navigation inline));
 
-    .no-js & {
-      inset-inline: 0;
-      min-width: 0;
+      position: fixed;
+      inset: auto;
+      inset-block: calc(anchor(end) + 8px) 8px;
+      inset-inline-start: clamp(
+        anchor(--navigation start),
+        anchor(start),
+        calc(anchor(--navigation end) - var(--submenu-width))
+      );
+      inline-size: var(--submenu-width);
+      block-size: max-content;
+      min-block-size: 4rem;
+      max-block-size: stretch;
+      position-anchor: auto;
+      position-try-fallbacks: flip-block;
+    }
+
+    .menu-item-language .submenu[popover] {
+      --submenu-width: min(12rem, anchor-size(--navigation inline));
+
+      inset-inline-start: clamp(
+        anchor(--navigation start),
+        calc(anchor(end) - var(--submenu-width)),
+        calc(anchor(--navigation end) - var(--submenu-width))
+      );
+    }
+
+    .menu-item:has(> :popover-open) > .menu-toggle {
+      color: variables.$color-interaction-text;
+      background: variables.$color-interaction-bg;
+
+      &::after {
+        margin-top: 3px;
+        transform: rotate(225deg);
+      }
+    }
+
+    @media (min-width: variables.$bp-tablet) {
+      .submenu[popover] {
+        --submenu-width: min(24rem, anchor-size(--navigation inline));
+      }
     }
   }
 
@@ -139,10 +161,6 @@
   @media (min-width: variables.$bp-tablet) {
     .menu {
       gap: 8px 12px;
-    }
-
-    .submenu {
-      max-width: min(24rem, var(--submenu-available-width, calc(100vw - 40px)));
     }
 
     .menu-item-language {

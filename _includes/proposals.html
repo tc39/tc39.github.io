@@ -17,7 +17,7 @@
       <strong> {{ proposals["how-to-read"]["tags"]["title"] }} </strong>
       <ul class="featurelist__legend__tags">
         <li>
-          {{ proposals["how-to-read"]["tags"]["last-presented"] }}:
+          <span>{{ proposals["how-to-read"]["tags"]["last-presented"] }}:</span>
           <div class="featurelist__item__presented featurelist__item__tag">
             <a title='{{ proposals["last-presented-alt"] }}'
               >{{ proposals["how-to-read"]["tags"]["last-presented-fake-date"]
@@ -26,7 +26,7 @@
           </div>
         </li>
         <li>
-          {{ proposals["how-to-read"]["tags"]["tests"] }}:
+          <span>{{ proposals["how-to-read"]["tags"]["tests"] }}:</span>
           <div class="featurelist__item__tests featurelist__item__tag">
             <a title='{{ proposals["tests-alt"] }}'>
               {{ proposals["tests"] }}
@@ -34,7 +34,7 @@
           </div>
         </li>
         <li>
-          {{ proposals["how-to-read"]["tags"]["spec"] }}:
+          <span>{{ proposals["how-to-read"]["tags"]["spec"] }}:</span>
           <div class="featurelist__item__spec featurelist__item__tag">
             <a title='{{ proposals["specification-alt"] }}'>
               {{ proposals["specification"] }}
@@ -49,48 +49,30 @@
 {% for proposal in stages %}
 <article class="featurelist__item">
   <div class="featurelist__item__intro">
-    <header class="g-row">
-      <h4 class="featurelist__item__title flex-grow">
+    <header class="featurelist__item__header">
+      <h4 class="featurelist__item__title">
         <a href="{{ proposal.url }}">{{ proposal.name }}</a>
       </h4>
-      <div class="featurelist__item__tags">
-        <ul class="featurelist__item__status featurelist__item__tags">
-          <!-- {% if proposal[1].presented | size %} {% for
-          presentation in proposal[1].presented %}
-          <li class="featurelist__item__presented featurelist__item__tag">
-            {%- if presentation.url -%}
-            <a
-              href="{{ presentation.url }}"
-              title='{{ proposals["last-presented-alt"] }}'
-            >
-              {{ proposals.months[presentation.month] }} {{ presentation.year}}
-            </a>
-            {%- else -%}
-            <span
-              >{{ proposals.months[presentation.month] }} {{
-              presentation.year}}</span
-            >
-            {%- endif -%}
-          </li>
-          {% endfor %} {% endif %}  -->
-          {% if proposal.tests | size %} {% for url in proposal.tests %}
-          <li class="featurelist__item__tests featurelist__item__tag">
-            <a href="{{ url }}" title='{{ proposals["test-alt"] }}'>
-              {{ proposals["tests"] }}
-            </a>
-          </li>
-          {% endfor %} {% endif %} {% if proposal['has-specification'] %}
-          <li class="featurelist__item__spec featurelist__item__tag">
-            <a
-              href="https://tc39.es/{{ proposal.id }}"
-              title='{{ proposals["specification-alt"] }}'
-            >
-              {{ proposals["specification"] }}
-            </a>
-          </li>
-          {% endif %}
-        </ul>
-      </div>
+      {% if proposal.tests.size > 0 or proposal['has-specification'] %}
+      <ul class="featurelist__item__tags">
+        {% if proposal.tests | size %} {% for url in proposal.tests %}
+        <li class="featurelist__item__tests featurelist__item__tag">
+          <a href="{{ url }}" title='{{ proposals["test-alt"] }}'>
+            {{ proposals["tests"] }}
+          </a>
+        </li>
+        {% endfor %} {% endif %} {% if proposal['has-specification'] %}
+        <li class="featurelist__item__spec featurelist__item__tag">
+          <a
+            href="https://tc39.es/{{ proposal.id }}"
+            title='{{ proposals["specification-alt"] }}'
+          >
+            {{ proposals["specification"] }}
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+      {% endif %}
     </header>
     <div class="featurelist__item__author">
       {% if proposal.authorsAndChampions %} {{
@@ -103,31 +85,7 @@
       proposals["champion"] }} {% endif %} {{ proposal.champions | join: ", " }}
       {% endif %} {% endif %}
     </div>
-    {% if proposal.description %}
     <div class="featurelist__item__desc">{{ proposal.description }}</div>
-    {% else %}
-    <div class="featurelist__item__desc">{{ proposal.description }}</div>
-    {% endif %}
-    <!-- {% if proposal[1].example %}
-    <div
-      class="featurelist__item__example"
-      aria-controls="example-{{ proposal[1].id }}"
-      aria-expanded="false"
-      role="button"
-      tabindex="0"
-      id="example-toggle-{{ proposal[1].id }}"
-    >
-      {{ proposals["show-example"] }}
-    </div>
-    <section
-      class="featurelist__item__info"
-      id="example-{{ proposal[1].id }}"
-      aria-hidden="true"
-      aria-labelledby="example-toggle-{{ proposal[1].id }}"
-    >
-      <pre><code class="js" tabindex="-1">{{ proposal[1].example }}</code></pre>
-    </section>
-    {% endif %} -->
   </div>
 </article>
 {% endfor %}

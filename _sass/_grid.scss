@@ -1,4 +1,3 @@
-@use "sass:math";
 @use "variables";
 
 .intro {
@@ -12,41 +11,5 @@
 
   @media (min-width: variables.$bp-tablet) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-.g-row {
-  @media (min-width: variables.$bp-tablet) {
-    display: flex;
-    flex-direction: row;
-
-    .flex-grow {
-      flex-grow: 1;
-    }
-
-    .flex-shrink {
-      flex-shrink: 1;
-    }
-
-    .g-col-2 {
-      flex: 0 0 200px;
-    }
-
-    .g-col-3 {
-      flex: 0 0 math.percentage(math.div(3, 12));
-    }
-
-    .g-col-4 {
-      flex: 0 0 math.percentage(math.div(4, 12));
-    }
-
-    .g-col-8 {
-      flex: 0 0 math.percentage(math.div(8, 12));
-    }
-
-    .g-col-10 {
-      flex: 0 0 math.percentage(math.div(10, 12));
-      flex-grow: 2;
-    }
   }
 }
