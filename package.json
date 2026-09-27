@@ -10,11 +10,11 @@
   "scripts": {
     "prebuild": "npm run sass",
     "build": "eleventy",
-    "fix": "npm run fix:biome & npm run fix:scss",
-    "fix:biome": "npm run lint:biome -- --fix",
+    "fix": "npm run fix:ultracite && npm run fix:scss",
+    "fix:ultracite": "ultracite fix",
     "fix:scss": "npm run lint:scss -- --fix",
-    "lint": "npm run lint:biome && npm run lint:scss",
-    "lint:biome": "biome check",
+    "lint": "npm run lint:ultracite && npm run lint:scss",
+    "lint:ultracite": "ultracite check",
     "lint:scss": "stylelint _sass",
     "sass": "sass --style=compressed _sass/style.scss assets/css/style.css",
     "sass:watch": "sass --style=compressed _sass/style.scss assets/css/style.css --watch",
@@ -24,13 +24,15 @@
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",
     "@11ty/eleventy-fetch": "5.1.3",
-    "@biomejs/biome": "2.2.7",
     "@primer/octicons": "19.38.0",
+    "oxfmt": "0.70.0",
+    "oxlint": "1.85.0",
     "sass-embedded": "1.104.1",
     "stylelint": "17.15.0",
     "stylelint-config-recess-order": "7.8.0",
     "stylelint-config-standard-scss": "17.0.0",
-    "stylelint-order": "8.1.1"
+    "stylelint-order": "8.1.1",
+    "ultracite": "7.12.0"
   },
   "engines": {
     "node": ">=24"

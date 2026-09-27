@@ -1,26 +1,30 @@
-function openMenu(menu) {
+const openMenu = (menu) => {
   menu.style.maxHeight = `${menu.scrollHeight}px`;
   setTimeout(() => {
     menu.style.maxHeight = "none";
   }, 600);
-}
+};
 
-function closeMenu(menu) {
+const closeMenu = (menu) => {
   menu.style.maxHeight = `${menu.scrollHeight}px`;
   setTimeout(() => {
     menu.style.maxHeight = "";
   }, 0);
-}
+};
 
-function toggleMenu(menu = document.querySelector("#menu")) {
-  const maxHeight = menu.style.maxHeight;
-  maxHeight ? closeMenu(menu) : openMenu(menu);
+const toggleMenu = (menu = document.querySelector("#menu")) => {
+  const { maxHeight } = menu.style;
+  if (maxHeight) {
+    closeMenu(menu);
+  } else {
+    openMenu(menu);
+  }
   menu.classList.toggle("open");
-}
+};
 
-function toggleProposal(item) {
+const toggleProposal = (item) => {
   const content = item.querySelector(".featurelist__item__info");
-  const maxHeight = content.style.maxHeight;
+  const { maxHeight } = content.style;
   content.style.maxHeight = maxHeight ? "" : `${content.scrollHeight}px`;
   content.setAttribute("aria-hidden", !!maxHeight);
   if (maxHeight) {
@@ -29,14 +33,14 @@ function toggleProposal(item) {
     content.removeAttribute("tabindex");
   }
   item.classList.toggle("open");
-}
+};
 
 /**
  * Represents the start of this application
  */
-function start() {
+const start = function start() {
   const items = document.querySelectorAll(
-    ".featurelist__item .featurelist__item__example",
+    ".featurelist__item .featurelist__item__example"
   );
 
   document.body.classList.remove("no-js");
@@ -78,6 +82,6 @@ function start() {
       t.classList.toggle("open");
     });
   }
-}
+};
 
 start();

@@ -4,7 +4,25 @@ updates:
     directory: /
     schedule:
       interval: daily
+    groups:
+      actions:
+        patterns:
+          - actions/*
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: daily
+    groups:
+      eleventy:
+        patterns:
+          - "@11ty/*"
+      oxc:
+        patterns:
+          - oxfmt
+          - oxlint
+      stylelint:
+        patterns:
+          - stylelint
+          - stylelint-config-recess-order
+          - stylelint-config-standard-scss
+          - stylelint-order
