@@ -9,18 +9,32 @@
   clip-path: inset(100%);
 }
 
-:focus {
-  outline-width: 0.125rem;
-  outline-style: solid;
-  outline-offset: 0.125rem;
+:focus-visible {
+  outline: 2px solid variables.$color-primary;
+  outline-offset: 3px;
 }
 
-.logo-box a:focus {
-  outline-color: variables.$color-nav;
+#content:focus {
+  outline: none;
 }
 
-.submenu {
-  :focus {
-    outline: 0;
+.skip-menu {
+  position: fixed;
+  inset-block-start: 12px;
+  inset-inline-start: 20px;
+  z-index: 3;
+  padding: 12px 16px;
+  color: variables.$color-text;
+  pointer-events: none;
+  background: white;
+  border: 1px solid variables.$color-spacer;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(calc(-100% - 16px));
+
+  &:focus {
+    pointer-events: auto;
+    opacity: 1;
+    transform: none;
   }
 }

@@ -1,19 +1,18 @@
 @use "variables";
 
 .logo-box {
-  z-index: 3;
   flex-shrink: 0;
 
   img {
     display: block;
-    width: 90px;
-    height: 90px;
+    width: 64px;
+    height: 64px;
   }
 
   @media (min-width: variables.$bp-tablet) {
     img {
-      width: 120px;
-      height: 120px;
+      width: 88px;
+      height: 88px;
     }
   }
 }

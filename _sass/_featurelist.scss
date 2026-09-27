@@ -2,11 +2,9 @@
 
 .featurelist {
   &__item {
-    padding: 0 1rem;
-    margin-bottom: 1.125rem;
-    font-size: 0.9em;
-    background-color: white;
-    border-bottom: 1px solid variables.$color-spacer;
+    padding: 24px 0;
+    font-size: 1rem;
+    border-top: 1px solid variables.$color-spacer;
 
     &__info {
       max-height: 0;
@@ -82,12 +80,10 @@
     }
 
     h4 {
-      display: inline-block;
-      padding-top: 0;
-      padding-bottom: 0;
-      margin-top: 1em;
-      margin-bottom: 0.5em;
-      font-size: 1.6em;
+      min-width: 0;
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+      line-height: 1.5;
       overflow-wrap: anywhere;
     }
     /* stylelint-disable-next-line no-descending-specificity */
@@ -144,15 +140,18 @@
     &__desc {
       clear: both;
       display: block;
+      max-width: 75ch;
       padding: 0;
-      margin: 1em 0;
+      margin: 12px 0 0;
     }
 
     &__author {
       clear: both;
       padding-top: 0;
       margin: 0;
-      font-weight: 800;
+      font-size: 0.875rem;
+      font-weight: variables.$font-weight-regular;
+      color: variables.$color-dim-gray;
     }
 
     &__example {
@@ -188,8 +187,14 @@
 
   &__legend {
     display: block;
-    margin-bottom: 4.5em;
-    font-size: 1.1em;
+    margin-bottom: 24px;
+    font-size: 0.875rem;
+
+    summary {
+      width: fit-content;
+      min-height: 44px;
+      padding: 10px 0;
+    }
 
     p {
       margin-top: 1em;
@@ -205,15 +210,15 @@
     }
   }
 
-  &__desc {
+  & > &__desc {
     display: block;
-    margin-top: 2em;
-    margin-bottom: 1.5em;
-    font-size: 1.1em;
+    max-width: 75ch;
+    margin: 0 0 8px;
   }
 
   &__more {
-    text-align: center;
+    padding-top: 24px;
+    text-align: start;
   }
 }
 

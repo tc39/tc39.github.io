@@ -1,298 +1,152 @@
 @use "variables";
 
-$svg-height: 24;
-$trans-timing: 600ms;
-
-@mixin svg-menu-icon($color: currentColor, $height: $svg-height) {
-  background: url("../img/menu.svg") no-repeat 50%;
-}
-
-@mixin rotate-submenu-toggle() {
-  transform: rotateX(180deg);
-}
-
-.skip-menu {
-  position: absolute;
-  top: 10px;
-  right: 84px;
-  z-index: 10;
-  opacity: 0;
-
-  &:focus {
-    opacity: 1;
-  }
-}
-
 .page-menu {
-  $mobile-mt: 15px;
-
+  position: relative;
+  z-index: 2;
   width: 100%;
-  margin-top: $mobile-mt;
-  font-size: 18px;
-  text-align: end;
-
-  .submenu {
-    flex: 0 0 100%;
-    max-height: 0;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    list-style: none;
-    transition: max-height $trans-timing ease;
-
-    &:focus-within {
-      max-height: none;
-    }
-
-    &-item {
-      width: 100%;
-    }
-
-    &-item a {
-      font-weight: 500;
-
-      &:hover {
-        font-weight: 500;
-        color: variables.$color-primary;
-        text-decoration: none;
-      }
-    }
-
-    &-toggle {
-      flex: 0 0 1.5rem;
-      padding: 0;
-      margin: 0 0 0 0.5rem;
-      cursor: pointer;
-      background: transparent;
-      border: none;
-
-      &::after {
-        display: block;
-        width: 1.5rem;
-        height: 1.5rem;
-        content: "";
-        background: url("../img/menu-down.svg") no-repeat 50%;
-        background-size: 1.5rem;
-        transition: transform $trans-timing ease;
-      }
-
-      &.open::after {
-        @include rotate-submenu-toggle;
-      }
-    }
-
-    &.open {
-      max-height: none;
-    }
-  }
+  font-size: 1rem;
+  line-height: 1.4;
+  border-top: 1px solid variables.$color-spacer;
+  border-bottom: 1px solid variables.$color-spacer;
 
   .menu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 2;
-    display: block;
-    width: 100%;
-    max-height: 0;
-    padding: ($svg-height + $mobile-mt) 20px 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    align-items: center;
+    padding: 8px 0;
     margin: 0;
-    overflow: hidden;
-    list-style-type: none;
-    background: variables.$color-submenu-bg;
-    border-bottom: 1px solid variables.$color-spacer;
-    transition: max-height $trans-timing ease;
+    list-style: none;
+  }
 
-    [dir="rtl"] & {
-      padding: ($svg-height + $mobile-mt) 0 10px 20px;
+  .menu-item {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .menu-dropdown {
+    position: relative;
+
+    &[open] {
+      z-index: 1;
     }
 
-    &:focus-within,
-    &:target {
-      max-height: none;
-    }
-
-    &-toggle {
-      position: relative;
-      z-index: 10;
-      display: inline-block;
-      padding: 10px;
-      margin: -10px;
-
-      &-text {
-        position: absolute;
-        width: 0;
-        height: 0;
-        overflow: hidden;
-        clip-path: inset(50%);
-      }
-
-      &::after {
-        @include svg-menu-icon(variables.$color-tc39);
-
-        display: block;
-        width: 1.5rem;
-        height: 1.5rem;
-        content: "";
-        background-size: 1.5rem;
-      }
-    }
-
-    &-link {
-      display: block;
-      flex: 0 0 calc(100% - 2rem);
-      min-width: 150px;
-      padding: 10px;
-      font-weight: 600;
-      color: variables.$color-nav;
-      text-decoration: none;
-      cursor: pointer;
-
-      &:focus {
-        ~ .submenu-toggle {
-          @include rotate-submenu-toggle;
-        }
-
-        ~ .submenu {
-          max-height: none;
-          overflow: visible;
-        }
-      }
-
-      &:hover,
-      &:focus {
-        font-weight: variables.$font-weight-semi-bold;
-        color: variables.$color-primary;
-        text-decoration: none;
-      }
-      /* stylelint-disable-next-line no-descending-specificity */
-      &__language {
-        min-width: 24px;
-        height: 40px;
-        margin-left: auto;
-      }
-    }
-
-    &-item {
-      display: block;
-
-      &.has-submenu {
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      &__language {
-        display: block;
-        width: 100%;
-        margin-left: auto;
-        /* stylelint-disable-next-line no-descending-specificity */
-        .submenu {
-          margin-left: 0;
-        }
-      }
-    }
-
-    @media (min-width: variables.$bp-desktop) {
-      &-link {
-        padding: 10px 40px;
-      }
+    .no-js & {
+      position: static;
     }
   }
 
-  &.open .menu-toggle,
-  &:focus-within .menu-toggle {
+  .menu-link {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 12px;
+    font-weight: variables.$font-weight-semi-bold;
+    color: variables.$color-nav;
+    text-align: start;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+    touch-action: manipulation;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:focus-visible {
+      color: variables.$color-primary;
+      outline-color: variables.$color-primary;
+      outline-offset: 2px;
+    }
+
+    &[aria-current="page"] {
+      color: variables.$color-interaction-text;
+      background: variables.$color-interaction-bg;
+    }
+  }
+
+  summary.menu-link {
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
     &::after {
-      @include svg-menu-icon;
+      flex: 0 0 6px;
+      width: 6px;
+      height: 6px;
+      margin-top: -3px;
+      content: "";
+      border-right: 1.5px solid currentcolor;
+      border-bottom: 1.5px solid currentcolor;
+      transform: rotate(45deg);
+    }
+  }
+
+  .menu-dropdown[open] > summary {
+    color: variables.$color-interaction-text;
+    background: variables.$color-interaction-bg;
+
+    &::after {
+      margin-top: 3px;
+      transform: rotate(225deg);
+    }
+  }
+
+  .submenu {
+    position: absolute;
+    inset-inline: 0 auto;
+    top: calc(100% + 8px);
+    width: max-content;
+    min-width: min(16rem, var(--submenu-available-width, calc(100vw - 40px)));
+    max-width: min(18rem, var(--submenu-available-width, calc(100vw - 40px)));
+    max-height: min(70vh, 32rem);
+    padding: 6px;
+    margin: 0;
+    overflow: auto;
+    overscroll-behavior: contain;
+    list-style: none;
+    background: variables.$color-submenu-bg;
+    border: 1px solid variables.$color-spacer;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgb(0 0 0 / 8%);
+    transform: translateX(var(--submenu-offset-x, 0));
+
+    .no-js & {
+      inset-inline: 0;
+      width: auto;
+      min-width: 0;
+      max-width: none;
+    }
+  }
+
+  .menu-item-language .submenu {
+    inset-inline: auto 0;
+    min-width: min(12rem, var(--submenu-available-width, calc(100vw - 40px)));
+
+    .no-js & {
+      inset-inline: 0;
+      min-width: 0;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .menu-link:hover {
+      color: variables.$color-interaction-text;
+      background: variables.$color-interaction-bg;
     }
   }
 
   @media (min-width: variables.$bp-tablet) {
-    $mt: 73.6px;
-
-    margin-top: $mt;
-    border-bottom: 1px solid variables.$color-spacer;
-
-    .submenu {
-      position: absolute;
-      font-size: 16px;
-      background: variables.$color-submenu-bg;
-      border-top: 2px solid variables.$color-spacer;
-
-      &-toggle {
-        display: none;
-      }
-
-      &-item {
-        border-bottom: 1px solid variables.$color-spacer;
-        border-left: 4px solid variables.$color-link;
-      }
-
-      &-item:last-child {
-        border-bottom: 1px solid transparent;
-      }
-
-      &-item:hover,
-      &-item:focus {
-        display: inline-block;
-        min-width: 120px;
-      }
+    .menu {
+      gap: 8px 12px;
     }
 
-    .menu {
-      position: relative;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      max-height: none;
-      padding: 0;
-      overflow: visible;
-      text-align: start;
-      background: variables.$color-submenu-bg;
+    .submenu {
+      max-width: min(24rem, var(--submenu-available-width, calc(100vw - 40px)));
+    }
 
-      &-toggle {
-        display: none;
-      }
-
-      &-item {
-        &.has-submenu {
-          display: block;
-        }
-
-        &:hover .submenu {
-          max-height: none;
-          overflow: visible;
-        }
-
-        &__language {
-          width: 50px;
-          margin-left: 0;
-          /* stylelint-disable-next-line no-descending-specificity */
-          .submenu {
-            margin-left: -105px;
-          }
-        }
-      }
-
-      &-link {
-        flex: none;
-
-        &__language {
-          flex-shrink: 1;
-          min-width: 50px;
-          height: 47px;
-          padding: 10px 0;
-          overflow: hidden;
-
-          svg {
-            width: 24px;
-          }
-
-          &-text {
-            display: none;
-          }
-        }
-      }
+    .menu-item-language {
+      margin-inline-start: auto;
     }
   }
 }

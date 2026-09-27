@@ -1,35 +1,14 @@
-@use "variables";
-
-.page-header {
+.page-brand {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 20px;
   align-items: flex-start;
-  background: inherit;
+  padding: 24px 0;
 
-  @media (min-width: variables.$bp-tablet) {
-    $spacing: 30px;
-
-    .page-menu {
-      margin-left: $spacing;
-
-      [dir="rtl"] & {
-        margin-right: $spacing;
-        margin-left: 0;
-      }
-    }
-  }
-
-  @media (min-width: variables.$bp-desktop) {
-    $spacing: 90px;
-
-    .page-menu {
-      margin-left: $spacing;
-      font-size: 1.1em;
-
-      [dir="rtl"] & {
-        margin-right: $spacing;
-        margin-left: 0;
-      }
-    }
+  @media (width >= 600px) {
+    flex-direction: row;
+    gap: 28px;
+    align-items: center;
+    padding: 32px 0;
   }
 }

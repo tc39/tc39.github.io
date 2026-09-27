@@ -1,10 +1,10 @@
-<article>
-  <h2 id="proposals" class="section-headline text-end">
+<article class="proposals-overview">
+  <h2 id="proposals" class="section-headline">
     {{ site["navigation"]["state-of-proposals"] }}
   </h2>
   <div class="featurelist">
     <h3>{{ proposals["title"] }}</h3>
-    <i class="featurelist__desc"> {{ proposals["description"] }} </i>
+    <p class="featurelist__desc">{{ proposals["description"] }}</p>
     {% if site.active_lang != site.default_lang %}
     <p>{{ proposals.community_translations }}</p>
     {% endif %}
