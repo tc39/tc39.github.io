@@ -1,7 +1,8 @@
-import * as util from "node:util";
+import { isDeepStrictEqual } from "node:util";
+
 import eleventyFetch from "@11ty/eleventy-fetch";
 
-export default async () => {
+const stages = async () => {
   const json = await eleventyFetch("https://tc39.es/dataset/proposals.json", {
     duration: "1h",
     type: "json",
@@ -10,9 +11,11 @@ export default async () => {
   const stage3 = json.filter((v) => v.stage === 3);
 
   return stage3.map((v) => {
-    v.authorsAndChampions = util.isDeepStrictEqual(v.authors, v.champions)
+    v.authorsAndChampions = isDeepStrictEqual(v.authors, v.champions)
       ? v.authors
       : false;
     return v;
   });
 };
+
+export default stages;

@@ -1,7 +1,9 @@
-export default (eleventyConfig) => {
+const configureEleventy = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("favicon*");
   return {
-    dir: { input: "./", output: "./_site", layouts: "./_layouts" },
+    dir: { input: "./", layouts: "./_layouts", output: "./_site" },
   };
 };
+
+export default configureEleventy;
