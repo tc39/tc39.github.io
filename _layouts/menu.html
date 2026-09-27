@@ -1,10 +1,10 @@
 <ul class="menu" id="menu">
   <li class="menu-item">
     <details class="menu-dropdown" name="navigation">
-      <summary class="menu-link">
+      <summary class="menu-link menu-toggle">
         {{ site["navigation"]["TC39"]["title"] }}
       </summary>
-      <ul class="submenu">
+      <ul class="submenu" id="tc39-menu">
         <li>
           <a class="menu-link" href="https://github.com/tc39/agendas#agendas">
             {{ site["navigation"]["TC39"]["agenda"] }}
@@ -23,10 +23,10 @@
   </li>
   <li class="menu-item">
     <details class="menu-dropdown" name="navigation">
-      <summary class="menu-link">
+      <summary class="menu-link menu-toggle">
         {{ site["navigation"]["specs"]["title"] }}
       </summary>
-      <ul class="submenu">
+      <ul class="submenu" id="specifications-menu">
         <li>
           <a class="menu-link" href="https://github.com/tc39/proposals">
             {{ site["navigation"]["specs"]["proposals"] }}
@@ -63,10 +63,10 @@
   </li>
   <li class="menu-item">
     <details class="menu-dropdown" name="navigation">
-      <summary class="menu-link">
+      <summary class="menu-link menu-toggle">
         {{ site["navigation"]["contribute"]["title"] }}
       </summary>
-      <ul class="submenu">
+      <ul class="submenu" id="contribute-menu">
         <li>
           <a
             class="menu-link"
@@ -107,8 +107,10 @@
     site.lang %} {% assign current_language_id = language.id %} {% assign
     current_language_title = language.title %} {% endif %} {% endfor %}
     <details class="menu-dropdown" name="navigation">
-      <summary class="menu-link">{{ current_language_title }}</summary>
-      <ul class="submenu">
+      <summary class="menu-link menu-toggle">
+        {{ current_language_title }}
+      </summary>
+      <ul class="submenu" id="language-menu">
         {% for language in languages %}
         <li>
           <a

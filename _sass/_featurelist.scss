@@ -6,139 +6,90 @@
     font-size: 1rem;
     border-top: 1px solid variables.$color-spacer;
 
-    &__info {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 600ms ease;
+    &__header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-block-end: 8px;
+
+      @media (min-width: variables.$bp-tablet) {
+        flex-flow: row wrap;
+        column-gap: 24px;
+        align-items: baseline;
+      }
     }
 
     &__tags {
-      flex-shrink: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.25rem;
+      max-inline-size: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
     }
 
     &__tag {
+      --tag-color: #{variables.$color-dim-gray};
+
       display: inline-block;
+      max-inline-size: 100%;
       font-size: 0.8rem;
 
       a {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
-        margin-top: 0.5rem;
+        display: inline-block;
+        padding: 1px 6px;
+        line-height: 1.25;
         color: white;
         word-break: break-all;
         text-decoration: none;
-        opacity: 1;
-
-        &:hover {
-          background-color: transparent;
-        }
-
-        &:focus {
-          background-color: transparent;
-        }
-      }
-
-      span {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
-        margin-top: 0.5rem;
-        font-weight: 550;
-        color: white;
-        background-color: variables.$color-dim-gray;
-        border: 2px solid variables.$color-dim-gray;
+        background-color: var(--tag-color);
+        border: 1px solid var(--tag-color);
         border-radius: 10px;
-      }
-    }
-    /* stylelint-disable-next-line no-descending-specificity */
-    &__translation a {
-      background-color: variables.$tag-translation;
-      border: 2px solid variables.$tag-translation;
-      border-radius: 10px;
 
-      &:focus {
-        color: variables.$tag-translation;
-      }
+        &:focus-visible {
+          color: var(--tag-color);
+          background-color: transparent;
+        }
 
-      &:hover {
-        color: variables.$tag-translation;
-      }
-    }
-
-    &__status {
-      float: left;
-      clear: both;
-      padding: 0;
-      margin-top: 0;
-      list-style: none;
-
-      @media (min-width: variables.$bp-tablet) {
-        float: right;
-        clear: none;
-        padding: 0 5px;
-        margin-top: 0.5rem;
+        @media (hover: hover) and (pointer: fine) {
+          &:hover {
+            color: var(--tag-color);
+            background-color: transparent;
+          }
+        }
       }
     }
 
-    h4 {
+    &__title {
       min-width: 0;
-      margin: 0 0 8px;
+      margin: 0;
       font-size: 1.25rem;
       line-height: 1.5;
       overflow-wrap: anywhere;
-    }
-    /* stylelint-disable-next-line no-descending-specificity */
-    &__tests a {
-      background-color: variables.$tag-tests;
-      border: 2px solid variables.$tag-tests;
-      border-radius: 10px;
 
-      &:focus {
-        color: variables.$tag-tests;
-      }
-
-      &:hover {
-        color: variables.$tag-tests;
-      }
-    }
-    /* stylelint-disable-next-line no-descending-specificity */
-    &__spec a {
-      background-color: variables.$tag-spec;
-      border: 2px solid variables.$tag-spec;
-      border-radius: 10px;
-
-      &:focus {
-        color: variables.$tag-spec;
-      }
-
-      &:hover {
-        color: variables.$tag-spec;
-      }
-    }
-    /* stylelint-disable-next-line no-descending-specificity */
-    &__presented a {
-      background-color: variables.$tag-presented;
-      border: 2px solid variables.$tag-presented;
-      border-radius: 10px;
-
-      &:focus {
-        color: variables.$tag-presented;
-      }
-
-      &:hover {
-        color: variables.$tag-presented;
+      @media (min-width: variables.$bp-tablet) {
+        flex: 1 1 24ch;
       }
     }
 
-    .no-js &:focus-within &__info {
-      max-height: none;
+    &__translation {
+      --tag-color: #{variables.$tag-translation};
     }
 
-    .no-js &:focus-within &__intro h4::after {
-      transform: rotateX(180deg);
+    &__tests {
+      --tag-color: #{variables.$tag-tests};
+    }
+
+    &__spec {
+      --tag-color: #{variables.$tag-spec};
+    }
+
+    &__presented {
+      --tag-color: #{variables.$tag-presented};
     }
 
     &__desc {
-      clear: both;
       display: block;
       max-width: 75ch;
       padding: 0;
@@ -146,42 +97,11 @@
     }
 
     &__author {
-      clear: both;
       padding-top: 0;
       margin: 0;
       font-size: 0.875rem;
       font-weight: variables.$font-weight-regular;
       color: variables.$color-dim-gray;
-    }
-
-    &__example {
-      display: inline-block;
-      margin-bottom: 1rem;
-      font-weight: 800;
-      text-decoration: underline;
-      cursor: pointer;
-
-      &::before {
-        float: right;
-        display: block;
-        width: 1.2rem;
-        height: 1.2em;
-        margin-left: 0.5rem;
-        content: "";
-        background: url("../img/menu-down.svg") no-repeat 20%;
-        background-size: 1.2rem;
-        transition: transform 600ms ease;
-
-        .open & {
-          transform: rotateX(180deg);
-        }
-
-        [dir="rtl"] & {
-          float: left;
-          margin-right: 0.5rem;
-          margin-left: 0;
-        }
-      }
     }
   }
 
@@ -201,8 +121,19 @@
     }
 
     &__tags {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
       padding: 0;
+      margin: 12px 0 0;
       list-style: none;
+
+      li {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 8px;
+        align-items: center;
+      }
 
       @media (min-width: variables.$bp-tablet) {
         padding-inline-start: 2em;

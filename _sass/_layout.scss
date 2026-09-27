@@ -7,8 +7,10 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -34,6 +36,7 @@ body {
   font-size: 28px;
   font-weight: 600;
   line-height: 1.25;
+  text-wrap: balance;
   overflow-wrap: anywhere;
 }
 
