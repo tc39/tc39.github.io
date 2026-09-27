@@ -1,27 +1,3 @@
-const openMenu = (menu) => {
-  menu.style.maxHeight = `${menu.scrollHeight}px`;
-  setTimeout(() => {
-    menu.style.maxHeight = "none";
-  }, 600);
-};
-
-const closeMenu = (menu) => {
-  menu.style.maxHeight = `${menu.scrollHeight}px`;
-  setTimeout(() => {
-    menu.style.maxHeight = "";
-  }, 0);
-};
-
-const toggleMenu = (menu = document.querySelector("#menu")) => {
-  const { maxHeight } = menu.style;
-  if (maxHeight) {
-    closeMenu(menu);
-  } else {
-    openMenu(menu);
-  }
-  menu.classList.toggle("open");
-};
-
 const toggleProposal = (item) => {
   const content = item.querySelector(".featurelist__item__info");
   const { maxHeight } = content.style;
@@ -35,53 +11,70 @@ const toggleProposal = (item) => {
   item.classList.toggle("open");
 };
 
-/**
- * Represents the start of this application
- */
-const start = function start() {
-  const items = document.querySelectorAll(
-    ".featurelist__item .featurelist__item__example"
-  );
+document.body.classList.remove("no-js");
 
-  document.body.classList.remove("no-js");
-
-  for (const item of items) {
-    item.addEventListener("click", () => {
-      toggleProposal(this.parentNode);
-    });
-    item.addEventListener("keypress", (ev) => {
-      if (ev.key === "Enter" || ev.key === " ") {
-        ev.preventDefault();
-        toggleProposal(this.parentNode);
-      }
-    });
-  }
-
-  document.querySelector(".menu-toggle").addEventListener("click", (ev) => {
-    ev.preventDefault();
-    toggleMenu();
+for (const item of document.querySelectorAll(".featurelist__item__example")) {
+  item.addEventListener("click", () => {
+    toggleProposal(item.parentNode);
   });
-
-  for (const link of document.querySelectorAll(".menu-link")) {
-    const submenu = link.parentNode.querySelector(".submenu");
-    if (submenu) {
-      link.addEventListener("click", (ev) => {
-        const t = link.parentNode.querySelector(".submenu-toggle");
-        ev.preventDefault();
-        toggleMenu(submenu);
-        t.classList.toggle("open");
-      });
+  item.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleProposal(item.parentNode);
     }
-  }
+  });
+}
 
-  for (const toggle of document.querySelectorAll(".submenu-toggle")) {
-    toggle.addEventListener("click", (ev) => {
-      const t = ev.target;
-      const submenu = t.parentNode.querySelector(".submenu");
-      toggleMenu(submenu);
-      t.classList.toggle("open");
-    });
+const menus = document.querySelectorAll(".menu-dropdown");
+
+const positionMenu = (menu) => {
+  const panel = menu.querySelector(".submenu");
+  const bounds = menu.closest(".page-menu").getBoundingClientRect();
+  panel.style.setProperty("--submenu-available-width", `${bounds.width}px`);
+  panel.style.setProperty("--submenu-offset-x", "0px");
+  const rect = panel.getBoundingClientRect();
+  const offset = Math.max(
+    bounds.left - rect.left,
+    Math.min(0, bounds.right - rect.right)
+  );
+  panel.style.setProperty("--submenu-offset-x", `${offset}px`);
+};
+
+const positionOpenMenus = () => {
+  for (const menu of menus) {
+    if (menu.open) {
+      positionMenu(menu);
+    }
   }
 };
 
-start();
+for (const menu of menus) {
+  menu.addEventListener("toggle", () => {
+    if (menu.open) {
+      positionMenu(menu);
+    }
+  });
+  menu.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menu.open) {
+      event.preventDefault();
+      menu.open = false;
+      menu.querySelector("summary").focus();
+    }
+  });
+  menu.addEventListener("focusout", (event) => {
+    if (event.relatedTarget && !menu.contains(event.relatedTarget)) {
+      menu.open = false;
+    }
+  });
+}
+
+window.addEventListener("resize", positionOpenMenus);
+document.fonts.addEventListener("loadingdone", positionOpenMenus);
+
+document.addEventListener("click", (event) => {
+  for (const menu of menus) {
+    if (!menu.contains(event.target)) {
+      menu.open = false;
+    }
+  }
+});

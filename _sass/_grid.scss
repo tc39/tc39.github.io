@@ -2,10 +2,16 @@
 @use "variables";
 
 .intro {
-  margin: 0 math.div(variables.$grid-gutter, -2) (2 * variables.$grid-gutter);
+  display: grid;
+  gap: variables.$grid-gutter;
+  margin-bottom: 48px;
 
-  [class*="g-col-"] {
-    padding: 0 math.div(variables.$grid-gutter, 2);
+  > div {
+    min-width: 0;
+  }
+
+  @media (min-width: variables.$bp-tablet) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

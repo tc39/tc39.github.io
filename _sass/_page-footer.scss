@@ -1,132 +1,74 @@
-@use "sass:color";
 @use "variables";
 
-.synopsis {
-  clear: both;
-  width: 100%;
-  padding: 0 4% variables.$grid-gutter;
-  overflow: auto;
-  font-weight: 400;
-}
-
-.synopsis ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.synopsis a,
-.synopsis h3 {
-  font-weight: variables.$font-weight-regular;
-}
-
 .page-footer {
-  width: 100%;
-  min-height: 100px;
-  font-size: 12px;
+  padding-bottom: 32px;
+  font-size: 0.875rem;
   color: variables.$color-dim-gray;
-}
 
-.page-footer h3 {
-  padding-bottom: 1em;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  border-bottom: 1px solid
-    color.mix(variables.$color-bg, variables.$color-dim-gray, $weight: 80%);
-}
-
-@media (min-width: variables.$bp-tablet) {
-  .page-footer h3 {
-    margin-top: 0;
+  .grid-container {
+    padding: 32px 0;
+    border-top: 1px solid variables.$color-spacer;
   }
 
-  .page-footer .synopsis .g-col-3:not(:last-child) {
-    padding-right: variables.$grid-gutter;
-    border-right: solid 1px
-      color.mix(variables.$color-bg, variables.$color-dim-gray, $weight: 80%);
+  .synopsis .g-row {
+    display: grid;
+    gap: 32px;
+
+    @media (width >= 600px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: variables.$bp-tablet) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
   }
 
-  .page-footer .synopsis .g-col-3:not(:first-child) {
-    padding-left: variables.$grid-gutter;
+  h3 {
+    margin: 0 0 12px;
+    font-size: 1rem;
+    font-weight: variables.$font-weight-semi-bold;
+    color: variables.$color-text;
   }
-}
 
-.page-footer a {
-  font-weight: variables.$font-weight-regular;
-  line-height: 24px;
-  color: variables.$color-link;
-  text-decoration: underline;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  a {
+    font-weight: variables.$font-weight-regular;
+  }
+
+  li a {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 0;
+  }
+
+  .connect p {
+    margin: 0;
+  }
 
   .icon {
-    float: left;
-    clear: left;
-    padding-right: 1em;
+    display: flex;
+    flex: 0 0 24px;
+
+    path {
+      fill: variables.$color-dim-gray;
+    }
   }
 
-  .icon path {
-    fill: variables.$color-dim-gray;
+  .grid-end {
+    margin-top: 16px;
   }
 
-  &:active .icon path,
-  &:focus .icon path,
-  &:hover .icon path {
-    fill: variables.$color-link;
-  }
-
-  span {
-    line-height: 32px;
-  }
-}
-
-.page-footer a:hover {
-  text-decoration: none;
-}
-
-.page-footer .pipe-nav {
-  display: block;
-  padding: 0;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.page-footer .pipe-nav li {
-  display: inline-block;
-  list-style: none;
-}
-
-.page-footer .pipe-nav li + li::before {
-  padding: 0 0.5em;
-  content: "| ";
-}
-
-.page-footer .grid-container {
-  padding: variables.$grid-gutter 0;
-  margin: 0 auto;
-  overflow: auto;
-  border-top: solid 1px
-    color.mix(variables.$color-bg, variables.$color-dim-gray, $weight: 80%);
-}
-
-.page-footer .grid-start {
-  float: none;
-  text-align: center;
-}
-
-.page-footer .grid-end {
-  float: none;
-  padding-top: 1em;
-  text-align: center;
-}
-
-@media (min-width: variables.$bp-tablet) {
-  .page-footer .grid-start {
-    float: left;
-    text-align: left;
-  }
-
-  .page-footer .grid-end {
-    float: right;
-    padding-top: 0;
-    text-align: right;
+  .pipe-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+    margin-bottom: 8px;
   }
 }

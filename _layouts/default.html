@@ -39,9 +39,11 @@
     ></script>
   </head>
   <body class="no-js">
+    <a href="#content" class="skip-menu">
+      {{ site["navigation"]["skip-content"] }}
+    </a>
     {% include "./page_header.html" %}
-    <main class="container">
-      <h1 id="content" class="page-title">{{ site["title"] }}</h1>
+    <main id="content" class="container" tabindex="-1">
       <section class="main-content">
         {% include "intro.html" %} {% include "proposals.html" %}
       </section>
