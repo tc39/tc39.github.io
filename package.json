@@ -29,7 +29,7 @@
     "oxlint": "1.89.0",
     "sass-embedded": "1.105.2",
     "stylelint": "17.16.0",
-    "stylelint-config-recess-order": "7.8.0",
+    "stylelint-config-recess-order": "7.8.2",
     "stylelint-config-standard-scss": "17.0.0",
     "stylelint-order": "8.1.2",
     "ultracite": "8.0.1"
