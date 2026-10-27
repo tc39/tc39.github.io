@@ -24,7 +24,7 @@
   "devDependencies": {
     "@11ty/eleventy": "3.1.7",
     "@11ty/eleventy-fetch": "6.0.1",
-    "@primer/octicons": "19.41.0",
+    "@primer/octicons": "19.42.0",
     "oxfmt": "0.74.0",
     "oxlint": "1.89.0",
     "sass-embedded": "1.106.1",
