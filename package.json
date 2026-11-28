@@ -32,7 +32,7 @@
     "stylelint-config-recess-order": "7.10.1",
     "stylelint-config-standard-scss": "18.0.0",
     "stylelint-order": "8.1.3",
-    "ultracite": "8.2.1"
+    "ultracite": "8.3.1"
   },
   "engines": {
     "node": ">=24"
